@@ -2,7 +2,9 @@ import React from "react";
 import tw from "twin.macro";
 //import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Hero from "components/hero/TwoColumnWithVideo.js";
+//import Hero from "components/hero/TwoColumnWithVideo.js";
+import Hero from "components/hero/BackgroundAsImage.js";
+
 //import Features from "components/features/ThreeColSimple.js";
 //import MainFeature from "components/features/TwoColWithButton.js";
 //import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
@@ -25,12 +27,12 @@ export default () => {
     <AnimationRevealPage>
       <Hero
         heading={<>Parrilla Gauchos<HighlightedText>Horno-Parrilla-Ahumador</HighlightedText></>}
-        //description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Perfecta parrilla para asados, horno para pizzas, panes y todo tipo de carnes y verduras y un ahumador para darse el gusto. Gran capacidad y contrucción sólida con materiales de primera calidad "
         //imageSrc="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
         //imageSrc="../../images/parrilla_gauchos1.png"
         imageCss={imageCss}
         imageDecoratorBlob={true}
-        primaryButtonText="Compre"
+        primaryButtonText="Consultenos!"
         watchVideoButtonText="Ver en funcionamiento"
       />
      

@@ -2,9 +2,14 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+//import ImagenParrilla from "../../images/parrilla_gauchos1.png";
+//import LoginPage from "pages/Login.js";
+import { components } from "ComponentRenderer.js";
+
 
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
+
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none`}
@@ -15,11 +20,14 @@ const StyledHeader = styled(Header)`
     ${tw`text-gray-100 hover:text-primary-500`}
   }
 `;
+//const urlImagen = ImagenParrilla;
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover`}
+  
   background-image: url("https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
 `;
-
+//{console.log(ImagenParrilla);}
+//background-image: url("https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-25`;
 
 const HeroContainer = tw.div`z-20 relative px-4 sm:px-8 max-w-screen-xl mx-auto`;
@@ -54,30 +62,35 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
     ${tw`rounded bg-black shadow-xl`}
   }
 `;
-
+//url: "/components/innerPages/LoginPage",
+const innerPages = components.innerPages;
+ console.log(innerPages['LoginPage']['url']);
 export default () => {
+  
+
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">
-        About
+      <NavLink href={innerPages['LoginPage']['url']}>
+        Información
       </NavLink>
       <NavLink href="#">
-        Blog
+        Envíos
       </NavLink>
       <NavLink href="#">
-        Locations
+        Galería de fotos
       </NavLink>
       <NavLink href="#">
-        Pricing
+        Precio
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink href="/#">
-        Hire Us
+        Comuníquese
       </PrimaryLink>
     </NavLinks>
   ];
-
+ 
+  //imageSrc=ImagenParrilla
   return (
     <Container>
       <OpacityOverlay />
@@ -85,17 +98,18 @@ export default () => {
         <StyledHeader links={navLinks} />
         <TwoColumn>
           <LeftColumn>
-            <Notification>We have now launched operations in Europe.</Notification>
+            <Notification>¿Porqué no tener todo?</Notification>
             <Heading>
-              <span>Hire the best</span>
+              <span>Parrilla Gauchos Trío</span>
               <br />
-              <SlantedBackground>Marketing Team.</SlantedBackground>
+              <SlantedBackground>Horno + Parrilla + Ahumador </SlantedBackground>
             </Heading>
-            <PrimaryAction>Read Customer Stories</PrimaryAction>
+            <PrimaryAction>Ver como funciona</PrimaryAction>
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed
-              url="//player.vimeo.com/video/374265101?title=0&portrait=0&byline=0&autoplay=0&responsive=1"
+             // url="//player.vimeo.com/video/374265101?title=0&portrait=0&byline=0&autoplay=0&responsive=1"
+             url ="https://www.youtube.com/embed/vRLWHPiK2sE"
               background="transparent"
             />
           </RightColumn>
@@ -104,3 +118,4 @@ export default () => {
     </Container>
   );
 };
+//<iframe width="560" height="315" src="https://www.youtube.com/embed/vRLWHPiK2sE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
