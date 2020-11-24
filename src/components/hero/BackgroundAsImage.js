@@ -6,7 +6,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 //import LoginPage from "pages/Login.js";
 import { components } from "ComponentRenderer.js";
 
-
+//{innerPages['LoginPage']['url']}
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
 
@@ -22,9 +22,9 @@ const StyledHeader = styled(Header)`
 `;
 //const urlImagen = ImagenParrilla;
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover`}
+  ${tw`relative -mx-1 -mt-8 bg-center bg-cover`}
   
-  background-image: url("https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
+  background-image: url('parrilla_gauchos1.png');
 `;
 //{console.log(ImagenParrilla);}
 //background-image: url("https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
@@ -64,14 +64,15 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 `;
 //url: "/components/innerPages/LoginPage",
 const innerPages = components.innerPages;
- console.log(innerPages['LoginPage']['url']);
+ //console.log(LoginPage);
+//{innerPages['LoginPage']['url']}>
 export default () => {
   
 
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href={innerPages['LoginPage']['url']}>
-        Información
+              Información
       </NavLink>
       <NavLink href="#">
         Envíos
@@ -92,7 +93,7 @@ export default () => {
  
   //imageSrc=ImagenParrilla
   return (
-    <Container>
+    <Container >
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
@@ -118,4 +119,5 @@ export default () => {
     </Container>
   );
 };
+
 //<iframe width="560" height="315" src="https://www.youtube.com/embed/vRLWHPiK2sE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
