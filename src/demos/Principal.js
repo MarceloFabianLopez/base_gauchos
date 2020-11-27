@@ -2,8 +2,8 @@ import React from "react";
 import tw from "twin.macro";
 //import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-//import Hero from "components/hero/TwoColumnWithVideo.js";
-import Hero from "components/hero/BackgroundAsImage.js";
+import Hero from "components/hero/TwoColumnWithVideo.js";
+//import Hero from "components/hero/BackgroundAsImage.js";
 
 //import Features from "components/features/ThreeColSimple.js";
 //import MainFeature from "components/features/TwoColWithButton.js";
@@ -11,7 +11,8 @@ import Hero from "components/hero/BackgroundAsImage.js";
 //import TabGrid from "components/cards/TabCardGrid.js";
 //import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
 //import DownloadApp from "components/cta/DownloadApp.js";
-import Footer from "components/footers/FiveColumnWithInputForm.js";
+import Footer from "components/footers/MiniCenteredFooter.js";
+import ThreeColSlider from "components/cards/ThreeColSlider";
 
 //import chefIconImageSrc from "images/chef-icon.svg";
 //import celebrationIconImageSrc from "images/celebration-icon.svg";
@@ -26,16 +27,20 @@ export default () => {
   return (
     <AnimationRevealPage>
       <Hero
-        heading={<>Parrilla Gauchos<HighlightedText>Horno-Parrilla-Ahumador</HighlightedText></>}
-        description="Perfecta parrilla para asados, horno para pizzas, panes y todo tipo de carnes y verduras y un ahumador para darse el gusto. Gran capacidad y contrucción sólida con materiales de primera calidad "
-        //imageSrc="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
-        //imageSrc="../../images/parrilla_gauchos1.png"
+        heading={<>Parrilla Gauchos<HighlightedText>Horno+Parrilla+Ahumador</HighlightedText></>}
+        description="
+        Triple función, parrilla-horno-ahumador. Es posible tener todo en uno. Parrilla de hierro redondo de 70x45cm (5 pollos o un lechón de 10kg), bajando la tapa
+        permite hornear carnes,verduras,pizzas, empanadas, panes, etc. y si agregamos astillas para humar tendremos un ahumado delicioso en nuestras comidas. Cuenta con termómetro para visualizar la temperatura a la que se está cocinando.
+        "
+        imageSrc="../../parrilla/parrilla_cerrada.png"
         imageCss={imageCss}
         imageDecoratorBlob={true}
         primaryButtonText="Consultenos!"
         watchVideoButtonText="Ver en funcionamiento"
       />
+     <ThreeColSlider
      
+     />
       <Footer />
     </AnimationRevealPage>
   );

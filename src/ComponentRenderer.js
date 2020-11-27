@@ -505,6 +505,7 @@ export const components = {
   }
 }
 
+// eslint-disable-next-line
 export default () => {
   const { type, subtype, name } = useParams()
 

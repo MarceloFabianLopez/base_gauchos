@@ -22,13 +22,13 @@ const StyledHeader = styled(Header)`
 `;
 //const urlImagen = ImagenParrilla;
 const Container = styled.div`
-  ${tw`relative -mx-1 -mt-8 bg-center bg-cover`}
+  ${tw`relative -mx-20 -mt-8 bg-center bg-cover`}
   
-  background-image: url('parrilla_gauchos1.png');
+  background-image: url('parrilla_gauchos.png');
 `;
 //{console.log(ImagenParrilla);}
 //background-image: url("https://images.unsplash.com/photo-1522071901873-411886a10004?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80");
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-primary-500 opacity-25`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-yellow-300 opacity-15`;
 
 const HeroContainer = tw.div`z-20 relative px-4 sm:px-8 max-w-screen-xl mx-auto`;
 const TwoColumn = tw.div`pt-24 pb-32 px-4 flex justify-between items-center flex-col lg:flex-row`;
@@ -63,15 +63,16 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
   }
 `;
 //url: "/components/innerPages/LoginPage",
-const innerPages = components.innerPages;
+//const innerPages = components.innerPages;
  //console.log(LoginPage);
 //{innerPages['LoginPage']['url']}>
+// <NavLink href={innerPages['LoginPage']['url']}>
 export default () => {
   
 
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href={innerPages['LoginPage']['url']}>
+      <NavLink href="#">
               Información
       </NavLink>
       <NavLink href="#">
@@ -116,6 +117,7 @@ export default () => {
           </RightColumn>
         </TwoColumn>
       </HeroContainer>
+
     </Container>
   );
 };
