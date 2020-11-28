@@ -92,7 +92,7 @@ export default () => {
   const cards = [
     {
       imageSrc: "/parrilla/parrilla_abierta.png",
-      title: "Gran capacidad",
+      title: "Parrilla cómoda en hierro redondo",
       description: "Puede asar 10kg de carne, o 5 polllos o un lechón. Puede asar para 12 comensales",
       locationText: "Parrilla 70x45cm con brasero",
       pricingText: "Refractarios",
@@ -100,35 +100,28 @@ export default () => {
     },
     {
       imageSrc: "/parrilla/bondiola_ahumada.jpg",
-      title: "Soho Paradise",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Ibiza, Spain",
-      pricingText: "USD 50/Day",
+      title: "Ahumado de carnes y pescados",
+      description: "Deliciosos ahumados con solo agregar astillas de maderas a las brasas.",
+      locationText: "Ahumador",
+      pricingText: "Fácil de usar",
       rating: 4.9,
     },
     {
       imageSrc: "/parrilla/carnes_ahumadas.jpg",
-      title: "Hotel Baja",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Palo Alto, CA",
-      pricingText: "USD 19/Day",
+      title: "Horno con termómetro",
+      description: "Cuando su fuego está listo, baje la tapa y comience a hornear controlando la temperatura.",
+      locationText: "Pizzas,panes,carnes,pavitos, lechones",
+      pricingText: "Un complemento imprecsindible",
       rating: "5.0",
     },
-    {
-      imageSrc: "/parrilla/parrilla_cerrada.png",
-      title: "Ahumado de carnes",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Arizona, RAK",
-      pricingText: "USD 99/Day",
-      rating: 4.5,
-    },
+    
   ]
 
   return (
     <Container>
       <Content>
         <HeadingWithControl>
-          <Heading>Lo mejor de los tres mundos</Heading>
+          <Heading>Tres funciones en una sola parrilla</Heading>
           <Controls>
             <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
             <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>

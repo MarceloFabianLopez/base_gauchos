@@ -37,7 +37,7 @@ export const LogoLink = styled(NavLink)`
   ${tw`flex items-center font-black border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`w-48
+    ${tw`w-32
      mr-3`}
   }
 `;
@@ -108,7 +108,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      Parrillas artesanales
+      
     </LogoLink>
   );
 
@@ -143,7 +143,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
 const collapseBreakPointCssMap = {
   sm: {
-    mobileNavLinks: tw`sm:hidden`,
+    mobileNavLinks: tw`sm:flex`,
     desktopNavLinks: tw`sm:flex`,
     mobileNavLinksContainer: tw`sm:hidden`
   },

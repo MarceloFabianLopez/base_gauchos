@@ -91,76 +91,84 @@
      inkscape:window-height="1053"
      id="namedview940"
      showgrid="false"
-     inkscape:zoom="0.75130096"
-     inkscape:cx="510.57904"
-     inkscape:cy="-60.503392"
+     inkscape:zoom="6.6355577"
+     inkscape:cx="119.07139"
+     inkscape:cy="122.48724"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg938" />
-  <rect
-     x="51.680302"
-     y="55.10358"
-     width="134.78218"
-     height="129.00197"
-     rx="7.5524497"
-     fill="#6415FF"
-     id="rect934"
-     style="fill:#f0e692;fill-opacity:1;stroke-width:0.568363" />
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0889px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:5.57919px;word-spacing:5.57919px;mix-blend-mode:normal;fill:#947af0;fill-opacity:1;stroke:none;stroke-width:0.35222"
-     x="91.90387"
-     y="67.974113"
-     id="text1509"
-     transform="scale(0.79574316,1.2566869)"><tspan
-       sodipodi:role="line"
-       id="tspan1507"
+     inkscape:current-layer="svg938"
+     inkscape:document-rotation="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:lockguides="false">
+    <sodipodi:guide
+       position="226.20555,146.28805"
+       orientation="1,0"
+       id="guide1419"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <g
+     id="g1482"
+     transform="matrix(1.16637,0,0,1.1952046,-10.898321,-13.945533)">
+    <g
+       id="g1427">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.89627px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:3.12693px;word-spacing:3.12693px;mix-blend-mode:normal;fill:#947af0;fill-opacity:1;stroke:none;stroke-width:4.897;stroke-miterlimit:4;stroke-dasharray:none"
+         x="104.75048"
+         y="104.55372"
+         id="text1509-3"
+         transform="scale(0.6257261,1.5981433)"><tspan
+           sodipodi:role="line"
+           id="tspan1507-7"
+           x="104.75048"
+           y="104.55372"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Bold';fill:#947af0;fill-opacity:1;stroke-width:4.897;stroke-miterlimit:4;stroke-dasharray:none">ARTESANIA ARGENTINA</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0889px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:5.57919px;word-spacing:5.57919px;mix-blend-mode:normal;fill:#9479f0;fill-opacity:0.53;stroke:none;stroke-width:0.35222;filter:url(#filter5250)"
+         x="92.737236"
+         y="68.362862"
+         id="text5248"
+         transform="scale(0.79574316,1.2566869)"><tspan
+           sodipodi:role="line"
+           id="tspan5246"
+           x="92.737236"
+           y="68.362862"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Bold';fill:#9479f0;fill-opacity:0.53;stroke-width:0.35222">GAUCHOS</tspan></text>
+      <g
+         id="g5256"
+         transform="matrix(0.37900212,0,0,0.29636869,-50.81204,102.07925)"
+         style="mix-blend-mode:normal;fill:#9479ef;fill-opacity:1">
+        <path
+           style="fill:#9479ef;fill-opacity:1;stroke:none;stroke-width:2.9783"
+           d="M 424.95046,-7.8251713 V 10.034019 h -17.88042 v 17.8592 h -17.88042 v 17.85919 h -17.88041 v 38.69492 h 17.88041 v 17.859191 h 17.88042 v 17.8592 h 17.88042 v 17.85919 h 41.72097 v -17.85919 h 17.88042 v -17.8592 h 17.88041 V 84.447329 h 17.88042 v -38.69492 h -17.88042 v -17.85919 h -17.88041 v -17.8592 H 466.67143 V -7.8251713 h -41.72097 m 35.76083,5.95307 V 13.010559 h 17.88042 c -0.004,5.984855 -0.12868,13.047041 0,17.85919 h 17.88042 v 17.85919 h 17.88041 v 32.74186 h -17.88041 v 17.85919 h -17.88042 v 17.859201 h -17.88042 v 17.85919 h -29.8007 V 117.18919 H 413.03018 V 99.329989 h -17.88042 v -17.85919 h -17.88041 v -32.74186 h 17.88041 v -17.85919 h 17.88042 v -17.85919 h 17.88041 V -1.8721013 h 29.8007 m -26.82063,2.97653 V 18.963619 h -17.88041 v 17.85919 h -17.88042 l -0.0686,16.559517 -16.99129,0.253821 0.46435,22.18835 16.14606,0.747936 0.44948,16.804496 h 17.88042 v 17.859191 h 17.88041 v 17.85919 h 23.84056 v -17.85919 h 17.88042 V 93.376929 h 17.88042 v -17.8592 h 17.88041 v -20.83572 h -17.88041 v -17.8592 c -8.39891,0.04995 -12.22029,-0.277234 -16.46576,0.177761 -3.02001,0.32366 -0.59925,-4.6558 -1.41466,-18.036951 H 457.73122 V 1.1044287 h -23.84056 m 17.88042,2.97653 V 21.940149 l 20.43003,0.499198 0.0735,17.833101 16.62179,-0.03212 -0.1804,16.946409 16.69633,0.471803 V 72.5412 H 487.53192 V 90.4004 H 469.6515 v 17.85919 h -17.88042 v 17.85919 H 439.8508 V 108.25959 H 421.97039 V 90.400399 h -17.88042 v -17.8592 l -17.50012,-0.651843 -0.3803,-14.230817 h 17.88042 v -14.88266 l 17.60667,-0.03325 0.27375,-20.802479 h 17.88041 c 0.39129,-5.07469 -0.75592,-15.8716456 0.002,-17.6951848 L 451.77108,4.0809587 M 424.95046,27.893219 v 17.85919 h -17.88042 v 38.69492 h 17.88042 v 17.859191 h 41.72097 V 84.447329 h 17.88042 v -38.69492 h -17.88042 v -17.85919 h -41.72097 m 35.76083,2.97653 v 17.85919 h 17.88042 v 32.74186 h -17.88042 v 17.85919 h -29.8007 v -17.85919 h -17.88041 v -32.74186 h 17.88041 v -17.85919 h 29.8007 M 428.5996,66.725701 447.67215,83.259905 466.67143,66.588139 447.67215,51.697012 m 14.40779,15.028689 -14.40779,11.694247 -14.83023,-11.694247 14.83023,-11.283314 z"
+           id="path5254"
+           sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccscccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+      </g>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0889px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:5.57919px;word-spacing:5.57919px;mix-blend-mode:normal;fill:#947af0;fill-opacity:1;stroke:none;stroke-width:0.35222"
        x="91.90387"
        y="67.974113"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Bold';fill:#947af0;fill-opacity:1;stroke-width:0.35222">GAUCHOS</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.89627px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:3.12693px;word-spacing:3.12693px;mix-blend-mode:normal;fill:#947af0;fill-opacity:1;stroke:none;stroke-width:4.89700006;stroke-miterlimit:4;stroke-dasharray:none"
-     x="104.75048"
-     y="104.55372"
-     id="text1509-3"
-     transform="scale(0.6257261,1.5981433)"><tspan
-       sodipodi:role="line"
-       id="tspan1507-7"
-       x="104.75048"
-       y="104.55372"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Bold';fill:#947af0;fill-opacity:1;stroke-width:4.89700006;stroke-miterlimit:4;stroke-dasharray:none">ARTESANIA ARGENTINA</tspan></text>
-  <g
-     id="g3800"
-     transform="matrix(0.37900212,0,0,0.29636869,-49.682587,101.1971)"
-     style="mix-blend-mode:normal;fill:#0c0a14;fill-opacity:0.33000001;filter:url(#filter5258)">
-    <path
-       style="fill:#0c0a14;fill-opacity:0.33000001;stroke:none;stroke-width:2.9783"
-       d="M 424.95046,-7.8251713 V 10.034019 h -17.88042 v 17.8592 h -17.88042 v 17.85919 h -17.88041 v 38.69492 h 17.88041 v 17.859191 h 17.88042 v 17.8592 h 17.88042 v 17.85919 h 41.72097 v -17.85919 h 17.88042 v -17.8592 h 17.88041 V 84.447329 h 17.88042 v -38.69492 h -17.88042 v -17.85919 h -17.88041 v -17.8592 H 466.67143 V -7.8251713 h -41.72097 m 35.76083,5.95307 V 13.010559 h 17.88042 c -0.004,5.984855 -0.12868,13.047041 0,17.85919 h 17.88042 v 17.85919 h 17.88041 v 32.74186 h -17.88041 v 17.85919 h -17.88042 v 17.859201 h -17.88042 v 17.85919 h -29.8007 V 117.18919 H 413.03018 V 99.329989 h -17.88042 v -17.85919 h -17.88041 v -32.74186 h 17.88041 v -17.85919 h 17.88042 v -17.85919 h 17.88041 V -1.8721013 h 29.8007 m -26.82063,2.97653 V 18.963619 h -17.88041 v 17.85919 h -17.88042 l -0.0686,16.559517 -16.99129,0.253821 0.46435,22.18835 16.14606,0.747936 0.44948,16.804496 h 17.88042 v 17.859191 h 17.88041 v 17.85919 h 23.84056 v -17.85919 h 17.88042 V 93.376929 h 17.88042 v -17.8592 h 17.88041 v -20.83572 h -17.88041 v -17.8592 c -8.39891,0.04995 -12.22029,-0.277234 -16.46576,0.177761 -3.02001,0.32366 -0.59925,-4.6558 -1.41466,-18.036951 H 457.73122 V 1.1044287 h -23.84056 m 17.88042,2.97653 V 21.940149 l 20.43003,0.499198 0.0735,17.833101 16.62179,-0.03212 -0.1804,16.946409 16.69633,0.471803 V 72.5412 H 487.53192 V 90.4004 H 469.6515 v 17.85919 h -17.88042 v 17.85919 H 439.8508 V 108.25959 H 421.97039 V 90.400399 h -17.88042 v -17.8592 l -17.50012,-0.651843 -0.3803,-14.230817 h 17.88042 v -14.88266 l 17.60667,-0.03325 0.27375,-20.802479 h 17.88041 c 0.39129,-5.07469 -0.75592,-15.8716456 0.002,-17.6951848 L 451.77108,4.0809587 M 424.95046,27.893219 v 17.85919 h -17.88042 v 38.69492 h 17.88042 v 17.859191 h 41.72097 V 84.447329 h 17.88042 v -38.69492 h -17.88042 v -17.85919 h -41.72097 m 35.76083,2.97653 v 17.85919 h 17.88042 v 32.74186 h -17.88042 v 17.85919 h -29.8007 v -17.85919 h -17.88041 v -32.74186 h 17.88041 v -17.85919 h 29.8007 M 428.5996,66.725701 447.67215,83.259905 466.67143,66.588139 447.67215,51.697012 m 14.40779,15.028689 -14.40779,11.694247 -14.83023,-11.694247 14.83023,-11.283314 z"
-       id="path3734"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccscccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
-  </g>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.0889px;line-height:1.25;font-family:'Ubuntu Condensed';-inkscape-font-specification:'Ubuntu Condensed, ';letter-spacing:5.57919px;word-spacing:5.57919px;mix-blend-mode:normal;fill:#9479f0;fill-opacity:0.53000009;stroke:none;stroke-width:0.35222;filter:url(#filter5250)"
-     x="92.737236"
-     y="68.362862"
-     id="text5248"
-     transform="scale(0.79574316,1.2566869)"><tspan
-       sodipodi:role="line"
-       id="tspan5246"
-       x="92.737236"
-       y="68.362862"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Bold';fill:#9479f0;fill-opacity:0.53000009;stroke-width:0.35222;">GAUCHOS</tspan></text>
-  <g
-     id="g5256"
-     transform="matrix(0.37900212,0,0,0.29636869,-50.81204,102.07925)"
-     style="mix-blend-mode:normal;fill:#9479ef;fill-opacity:1">
-    <path
-       style="fill:#9479ef;fill-opacity:1;stroke:none;stroke-width:2.9783"
-       d="M 424.95046,-7.8251713 V 10.034019 h -17.88042 v 17.8592 h -17.88042 v 17.85919 h -17.88041 v 38.69492 h 17.88041 v 17.859191 h 17.88042 v 17.8592 h 17.88042 v 17.85919 h 41.72097 v -17.85919 h 17.88042 v -17.8592 h 17.88041 V 84.447329 h 17.88042 v -38.69492 h -17.88042 v -17.85919 h -17.88041 v -17.8592 H 466.67143 V -7.8251713 h -41.72097 m 35.76083,5.95307 V 13.010559 h 17.88042 c -0.004,5.984855 -0.12868,13.047041 0,17.85919 h 17.88042 v 17.85919 h 17.88041 v 32.74186 h -17.88041 v 17.85919 h -17.88042 v 17.859201 h -17.88042 v 17.85919 h -29.8007 V 117.18919 H 413.03018 V 99.329989 h -17.88042 v -17.85919 h -17.88041 v -32.74186 h 17.88041 v -17.85919 h 17.88042 v -17.85919 h 17.88041 V -1.8721013 h 29.8007 m -26.82063,2.97653 V 18.963619 h -17.88041 v 17.85919 h -17.88042 l -0.0686,16.559517 -16.99129,0.253821 0.46435,22.18835 16.14606,0.747936 0.44948,16.804496 h 17.88042 v 17.859191 h 17.88041 v 17.85919 h 23.84056 v -17.85919 h 17.88042 V 93.376929 h 17.88042 v -17.8592 h 17.88041 v -20.83572 h -17.88041 v -17.8592 c -8.39891,0.04995 -12.22029,-0.277234 -16.46576,0.177761 -3.02001,0.32366 -0.59925,-4.6558 -1.41466,-18.036951 H 457.73122 V 1.1044287 h -23.84056 m 17.88042,2.97653 V 21.940149 l 20.43003,0.499198 0.0735,17.833101 16.62179,-0.03212 -0.1804,16.946409 16.69633,0.471803 V 72.5412 H 487.53192 V 90.4004 H 469.6515 v 17.85919 h -17.88042 v 17.85919 H 439.8508 V 108.25959 H 421.97039 V 90.400399 h -17.88042 v -17.8592 l -17.50012,-0.651843 -0.3803,-14.230817 h 17.88042 v -14.88266 l 17.60667,-0.03325 0.27375,-20.802479 h 17.88041 c 0.39129,-5.07469 -0.75592,-15.8716456 0.002,-17.6951848 L 451.77108,4.0809587 M 424.95046,27.893219 v 17.85919 h -17.88042 v 38.69492 h 17.88042 v 17.859191 h 41.72097 V 84.447329 h 17.88042 v -38.69492 h -17.88042 v -17.85919 h -41.72097 m 35.76083,2.97653 v 17.85919 h 17.88042 v 32.74186 h -17.88042 v 17.85919 h -29.8007 v -17.85919 h -17.88041 v -32.74186 h 17.88041 v -17.85919 h 29.8007 M 428.5996,66.725701 447.67215,83.259905 466.67143,66.588139 447.67215,51.697012 m 14.40779,15.028689 -14.40779,11.694247 -14.83023,-11.694247 14.83023,-11.283314 z"
-       id="path5254"
-       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccscccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+       id="text1509"
+       transform="scale(0.79574316,1.2566869)"><tspan
+         sodipodi:role="line"
+         id="tspan1507"
+         x="91.90387"
+         y="67.974113"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Bold';fill:#947af0;fill-opacity:1;stroke-width:0.35222">GAUCHOS</tspan></text>
+    <g
+       id="g3800"
+       transform="matrix(0.37900212,0,0,0.29636869,-49.682587,101.1971)"
+       style="mix-blend-mode:normal;fill:#0c0a14;fill-opacity:0.33;filter:url(#filter5258)">
+      <path
+         style="fill:#0c0a14;fill-opacity:0.33;stroke:none;stroke-width:2.9783"
+         d="M 424.95046,-7.8251713 V 10.034019 h -17.88042 v 17.8592 h -17.88042 v 17.85919 h -17.88041 v 38.69492 h 17.88041 v 17.859191 h 17.88042 v 17.8592 h 17.88042 v 17.85919 h 41.72097 v -17.85919 h 17.88042 v -17.8592 h 17.88041 V 84.447329 h 17.88042 v -38.69492 h -17.88042 v -17.85919 h -17.88041 v -17.8592 H 466.67143 V -7.8251713 h -41.72097 m 35.76083,5.95307 V 13.010559 h 17.88042 c -0.004,5.984855 -0.12868,13.047041 0,17.85919 h 17.88042 v 17.85919 h 17.88041 v 32.74186 h -17.88041 v 17.85919 h -17.88042 v 17.859201 h -17.88042 v 17.85919 h -29.8007 V 117.18919 H 413.03018 V 99.329989 h -17.88042 v -17.85919 h -17.88041 v -32.74186 h 17.88041 v -17.85919 h 17.88042 v -17.85919 h 17.88041 V -1.8721013 h 29.8007 m -26.82063,2.97653 V 18.963619 h -17.88041 v 17.85919 h -17.88042 l -0.0686,16.559517 -16.99129,0.253821 0.46435,22.18835 16.14606,0.747936 0.44948,16.804496 h 17.88042 v 17.859191 h 17.88041 v 17.85919 h 23.84056 v -17.85919 h 17.88042 V 93.376929 h 17.88042 v -17.8592 h 17.88041 v -20.83572 h -17.88041 v -17.8592 c -8.39891,0.04995 -12.22029,-0.277234 -16.46576,0.177761 -3.02001,0.32366 -0.59925,-4.6558 -1.41466,-18.036951 H 457.73122 V 1.1044287 h -23.84056 m 17.88042,2.97653 V 21.940149 l 20.43003,0.499198 0.0735,17.833101 16.62179,-0.03212 -0.1804,16.946409 16.69633,0.471803 V 72.5412 H 487.53192 V 90.4004 H 469.6515 v 17.85919 h -17.88042 v 17.85919 H 439.8508 V 108.25959 H 421.97039 V 90.400399 h -17.88042 v -17.8592 l -17.50012,-0.651843 -0.3803,-14.230817 h 17.88042 v -14.88266 l 17.60667,-0.03325 0.27375,-20.802479 h 17.88041 c 0.39129,-5.07469 -0.75592,-15.8716456 0.002,-17.6951848 L 451.77108,4.0809587 M 424.95046,27.893219 v 17.85919 h -17.88042 v 38.69492 h 17.88042 v 17.859191 h 41.72097 V 84.447329 h 17.88042 v -38.69492 h -17.88042 v -17.85919 h -41.72097 m 35.76083,2.97653 v 17.85919 h 17.88042 v 32.74186 h -17.88042 v 17.85919 h -29.8007 v -17.85919 h -17.88041 v -32.74186 h 17.88041 v -17.85919 h 29.8007 M 428.5996,66.725701 447.67215,83.259905 466.67143,66.588139 447.67215,51.697012 m 14.40779,15.028689 -14.40779,11.694247 -14.83023,-11.694247 14.83023,-11.283314 z"
+         id="path3734"
+         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccscccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+    </g>
   </g>
 </svg>

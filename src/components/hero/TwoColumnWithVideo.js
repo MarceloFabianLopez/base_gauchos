@@ -17,11 +17,11 @@ import { ReactComponent as SvgDecoratorBlob2 } from "../../images/dot-pattern.sv
 //import ImagenParrilla from "../../../public/parrilla/parrilla_abierta.png";
 
 const Container = tw.div`relative`;
-const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto py-20 md:py-24`;
+const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto py-0 md:py-0 sm:py-0`;
 const LeftColumn = tw.div`relative lg:w-6/12 lg:pr-12 flex-shrink-0 text-center lg:text-left`;
 const RightColumn = tw.div`relative mt-12 lg:mt-0 flex flex-col justify-center`;
 
-const Heading = tw.h1`font-black text-3xl md:text-5xl leading-snug max-w-3xl`;
+const Heading = tw.h1`font-black text-xl md:text-5xl sm:text-xl leading-snug max-w-5xl`;
 const Paragraph = tw.p`my-5 lg:my-8 text-sm lg:text-base font-medium text-gray-600 max-w-lg mx-auto lg:mx-0`;
 
 const Actions = tw.div`flex flex-col items-center sm:flex-row justify-center lg:justify-start mt-8`;
@@ -66,7 +66,6 @@ export default ({
   primaryButtonUrl="#",
   watchVideoButtonText="Watch Video",
   watchVideoYoutubeUrl="https://www.youtube.com/embed/_GuOjXYl5ew",
-  //imageSrc=DesignIllustration,
   imageSrc="/parrilla/parrilla_abierta.png",
   imageCss=null,
   imageDecoratorBlob = false,
@@ -78,11 +77,11 @@ export default ({
   return (
     <>
       <Header />
-      <Container>
+      <Container >
         <TwoColumn>
           <LeftColumn>
-            <Heading>{heading}</Heading>
-            <Paragraph>{description}</Paragraph>
+            <Heading >{heading}</Heading>
+            <Paragraph className="rojito">{description}</Paragraph>
             <Actions>
               <PrimaryButton as="a" href={primaryButtonUrl}>{primaryButtonText}</PrimaryButton>
               <WatchVideoButton onClick={toggleModal}>

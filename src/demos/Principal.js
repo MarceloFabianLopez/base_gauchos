@@ -17,7 +17,7 @@ import ThreeColSlider from "components/cards/ThreeColSlider";
 //import chefIconImageSrc from "images/chef-icon.svg";
 //import celebrationIconImageSrc from "images/celebration-icon.svg";
 //import shopIconImageSrc from "images/shop-icon.svg";
-
+//"Triple función, parrilla-horno-ahumador. Parrilla de hierro redondo de 70x45cm (5 pollos o un lechón de 10kg),permite hornear carnes,verduras,pizzas, empanadas, panes, etc. y si agregamos astillas para humar tendremos un ahumado delicioso en nuestras comidas. Cuenta con termómetro para visualizar la temperatura a la que se está cocinando."
 export default () => {
   //const Subheading = tw.span`tracking-wider text-sm font-medium`;
   const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
@@ -28,10 +28,7 @@ export default () => {
     <AnimationRevealPage>
       <Hero
         heading={<>Parrilla Gauchos<HighlightedText>Horno+Parrilla+Ahumador</HighlightedText></>}
-        description="
-        Triple función, parrilla-horno-ahumador. Es posible tener todo en uno. Parrilla de hierro redondo de 70x45cm (5 pollos o un lechón de 10kg), bajando la tapa
-        permite hornear carnes,verduras,pizzas, empanadas, panes, etc. y si agregamos astillas para humar tendremos un ahumado delicioso en nuestras comidas. Cuenta con termómetro para visualizar la temperatura a la que se está cocinando.
-        "
+        description="Como asar, hornear o ahumar en un mismo espacio y con un solo equipo."
         imageSrc="../../parrilla/parrilla_cerrada.png"
         imageCss={imageCss}
         imageDecoratorBlob={true}
