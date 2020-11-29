@@ -15,7 +15,11 @@ import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/dot-pattern.svg";
 //import DesignIllustration from "../../images/design-illustration.svg";
 //import ImagenParrilla from "../../../public/parrilla/parrilla_abierta.png";
+import {NavLinks,NavLink,PrimaryLink} from '../headers/light';
 
+import { components } from "ComponentRenderer.js";
+
+//import Ficha from "components/features/ThreeColWithSideImage";
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row md:items-center max-w-screen-xl mx-auto py-0 md:py-0 sm:py-0`;
 const LeftColumn = tw.div`relative lg:w-6/12 lg:pr-12 flex-shrink-0 text-center lg:text-left`;
@@ -59,7 +63,18 @@ const StyledModal = styled(ReactModalAdapter)`
 `;
 const CloseModalButton = tw.button`absolute top-0 right-0 mt-8 mr-8 hocus:text-primary-500`;
 
+//const url= "/components/Features/ThreeColWithSideImage";
+const caracteristicas = components['blocks']['Features']['elements']['ThreeColWithSideImage'];
+const contactos =components['blocks']['Form']['elements']['SimpleContactUs'];
+//console.log(components['blocks']['Form']);
+//console.log(components['blocks']);
+//{innerPages['LoginPage']['url']}>
+// <NavLink href={innerPages['LoginPage']['url']}>
+
+
 export default ({
+  caracteristicas = components['blocks']['Features']['elements']['ThreeColWithSideImage']['url'],
+  contactos =components['blocks']['Form']['elements']['SimpleContactUs']['url'],
   heading = "Modern React Templates, Just For You",
  description="Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.",
   primaryButtonText="Get Started",
@@ -73,10 +88,18 @@ export default ({
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const toggleModal = () => setModalIsOpen(!modalIsOpen);
+  const MisLinks = [
+    <NavLinks key={1}>
+      <NavLink href={caracteristicas}>Ver más</NavLink>
+      <NavLink href={contactos}>Política de Envios</NavLink>
+      
+      <PrimaryLink href={contactos}>Pactar una entrevista</PrimaryLink>
+    </NavLinks>
+  ];
 
   return (
     <>
-      <Header />
+      <Header  links={MisLinks}/>
       <Container >
         <TwoColumn>
           <LeftColumn>
@@ -110,7 +133,7 @@ export default ({
           isOpen={modalIsOpen}
           onRequestClose={toggleModal}
           shouldCloseOnOverlayClick={true}
-        >
+        >import Ficha from "components/features/ThreeColWithSideImage";
           <CloseModalButton onClick={toggleModal}>
             <CloseIcon tw="w-6 h-6" />
           </CloseModalButton>

@@ -35,9 +35,7 @@ export default () => {
         primaryButtonText="Consultenos!"
         watchVideoButtonText="Ver en funcionamiento"
       />
-     <ThreeColSlider
-     
-     />
+    
       <Footer />
     </AnimationRevealPage>
   );
