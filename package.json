@@ -23,11 +23,6 @@
     "tailwindcss": "^1.2.0",
     "twin.macro": "^1.0.0-alpha.7",
     "use-in-view": "^1.0.15"
-
-   
-
-
-
   },
   "scripts": {
     "start": "react-scripts start",
