@@ -3,7 +3,8 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
-import HookForm from "./TestForm";
+//import HookForm from "./TestForm";
+import { useForm } from 'react-hook-form'
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -34,41 +35,136 @@ const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
 const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-100 text-primary-500 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
 
 const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`
+const SimpleContactUs = () => {
 
-export default () => {
+const {register, errors, handleSubmit} = useForm();
+const onSubmit = (data) => {
+  console.log(data)
+}
+//<form action="#">
+//export default () => {
+  //<form onSubmit={handleSubmit(onSubmit)}>
   return (
     <Container>
       <Content>
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
-            <h2>Organize an Event</h2>
-            <form action="#">
+            <h2>Envienos sus consulta</h2>
+            <form onSubmit={handleSubmit(onSubmit)}>
+            
+ 
               <TwoColumn>
                 <Column>
                   <InputContainer>
-                    <Label htmlFor="name-input">Your Name</Label>
-                    <Input id="name-input" type="text" name="name" placeholder="E.g. John Doe" />
+                    <Label htmlFor="nombre">Su nombre</Label>
+                 
+                    <Input id="nombre" type="text" 
+                    name="nombre" 
+                    placeholder="Juan Perez"
+                    ref={register({
+                        required: {
+                            value: true, 
+                            message: 'Nombre es requerido'
+                            }, 
+                        maxLength: {
+                            value: 25, 
+                            message: 'No más de 25 carácteres!'
+                            },
+                        minLength: {
+                            value: 2, 
+                            message: 'Mínimo 12 carácteres'
+                            }
+                    })}
+                  
+                 ></Input>
+                 
+                 
+                 
                   </InputContainer>
                   <InputContainer>
-                    <Label htmlFor="email-input">Your Email Address</Label>
-                    <Input id="email-input" type="email" name="email" placeholder="E.g. john@mail.com" />
+                    <Label htmlFor="email-input">Su EMAIL</Label>
+                    <Input id="email-input" 
+                    type="email" 
+                    name="email" 
+                    placeholder="E.g. juan@email.com" 
+                    ref={register({
+                      required: {
+                          value: true, 
+                          message: 'EMAIL es requerido'
+                          }, 
+                      maxLength: {
+                          value: 25, 
+                          message: 'No más de 15 carácteres!'
+                          },
+                      minLength: {
+                          value: 2, 
+                          message: 'Mínimo 2 carácteres'
+                          }
+                  })}
+                    
+                    />
+                  </InputContainer>
+                  <InputContainer>
+                  <Label>
+                    Teléfono
+                  </Label>
+                  <Input id="telefono"
+                  type="phone"
+                  name="telefono"
+                  placeholder="221 6701280" 
+                    ref={register({
+                      required: {
+                          value: false, 
+                          message: 'Teléfono no es requerido'
+                          }, 
+                      maxLength: {
+                          value: 15, 
+                          message: 'No más de 15 carácteres!'
+                          },
+                      minLength: {
+                          value: 6, 
+                          message: 'Mínimo 6 carácteres'
+                          }
+                  })}
+                  ></Input>
                   </InputContainer>
                 </Column>
                 <Column>
                   <InputContainer tw="flex-1">
-                    <Label htmlFor="name-input">Your Message</Label>
-                    <TextArea id="message-input" name="message" placeholder="E.g. Details about your event"/>
+                    <Label htmlFor="mensaje">Su mensaje</Label>
+                    <TextArea 
+                    id="mensaje" 
+                    name="message" 
+                    placeholder="Escriba su mensaje"
+                    
+                    ref={register({
+                      required: {
+                          value: true, 
+                          message: 'Mensaje es requerido'
+                          }, 
+                      maxLength: {
+                          value: 250, 
+                          message: 'No más de 15 carácteres!'
+                          },
+                      minLength: {
+                          value: 2, 
+                          message: 'Mínimo 2 carácteres'
+                          }
+                  })}
+                    />
                   </InputContainer>
                 </Column>
               </TwoColumn>
 
               <SubmitButton type="submit" value="Submit">Submit</SubmitButton>
+              <span>{errors.nombre && errors.nombre.message}</span>
             </form>
           </div>
           <SvgDotPattern1 />
         </FormContainer>
       </Content>
-      <HookForm/>
+      
     </Container>
   );
 };
+export default SimpleContactUs;
