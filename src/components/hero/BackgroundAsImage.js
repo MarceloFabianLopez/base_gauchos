@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 //import ImagenParrilla from "../../images/parrilla_gauchos1.png";
 //import LoginPage from "pages/Login.js";
-import { components } from "ComponentRenderer.js";
+//import { components } from "ComponentRenderer.js";
 
 //{innerPages['LoginPage']['url']}
 import Header, { NavLink, NavLinks, PrimaryLink, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";

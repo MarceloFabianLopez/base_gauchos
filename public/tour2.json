@@ -1,0 +1,934 @@
+{   
+    "default": {
+        "firstScene": "Ingreso",
+        "author": "VTOUR",
+        
+        "sceneFadeDuration": 2000,
+        "crossOrigin" : "anonymous",
+        "hfov": 180,
+        "pitch": 10,
+        "yaw": 0,
+        "autoLoad": true,
+        "hotSpotDebug" :false,
+        "autoRotate" :20,
+        "preview" : "../vtour/chamas/rec_small/1_calle.jpg",
+        "panorama": "../vtour/chamas/rec_small/1_calle.jpg",
+        "previewTitle": "Inmobiliaria M.Chamas",
+        "horizonPitch" : 10,
+        "horizonRoll" : 3,
+        "hotSpots": [
+            {
+                "pitch": -5.52,
+                "yaw": -2.12,
+                "type": "scene",
+                "text": "Entrada",
+                "sceneId": "Entrada",
+                "targetYaw": -20,
+                "targetPitch": 20
+            }
+        ]
+    },
+    
+    "scenes": {
+            "Entrada": {
+                "title": "Entrada",
+                "hfov": 120,
+                "pitch": 7,
+                "yaw": -22,
+                "type": "equirectangular",
+                
+                "panorama": "../vtour/chamas/rec_small/2_patio_delantero.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": 190,
+                        "type": "scene",
+                        "text": "Frente a puerta principal dentro de la casa",
+                        "sceneId": "Ingreso"
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": -45,
+                        "type": "scene",
+                        "text": "Palier de ingreso",
+                        "sceneId": "Palier"
+                    },
+                    {
+                        "pitch": 4,
+                        "yaw": 30,
+                        "type": "scene",
+                        "text": "Parque",
+                        "sceneId": "Parque_2",
+                        "targetYaw": -50,
+                        "targetPitch": 0,
+                        "targetHfov": 120
+                    }
+                ]
+            },
+
+            "Palier": {
+                "title": "Palier",
+                "hfov": 100,
+                "pitch": -13,
+                "yaw": 86,
+                "autoRotate" :-20,
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/3_palier_de_ingreso.jpg",
+                "hotSpots": [
+                    {
+                        
+                        "type": "scene",
+                        "text": "Living",
+                        "sceneId": "Living",
+                        
+                        "pitch": -15.2684740393759,
+                        "yaw": 87.53008660620388 
+                        
+                    },
+                    {
+                        "pitch": -18,
+                        "yaw": 155,
+                        "type": "scene",
+                        "text": "Entrada",
+                        "sceneId": "Entrada",
+                        "targetYaw": -73,
+                        "targetPitch": 9,
+                        "targetHorizonRoll":0,
+                        "targetHorizonPitch":0
+                    },
+                    {
+                        "pitch": -3,
+                        "yaw": -19,
+                        "type": "scene",
+                        "text": "Living 2",
+                        "sceneId": "Living2",
+                        "targetYaw": 77,
+                        "targetPitch":-22,
+                        "targetHorizonRoll":0,
+                        "targetHorizonPitch":0
+                    },
+                    {
+                        "pitch": -12,
+                        "yaw": -102,
+                        "type": "scene",
+                        "text": "Banio",
+                        "sceneId": "Banio",
+                        "targetYaw": -73,
+                        "targetPitch": 9,
+                        "targetHorizonRoll":0,
+                        "targetHorizonPitch":0
+                    },
+                    {
+                        "pitch": -9,
+                        "yaw": -140,
+                        "type": "scene",
+                        "text": "Escritorio",
+                        "sceneId": "Escritorio",
+                        "targetYaw": -73,
+                        "targetPitch": 9,
+                        "targetHorizonRoll":0,
+                        "targetHorizonPitch":0
+                    }
+                ]
+            },
+            "Living": {
+                "title": "Living",
+                "hfov": 120,
+                "pitch": -20,
+                "yaw": -167,
+                
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/4_living_1.jpg",
+                "hotSpots": [
+                   
+                    {
+                        "pitch": -6, 
+                        "yaw":165,
+                       
+                        "type": "scene",
+                        "text": "Escritorio",
+                        "sceneId": "Escritorio"
+                    
+                    },
+                    {
+                        "pitch": -21,
+                        "yaw": -168,
+                        "type": "scene",
+                        "text": "Palier de ingreso",
+                        "sceneId": "Palier"
+                    },
+                    {
+                        "pitch": -7,
+                        "yaw": 180,
+                        "type": "scene",
+                        "text": "Baño",
+                        "sceneId": "Banio"
+                    },
+                    {
+                        "pitch": -14,
+                        "yaw": -127,
+                        "type": "scene",
+                        "text": "Living 2",
+                        "sceneId": "Living2"
+                    }
+                ]
+            },
+            "Escritorio": {
+                "title": "Escritorio",
+                "hfov": 120,
+                "pitch": 0,
+                "yaw": -21,
+                "autoRotate" :-20,
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+      
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/5_escritorio.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -10,
+                        "yaw": 97,
+                        "type": "scene",
+                        "text": "Baño planta baja",
+                        "sceneId": "Banio"
+                    
+                        
+                    },
+                    {
+                        
+                        "type": "scene",
+                        "text": "Palier",
+                        "sceneId": "Palier",
+                        
+                        "pitch": -15.2684740393759,
+                        "yaw": 87.53008660620388 
+                        
+                    }
+                   
+                     
+                ]
+            },
+            "Banio": {
+                "title": "Baño planta baja",
+                "hfov": 120,
+                "pitch": -20,
+                "yaw": -145,
+                
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/5_bis_banio_planta_baja.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -8,
+                        "yaw": 50,
+                        "type": "scene",
+                        "text": "Palier",
+                        "sceneId": "Palier"
+                       
+                    },
+                    {
+                        "pitch": -16, 
+                        "yaw":60,
+                       
+                        "type": "scene",
+                        "text": "Escritorio",
+                        "sceneId": "Escritorio"
+                    
+                    }
+                ]
+            },
+        
+            "Living2": {
+                "title": "Living 2",
+                "hfov": 120,
+                "pitch": -20,
+                "yaw": 170,
+                "autoRotate" :-20,
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/6_living_2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -15,
+                        "yaw": -172,
+                        "type": "scene",
+                        "text": "Cocina",
+                        "sceneId": "Cocina",
+                        "targetYaw": -118,
+                        "targetPitch": -13,
+                        "targetHorizonRoll":0,
+                        "targetHorizonPitch":0
+                        
+                    },
+                    {
+                        "pitch": -1,
+                        "yaw": 141,
+                        "type": "scene",
+                        "text": "Planta alta",
+                        "sceneId": "Pasillo",
+                        "targetYaw": 179,
+                        "targetPitch": -7,
+                        "targetHorizonRoll":0,
+                        "targetHorizonPitch":0
+                        
+                    },
+                    {
+                        "pitch": -6.4,
+                        "yaw": 160,
+                        "type": "scene",
+                        "text": "Palier",
+                        "sceneId": "Palier",
+                        "targetYaw": 179,
+                        "targetPitch": -7,
+                        "targetHorizonRoll":0,
+                        "targetHorizonPitch":0
+                        
+                    }
+                ]
+            },
+            "Cocina": {
+                "title": "Cocina",
+                "hfov": 120,
+                "pitch": -15,
+                "yaw": -172,
+                
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/7_cocina.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": -70,
+                        "type": "scene",
+                        "text": "Living Comedor",
+                        "sceneId": "Living2",
+                        "targetYaw": 172,
+                        "targetPitch": -9,
+                        "targetHfov": 150
+                       
+                    },
+                    {
+                        "pitch": -20,
+                        "yaw": -171,
+                        "type": "scene",
+                        "text": "Parque",
+                        "sceneId": "Parque",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    }
+                    
+                ]
+            },
+            "Pasillo": {
+                "title": "Pasillo",
+                "hfov": 120,
+                "pitch": -5,
+                "yaw": -172,
+                "autoRotate" :-20,
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/8_pasillo_planta_alta.jpg",
+                "hotSpots": [
+                   
+                    {
+                        "pitch": -6,
+                        "yaw": 175,
+                        "type": "scene",
+                        "text": "Dormitorio 2",
+                        "sceneId": "Dormitorio_2",
+                        "targetYaw": 90,
+                        "targetPitch": -11,
+                        "targetHfov": 120
+                    },
+                    
+                    {
+                        "pitch": -3,
+                        "yaw": 20,
+                        "type": "scene",
+                        "text": "Dormitorio Principal",
+                        "sceneId": "Dormitorio",
+                        "targetYaw": 94,
+                        "targetPitch": -9,
+                        "targetHfov": 150
+                    },
+                    
+                    {
+                        "pitch": -5.4,
+                        "yaw": 154,
+                        "type": "scene",
+                        "text": "Pasillo dormitorios",
+                        "sceneId": "Pasillo_dormitorios",
+                        "targetYaw": -17,
+                        "targetPitch": -5,
+                        "targetHfov": 150
+                    },
+                    {
+                        "pitch": -15,
+                        "yaw": 70,
+                        "type": "scene",
+                        "text": "Planta baja",
+                        "sceneId": "Living2",
+                        "targetYaw": 160,
+                        "targetPitch": -9,
+                        "targetHfov": 120
+                    }
+                ]
+            },
+            "Dormitorio": {
+                "title": "Dormitorio",
+                "hfov": 120,
+                "pitch": -15,
+                "yaw": 108,
+                
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/9_dormitorio_principal.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": 33,
+                        "type": "scene",
+                        "text": "Dormitorio principal",
+                        "sceneId": "Dormitorio_principal_2"
+                       
+                    },
+                    {
+                        "pitch": -18,
+                        "yaw": 57,
+                        "type": "scene",
+                        "text": "Pasillo planta alta",
+                        "sceneId": "Pasillo",
+                        "targetYaw": -17,
+                        "targetPitch": -5,
+                        "targetHfov": 150
+                       
+                    }
+                ]
+            },
+            "Dormitorio_principal_2": {
+            "title": "Dormitorio principal",
+            "hfov": 120,
+            "pitch": -12,
+            "yaw": 141,
+            "autoRotate" :-20,
+            "horizonRoll" : 0,
+            "horizonPitch" : 0,
+            "type": "equirectangular",
+            "panorama": "../vtour/chamas/rec_small/9_bis_dormitorio_principal.jpg",
+            "hotSpots": [
+                
+                {
+                    "pitch": -15,
+                    "yaw": 5,
+                    "type": "scene",
+                    "text": "Vestidor dormitorio principal",
+                    "sceneId": "Vestidor",
+                    "targetYaw": 3.4,
+                    "targetPitch": -12,
+                    "targetHfov": 120
+                },
+                {
+                        "pitch": -15,
+                        "yaw": -21,
+                        "type": "scene",
+                        "text": "Baño dormitorio principal",
+                        "sceneId": "Banio_dormitorio_principal",
+                        "targetYaw": -110,
+                    "targetPitch": -2,
+                    "targetHfov": 120
+                    },
+                    {
+                        "pitch": -23,
+                        "yaw": 51,
+                        "type": "scene",
+                        "text": "Pasillo planta alta",
+                        "sceneId": "Pasillo"
+                       
+                    }
+            ]
+            },
+            "Vestidor": {
+                "title": "Vestidor",
+                "hfov": 100,
+                "pitch": -15,
+                "yaw": 5,
+                
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/10_vestidor.jpg",
+                "hotSpots": [
+                    
+                    {
+                        "pitch": -20,
+                        "yaw": 33,
+                        "type": "scene",
+                        "text": "Dormitorio principal",
+                        "sceneId": "Dormitorio_principal_2"
+                       
+                    } 
+                    
+                ]
+            },
+            "Banio_dormitorio_principal": {
+                "title": "Baño dormitorio principal",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                "autoRotate" :-20,
+
+                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/11_banio.jpg",
+                "hotSpots": [
+                   
+                   
+                    {
+                        "pitch": -18,
+                        "yaw": -89,
+                        "type": "scene",
+                        "text": "Dormitorio principal",
+                        "sceneId": "Dormitorio_principal_2"
+                       
+                    }
+                ]
+            },
+            "Dormitorio_2": {
+                "title": "Dormitorio 2",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/12_dormitorio_2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -15,
+                        "yaw": 31,
+                        "type": "scene",
+                        "text": "Pasillo dormitorios",
+                        "sceneId": "Pasillo_dormitorios",
+                        "targetYaw": 130,
+                        "targetPitch": -22,
+                        "targetHfov": 120
+                    }
+                    
+                ]
+            },
+            "Pasillo_dormitorios": {
+                "title": "Pasillo dormitorios",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                "autoRotate" :-20,
+
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/13_pasillo_dormitorios.jpg",
+                "hotSpots": [
+                   
+                    {
+                        "pitch": -9,
+                        "yaw": -22,
+                        "type": "scene",
+                        "text": "Dormitorio 3",
+                        "sceneId": "Dormitorio_3",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    },
+                    {
+                        "pitch": -20,
+                        "yaw": -165,
+                        "type": "scene",
+                        "text": "Dormitorio 4",
+                        "sceneId": "Dormitorio_4",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    },
+                    {
+                        "pitch": -20,
+                        "yaw": 112,
+                        "type": "scene",
+                        "text": "Baño 3",
+                        "sceneId": "Banio_3",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    },
+                    {
+                        "pitch": -14,
+                        "yaw": 2.2,
+                        "type": "scene",
+                        "text": "Pasillo",
+                        "sceneId": "Pasillo",
+                        "targetYaw": -183,
+                        "targetPitch": -10,
+                        "targetHfov": 150
+                    }
+                ]
+            },
+
+            "Dormitorio_3": {
+                "title": "Dormitorio 3",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/14_dormitorio_3.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": 175,
+                        "type": "scene",
+                        "text": "Baño dormitorio 3",
+                        "sceneId": "Banio_3",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    },
+                    {
+                        "pitch": -23,
+                        "yaw": -44,
+                        "type": "scene",
+                        "text": "Pasillo dormitorios",
+                        "sceneId": "Pasillo_dormitorios",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    }
+                ]
+            },
+            
+            
+            "Banio_3": {
+                "title": "Baño dormitorio 3",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                "autoRotate" :-20,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/recorrido/15_banio_3.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": -102,
+                        "type": "scene",
+                        "text": "Pasillo dormitorios",
+                        "sceneId": "Pasillo_dormitorios",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    }
+                   
+                ]
+            },
+           
+           
+            "Dormitorio_4": {
+                "title": "Dormitorio 4",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/rec_small/16_dormitorio_4.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": 116,
+                        "type": "scene",
+                        "text": "Pasillo dormitorios",
+                        "sceneId": "Pasillo_dormitorios",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    }
+                   
+                ]
+            },
+            "Parque": {
+                "title": "Parque",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                "autoRotate" :-20,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/recorrido/17_parque_1.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": 175,
+                        "type": "scene",
+                        "text": "Cocina",
+                        "sceneId": "Cocina"
+                        
+                    },
+                    {
+                        "pitch": -20,
+                        "yaw": 175,
+                        "type": "scene",
+                        "text": "Parque 2",
+                        "sceneId": "Parque_2",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    }
+                ]
+            },
+            "Parque_2": {
+                "title": "Parque 2",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/recorrido/18_parque_2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -4,
+                        "yaw": 141,
+                        "type": "scene",
+                        "text": "Parque 3",
+                        "sceneId": "Parque_3",
+                        "targetYaw": -72,
+                        "targetPitch": 0,
+                        "targetHfov": 120
+                    },
+                    {
+                        "pitch": -13,
+                        "yaw": 2,
+                        "type": "scene",
+                        "text": "Parque",
+                        "sceneId": "Parque",
+                        "targetYaw": -13,
+                        "targetPitch": -3,
+                        "targetHfov": 120
+                    },{
+                        "pitch": 4,
+                        "yaw": 46,
+                        "type": "scene",
+                        "text": "Cocina",
+                        "sceneId": "Cocina",
+                        "targetYaw": -13,
+                        "targetPitch": -3,
+                        "targetHfov": 120
+                    },
+                    {
+                        "pitch": -5,
+                        "yaw": -53,
+                        "type": "scene",
+                        "text": "Entrada",
+                        "sceneId": "Entrada",
+                        "targetYaw": -0.8,
+                        "targetPitch": 10,
+                        "targetHfov": 120
+                    }
+                ]
+            },
+            "Parque_3": {
+                "title": "Parque 3",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                "autoRotate" :-20,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/recorrido/19_parque_3.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 140,
+                        "type": "scene",
+                        "text": "Quincho",
+                        "sceneId": "Quincho_1",
+                        "targetYaw": 80,
+                        "targetPitch": -2,
+                        "targetHfov": 120
+                    },
+                    {
+                        "pitch": -0.6,
+                        "yaw": -68,
+                        "type": "scene",
+                        "text": "Parque 2",
+                        "sceneId": "Parque_2",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    }
+                    
+                ]
+            },
+            "Quincho_1": {
+                "title": "Quincho",
+                "hfov": 120,
+                "pitch": -2,
+                "yaw": -183,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/recorrido/20_quincho_1.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -6,
+                        "yaw": 39,
+                        "type": "scene",
+                        "text": "Quincho 2",
+                        "sceneId": "Quincho_2",
+                        "targetYaw": -126,
+                        "targetPitch": -8,
+                        "targetHfov": 120
+                    },
+                    {
+                        "pitch": -20,
+                        "yaw": 175,
+                        "type": "scene",
+                        "text": "Parque 3",
+                        "sceneId": "Parque_3",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    }
+                   
+                ]
+            },
+            "Quincho_2": {
+                "title": "Quincho 2",
+                "hfov": 120,
+                "pitch": -10,
+                "yaw": -120,
+                "autoRotate" :-20,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/recorrido/21_quincho_2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -5,
+                        "yaw": -174,
+                        "type": "scene",
+                        "text": "Quincho baño",
+                        "sceneId": "Quincho_banio",
+                        "targetYaw": 46,
+                        "targetPitch": -4,
+                        "targetHfov": 120
+                    }, 
+                    {
+                        "pitch": -15,
+                        "yaw": -174,
+                        "type": "scene",
+                        "text": "Quincho dormitorio",
+                        "sceneId": "Quincho_dormitorio",
+                        "targetYaw": 46,
+                        "targetPitch": -4,
+                        "targetHfov": 120
+                    },
+                    {
+                        "pitch": -6,
+                        "yaw": -101,
+                        "type": "scene",
+                        "text": "Parque frente quincho",
+                        "sceneId": "Quincho_1",
+                        "targetYaw": 166,
+                        "targetPitch": -10,
+                        "targetHfov": 120,
+                        "targetHorizonRoll":0,
+                        "targetHorizonPitch":0
+                    }
+                ]
+            },
+ 
+            "Quincho_banio": {
+                "title": "Quincho Baño",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                "autoRotate" :-20,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/recorrido/22_quincho_banio.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -10,
+                        "yaw": 87,
+                        "type": "scene",
+                        "text": "Quincho 2",
+                        "sceneId": "Quincho_2",
+                        "targetYaw": -169,
+                        "targetPitch": -13,
+                        "targetHfov": 120
+                    },
+                    {
+                        "pitch": -3,
+                        "yaw": 78,
+                        "type": "scene",
+                        "text": "Quincho dormitorio",
+                        "sceneId": "Quincho_dormitorio",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    }
+                ]
+            },
+ 
+            "Quincho_dormitorio": {
+                "title": "Quincho Dormitorio",
+                "hfov": 100,
+                "pitch": 10,
+                "yaw": -15,
+                                "horizonRoll" : 0,
+                "horizonPitch" : 0,
+                "type": "equirectangular",
+                "panorama": "../vtour/chamas/recorrido/23_quincho_dormitorio.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": 99,
+                        "type": "scene",
+                        "text": "Quincho 2",
+                        "sceneId": "Quincho_2",
+                        "targetYaw": -183,
+                        "targetPitch": -20,
+                        "targetHfov": 150
+                    }
+                    
+                ]
+            }
+        }
+
+
+
+
+
+}
+

@@ -44,7 +44,7 @@ const RecentPostsContainer = styled.div`
 `;
 const PostTextContainer = tw.div``
 
-export default () => {
+const fn = () => {
   // This setting is for animating the post background image on hover
   const postBackgroundSizeAnimation = {
     rest: {
@@ -167,3 +167,4 @@ export default () => {
     </Container>
   );
 };
+export default fn ;

@@ -36,12 +36,12 @@ export default () => {
         <Row>
           <LogoContainer>
             <LogoImg src={logo} />
-            <LogoText>GAUCHOS</LogoText>
+            <LogoText>VTOUR.COM.AR</LogoText>
           </LogoContainer>
           <LinksContainer>
-            <Link href="#">Inicio</Link>
-            <Link href="#">Gauchos</Link>
-            <Link href="#">Contactos</Link>
+            <Link href="/">Inicio</Link>
+            <Link href="/">VTOUR</Link>
+            <Link href="/">Contactos</Link>
             
           </LinksContainer>
           <SocialLinksContainer>
@@ -56,7 +56,7 @@ export default () => {
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright 2020, Gauchos Artesanías Argentinas.
+            &copy; Copyright 2021, VTOUR Recorridos virtuales y multimedia.
           </CopyrightText>
         </Row>
       </Content>

@@ -1,6 +1,6 @@
 import "tailwindcss/dist/base.css";
 import "styles/globalStyles.css";
-import React from "react";
+import React  from "react";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
 /*
@@ -101,16 +101,18 @@ import Principal from "demos/Principal.js";
 // import BlogIndexPage from "pages/BlogIndex.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
-
+//import MiWsp from 'components/propios/MiWsp';
 import ComponentRenderer from "ComponentRenderer.js";
 //import MainLandingPage from "MainLandingPage.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { DataProvider } from "context/DataContext";
 
 export default function App() {
 
   //    return <AnimationRevealPage disabled></AnimationRevealPage>;
    return (
+     <DataProvider>
      <Router>
        <Switch>
          <Route path="/components/:type/:subtype/:name">
@@ -120,10 +122,13 @@ export default function App() {
            <ComponentRenderer />
          </Route>
          <Route path="/">
-           <Principal />
+           
+     
+            <Principal /> 
          </Route>
        </Switch>
      </Router>
+     </DataProvider>
    );
  }
 

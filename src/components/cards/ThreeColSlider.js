@@ -9,10 +9,11 @@ import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin
 import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
+import MiFrame from "../propios/MiFrame";
+
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
-
 const HeadingWithControl = tw.div`flex flex-col items-center sm:items-stretch sm:flex-row justify-between`;
 const Heading = tw(SectionHeading)``;
 const Controls = tw.div`flex items-center`;
@@ -35,10 +36,10 @@ const CardSlider = styled(Slider)`
   }
 `;
 const Card = tw.div`h-full flex! flex-col sm:border max-w-sm sm:rounded-tl-4xl sm:rounded-br-5xl relative focus:outline-none`;
-const CardImage = styled.div(props => [
-  `background-image: url("${props.imageSrc}");`,
-  tw`w-full h-56 sm:h-64 bg-cover bg-center rounded sm:rounded-none sm:rounded-tl-4xl`
-]);
+//const CardImage = styled.div(props => [
+//  `background-image: url("${props.imageSrc}");`,
+//  tw`w-full h-56 sm:h-64 bg-cover bg-center rounded sm:rounded-none sm:rounded-tl-4xl`
+//]);
 
 const TextInfo = tw.div`py-6 sm:px-10 sm:py-6`;
 const TitleReviewContainer = tw.div`flex flex-col sm:flex-row sm:justify-between sm:items-center`;
@@ -89,30 +90,36 @@ export default () => {
   };
 
   /* Change this according to your needs */
+ // const misrc1 = "../standalone/pannellum.htm?config=../tour1.json";
+//const misrc2 = "../standalone/pannellum.htm?config=../tour2.json";
+//const misrc3 = "../standalone/pannellum.htm?config=../tour3.json";
   const cards = [
     {
-      imageSrc: "/parrilla/parrilla_abierta.png",
-      title: "Parrilla cómoda en hierro redondo",
-      description: "Puede asar 10kg de carne, o 5 polllos o un lechón. Puede asar para 12 comensales",
-      locationText: "Parrilla 70x45cm con brasero",
-      pricingText: "Refractarios",
+      imageSrc: "/vtour/hotspot.png",
+      title: "Recorridos virtuales 360",
+      description: "Infaltable en toda campaña de ventas, mostrar con una experiencia inmersiva",
+      locationText: "Recorrido con capacidad de usar gafas de realidad virtual",
+      pricingText: "Consulte",
       rating: "4.8",
+       misrc : "../standalone/pannellum.htm?config=../tour1.json",
     },
     {
-      imageSrc: "/parrilla/bondiola_ahumada.jpg",
-      title: "Ahumado de carnes y pescados",
-      description: "Deliciosos ahumados con solo agregar astillas de maderas a las brasas.",
-      locationText: "Ahumador",
-      pricingText: "Fácil de usar",
+      imageSrc: "/vtour/aereos2.jpeg",
+      title: "Fotografía aerea",
+      description: "Tomas de calidad cinematográfica, realizadas en calidad 4k",
+      locationText: "Tomas àereas",
+      pricingText: "4k aereo",
       rating: 4.9,
+      misrc : "../standalone/pannellum.htm?config=../tour2.json",
     },
     {
-      imageSrc: "/parrilla/carnes_ahumadas.jpg",
-      title: "Horno con termómetro",
-      description: "Cuando su fuego está listo, baje la tapa y comience a hornear controlando la temperatura.",
-      locationText: "Pizzas,panes,carnes,pavitos, lechones",
-      pricingText: "Un complemento imprecsindible",
+      imageSrc: "/vtour/contenidos.jpg",
+      title: "Disponga de sus contenidos",
+      description: "Exponga facilmente sus contenidos en todos sus medios fácilmente.",
+      locationText: "Use sus contenidos en webs, redes sociales y en sus dispositivos",
+      pricingText: "Sus imágenes y videos listos para ser mostrados",
       rating: "5.0",
+      misrc : "../standalone/pannellum.htm?config=../tour3.json",
     },
     
   ]
@@ -121,16 +128,18 @@ export default () => {
     <Container>
       <Content>
         <HeadingWithControl>
-          <Heading>Tres funciones en una sola parrilla</Heading>
+          <Heading>Alternativas </Heading>
           <Controls>
             <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
             <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>
           </Controls>
         </HeadingWithControl>
         <CardSlider ref={setSliderRef} {...sliderSettings}>
+        
           {cards.map((card, index) => (
             <Card key={index}>
-              <CardImage imageSrc={card.imageSrc} />
+              <MiFrame source= {card.misrc}/>
+
               <TextInfo>
                 <TitleReviewContainer>
                   <Title>{card.title}</Title>
@@ -156,6 +165,8 @@ export default () => {
                 <Description>{card.description}</Description>
               </TextInfo>
               <PrimaryButton>Consultar</PrimaryButton>
+              
+
             </Card>
           ))}
         </CardSlider>
@@ -163,3 +174,4 @@ export default () => {
     </Container>
   );
 };
+//              {/* <CardImage imageSrc={card.imageSrc} /> */}

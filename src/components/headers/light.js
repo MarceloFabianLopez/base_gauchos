@@ -3,17 +3,19 @@ import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-
+//import MiWsp from 'components/propios/MiWsp';
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
-import logo from "../../images/logo.svg";
+//import logo from "../../images/logo1.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import ContainerBanner from 'components/propios/ContainerBanner';
 
 const Header = tw.header`
-  flex justify-between items-center
-  max-w-screen-xl mx-auto
+  flex justify-between items-center 
+   max-w-full  
 `;
+//const ColorBanner=tw(ContainerBanner)`bg-green-500`;
 
 export const NavLinks = tw.div`inline-block`;
 
@@ -21,9 +23,9 @@ export const NavLinks = tw.div`inline-block`;
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
 export const NavLink = tw.a`
-  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
-  font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+  text-xl my-2 lg:text-sm lg:mx-6 lg:my-0 
+  font-semibold tracking-wide transition  duration-300 
+  pb-2 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `;
 
 export const PrimaryLink = tw(NavLink)`
@@ -37,25 +39,25 @@ export const LogoLink = styled(NavLink)`
   ${tw`flex items-center font-black border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`w-32
-     mr-3`}
+    ${tw`w-1/5 mr-3 py-0 lg:w-32  px-2 py-2 mr-20`}
   }
 `;
 
-export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
+export const MobileNavLinksContainer = tw.nav`z-40 flex flex-1 items-center justify-between px-5`;
 export const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `;
 export const MobileNavLinks = motion.custom(styled.div`
-  ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
+  ${tw`lg:hidden  fixed top-0 inset-x-0  my-6 p-8  text-center rounded-lg text-gray-900 bg-white`}
   ${NavLinks} {
     ${tw`flex flex-col items-center`}
   }
 `);
 
 export const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center
-`;
+  hidden lg:flex flex-1 justify-between items-center 
+ 
+  `;
 
 export default ({ roundedHeaderButton = false, logoLink, links, className, collapseBreakpointClass = "lg" }) => {
   /*
@@ -71,23 +73,12 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
    * changing the defaultLinks variable below below.
    * If you manipulate links here, all the styling on the links is already done for you. If you pass links yourself though, you are responsible for styling the links or use the helper styled components that are defined here (NavLink)
    */
- /*  const defaultLinks = [
-    <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`}href="/#">Sign Up</PrimaryLink>
-    </NavLinks>
-  ]; */
+
 
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">Galería</NavLink>
-      <NavLink href="/#">Gauchos Artesania Argentina</NavLink>
+      <NavLink href="/#">Trabajos realizados</NavLink>
+      <NavLink href="/#">VTOUR MISION </NavLink>
       <NavLink href="/#" tw="lg:ml-12!">
         Envíos
       </NavLink>
@@ -96,8 +87,11 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
   ];
 
 
-
-
+ /*  const ContainerBanner = styled.div`
+  ${tw` hidden lg:flex -my-10   -mb-8 bg-left  w-full bg-cover bg-black bg-opacity-75 px-5 `}
+  
+`; */
+// background-image: url("images/aereos.jpg") ;
 
 
 
@@ -107,30 +101,37 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLogoLink = (
     <LogoLink href="/">
-      <img src={logo} alt="logo" />
+      <img src="../images/logo.png" alt="logo" />
       
     </LogoLink>
   );
 
   logoLink = logoLink || defaultLogoLink;
   links = links || defaultLinks;
-
+//const colorPersonalizado="bg-black";
   return (
     <Header className={className || "header-light"}>
-      <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
+      <ContainerBanner>
+         <DesktopNavLinks css={collapseBreakpointCss.desktopNavLinks}>
         {logoLink}
         {links}
-      </DesktopNavLinks>
+      </DesktopNavLinks> 
+      </ContainerBanner>
+      
 
+  
+     
       <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
         {logoLink}
         <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
           {links}
-        </MobileNavLinks>
+         </MobileNavLinks>
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
           {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
-        </NavToggle>
-      </MobileNavLinksContainer>
+        </NavToggle> 
+      </MobileNavLinksContainer> 
+   
+
     </Header>
   );
 };
@@ -145,21 +146,25 @@ const collapseBreakPointCssMap = {
   sm: {
     mobileNavLinks: tw`sm:flex`,
     desktopNavLinks: tw`sm:flex`,
-    mobileNavLinksContainer: tw`sm:hidden`
+    mobileNavLinksContainer: tw`sm:hidden`,
+    ContainerBanner :tw`sm:hidden`
   },
   md: {
     mobileNavLinks: tw`md:hidden`,
     desktopNavLinks: tw`md:flex`,
-    mobileNavLinksContainer: tw`md:hidden`
+    mobileNavLinksContainer: tw`md:hidden`,
+    ContainerBanner :tw`md:flex`
   },
   lg: {
     mobileNavLinks: tw`lg:hidden`,
     desktopNavLinks: tw`lg:flex`,
-    mobileNavLinksContainer: tw`lg:hidden`
+    mobileNavLinksContainer: tw`lg:hidden`,
+    ContainerBanner :tw`lg:flex`
   },
   xl: {
     mobileNavLinks: tw`lg:hidden`,
     desktopNavLinks: tw`lg:flex`,
-    mobileNavLinksContainer: tw`lg:hidden`
+    mobileNavLinksContainer: tw`lg:hidden`,
+    ContainerBanner :tw`lg:flex`
   }
 };
