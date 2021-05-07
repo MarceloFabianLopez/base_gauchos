@@ -29,7 +29,7 @@ const DecoratorBlob2 = tw(
   SvgDecoratorBlob2
 )`-z-10 absolute top-0 left-0 w-48 h-48 transform -translate-x-32 translate-y-full opacity-25`;
 
-export default () => {
+const ThreeColSimpleWithImage  = () => {
   const blogPosts = [
     {
       imageSrc:
@@ -78,3 +78,4 @@ export default () => {
     </Container>
   );
 };
+export default ThreeColSimpleWithImage;

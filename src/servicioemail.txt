@@ -1,0 +1,45 @@
+Manual setup
+
+Mail server username
+info@vtour.com.ar
+
+Incoming mail server
+vtour.com.ar
+
+Outgoing mail server
+vtour.com.ar
+(server requires authentication)
+
+Supported incoming mail protocols
+POP3, POP3 over SSL/TLS, IMAP, IMAP over SSL/TLS
+
+Supported outgoing mail protocols
+SMTP
+
+To connect via POP3 securely over SSL/TLS, use port 995.
+
+To connect via IMAP securely over SSL/TLS, use port 993.
+
+To send messages via SMTP securely, use port 465.
+
+pass Peron31416_
+
+
+emailjs
+
+Service ID
+service_anxnkre
+
+npm install emailjs-com
+Then the module or the required method can be imported.
+
+import{ init } from 'emailjs-com';
+init("user_kfmun1gr4Vx8fC0gf1XpR");
+For more information, please check the
+
+
+API keys
+User ID
+user_kfmun1gr4Vx8fC0gf1XpR
+Access Token
+bde0d8a0e83269a9086ce577f0fc211d

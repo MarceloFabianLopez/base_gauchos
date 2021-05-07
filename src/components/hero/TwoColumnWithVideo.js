@@ -64,9 +64,11 @@ const StyledModal = styled(ReactModalAdapter)`
 const CloseModalButton = tw.button`absolute top-0 right-0 mt-8 mr-8 hocus:text-primary-500`;
 
 //const url= "/components/Features/ThreeColWithSideImage";
-const caracteristicas = components['blocks']['Features']['elements']['ThreeColWithSideImage'];
+/* const caracteristicas = components['blocks']['Features']['elements']['ThreeColWithSideImage'];
 const contactos =components['blocks']['Form']['elements']['SimpleContactUs'];
-//console.log(components['blocks']['Form']);
+/ */
+
+console.log(components['blocks']['Form']);
 //console.log(components['blocks']);
 //{innerPages['LoginPage']['url']}>
 // <NavLink href={innerPages['LoginPage']['url']}>
@@ -81,7 +83,7 @@ export default ({
   primaryButtonUrl="#",
   watchVideoButtonText="Watch Video",
   watchVideoYoutubeUrl="https://www.youtube.com/embed/_GuOjXYl5ew",
-  imageSrc="/parrilla/parrilla_abierta.png",
+  imageSrc="../../vtour/fpv.jpeg",
   imageCss=null,
   imageDecoratorBlob = false,
 }) => {
@@ -90,8 +92,8 @@ export default ({
   const toggleModal = () => setModalIsOpen(!modalIsOpen);
   const MisLinks = [
     <NavLinks key={1}>
-      <NavLink href={caracteristicas}>Ver más</NavLink>
-      <NavLink href={contactos}>Política de Envios</NavLink>
+      <NavLink href={caracteristicas}>Mas información</NavLink>
+      <NavLink href={contactos}>Comunìquese con nosotros</NavLink>
       
       <PrimaryLink href={contactos}>Pactar una entrevista</PrimaryLink>
     </NavLinks>
@@ -133,7 +135,7 @@ export default ({
           isOpen={modalIsOpen}
           onRequestClose={toggleModal}
           shouldCloseOnOverlayClick={true}
-        >import Ficha from "components/features/ThreeColWithSideImage";
+        >
           <CloseModalButton onClick={toggleModal}>
             <CloseIcon tw="w-6 h-6" />
           </CloseModalButton>

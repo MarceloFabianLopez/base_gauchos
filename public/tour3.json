@@ -1,0 +1,62 @@
+{   
+    "default": {
+        "firstScene": "catedral",
+        "author": "VTOUR",
+        "sceneFadeDuration": 1000,
+        "crossOrigin" : "anonymous",
+        "autoLoad": false,
+        "preview" : "../images/cuatro.jpeg",
+        "panorama": "../images/cuatro.jpeg",
+        "hotSpots": [
+            {
+                "pitch": -0.6,
+                "yaw": 37.1,
+                "type": "scene",
+                "text": "Algun lugar",
+                "sceneId": "circle",
+                "targetYaw": -23,
+                "targetPitch": 2
+            }
+        ]
+    },
+    
+    "scenes": {
+        "circle": {
+            "title": "Mason Circle",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "../images/uno.jpeg",
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 132.9,
+                    "type": "scene",
+                    "text": "Spring House or Dairy",
+                    "sceneId": "house"
+                }
+            ]
+        },
+
+        "house": {
+            "title": "Spring House or Dairy",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "../images/bma-0.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Mason Circle",
+                    "sceneId": "circle",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+    }
+}
+
