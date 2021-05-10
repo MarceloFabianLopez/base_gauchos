@@ -12,7 +12,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 //import Hero from "components/hero/TwoColumnWithVideo.js";
 //import Hero2 from "components/hero/BackgroundAsImage.js";
 //import Hero1 from "components/hero/BackgroundAsImageWithCenteredContent.js";
-import Hero0 from "components/hero/BackgroundAsImageWithCenteredContent__.js";
+import Hero0 from "components/hero/BackgroundAsImageWithCenteredContent.js";
 
 import Features from "components/features/ThreeColSimple.js";
 //import MainFeature from "components/features/TwoColWithButton.js";
@@ -36,16 +36,15 @@ export default () => {
   //const Description = tw.span`inline-block mt-8`;
   //const imageCss = tw`rounded-6xl`;
   return (
-    <>
-    <AnimationRevealPage>
-     
-    
+   
+    <AnimationRevealPage> 
+   
        <Hero0/>
-      {/*  <PortfolioTwoCardsWithImage/> */}
+      
       <Features/> 
       <Footer />
       
-    </AnimationRevealPage>
-    </>
+    </AnimationRevealPage> 
+    
   );
 }

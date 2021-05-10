@@ -285,11 +285,11 @@ const src = source;
                                 { IsRecorrido &&
                               
                                     <div>
-                                        <iframe id="mipannellum" title="recorrido"  width="100%" allowFullScreen src={src}/>
+                                        <iframe id="mipannellum" title="recorrido"  width="90%" allowFullScreen src={src}/>
                                         <Botonera/>
                                     </div>
                                   }
-                                {IsImagen && <img src={source?source:sourceInicial} width="100%" alt={ImageAlt} />}
+                                {IsImagen && <img src={source?source:sourceInicial} width="90%" alt={ImageAlt} />}
                         
                         </CardHeader>
                         {!IsPlano && <>
