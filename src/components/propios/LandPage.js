@@ -16,8 +16,8 @@ import FrameBase from "../propios/FrameBase";
 import SimpleContactUs from "components/forms/SimpleContactUs.js";
 
 import ReactMarkdown from 'react-markdown';
-//import rehypeRaw from 'rehype-raw';
-//import gfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
+import gfm from 'remark-gfm';
 //import MiMarkDown from "../propios/MiMarkDown"
 import FrameGaleria from '../propios/FrameGaleria';
 //import MiFrame from "./MiFrame.js";
@@ -25,7 +25,7 @@ import FrameGaleria from '../propios/FrameGaleria';
 //import  {DataProvider} from '../../context/DataContext';
 import { DataContext } from 'context/DataContext';
 //import Datos from "./Datos.js";
-
+//const gfm = require('remark-gfm');
 const logoLink = (
   <LogoLink href="/paginaprincipal">
     <img src="../../images/logo.png" width="100%" alt="logo1" />
@@ -130,12 +130,43 @@ const TextoDescripcion = `
 - Casa construida en 1 sola planta con techo de losa y cielo raso de yeso con pisos de madera maciza en todos los ambientes.
 -
 - Cuenta con 3 dormitorios con puerta ventana al parque, 1 de ellos en suite con vestidor y los secundarios con placard de piso a techo en madera, además cuenta con 2 baños completos.
+### A estrenar
 -
-- Pasillo ancho con muebles y paredes revestidas en madera de piso a techo, muebles a medida en piso a techo en todos los ambientes.
+- Pasillo **_ancho_** con muebles y paredes revestidas en madera de piso a techo, muebles a medida en piso a techo en todos los ambientes.
 - Calefacción por Losa radiante, AA frío calor en todas las habitaciones, AA frío calor central en living comedor.
 - **Living-comedor** con estufa hogar a leña con extractor eléctrico de humo, en cocina parrilla con extractor eléctricode humo integrada a la cocina remodelada a nuevo en el año 2020.Parrilla y comedor con apertura total de ventanal de 3,5 metros a la galería semicubierta.
-- **_Pisos de Madera Maciza_**.`
+- **_Pisos de Madera Maciza_**.
+| Feature    | Support              |
+| ---------: | :------------------- |
+| CommonMark | 100%                 |
+| GFM        | 100% xxx             |
 
+`;
+
+/* ## GitHub flavored markdown (GFM)
+
+For GFM, you can *also* use a plugin:
+[`remark-gfm`](https://github.com/remarkjs/react-markdown#use).
+It adds support for GitHub-specific extensions to the language:
+tables, strikethrough, tasklists, and literal URLs.
+
+These features **do not work by default**.
+👆 Use the toggle above to add the plugin.
+
+| Feature    | Support              |
+| ---------: | :------------------- |
+| CommonMark | 100%                 |
+| GFM        | 100% w/ `remark-gfm` |
+
+~~strikethrough~~
+
+* [ ] task list
+* [x] checked item
+
+https://example.com
+
+## HTML in markdown
+_`; */
 
 export default () => {
 
@@ -154,6 +185,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
       });
   }
  const {escena} = useContext (DataContext);
+// const markdown = `Just a link: https://reactjs.com.`
   return (<>
             <Container>
                  
@@ -182,6 +214,14 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
               
                             <Descripcion>  {<ReactMarkdown  source={TextoDescripcion} />}
                           {/*   <Datos/> */}
+                         
+                                            
+                          <ReactMarkdown remarkPlugins={[gfm]} source={TextoDescripcion}/>
+                          <ReactMarkdown remarkPlugins={[[gfm, {singleTilde: false}]]}>
+    This ~is not~ strikethrough, but ~~this is~~!
+  </ReactMarkdown>
+                               
+
                             </Descripcion>
                             </ColumnAncha>
                             <ColumnAngosta>

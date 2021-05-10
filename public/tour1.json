@@ -5,8 +5,8 @@
         "sceneFadeDuration": 1000,
         "crossOrigin" : "anonymous",
         "autoLoad": true,
-        "preview" : "../images/uno.jpeg",
-        "panorama": "../images/distribuidor.jpg",
+        "preview" : "../vtour/chamas/depto_55/0_portada_edificio.jpg",
+        "panorama": "../vtour/chamas/depto_55/0_portada_edificio.jpg",
         "hotSpotDebug" : false,
         "autoRotate":"3",
         "hotSpots": [
@@ -38,7 +38,7 @@
             "pitch": -3,
             "yaw": 117,
             "type": "equirectangular",
-            "panorama": "../images/uno.jpeg",
+            "panorama": "../vtour/chamas/depto_55/1_cochera.jpg",
             "hotSpots": [
                 {
                     "pitch": -2.1,

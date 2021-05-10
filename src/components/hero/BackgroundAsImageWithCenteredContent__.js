@@ -31,18 +31,18 @@ const StyledHeader = styled(Header)`
 
 //const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
-  ${tw`relative -mx-8 -mb-8 -my-10  bg-top  bg-cover
+  ${tw`relative -z-50 -mx-8 -mb-8 -my-10  bg-top  bg-cover
     `}
   background-image: url("images/aereos2.jpg");
 `;
 
-const OpacityOverlay = tw.div`z-0 absolute inset-0  h-full bg-black bg-opacity-75  `;
+const OpacityOverlay = tw.div`-z-10 absolute inset-0  h-full bg-black bg-opacity-50  `;
 
 const HeroContainer = tw.div`z-20   sm:px-0 mx-auto  flex flex-col`;
 const Content = tw.div`flex flex-1 flex-col justify-center items-center`;
 
 const Heading = styled.h1`
-  ${tw`text-xl text-center mt-20 md:text-4xl  lg:text-4xl xl:text-6xl font-black text-gray-100 leading-snug -mt-24 sm:p-20 md:p-24`}
+  ${tw`text-xl text-center  md:text-4xl  lg:text-4xl xl:text-6xl font-black text-gray-100 leading-snug -mt-24 sm:p-20 md:p-24`}
   span {
     ${tw`inline-block mt-2`}
   }
@@ -50,7 +50,9 @@ const Heading = styled.h1`
 const SubHeading = tw.div`sm:text-sm text-purple-600 md:text-4xl`;
 const GrillaPortada = tw.div`mx-auto   grid lg:grid-cols-3 gap-5 p-5 sm:grid-cols-1  `;
 const CajaContenido  = tw.div`bg-white mx-auto xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs `;
-
+const BannerFondo=tw.div` bg-green-800 bg-left-top bg-auto bg-repeat-x `;
+//const =tw.div` `;
+const Tope=styled.div`-mt-64 `;
 const Llamador =tw.div`relative flex flex-1 bg-primary-500 w-full p-2 mx-auto text-white font-extrabold items-end`;
 
 const misrc = "../standalone/pannellum.htm?config=../tour1.json";
@@ -77,21 +79,25 @@ const videoParametros = {
 export default ({
   
   //caracteristicas = components['blocks']['Features']['elements']['ThreeColWithSideImage']['url'],
-  caracteristicas = components['propios']['LandPage']['url'],
+ }) => {
 
-   clientes = components['propios']['ClientesPage']['url'],  //hacerla con mibanner
+const caracteristicas = components['propios']['LandPage']['url'];
+
+const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mibanner
 
 
 
- contactos =components['blocks']['Form']['elements']['SimpleContactUs']['url'],
-}) => {
+const contactos =components['blocks']['Form']['elements']['SimpleContactUs']['url'];
+
+
+
   const MisLinks = [
     
     <NavLinks key={1}>
-     {/*  <NavLink href={caracteristicas}>
-      
+       <NavLink href={caracteristicas}>
+      Ejemplos
      
-      </NavLink> */}
+      </NavLink> 
        <NavLink href={clientes}>
       Área Clientes
      
@@ -104,13 +110,13 @@ export default ({
 
   return (  
       <> 
+           
+        <Container>{/*  <OpacityOverlay/>  */}
           
-        <Container>
-           <OpacityOverlay/>
           <HeroContainer>   <StyledHeader links={MisLinks} />  
              <Content>
-               <Llamador>Vea ejemplos</Llamador>
-               <Heading>
+             <BannerFondo> <Llamador>Vea ejemplos</Llamador></BannerFondo>
+               <Heading> 
                    Recorridos virtuales<br/>
                    Video 360º y aéreos
                    <SubHeading>vtour.com.ar</SubHeading>
