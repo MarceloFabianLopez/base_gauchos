@@ -33,7 +33,7 @@ bg-primary-500 text-gray-100 hocus:bg-primary-700
 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
 
  const StyledHeader = styled(Header)`
-  ${tw`pt-8 max-w-none w-full`}
+  ${tw`pt-6 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     ${tw`text-gray-200 hover:border-gray-300 hover:text-gray-300 `}
   }
@@ -57,12 +57,12 @@ const Heading = styled.h1`
 const SubHeading = tw.div`sm:text-sm text-purple-600 md:text-4xl`;
 const GrillaPortada = tw.div`grid lg:grid-cols-3 gap-5 p-0 sm:grid-cols-1 pt-8  `;
 const CajaContenido  = tw.div`bg-white mx-auto xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs sm:max-w-screen-sm `;
-const BannerFondo=tw.div` bg-green-800 bg-left-top bg-auto bg-repeat-x `;
+const BannerFondo=tw.div` lg:hidden bg-left-top bg-auto bg-repeat-x  text-white`;
 
 const Tope=styled.div`-mt-64 `;
 const Llamador =tw.div`relative flex flex-1 bg-primary-500 w-full p-2 mx-auto text-white font-extrabold items-end`;
-
-const misrc = "../standalone/pannellum.htm?config=../tour1.json";
+const MenuEncabezado =tw.span`bg-primary-500  p-4 text-white font-extrabold `;
+const misrc = "../standalone/pannellum.htm?config=../tour2.json";
 const misrcvideo = "../video/tres.mp4";
 const misrcImagen="../../images/repu2.png";
 const videoParametros = {
@@ -95,14 +95,16 @@ export default () => {
   
   const MisLinks = [
    <NavLinks  key={1}>
-       <NavLink href={caracteristicas}>
-      Ejemplos
-     </NavLink>
+      
      
-             <NavLink href={clientes}>
+            {/*  <NavLink href={clientes}>
       Área Clientes
      
-      </NavLink>
+      </NavLink> */}
+      <PrimaryLink href={caracteristicas}>Ejemplos de uso</PrimaryLink>
+      {/*  <NavLink href={caracteristicas}>
+      Vea ejemplos!!!
+     </NavLink> */} 
       <PrimaryLink href={contactos}>Contacto</PrimaryLink>
      
     </NavLinks> ];
@@ -114,16 +116,18 @@ export default () => {
           <HeroContainer>  
             <StyledHeader links={MisLinks} /> 
              <Content> 
-              <BannerFondo> <Llamador>Vea ejemplos</Llamador></BannerFondo> 
-               <Heading> 
+             
+               <Heading>
                    Recorridos virtuales<br/>
                    Video 360º y aéreos
                    <SubHeading>vtour.com.ar</SubHeading>
-               </Heading> 
+               </Heading>  <BannerFondo > <a href="/components/propios/LandPage">Ejemplos </a>
+      
+     </BannerFondo> 
                  <GrillaPortada>
                   
                   <CajaContenido>
-                     <FrameBase source= {misrc}
+                     <FrameBase altura={window.innerWidth>900?350:250} source= {misrc}
                   Titulo="Recorrido 360º"
                   Bajada="La mejor forma de mostrar"
                   SubTitulo="Resalte lo importante"
@@ -133,15 +137,15 @@ export default () => {
                  </CajaContenido>
                  
                  
-                 <CajaContenido> <FrameBase source= {misrcvideo}
+                 <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcvideo}
                   Titulo="Video 360º"
                   Bajada="Experiencia inmersiva"
-                  SubTitulo="Es como estar ahí..."
+                  SubTitulo="Video 360º "
                   TextoGrisMayuscula="Herramienta excelente para promocionar eventos y productos"
                   videoJsOptions ={ videoParametros}
                   IsVideo='true'/> 
                  </CajaContenido>
-                  <CajaContenido> <FrameBase source= {misrcImagen}
+                  <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcImagen}
                   Titulo="Vistas aéreas"
                   Bajada="La otra mirada"
                   SubTitulo="Imprescindible"

@@ -10,7 +10,7 @@
         "yaw": 0,
         "autoLoad": true,
         "hotSpotDebug" :false,
-        "autoRotate" :20,
+        "autoRotate" :5,
         "preview" : "../vtour/chamas/rec_small/1_calle.jpg",
         "panorama": "../vtour/chamas/rec_small/1_calle.jpg",
         "previewTitle": "Inmobiliaria M.Chamas",
@@ -116,8 +116,8 @@
                         "type": "scene",
                         "text": "Banio",
                         "sceneId": "Banio",
-                        "targetYaw": -73,
-                        "targetPitch": 9,
+                        "targetYaw": 140,
+                        "targetPitch": -20,
                         "targetHorizonRoll":0,
                         "targetHorizonPitch":0
                     },
@@ -218,8 +218,8 @@
                 "title": "Baño planta baja",
                 "hfov": 120,
                 "pitch": -20,
-                "yaw": -145,
-                
+                "yaw": 140,
+                "setPitchBounds": [0,90],
                 "horizonRoll" : 0,
                 "horizonPitch" : 0,
                 
@@ -632,7 +632,7 @@
                                 "horizonRoll" : 0,
                 "horizonPitch" : 0,
                 "type": "equirectangular",
-                "panorama": "../vtour/chamas/recorrido/15_banio_3.jpg",
+                "panorama": "../vtour/chamas/rec_small/15_banio_3.jpg",
                 "hotSpots": [
                     {
                         "pitch": -20,
@@ -681,7 +681,7 @@
                                 "horizonRoll" : 0,
                 "horizonPitch" : 0,
                 "type": "equirectangular",
-                "panorama": "../vtour/chamas/recorrido/17_parque_1.jpg",
+                "panorama": "../vtour/chamas/rec_small/17_parque_1.jpg",
                 "hotSpots": [
                     {
                         "pitch": -20,
@@ -711,7 +711,7 @@
                                 "horizonRoll" : 0,
                 "horizonPitch" : 0,
                 "type": "equirectangular",
-                "panorama": "../vtour/chamas/recorrido/18_parque_2.jpg",
+                "panorama": "../vtour/chamas/rec_small/18_parque_2.jpg",
                 "hotSpots": [
                     {
                         "pitch": -4,
@@ -763,7 +763,7 @@
                                 "horizonRoll" : 0,
                 "horizonPitch" : 0,
                 "type": "equirectangular",
-                "panorama": "../vtour/chamas/recorrido/19_parque_3.jpg",
+                "panorama": "../vtour/chamas/rec_small/19_parque_3.jpg",
                 "hotSpots": [
                     {
                         "pitch": 0,
@@ -796,7 +796,7 @@
                                 "horizonRoll" : 0,
                 "horizonPitch" : 0,
                 "type": "equirectangular",
-                "panorama": "../vtour/chamas/recorrido/20_quincho_1.jpg",
+                "panorama": "../vtour/chamas/rec_small/20_quincho_1.jpg",
                 "hotSpots": [
                     {
                         "pitch": -6,
@@ -830,7 +830,7 @@
                                 "horizonRoll" : 0,
                 "horizonPitch" : 0,
                 "type": "equirectangular",
-                "panorama": "../vtour/chamas/recorrido/21_quincho_2.jpg",
+                "panorama": "../vtour/chamas/rec_small/21_quincho_2.jpg",
                 "hotSpots": [
                     {
                         "pitch": -5,
@@ -876,7 +876,7 @@
                                 "horizonRoll" : 0,
                 "horizonPitch" : 0,
                 "type": "equirectangular",
-                "panorama": "../vtour/chamas/recorrido/22_quincho_banio.jpg",
+                "panorama": "../vtour/chamas/rec_small/22_quincho_banio.jpg",
                 "hotSpots": [
                     {
                         "pitch": -10,
@@ -909,7 +909,7 @@
                                 "horizonRoll" : 0,
                 "horizonPitch" : 0,
                 "type": "equirectangular",
-                "panorama": "../vtour/chamas/recorrido/23_quincho_dormitorio.jpg",
+                "panorama": "../vtour/chamas/rec_small/23_quincho_dormitorio.jpg",
                 "hotSpots": [
                     {
                         "pitch": -20,

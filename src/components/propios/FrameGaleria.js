@@ -14,7 +14,7 @@ escena : "../../standalone/pannellum.htm?config=../tour1.json",
   },
   {
     alt:"alt2",
-    url:"../../vtour/chamas/21_32_33/chama_21_32_33.jpg",
+    url:"../../vtour/chamas/rec_small/0_portada.jpg",
     texto :"M.Chama Imobiliaria",
     escena :  "../../standalone/pannellum.htm?config=../tour2.json",
       },
@@ -46,7 +46,7 @@ escena : "../../standalone/pannellum.htm?config=../tour1.json",
 //const FotosContainer=tw.div`w-2/4 bg-green-500 grid grid-cols-1 md:p-10 grid grid-flow-col   gap-4 align-middle mx-auto
 //`;
 
-const FotosContainer = tw.div`-mt-10 flex flex-wrap sm:-mr-2 md:-mr-6 lg:-mr-6`;
+const FotosContainer = tw.div`mt-2 flex flex-wrap sm:-mr-2 md:-mr-6 lg:-mr-6`;
 const UnaFoto = tw.div`mt-4 w-1/3 p-2 sm:w-1/6 md:w-1/3 lg:w-1/6 sm:pr-2 md:pr-6 lg:pr-6`;
 //const ListadoFoto=tw.div`p-5 bg-blue-400`; 
 
@@ -66,7 +66,9 @@ function FrameGaleria () {
  // console.log(IdEscena);
  //e.preventDefault();
   console.log("click");
+  console.log("cambio de escena=", Fotos[idFoto])
   var OtraEscena = {idEscena : Fotos[idFoto].escena};
+  console.log("otraEscena=",OtraEscena);
   setEscena(OtraEscena);
  // setRecorrido()
 }

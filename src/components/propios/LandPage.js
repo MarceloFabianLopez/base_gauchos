@@ -1,8 +1,11 @@
 import React , { useContext } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import Header from "../headers/light.js";
-import {NavLinks,NavLink,PrimaryLink,LogoLink, NavToggle, DesktopNavLinks} from '../headers/light';
+import Header, { NavLink, NavLinks, PrimaryLink , LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+
+//import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+//import Header from "../headers/light.js";
+//import {NavLinks,NavLink,PrimaryLink,LogoLink, NavToggle, DesktopNavLinks} from '../headers/light';
 //import { css } from "styled-components/macro"; //eslint-disable-line
 //import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
 import emailjs from 'emailjs-com';
@@ -26,12 +29,13 @@ import FrameGaleria from '../propios/FrameGaleria';
 import { DataContext } from 'context/DataContext';
 //import Datos from "./Datos.js";
 //const gfm = require('remark-gfm');
-const logoLink = (
-  <LogoLink href="/paginaprincipal">
+ const logoLink = (
+   <LogoLink href="/paginaprincipal">
     <img src="../../images/logo.png" width="100%" alt="logo1" />
     
   </LogoLink>
-);
+);  
+
 //<img src="../../media_landpages/dacal/logoverde.jpg" width="100%" alt="logo1" />
 const StyledHeader = styled(Header)`
   ${tw`pt-10 max-w-none w-full `}
@@ -111,14 +115,15 @@ ${tw`bg-top bg-white font-sans`}
 
 
 `;
-const NavLinkMio=tw(NavLink)`bg-blue-300 p-4`;
+const NavLinkMio=tw(NavLink)`bg-primary-400 p-4`;
 const MisLinks = [
     
   <NavLinks key={1}>
-    <NavLinkMio href="/#">
+    {/* <NavLinkMio href="/#">
     Enlace a su página web
    
-    </NavLinkMio>
+    </NavLinkMio> */}
+    <PrimaryLink href="/#">Enlace a su página web</PrimaryLink>
   
     <PrimaryLink href="/#">Contacto</PrimaryLink>
    
@@ -126,52 +131,30 @@ const MisLinks = [
 ];
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const TextoDescripcion = `
-### Descripción
-- Casa construida en 1 sola planta con techo de losa y cielo raso de yeso con pisos de madera maciza en todos los ambientes.
--
-- Cuenta con 3 dormitorios con puerta ventana al parque, 1 de ellos en suite con vestidor y los secundarios con placard de piso a techo en madera, además cuenta con 2 baños completos.
-### A estrenar
--
-- Pasillo **_ancho_** con muebles y paredes revestidas en madera de piso a techo, muebles a medida en piso a techo en todos los ambientes.
-- Calefacción por Losa radiante, AA frío calor en todas las habitaciones, AA frío calor central en living comedor.
-- **Living-comedor** con estufa hogar a leña con extractor eléctrico de humo, en cocina parrilla con extractor eléctricode humo integrada a la cocina remodelada a nuevo en el año 2020.Parrilla y comedor con apertura total de ventanal de 3,5 metros a la galería semicubierta.
-- **_Pisos de Madera Maciza_**.
-| Feature    | Support              |
-| ---------: | :------------------- |
-| CommonMark | 100%                 |
-| GFM        | 100% xxx             |
+### Venta en exclusiva!
+- 
+- Vivienda familiar en barrio residencial, sobre un lote de terreno de **_16x60_**.
+- La misma consta de 4 dormitorios, el principal en suite, con vestidor.
+-  Escritorio.
+- Amplio comedor, 2 livings, 1 en desnivel, con estufa hogar a leña, cocina equipada con muebles bajo y
+sobre mesada, y desayunador. 
+- Hermoso jardín de invierno y parque arbolado. 
+- Toilette en planta baja
+y **2 baños** completos en planta alta. 
+- Al fondo del terreno se encuentra un comodo quincho con
+parrilla y otra habitación con baño.
+- Cuenta con calefacción central y completo sistema de alarma.
+- Garage descubierto para 3 autos.
+- La casa tiene una **_inmejorable_** calidad constructiva e impecable
+diseño de ladrillo a la vista y aberturas de viraró.
 
 `;
 
-/* ## GitHub flavored markdown (GFM)
-
-For GFM, you can *also* use a plugin:
-[`remark-gfm`](https://github.com/remarkjs/react-markdown#use).
-It adds support for GitHub-specific extensions to the language:
-tables, strikethrough, tasklists, and literal URLs.
-
-These features **do not work by default**.
-👆 Use the toggle above to add the plugin.
-
-| Feature    | Support              |
-| ---------: | :------------------- |
-| CommonMark | 100%                 |
-| GFM        | 100% w/ `remark-gfm` |
-
-~~strikethrough~~
-
-* [ ] task list
-* [x] checked item
-
-https://example.com
-
-## HTML in markdown
-_`; */
 
 export default () => {
 
   init("user_kfmun1gr4Vx8fC0gf1XpR");
-  
+ // console.log("ancho=",window.innerWidth);
   function sendEmail(e) {
     e.preventDefault();
     e.target.reset();
@@ -185,7 +168,9 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
       });
   }
  const {escena} = useContext (DataContext);
-// const markdown = `Just a link: https://reactjs.com.`
+ const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour2.json" ;   
+//logoLink={logoLink}
+ // const markdown = `Just a link: https://reactjs.com.`
   return (<>
             <Container>
                  
@@ -205,7 +190,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                                               Titulo="Importante propiedad"
                                             TextoGrisMayuscula="Tres dormitorios, cochera, 2 baños"/> */}
                     <ViewerPrincipal>
-                            <FrameBase source= {escena.idEscena}
+                            <FrameBase altura={window.innerWidth>600?450:250} source= {EscenaLandPage}
                  
                   IsRecorrido='true'
                   IsPlano='true'/></ViewerPrincipal>                   
@@ -215,11 +200,8 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                             <Descripcion>  {<ReactMarkdown  source={TextoDescripcion} />}
                           {/*   <Datos/> */}
                          
-                                            
-                          <ReactMarkdown remarkPlugins={[gfm]} source={TextoDescripcion}/>
-                          <ReactMarkdown remarkPlugins={[[gfm, {singleTilde: false}]]}>
-    This ~is not~ strikethrough, but ~~this is~~!
-  </ReactMarkdown>
+                         
+                          
                                
 
                             </Descripcion>

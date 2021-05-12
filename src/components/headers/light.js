@@ -17,13 +17,13 @@ const Header = tw.header`
 `;
 //const ColorBanner=tw(ContainerBanner)`bg-green-500`;
 
-export const NavLinks = tw.div`inline-block`;
+export const NavLinks = tw.div`inline-block`; 
 
-/* hocus: stands for "on hover or focus"
- * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
- */
+/*  hocus: stands for "on hover or focus"
+ hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
+`; */
 export const NavLink = tw.a`
-  text-xl my-2 lg:text-sm lg:mx-6 lg:my-0 
+  text-xl my-10 lg:text-sm lg:mx-6 lg:my-0 
   font-semibold tracking-wide transition  duration-300 
   pb-2 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `;
@@ -36,19 +36,19 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-xl! ml-0!`};
+  ${tw`top-0 flex items-center font-extrabold border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`w-1/5 mr-3 py-0 lg:w-32  px-2 py-2 mr-20`}
+    ${tw`relative  bg-white  mt-2 mx-2  p-2 rounded-xl w-12  sm:mt-0 sm:mx-0  md:w-24     `}
   }
 `;
 
-export const MobileNavLinksContainer = tw.nav`z-40 flex flex-1 items-center justify-between px-5`;
+export const MobileNavLinksContainer = tw.nav`z-40 flex flex-1 items-center justify-between md:px-5 md:mt-4`;
 export const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `;
 export const MobileNavLinks = motion.custom(styled.div`
-  ${tw`lg:hidden  fixed top-0 inset-x-0  my-6 p-8  text-center rounded-lg text-gray-900 bg-white`}
+  ${tw`lg:hidden  fixed  inset-x-0  my-6 p-8  text-center rounded-lg text-gray-900 bg-white`}
   ${NavLinks} {
     ${tw`flex flex-col items-center`}
   }
@@ -101,7 +101,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLogoLink = (
     <LogoLink href="/">
-      <img src="../images/logo.png" alt="logo" />
+      <img src="../images/logo.png" alt="logo1" />
       
     </LogoLink>
   );

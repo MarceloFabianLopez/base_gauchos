@@ -19,7 +19,7 @@ import { DataContext } from 'context/DataContext';
 
 
 
-const Card = tw.div`relative top-0  bg-white  mx-auto xl:mx-0 xl:ml-auto max-w-full md:max-w-full  lg:max-w-full xl:max-w-full p-5 `;
+const Card = tw.div`relative top-auto  bg-black  xl:mx-0 xl:ml-auto max-w-full md:max-w-full  lg:max-w-full xl:max-w-full p-5 `;
 /* const CardImage = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`h-80 bg-cover bg-center rounded-2xl`
@@ -27,10 +27,12 @@ const Card = tw.div`relative top-0  bg-white  mx-auto xl:mx-0 xl:ml-auto max-w-f
  */
 //const CardText = tw.div`mt-0 p-4`;
 
-const CardHeader = tw.div` bg-black `;
+const CardHeader = tw.div` bg-black  p-2  flex flex-col  `;
 const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
 const CardType = tw.div`font-semibold text-sm text-gray-600 text-right `;
-const CardTitle = tw.h5`text-xl mt-2 font-bold`;
+const CardTitle = tw.h5`text-xl mt-2 text-white font-extrabold`;
+
+//const Centrador = tw.div`bg-red-400 p-2 flex flex-col`;
 
 const CardMeta = styled.div`
   ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
@@ -96,130 +98,154 @@ const CardMetaFeature = styled.div`
 
 
 
-const Fondo=tw.div`bg-red-600 p-4 text-blue-400`; 
+const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm font-mono font-extrabold rounded-xl`; 
 
 //const {cantidad,setCantidad} = useContext(DataContext);
 
-  function FrameBase ({ source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
+  function FrameBase ({ altura="450",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
     
                       IsVideo=false, IsImagen=false, IsRecorrido=false, IsPlano=false,videoJsOptions={},ImageAlt="imagen" ,sourceInicial="../../standalone/pannellum.htm?config=../tour2.json"}) 
 
 
 {
-  
+  const [sourcelocal,setSourcelocal]=useState(source);
   const {cantidad,setCantidad} = useContext(DataContext);
+  const {intervalo,setIntervalo}=useContext(DataContext);                                                     
  // const [archivo,setArchivo]  = useState('');
   const [run, setRun] = useState(true);
   const [counter, setCounter] = useState(-1);
   //const countRef = useRef(count);
   //countRef.current = count;
- // const [recorrido, setRecorrido] = useState([]);
- //const {recorrido,setRecorrido} = useContext(DataContext);
+ const [recorrido, setRecorrido] = useState(null);
+// const {recorrido,setRecorrido} = useContext(DataContext);
   const [conjuntoEscenas,setConjuntoEscenas]=useState([]);
   const {escena} = useContext (DataContext);
   const [huboUnCambio, setHuboUnCambio]=useState(false);
 
    
-
-  useEffect(() => {
-
-   // 
-   // var myHeaders = new Headers();
-    //var myInit = { method: 'GET',
-      //         headers: myHeaders,
-        //       mode: 'cors',
-         //      cache: 'default' };
+//------------------------------------------------------------------------------------------------------------------
+  useEffect(() => 
+  {
+    console.log("useEffect corrige recorrido");
+    console.log("Datos actuales , parametro del componente:  source=",source);
+    console.log("contexto escena=",escena);
+    console.log("state contador=",counter);
+    console.log("state sourcelocal=",sourcelocal);
+    console.log("..........................................................");
+   
+    var sourceCorregido="../../" +source.slice(38);
+   
+         //console.log("sourceantes=",sourcelocal);        
+         if (escena){
+                     //console.log("escena....=",escena['idEscena']);      
+                    setSourcelocal( ""+escena['idEscena']) ; 
          
-var sourceCorregido="../../" +source.slice(38);
-//var myRequest = new Request(sourceCorregido, myInit);
-                    //////console.log("useEffect recorrido");
-                    //console.log("sourceCorregido =" ,sourceCorregido);
-                    //console.log("source =" ,source);
-                   // fetch("../../../tour1.json")
-                   // fetch(myRequest)
-                   fetch(sourceCorregido)
+                  } else 
+                  {
+                    console.log("todavia no carga escena");
+                  
+                  }               // eslint-disable-next-line react-hooks/exhaustive-deps 
+
+  
+        
+        
+                    if (sourcelocal) {
+                                //console.log("sourcedopolocal=",sourcelocal);
+                                sourceCorregido="../../" +sourcelocal.slice(38);
+
+                                } else {console.log("todavia no carga surcelocal");}
+         
+
+
+                    console.log("leyando datos desde sourcecorregido=",sourceCorregido);
+                    fetch(sourceCorregido)
                                .then(res => res.json())
                                                                 .then(datos => {
-                                                                  //setRecorrido(datos);
-                                                                  setCounter(-1);
-                                                                  //console.log("corregido=",sourceCorregido);
-                                                                  //console.log('datos obtenidos=',datos);
-                                                                     // debugger;
-                                                                  //console.log("Recorrido=",recorrido);
-                                                                  setConjuntoEscenas(Object.keys(datos["scenes"]
-                                                                  ));
-                                                                  setCantidad((Object.keys(datos["scenes"]).length));
-                                                                  setHuboUnCambio(true);
-                                                                  //console.log("cantidad=",cantidad);
-                                                                  //console.log("conjuntEscenas",conjuntoEscenas);
-                                                                  //console.log("Object=",Object.keys(datos["scenes"]));
-                                                                 // setCounter(0);
-                                                                  
-                                                                 // //console.log("escenas=",conjuntoEscenas.length,"counter=",counter);
+                                                                                console.log("tengo los datos=",datos);
+                                                                                //setRecorrido(datos);
+                                                                                setCounter(-1);
+                                                                                setConjuntoEscenas(Object.keys(datos["scenes"]));
+                                                                                setCantidad((Object.keys(datos["scenes"]).length));
+                                                                                setHuboUnCambio(true);
+                                                                                setRecorrido(datos);
+                                                                              }
+                                                                        )
+                                                                        .catch(function() {
+                                                                        //  alert("eror de descarga");
+                                                                          //console.log("cargando");
+                                                                        }
+                                                                        ); 
 
-                                                                }
-                                      )
-                                      .catch(function() {
-                                      //  alert("eror de descarga");
-                                        //console.log("cargando");
-                                      }); 
+                                     
 
-                 return () => {
-                  //console.log("limpieza ussefect recorrido");
-
-                }
-                 // eslint-disable-next-line react-hooks/exhaustive-deps 
-                                    },[escena,source]);
+                    return () => {                    //console.log("limpieza ussefect recorrido");
+                                  }
+                                  
+  } ,[escena,source]
+                 );
   
-
+//-------------------------------------------------------------------------------------------------------------------------------------------
 
     useEffect(() => {
 
-
+          console.log("usefect counter navegacion");
       function Navegacion(){
   
         var ifrm = document.getElementById('mipannellum')
           var miviewer= ifrm.contentWindow.viewer
-        
+        var pitch=0;
+        var yaw=0;
                   if(miviewer&&conjuntoEscenas){
-                    //console.log("tengo viewer y conjuntoescenas");
+                    //console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
                     if (counter===-1){
-                      //console.log("inicioooooo");
+                      console.log("inicioooooo");
                       miviewer.loadScene("Ingreso",0,0,120,true)} else {
-                        //console.log("no es inicio");
-                  miviewer.loadScene(conjuntoEscenas[counter],0,0,120,true)}
-                    miviewer.lookAt(-5,0,60,4000);
-                    miviewer.lookAt(0,0,120,4000);
+                        if (recorrido) {  
+                          console.log("recorrido=",recorrido);
+                          console.log("navegacion conjuntoEscenas=",conjuntoEscenas[counter]);
+                          console.log("Navegacion Recorrido=",recorrido['scenes'][conjuntoEscenas[counter]]);
+                          //console.log(recorrido);
+                          pitch=recorrido['scenes'][conjuntoEscenas[counter]]['pitch'];
+                          yaw=recorrido['scenes'][conjuntoEscenas[counter]]['yaw'];
+                        }
+                      console.log("Cambiando a escena=",conjuntoEscenas[counter]);
+                  miviewer.loadScene(conjuntoEscenas[counter],pitch,yaw,120,true)}
+                  //  miviewer.lookAt(-5,0,60,4000);
+                  //  miviewer.lookAt(0,0,120,4000);
                 }
           }
 
 
 
-     // //console.log("useeffect run=",run);
-     const   lacuenta =  setTimeout(() => setCounter(counter + 1), 3000);
-
-     if (run) { 
+     //console.log("useeffect run=",intervalo);
+     console.log("empieza aumentando el contador .......=",counter);
+     const   lacuenta =  setTimeout(() => setCounter(counter + 1), intervalo);
+          console.log("termina aumentando el contador .......=",counter);
+     if (run&&sourcelocal) { 
      Navegacion();
      }
      // counter < (cantidad + 1) && lacuenta() ;
-      //console.log("counter useEffect=",counter,"cantidad=",cantidad);
+     // //console.log("counter useEffect=",counter,"cantidad=",cantidad);
+
      
      if (counter===(cantidad) ) {
-      //console.log("reiniciando secuencia:",counter); 
-
+      console.log("reiniciando secuencia:",counter); 
+      
       setCounter(-1);
       
       }
       if (huboUnCambio){
-        //console.log("hubo un cambio");
+        console.log("hubo un cambio");
         setHuboUnCambio(false);
-        
+       /*  return() => {
+          console.log("cleanup counter");   
+          clearTimeout(lacuenta);}   */
       }
       
     
-    return() => {
-      //console.log("cleanup");   
-      clearTimeout(lacuenta);}
+     return() => {
+      console.log("cleanup counter");   
+      clearTimeout(lacuenta);} 
  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter]);
       
@@ -234,7 +260,7 @@ setCounter(counter-1);
 
   function handleClick(event) {
     //alert('clicked');
-   // //console.log("botonera run=",run);
+   // ////console.log("botonera run=",run);
     if(run){
     setRun(false) } else {setRun(true)}
     
@@ -260,16 +286,16 @@ setCounter(counter-1);
                 
             </Fondo>
         );
-        //console.log("counter en botonera=",counter);
+        ////console.log("counter en botonera=",counter);
    }
 
 
 
 
  
-if (!source) { return <div></div>; }
+if (!sourcelocal) { return <div></div>; }
 else {
-const src = source;
+const src = sourcelocal;
 //setArchivo(source);
   return (<>
 
@@ -283,18 +309,21 @@ const src = source;
                                 { IsVideo && <VideoPlayer { ...videoJsOptions }/> }
 
                                 { IsRecorrido &&
-                              
-                                    <div>
-                                        <iframe id="mipannellum" title="recorrido"  width="90%" allowFullScreen src={src}/>
-                                        <Botonera/>
-                                    </div>
+                                    <>
+                                   {/*  <Centrador> */}
+                                        <iframe id="mipannellum" title="recorrido"   height={altura} width="100%" allowFullScreen src={src}/>
+                                        
+                                    {/* </Centrador> */}
+                                    <br/>
+                                    <Botonera/>
+                                    </>
                                   }
-                                {IsImagen && <img src={source?source:sourceInicial} width="90%" alt={ImageAlt} />}
+                                {IsImagen && <img src={source?source:sourceInicial}  height={altura} width="90%" alt={ImageAlt} />}
                         
                         </CardHeader>
                         {!IsPlano && <>
-                              <CardCompany>{Titulo}</CardCompany>
-                              <CardType>{Bajada}</CardType>
+                              {/* <CardCompany>{Titulo}</CardCompany> */}
+                             {/*  <CardType>{Bajada}</CardType> */}
                               <CardTitle>{SubTitulo}</CardTitle>
                               <CardMeta>
                                 <CardMetaFeature>{TextoGrisMayuscula}</CardMetaFeature>
@@ -312,12 +341,3 @@ const src = source;
 
 export default FrameBase;
 
-
-/* var pano = document.getElementById('pano').contentWindow; 
-var pitch = pano.config.pitch; 
-var yaw = pano.config.yaw; 
-var scene = pano.config.activeScene; 
-
-will allow you to read values; after changing a value 
-(except activeScene), 
-run pano.animate(); */
