@@ -62,7 +62,7 @@ const BannerFondo=tw.div` lg:hidden bg-left-top bg-auto bg-repeat-x  text-white`
 const Tope=styled.div`-mt-64 `;
 const Llamador =tw.div`relative flex flex-1 bg-primary-500 w-full p-2 mx-auto text-white font-extrabold items-end`;
 const MenuEncabezado =tw.span`bg-primary-500  p-4 text-white font-extrabold `;
-const misrc = "../standalone/pannellum.htm?config=../tour2.json";
+const misrc = "../standalone/pannellum.htm?config=../tour1.json";
 const misrcvideo = "../video/tres.mp4";
 const misrcImagen="../../images/repu2.png";
 const videoParametros = {
