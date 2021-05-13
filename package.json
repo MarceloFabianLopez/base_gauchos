@@ -6,19 +6,15 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "react-json-pretty": "^2.2.0",
-
     "autoprefixer": "^10.2.5",
     "emailjs-com": "^2.6.4",
-
     "feather-icons": "^4.26.0",
     "framer-motion": "^1.11.1",
     "postcss": "^8.1.10",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.3.1",
-
-    
+    "react-json-pretty": "^2.2.0",
     "react-markdown": "^5.0.3",
     "react-modal": "^3.11.2",
     "react-pannellum": "^0.2.5",

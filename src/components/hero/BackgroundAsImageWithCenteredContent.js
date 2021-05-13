@@ -137,14 +137,14 @@ export default () => {
                  </CajaContenido>
                  
                  
-                 <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcvideo}
+                 {/* <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcvideo}
                   Titulo="Video 360º"
                   Bajada="Experiencia inmersiva"
                   SubTitulo="Video 360º "
                   TextoGrisMayuscula="Herramienta excelente para promocionar eventos y productos"
                   videoJsOptions ={ videoParametros}
                   IsVideo='true'/> 
-                 </CajaContenido>
+                 </CajaContenido> */}
                   <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcImagen}
                   Titulo="Vistas aéreas"
                   Bajada="La otra mirada"

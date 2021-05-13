@@ -52,10 +52,10 @@ export default () => {
 
   function sendEmail(e) {
     e.preventDefault();
-    e.target.reset();
+    //e.target.reset();
 
 
-emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr4Vx8fC0gf1XpR')
+emailjs.sendForm('service_anxnkre', 'template_t33nzin', e.target, 'user_kfmun1gr4Vx8fC0gf1XpR')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
@@ -77,7 +77,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                 <Column> 
                 <InputContainer tw="flex-1">
                     <Label htmlFor="message-input">Su mensaje</Label>
-                    <TextArea id="message-input" name="message" placeholder="Hola, quería recibir info....."/>
+                    <TextArea id="message" name="message" placeholder="Hola, quería recibir info....."/>
                   </InputContainer>
                   <InputContainer>
                    <input type="hidden" name="contact_number" />
@@ -97,10 +97,10 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
               <br/>
 
 
-           <p className="sm:text-center p-10">
+           {/* <p className="sm:text-center p-10">
 
            
- <a href="/">Cancelar</a></p>
+ <a href="/components/propios/LandPage">Cancelar</a></p> */}
 
          
               
@@ -108,13 +108,13 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
           
          
          {/*   <SvgDotPattern1 /> */}
-         <div className="absolute top-0  pd-20"> 
-              <WhatsAppWidget phoneNumber='542216701280'
+         {/* <div className="absolute top-0  pd-20"> 
+              <WhatsAppWidget phoneNumber='542214597362'
                                     textReplyTime='Este es un mensaje automatizado, lo antes posible una persona de nuestro equipo lo contactará! '
                                       message= 'Hola!  En que podemos ayudarlo/a?'
-                                      companyName="VTOUR"
+                                      companyName="MCHAMA BIENES RAICES"
                                       sendButton="ENVIAR WSP" 
-                                      /></div>
+                                      /></div> */}
         </FormContainer>
    
       </Content>

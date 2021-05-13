@@ -1,7 +1,9 @@
 import React , { useContext } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
+//import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import Header, { NavLink, NavLinks, PrimaryLink , LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+//import { components } from "ComponentRenderer.js";
 
 //import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 //import Header from "../headers/light.js";
@@ -29,23 +31,39 @@ import FrameGaleria from '../propios/FrameGaleria';
 import { DataContext } from 'context/DataContext';
 //import Datos from "./Datos.js";
 //const gfm = require('remark-gfm');
- const logoLink = (
-   <LogoLink href="/paginaprincipal">
-    <img src="../../images/logo.png" width="100%" alt="logo1" />
-    
-  </LogoLink>
-);  
+const MiLogoLink = styled(NavLink)`
+  ${tw`top-0 flex items-center font-extrabold border-b-0 text-xl! ml-0!`};
 
-//<img src="../../media_landpages/dacal/logoverde.jpg" width="100%" alt="logo1" />
-const StyledHeader = styled(Header)`
-  ${tw`pt-10 max-w-none w-full `}
+  img {
+    ${tw`w-64     `}
+  }
+`;
+//const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
+ const logoLink = (
+   <MiLogoLink href="https://www.mchama.com.ar/ficha/354103">
+    <img src="../../images/logo_mchama.jpg"  alt="logoMCHAMA" />
+    
+  </MiLogoLink>
+);  
+/* const StyledHeader = styled(Header)`
+  ${tw`pt-6 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-200 hover:border-gray-300 hover:text-gray-300  `}
+    ${tw`text-gray-200 hover:border-gray-300 hover:text-gray-300 `}
   }
   ${NavToggle}.closed {
     ${tw`text-gray-100 hover:text-primary-500`}
   }
-`;
+`; */
+//<img src="../../media_landpages/dacal/logoverde.jpg" width="100%" alt="logo1" />
+ const StyledHeader = styled(Header)`
+  ${tw`pt-10 max-w-none w-full `}
+  ${DesktopNavLinks} ${NavLink}, ${MiLogoLink} {
+    ${tw`text-gray-200 hover:border-gray-300 hover:text-gray-300  `}
+  }
+  ${NavToggle}.closed {
+    ${tw`text-gray-800 p-2 hover:text-primary-500`}
+  }
+`; 
 const MiHeader=tw(StyledHeader)`bg-blue-100`;
 
 //const CajaContenido  = tw.div`bg-white mx-auto  `;
@@ -67,7 +85,7 @@ const CabezaContainer = styled.div`
   }
 `;
 const Descripcion = styled.div`
-  ${tw`relative my-4 z-40 bg-white text-justify p-5 text-gray-800 font-poppins rounded-3xl`}
+  ${tw`relative my-4 z-40 bg-white text-justify p-16 text-gray-800 font-poppins rounded-3xl`}
   
   h2 {
     ${tw`text-2xl sm:text-2xl font-bold`}
@@ -98,7 +116,8 @@ const AreaContactar = tw.div`p-2 bg-white`;
 const FormularioCorreo = tw.div`bg-gray-200 p-2 rounded-2xl ml-4`;
 //const AreaMenuSuperior =tw.div`p-5 bg-blue-300`;
 
-const AreaRegresar = tw.div`p-3 bg-gray-100 text-gray-500 font-bold`;
+
+const AreaRegresar = tw.div`p-3 bg-gray-100 text-primary-600 font-extrabold`;
 const ViewerPrincipal =tw.div`bg-black`;
 const AreaWhatsap =styled.div(props => [
   `background-image: url("${props.imageWsp}");
@@ -116,34 +135,21 @@ ${tw`bg-top bg-white font-sans`}
 
 `;
 const NavLinkMio=tw(NavLink)`bg-primary-400 p-4`;
-const MisLinks = [
-    
-  <NavLinks key={1}>
-    {/* <NavLinkMio href="/#">
-    Enlace a su página web
-   
-    </NavLinkMio> */}
-    <PrimaryLink href="/#">Enlace a su página web</PrimaryLink>
-  
-    <PrimaryLink href="/#">Contacto</PrimaryLink>
-   
-  </NavLinks>
-];
+
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const TextoDescripcion = `
 ### Venta en exclusiva!
 - 
 - Vivienda familiar en barrio residencial, sobre un lote de terreno de **_16x60_**.
-- La misma consta de 4 dormitorios, el principal en suite, con vestidor.
--  Escritorio.
-- Amplio comedor, 2 livings, 1 en desnivel, con estufa hogar a leña, cocina equipada con muebles bajo y
+- La misma consta de **4 dormitorios, el principal en suite, con vestidor.**
+-  Escritorio. Amplio comedor, 2 livings, 1 en desnivel, con estufa hogar a leña, cocina equipada con muebles bajo y
 sobre mesada, y desayunador. 
 - Hermoso jardín de invierno y parque arbolado. 
-- Toilette en planta baja
-y **2 baños** completos en planta alta. 
-- Al fondo del terreno se encuentra un comodo quincho con
+- **Toilette** en planta baja
+y **2 baños completos** en planta alta. 
+- Al fondo del terreno se encuentra un comodo **quincho** con
 parrilla y otra habitación con baño.
-- Cuenta con calefacción central y completo sistema de alarma.
+- Cuenta con **calefacción central y completo sistema de alarma.**
 - Garage descubierto para 3 autos.
 - La casa tiene una **_inmejorable_** calidad constructiva e impecable
 diseño de ladrillo a la vista y aberturas de viraró.
@@ -167,21 +173,34 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
           console.log(error.text);
       });
   }
+
+   const MisLinks = [
+    
+  <NavLinks key={1}>
+    
+    <a href="https://www.mchama.com.ar/ficha/354103">MCHAMA BIENES RAICES</a>&nbsp;&nbsp;&nbsp;
+    <PrimaryLink href="/components/blocks/Form/SimpleContactUs">Contacto</PrimaryLink>
+    
+   
+  </NavLinks>
+]; 
  const {escena} = useContext (DataContext);
- const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour2.json" ;   
+ const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour2.json" ;  
+ //const contactos = components['blocks']['Form']['elements']['SimpleContactUs']['url']; 
 //logoLink={logoLink}
  // const markdown = `Just a link: https://reactjs.com.`
   return (<>
             <Container>
                  
                   <HeroContainer>   
-                    <MiHeader logoLink={logoLink} links={MisLinks}/>  
+                     <MiHeader logoLink={logoLink} links={MisLinks}/>   
+                 
                       <CabezaContainer>
                        
                         <CuerpoContainer>
                           <TwoColumn>
-                            <ColumnAncha><AreaRegresar><Negrito>13 e/ 478 y 478 bis n 5681</Negrito>
-                                    City Bell , La Plata, Buenos Aires, Argentina 
+                            <ColumnAncha><AreaRegresar><Negrito>CASA EN VENTA 4 DORM PRECIO U$D370.000 </Negrito>
+                                    21 E/ 32 Y 33
                          {/*             <div>  xx {escena.idEscena}xx</div> */}
                                      </AreaRegresar>
 
@@ -193,8 +212,10 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                             <FrameBase altura={window.innerWidth>600?450:250} source= {EscenaLandPage}
                  
                   IsRecorrido='true'
-                  IsPlano='true'/></ViewerPrincipal>                   
-                            <FrameGaleria/>
+                  IsPlano='true'/>
+                  
+                  </ViewerPrincipal>              
+                            {/* <FrameGaleria/> */}
                           
               
                             <Descripcion>  {<ReactMarkdown  source={TextoDescripcion} />}
@@ -204,11 +225,12 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                           
                                
 
-                            </Descripcion>
+                            </Descripcion>..
+                           
                             </ColumnAncha>
                             <ColumnAngosta>
                             <AreaContactar>
-                            <a href="https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quieres%20contactarte%20con%20nosotros!">
+                            <a href="https://api.whatsapp.com/send?phone=5492214597362&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
                             <AreaWhatsap imageWsp={imagenWsp}/></a>
                             
                             
@@ -221,7 +243,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                           
 
                         </CuerpoContainer>
-
+ 
                       </CabezaContainer>
                       
                         

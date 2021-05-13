@@ -32,7 +32,7 @@ const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
 const CardType = tw.div`font-semibold text-sm text-gray-600 text-right `;
 const CardTitle = tw.h5`text-xl mt-2 text-white font-extrabold`;
 
-//const Centrador = tw.div`bg-red-400 p-2 flex flex-col`;
+const Centrador = tw.div`bg-red-400 p-2  items-end`;
 
 const CardMeta = styled.div`
   ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
@@ -126,23 +126,23 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
 //------------------------------------------------------------------------------------------------------------------
   useEffect(() => 
   {
-    console.log("useEffect corrige recorrido");
-    console.log("Datos actuales , parametro del componente:  source=",source);
-    console.log("contexto escena=",escena);
-    console.log("state contador=",counter);
-    console.log("state sourcelocal=",sourcelocal);
-    console.log("..........................................................");
+    //console.log("useEffect corrige recorrido");
+    //console.log("Datos actuales , parametro del componente:  source=",source);
+    //console.log("contexto escena=",escena);
+    //console.log("state contador=",counter);
+    //console.log("state sourcelocal=",sourcelocal);
+    //console.log("..........................................................");
    
     var sourceCorregido="../../" +source.slice(38);
    
-         //console.log("sourceantes=",sourcelocal);        
+         ////console.log("sourceantes=",sourcelocal);        
          if (escena){
-                     //console.log("escena....=",escena['idEscena']);      
+                     ////console.log("escena....=",escena['idEscena']);      
                     setSourcelocal( ""+escena['idEscena']) ; 
          
                   } else 
                   {
-                    console.log("todavia no carga escena");
+                    //console.log("todavia no carga escena");
                   
                   }               // eslint-disable-next-line react-hooks/exhaustive-deps 
 
@@ -150,18 +150,19 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
         
         
                     if (sourcelocal) {
-                                //console.log("sourcedopolocal=",sourcelocal);
+                                ////console.log("sourcedopolocal=",sourcelocal);
                                 sourceCorregido="../../" +sourcelocal.slice(38);
 
-                                } else {console.log("todavia no carga surcelocal");}
+                                } else {//console.log("todavia no carga surcelocal");
+                                }
          
 
 
-                    console.log("leyando datos desde sourcecorregido=",sourceCorregido);
+                    //console.log("leyando datos desde sourcecorregido=",sourceCorregido);
                     fetch(sourceCorregido)
                                .then(res => res.json())
                                                                 .then(datos => {
-                                                                                console.log("tengo los datos=",datos);
+                                                                                //console.log("tengo los datos=",datos);
                                                                                 //setRecorrido(datos);
                                                                                 setCounter(-1);
                                                                                 setConjuntoEscenas(Object.keys(datos["scenes"]));
@@ -172,13 +173,13 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
                                                                         )
                                                                         .catch(function() {
                                                                         //  alert("eror de descarga");
-                                                                          //console.log("cargando");
+                                                                          ////console.log("cargando");
                                                                         }
                                                                         ); 
 
                                      
 
-                    return () => {                    //console.log("limpieza ussefect recorrido");
+                    return () => {                    ////console.log("limpieza ussefect recorrido");
                                   }
                                   
   } ,[escena,source]
@@ -188,7 +189,7 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
 
     useEffect(() => {
 
-          console.log("usefect counter navegacion");
+          //console.log("usefect counter navegacion");
       function Navegacion(){
   
         var ifrm = document.getElementById('mipannellum')
@@ -196,19 +197,19 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
         var pitch=0;
         var yaw=0;
                   if(miviewer&&conjuntoEscenas){
-                    //console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
+                    ////console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
                     if (counter===-1){
-                      console.log("inicioooooo");
+                      //console.log("inicioooooo");
                       miviewer.loadScene("Ingreso",0,0,120,true)} else {
-                        if (recorrido) {  
-                          console.log("recorrido=",recorrido);
-                          console.log("navegacion conjuntoEscenas=",conjuntoEscenas[counter]);
-                          console.log("Navegacion Recorrido=",recorrido['scenes'][conjuntoEscenas[counter]]);
-                          //console.log(recorrido);
+                        if (recorrido&conjuntoEscenas) {  
+                          //console.log("recorrido=",recorrido);
+                          //console.log("navegacion conjuntoEscenas=",conjuntoEscenas[counter]);
+                          //console.log("Navegacion Recorrido=",recorrido['scenes'][conjuntoEscenas[counter]]);
+                          ////console.log(recorrido);
                           pitch=recorrido['scenes'][conjuntoEscenas[counter]]['pitch'];
                           yaw=recorrido['scenes'][conjuntoEscenas[counter]]['yaw'];
                         }
-                      console.log("Cambiando a escena=",conjuntoEscenas[counter]);
+                      //console.log("Cambiando a escena=",conjuntoEscenas[counter]);
                   miviewer.loadScene(conjuntoEscenas[counter],pitch,yaw,120,true)}
                   //  miviewer.lookAt(-5,0,60,4000);
                   //  miviewer.lookAt(0,0,120,4000);
@@ -217,34 +218,34 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
 
 
 
-     //console.log("useeffect run=",intervalo);
-     console.log("empieza aumentando el contador .......=",counter);
+     ////console.log("useeffect run=",intervalo);
+     //console.log("empieza aumentando el contador .......=",counter);
      const   lacuenta =  setTimeout(() => setCounter(counter + 1), intervalo);
-          console.log("termina aumentando el contador .......=",counter);
+          //console.log("termina aumentando el contador .......=",counter);
      if (run&&sourcelocal) { 
      Navegacion();
      }
      // counter < (cantidad + 1) && lacuenta() ;
-     // //console.log("counter useEffect=",counter,"cantidad=",cantidad);
+     // ////console.log("counter useEffect=",counter,"cantidad=",cantidad);
 
      
      if (counter===(cantidad) ) {
-      console.log("reiniciando secuencia:",counter); 
+      //console.log("reiniciando secuencia:",counter); 
       
       setCounter(-1);
       
       }
       if (huboUnCambio){
-        console.log("hubo un cambio");
+        //console.log("hubo un cambio");
         setHuboUnCambio(false);
        /*  return() => {
-          console.log("cleanup counter");   
+          //console.log("cleanup counter");   
           clearTimeout(lacuenta);}   */
       }
       
     
      return() => {
-      console.log("cleanup counter");   
+      //console.log("cleanup counter");   
       clearTimeout(lacuenta);} 
  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter]);
@@ -260,7 +261,7 @@ setCounter(counter-1);
 
   function handleClick(event) {
     //alert('clicked');
-   // ////console.log("botonera run=",run);
+   // //////console.log("botonera run=",run);
     if(run){
     setRun(false) } else {setRun(true)}
     
@@ -281,12 +282,15 @@ setCounter(counter-1);
                  <button onClick={() => setCounter(counter+1)}>Adelante</button>
                  <button onClick={() => setCounter(counter-1)}>Atras</button> */}
 
-                 <button onClick={handleClick}>{run?"Parar":"Automático"}</button>
-
-                
+                 <button onClick={handleClick}>{run?"Parar recorrido automático":"Recorrido automático"}</button>
+                 
+                  
+                                     
+                                     
+                                   
             </Fondo>
         );
-        ////console.log("counter en botonera=",counter);
+        //////console.log("counter en botonera=",counter);
    }
 
 
@@ -312,10 +316,15 @@ const src = sourcelocal;
                                     <>
                                    {/*  <Centrador> */}
                                         <iframe id="mipannellum" title="recorrido"   height={altura} width="100%" allowFullScreen src={src}/>
-                                        
+                                         
+                                      <audio controls autoPlay="autoplay"  loop="loop" src="../../images/audio.mp3" >.</audio>
+                                     
+                                      
                                     {/* </Centrador> */}
-                                    <br/>
-                                    <Botonera/>
+                                   
+                                   
+                                      <Botonera/>
+                                   
                                     </>
                                   }
                                 {IsImagen && <img src={source?source:sourceInicial}  height={altura} width="90%" alt={ImageAlt} />}
