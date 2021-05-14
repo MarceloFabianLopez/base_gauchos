@@ -10,12 +10,7 @@ import VideoPlayer from 'components/propios/VideoPlayer';
 
 //import { ReactComponent as VrIcon } from "feather-icons/dist/icons/nuevovr.svg";
 import { DataContext } from 'context/DataContext';
-//import Botonera from 'components/propios/Botonera';
-//import Datos from 'components/propios/Datos';
 
-//import { DataProvider } from './context/DataContext';
-
-//import ReactPannellum, { getConfig ,getViewer,getAllScenes,addScene, loadScene, lookAt} from "react-pannellum";
 
 
 
@@ -102,7 +97,7 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
 
 //const {cantidad,setCantidad} = useContext(DataContext);
 
-  function FrameBase ({ altura="450",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
+  function FrameBase ({ esPortada="true", tieneAudio="false",altura="350",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
     
                       IsVideo=false, IsImagen=false, IsRecorrido=false, IsPlano=false,videoJsOptions={},ImageAlt="imagen" ,sourceInicial="../../standalone/pannellum.htm?config=../tour2.json"}) 
 
@@ -315,9 +310,10 @@ const src = sourcelocal;
                                 { IsRecorrido &&
                                     <>
                                    {/*  <Centrador> */}
-                                        <iframe id="mipannellum" title="recorrido"   height={altura} width="100%" allowFullScreen src={src}/>
+                                        <iframe id="mipannellum" title="recorrido"   height={esPortada? 200 :altura} width="100%" allowFullScreen src={src}/>
                                          
-                                      <audio controls autoPlay="autoplay"  loop="loop" src="../../images/audio.mp3" >.</audio>
+                                     {!tieneAudio && <audio controls autoPlay="autoplay"  loop="loop" src="../../images/audio.mp3" ></audio>
+                                     }
                                      
                                       
                                     {/* </Centrador> */}

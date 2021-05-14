@@ -1,16 +1,21 @@
 import React from 'react';
 //import THREE from   'three';
 import videojs from 'video.js';
-//import videojs-vr.js from 'videojs-vr';
+//import videojs
+//import videojsvr from 'videojs-vr';
 import 'videojs-vr/dist/videojs-vr.min.js';
+//import 'videojs-panorama/dist/videojs-panorama.v4.min.js';
 //import 'videojs-vr';
 import '../../../node_modules/video.js/dist/video-js.css';
 import '../../../node_modules/videojs-vr/dist/videojs-vr.css';
 
 
 export default class VideoPlayer extends React.Component {
+  
   componentDidMount() {
 
+    //var videojs = require('video.js');
+  //require('videojs-vr');
     this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
         console.log('onPlayerReady', this)
         const player = this
@@ -18,13 +23,20 @@ export default class VideoPlayer extends React.Component {
         player.mediainfo.projection = 'equirectangular'
         player.bigPlayButton = true
         player.loadingSpinner = true
-        
-        player.vr({
-          projection: '360',
-          debug: false,
-          forceCardboard: true
 
-        })
+       /*  player.panorama({
+          clickAndDrag: true,
+          callback: function () {
+            player.play();
+          }
+      }); */
+        
+        /* player.vr({
+          projection: '360',
+          debug: true,
+          forceCardboard: true 
+
+        }) */
        // player.poster('../video/jfk-poster.jpg')
       })
 //equirectangular para gear 360

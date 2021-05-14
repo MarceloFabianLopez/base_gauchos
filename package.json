@@ -28,9 +28,10 @@
     "remark-gfm": "^1.0.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.0.1",
-    "tailwindcss": "^1.2.0",
-    "twin.macro": "^1.12.1",
+    "tailwindcss": "^2.1.2",
+    "twin.macro": "^2.4.1",
     "use-in-view": "^1.0.15",
+    "videojs-panorama": "^0.1.7",
     "videojs-vr": "^1.7.1"
   },
   "scripts": {
