@@ -40,8 +40,8 @@ const MiLogoLink = styled(NavLink)`
 `;
 //const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
  const logoLink = (
-   <MiLogoLink href="https://www.mchama.com.ar/ficha/354103">
-    <img src="../../images/logo_mchama.jpg"  alt="logoMCHAMA" />
+   <MiLogoLink href="/">
+    <img src="../../images/logo.jpg"  alt="logo" />
     
   </MiLogoLink>
 );  
@@ -138,8 +138,8 @@ const NavLinkMio=tw(NavLink)`bg-primary-400 p-4`;
 
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const TextoDescripcion = `
-### Venta en exclusiva!
-- 
+### Recorridos virtuales
+## La nueva manera de estar ahí-
 - Vivienda familiar en barrio residencial, sobre un lote de terreno de **_16x60_**.
 - La misma consta de **4 dormitorios, el principal en suite, con vestidor.**
 -  Escritorio. Amplio comedor, 2 livings, 1 en desnivel, con estufa hogar a leña, cocina equipada con muebles bajo y
@@ -178,14 +178,14 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
     
   <NavLinks key={1}>
     
-    <a href="https://www.mchama.com.ar/ficha/354103">MCHAMA BIENES RAICES</a>&nbsp;&nbsp;&nbsp;
+    <a href="/">Sitio principal</a>&nbsp;&nbsp;&nbsp;
     <PrimaryLink href="/components/blocks/Form/SimpleContactUs">Contacto</PrimaryLink>
     
    
   </NavLinks>
 ]; 
  const {escena} = useContext (DataContext);
- const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour2.json" ;  
+ const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour1.json" ;  
  //const contactos = components['blocks']['Form']['elements']['SimpleContactUs']['url']; 
 //logoLink={logoLink}
  // const markdown = `Just a link: https://reactjs.com.`
@@ -199,8 +199,8 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                        
                         <CuerpoContainer>
                           <TwoColumn>
-                            <ColumnAncha><AreaRegresar><Negrito>CASA EN VENTA 4 DORM PRECIO U$D370.000 </Negrito>
-                                    21 E/ 32 Y 33
+                            <ColumnAncha><AreaRegresar><Negrito>Vea los recorridos virtuales platenses </Negrito>
+                                    Nuestros lugares
                          {/*             <div>  xx {escena.idEscena}xx</div> */}
                                      </AreaRegresar>
 
@@ -230,7 +230,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                             </ColumnAncha>
                             <ColumnAngosta>
                             <AreaContactar>
-                            <a href="https://api.whatsapp.com/send?phone=5492214597362&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
+                            <a href="https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
                             <AreaWhatsap imageWsp={imagenWsp}/></a>
                             
                             

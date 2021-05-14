@@ -83,6 +83,7 @@ const videoParametros = {
   }]
 }
 const caracteristicas = components['propios']['LandPage']['url'];
+const landpagebase = components['propios']['LandPBase']['url'];
 
 const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mibanner
 
@@ -97,15 +98,14 @@ export default () => {
    <NavLinks  key={1}>
       
      
-            {/*  <NavLink href={clientes}>
+              <NavLink href={clientes}>
       Área Clientes
      
-      </NavLink> */}
-      <PrimaryLink href={caracteristicas}>Ejemplos de uso</PrimaryLink>
-      {/*  <NavLink href={caracteristicas}>
-      Vea ejemplos!!!
-     </NavLink> */} 
-      <PrimaryLink href={contactos}>Contacto</PrimaryLink>
+      </NavLink> 
+      
+      <PrimaryLink href={caracteristicas}>Casos de uso</PrimaryLink>
+      
+      <PrimaryLink href={contactos}>Contacto</PrimaryLink><PrimaryLink href={landpagebase}>Recorridos Ciudad de La Plata</PrimaryLink>
      
     </NavLinks> ];
  return (  
@@ -127,7 +127,7 @@ export default () => {
                  <GrillaPortada>
                   
                   <CajaContenido>
-                     <FrameBase altura={window.innerWidth>900?350:250} source= {misrc}
+                     <FrameBase esPortada={true} tieneAudio={false} altura={window.innerWidth>900?350:250} source= {misrc}
                   Titulo="Recorrido 360º"
                   Bajada="La mejor forma de mostrar"
                   SubTitulo="Resalte lo importante"

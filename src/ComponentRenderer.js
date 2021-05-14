@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 import MiWsp from 'components/propios/MiWsp';
 import LandPage from 'components/propios/LandPage';
+import LandPBase from 'components/propios/LandPBase';
 import ClientesPage from 'components/propios/ClientesPage';
 //import EventLandingPage from "demos/EventLandingPage.js";
 //import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
@@ -31,6 +32,7 @@ import TermsOfServicePage from "pages/TermsOfService.js";
 import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 import MiWspSrc from "images/demo/SignupPage.jpeg";
 import LandPageImageSrc from "images/demo/SignupPage.jpeg";
+import LandPBaseImageSrc from "images/demo/SignupPage.jpeg";
 import ClientesPageImageSrc from "images/demo/SignupPage.jpeg";
 import LoginPageImageSrc from "images/demo/LoginPage.jpeg";
 import SignupPageImageSrc from "images/demo/SignupPage.jpeg";
@@ -116,6 +118,12 @@ export const components = {
       component: LandPage,
       imageSrc : LandPageImageSrc,
       url:"components/propios/LandPage",
+
+    },
+    LandPBase :{
+      component: LandPBase,
+      imageSrc : LandPBaseImageSrc,
+      url:"components/propios/LandPBase",
 
     },
     ClientesPage :{
