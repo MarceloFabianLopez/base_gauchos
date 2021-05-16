@@ -6,8 +6,8 @@ import videojs from 'video.js';
 import 'videojs-vr/dist/videojs-vr.min.js';
 //import 'videojs-panorama/dist/videojs-panorama.v4.min.js';
 //import 'videojs-vr';
-import '../../../node_modules/video.js/dist/video-js.css';
-import '../../../node_modules/videojs-vr/dist/videojs-vr.css';
+import 'video.js/dist/video-js.css';
+import 'videojs-vr/dist/videojs-vr.css';
 
 
 export default class VideoPlayer extends React.Component {
@@ -31,12 +31,12 @@ export default class VideoPlayer extends React.Component {
           }
       }); */
         
-        /* player.vr({
+         player.vr({
           projection: '360',
           debug: true,
           forceCardboard: true 
 
-        }) */
+        }) 
        // player.poster('../video/jfk-poster.jpg')
       })
 //equirectangular para gear 360

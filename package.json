@@ -31,6 +31,7 @@
     "tailwindcss": "^2.1.2",
     "twin.macro": "^2.4.1",
     "use-in-view": "^1.0.15",
+    "videojs": "^1.0.0",
     "videojs-panorama": "^0.1.7",
     "videojs-vr": "^1.7.1"
   },

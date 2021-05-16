@@ -74,7 +74,7 @@ const videoParametros = {
   fluid :true ,
   responsive :true,
   width : "450" ,
-  projection : '360',
+  projection : 'Cube',
   poster :'../video/jfk-poster.jpg',
   notSupportedMessage: false,
   sources: [{
