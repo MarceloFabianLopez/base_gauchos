@@ -29,13 +29,13 @@ background-image: url("images/aereos2.jpg");
 const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm 
 sm:text-base sm:mt-16 sm:px-8 
 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 
-bg-primary-500 text-gray-100 hocus:bg-primary-700 
+ text-gray-100 hocus:bg-primary-700 
 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
 
  const StyledHeader = styled(Header)`
   ${tw`pt-6 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-200 hover:border-gray-300 hover:text-gray-300 `}
+    ${tw`text-gray-200 hover:border-red-300 hover:text-gray-300 `}
   }
   ${NavToggle}.closed {
     ${tw`text-gray-100 hover:text-primary-500`}
@@ -56,7 +56,7 @@ const Heading = styled.h1`
 `; 
 const SubHeading = tw.div`sm:text-sm text-purple-600 md:text-4xl`;
 const GrillaPortada = tw.div`grid lg:grid-cols-3 gap-5 p-0 sm:grid-cols-1 pt-8  `;
-const CajaContenido  = tw.div`bg-white mx-auto xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs sm:max-w-screen-sm `;
+const CajaContenido  = tw.div`bg-white mx-auto min-h-full xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs sm:max-w-screen-sm `;
 const BannerFondo=tw.div` lg:hidden bg-left-top bg-auto bg-repeat-x  text-white`;
 
 const Tope=styled.div`-mt-64 `;
@@ -98,22 +98,20 @@ export default () => {
    <NavLinks  key={1}>
       
      
-              <NavLink href={clientes}>
-      Área Clientes
-     
-      </NavLink> 
+             
+       <NavLink href={clientes}>Área Clientes</NavLink>
+      {/* <NavLink href={caracteristicas}>uso</NavLink> */}
       
-      <PrimaryLink href={caracteristicas}>Casos de uso</PrimaryLink>
+      <NavLink href={contactos}>Contactos</NavLink>
+      <NavLink href={landpagebase}>Recorridos platenses</NavLink>
       
-      <PrimaryLink href={contactos}>Contacto</PrimaryLink><PrimaryLink href={landpagebase}>Recorridos Ciudad de La Plata</PrimaryLink>
-     
     </NavLinks> ];
  return (  
       <> 
            
         <Container> 
-          <OpacityOverlay/> 
-          <HeroContainer>  
+           <OpacityOverlay/> 
+          <HeroContainer> 
             <StyledHeader links={MisLinks} /> 
              <Content> 
              
@@ -121,10 +119,9 @@ export default () => {
                    Recorridos virtuales<br/>
                    Video 360º y aéreos
                    <SubHeading>vtour.com.ar</SubHeading>
-               </Heading>  <BannerFondo > <a href="/components/propios/LandPage">Ejemplos </a>
-      
-     </BannerFondo> 
-                 <GrillaPortada>
+               </Heading>  
+                <BannerFondo > <a href="/components/propios/LandPage">Ejemplos </a></BannerFondo>  
+              <GrillaPortada>
                   
                   <CajaContenido>
                      <FrameBase esPortada={true} tieneAudio={false} altura={window.innerWidth>900?350:250} source= {misrc}
@@ -153,15 +150,15 @@ export default () => {
                   videoJsOptions ={ videoParametros}
                   IsImagen='true'/> 
                   </CajaContenido>
-                    </GrillaPortada>
-                    <WhatsAppWidget phoneNumber='542216701280'
+                    </GrillaPortada> 
+                     <WhatsAppWidget phoneNumber='542216701280'
                                     textReplyTime='Este es un mensaje automatizado, lo antes posible una persona de nuestro equipo lo contactará! '
                                       message= 'Hola!  En que podemos ayudarlo/a?'
                                       companyName="VTOUR"
                                       sendButton="ENVIAR WSP" className="relative t-0"
-                                      />
+                                      /> 
                    </Content>
-            </HeroContainer>
+             </HeroContainer>
         </Container>
       </>
   );
