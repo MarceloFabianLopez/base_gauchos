@@ -56,7 +56,7 @@ const Heading = styled.h1`
 `; 
 const SubHeading = tw.div`sm:text-sm text-purple-600 md:text-4xl`;
 const GrillaPortada = tw.div`grid lg:grid-cols-3 gap-5 p-0 sm:grid-cols-1 pt-8  `;
-const CajaContenido  = tw.div`bg-white mx-auto min-h-full xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs sm:max-w-screen-sm `;
+const CajaContenido  = tw.div`bg-red-400 mx-auto min-h-64 xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs sm:max-w-screen-sm `;
 const BannerFondo=tw.div` lg:hidden bg-left-top bg-auto bg-repeat-x  text-white`;
 
 const Tope=styled.div`-mt-64 `;

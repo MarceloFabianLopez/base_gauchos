@@ -14,7 +14,7 @@ import { DataContext } from 'context/DataContext';
 
 
 
-const Card = tw.div`relative top-auto  bg-black  xl:mx-0 xl:ml-auto max-w-full md:max-w-full  lg:max-w-full xl:max-w-full p-5 `;
+const Card = tw.div`relative top-auto min-h-full  bg-black  xl:mx-0 xl:ml-auto max-w-full md:max-w-full  lg:max-w-full xl:max-w-full p-5 `;
 /* const CardImage = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`h-80 bg-cover bg-center rounded-2xl`
