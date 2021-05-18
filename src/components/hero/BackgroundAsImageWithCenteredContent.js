@@ -55,8 +55,8 @@ const Heading = styled.h1`
   }
 `; 
 const SubHeading = tw.div`sm:text-sm text-purple-600 md:text-4xl`;
-const GrillaPortada = tw.div`grid lg:grid-cols-3 gap-5 p-0 sm:grid-cols-1 pt-8  `;
-const CajaContenido  = tw.div`bg-red-400 mx-auto min-h-64 xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs sm:max-w-screen-sm `;
+const GrillaPortada = tw.div` grid gap-2 p-2 lg:grid-cols-3     sm:grid-cols-1 pt-8  `;
+const CajaContenido  = tw.div`bg-blue-200 mx-auto p-4   max-w-96 bg-opacity-25 rounded-xl xl:max-w-lg`;
 const BannerFondo=tw.div` lg:hidden bg-left-top bg-auto bg-repeat-x  text-white`;
 
 const Tope=styled.div`-mt-64 `;
@@ -73,7 +73,7 @@ const videoParametros = {
   
   fluid :true ,
   responsive :true,
-  width : "450" ,
+  width : "350" ,
   projection : 'Cube',
   poster :'../video/jfk-poster.jpg',
   notSupportedMessage: false,
@@ -124,7 +124,7 @@ export default () => {
               <GrillaPortada>
                   
                   <CajaContenido>
-                     <FrameBase esPortada={true} tieneAudio={false} altura={window.innerWidth>900?350:250} source= {misrc}
+                     <FrameBase esPortada={true} tieneAudio={false} altura={window.innerWidth>900?300:250} source= {misrc}
                   Titulo="Recorrido 360º"
                   Bajada="La mejor forma de mostrar"
                   SubTitulo="Resalte lo importante"
@@ -132,16 +132,6 @@ export default () => {
                   videoJsOptions ={ videoParametros}
                   IsRecorrido='true'/> 
                  </CajaContenido>
-                 
-                 
-            <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcvideo}
-                  Titulo="Video 360º"
-                  Bajada="Experiencia inmersiva"
-                  SubTitulo="Video 360º "
-                  TextoGrisMayuscula="Herramienta excelente para promocionar eventos y productos"
-                  videoJsOptions ={ videoParametros}
-                  IsVideo='true'/> 
-                 </CajaContenido> 
                   <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcImagen}
                   Titulo="Vistas aéreas"
                   Bajada="La otra mirada"
@@ -150,6 +140,17 @@ export default () => {
                   videoJsOptions ={ videoParametros}
                   IsImagen='true'/> 
                   </CajaContenido>
+                 
+            <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcvideo}
+                  Titulo="Video 360º"
+                  Bajada="Experiencia inmersiva"
+                  SubTitulo="Video 360º "
+                  TextoGrisMayuscula="Herramienta excelente para 
+                  promocionar "
+                  videoJsOptions ={ videoParametros}
+                  IsVideo='true'/> 
+                 </CajaContenido> 
+                 
                     </GrillaPortada> 
                      <WhatsAppWidget phoneNumber='542216701280'
                                     textReplyTime='Este es un mensaje automatizado, lo antes posible una persona de nuestro equipo lo contactará! '

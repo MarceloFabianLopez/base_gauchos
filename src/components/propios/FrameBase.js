@@ -12,9 +12,9 @@ import VideoPlayer from 'components/propios/VideoPlayer';
 import { DataContext } from 'context/DataContext';
 
 
+// xl:mx-0 xl:ml-auto max-w-full md:max-w-full  lg:max-w-full xl:max-w-full p-5
 
-
-const Card = tw.div`relative top-auto min-h-full  bg-black  xl:mx-0 xl:ml-auto max-w-full md:max-w-full  lg:max-w-full xl:max-w-full p-5 `;
+const Card = tw.div`relative top-auto mx-auto bg-blue-900 min-h-full    rounded-2xl   p-2 `;
 /* const CardImage = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`h-80 bg-cover bg-center rounded-2xl`
@@ -22,7 +22,7 @@ const Card = tw.div`relative top-auto min-h-full  bg-black  xl:mx-0 xl:ml-auto m
  */
 //const CardText = tw.div`mt-0 p-4`;
 
-const CardHeader = tw.div` bg-black  p-2  flex flex-col  `;
+const CardHeader = tw.div` bg-black  p-8  flex flex-col  rounded-xl  `;
 const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
 const CardType = tw.div`font-semibold text-sm text-gray-600 text-right `;
 const CardTitle = tw.h5`text-xl mt-2 text-white font-extrabold`;
@@ -296,6 +296,8 @@ if (!sourcelocal) { return <div></div>; }
 else {
 const src = sourcelocal;
 //setArchivo(source);
+//reco height={esPortada? 220 :altura}  width={220*1.33}
+// imagenheight={altura}  alt={ImageAlt}
   return (<>
 
                       <Card>
@@ -310,7 +312,7 @@ const src = sourcelocal;
                                 { IsRecorrido &&
                                     <>
                                    {/*  <Centrador> */}
-                                        <iframe id="mipannellum" title="recorrido"   height={esPortada? 200 :altura} width="100%" allowFullScreen src={src}/>
+                                        <iframe id="mipannellum" title="recorrido"    allowFullScreen src={src}/>
                                          
                                      {tieneAudio && <audio controls autoPlay="autoplay"  loop="loop" src="../../images/audio.mp3" ></audio>
                                      }
@@ -323,7 +325,7 @@ const src = sourcelocal;
                                    
                                     </>
                                   }
-                                {IsImagen && <img src={source?source:sourceInicial}  height={altura} width="90%" alt={ImageAlt} />}
+                                {IsImagen && <img src={source?source:sourceInicial}  height={altura}  alt={ImageAlt} />}
                         
                         </CardHeader>
                         {!IsPlano && <>
