@@ -91,6 +91,7 @@ import SimplePrimaryBackgroundTestimonial from "components/testimonials/SimplePr
 //import TwoColumnPrimaryBackgroundFAQS from "components/faqs/TwoColumnPrimaryBackground.js";
 
 import SimpleContactUsForm from "components/forms/SimpleContactUs.js";
+import Contacto from "components/forms/Contacto.js";
 //import SimpleSubscribeNewsletterForm from "components/forms/SimpleSubscribeNewsletter.js";
 //import TwoColContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 //import TwoColContactUsFullForm from "components/forms/TwoColContactUsWithIllustrationFullForm.js";
@@ -468,6 +469,11 @@ export const components = {
           name: "Simple Contact Us",
           component: SimpleContactUsForm,
           url: "/components/blocks/Form/SimpleContactUs",
+        },
+        Contacto: {
+          name: "Contacto",
+          component: Contacto,
+          url: "/components/blocks/Form/Contacto",
         },
        /*  SimpleSubscribeNewsletter: {
           name: "Simple Subscribe newsletter",

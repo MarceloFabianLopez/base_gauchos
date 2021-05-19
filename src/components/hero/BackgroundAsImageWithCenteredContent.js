@@ -90,7 +90,7 @@ const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mi
 
 
 
-const contactos =components['blocks']['Form']['elements']['SimpleContactUs']['url'];
+const contactos =components['blocks']['Form']['elements']['Contacto']['url'];
 
  
 export default () => {   
