@@ -63,8 +63,8 @@ export default class VideoPlayer extends React.Component {
   // see https://github.com/videojs/video.js/pull/3856
   render() {
     return (
-      <div className="video-js vjs-theme-city ">	
-        <div data-vjs-player>
+      <div className="video-js vjs-theme-city" >	
+        <div >
           <video ref={ node => this.videoNode = node } ></video>
         </div>
       </div>
@@ -72,3 +72,4 @@ export default class VideoPlayer extends React.Component {
   }
 }
 //className="video-js vjs-theme-city"
+//data-vjs-player

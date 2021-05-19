@@ -43,10 +43,10 @@ hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
 `;
 
 //const OpacityOverlay = tw.div`-z-10 absolute inset-0  h-full bg-black bg-opacity-50  `;
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-50`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-0 mx-auto h-full flex flex-col`;
 //const HeroContainer = tw.div`z-20   sm:px-0 mx-auto  flex flex-col`;
-const Content = tw.div` flex flex-1 flex-col justify-center items-center`;
+const Content = tw.div`flex-1 flex-col  items-center`;
 
 const Heading = styled.h1`
   ${tw`text-xl text-center  md:text-4xl  lg:text-4xl xl:text-6xl font-black text-gray-100 leading-snug -mt-24 sm:pt-2 md:p-24`}
@@ -54,10 +54,11 @@ const Heading = styled.h1`
     ${tw`inline-block mt-2`}
   }
 `; 
+//xl:grid-cols-3     sm:grid-cols-1 pt-8 justify-items-center
 const SubHeading = tw.div`sm:text-sm text-purple-600 md:text-4xl`;
-const GrillaPortada = tw.div` grid gap-2 p-2 lg:grid-cols-3     sm:grid-cols-1 pt-8  `;
-const CajaContenido  = tw.div`bg-blue-200 mx-auto p-4   max-w-96 bg-opacity-25 rounded-xl xl:max-w-lg`;
-const BannerFondo=tw.div` lg:hidden bg-left-top bg-auto bg-repeat-x  text-white`;
+const GrillaPortada = tw.div`   grid  gap-2 xl:grid-flow-col     sm:grid grid-flow-row   justify-center`;
+const CajaContenido  = tw.div`bg-blue-200    p-4  max-w-96 bg-opacity-25 rounded-xl xl:max-w-lg`;
+const BannerFondo=tw.div` lg:hidden   text-center font-extrabold text-white`;
 
 const Tope=styled.div`-mt-64 `;
 const Llamador =tw.div`relative flex flex-1 bg-primary-500 w-full p-2 mx-auto text-white font-extrabold items-end`;
@@ -73,7 +74,7 @@ const videoParametros = {
   
   fluid :true ,
   responsive :true,
-  width : "350" ,
+  width : "200" ,
   projection : 'Cube',
   poster :'../video/jfk-poster.jpg',
   notSupportedMessage: false,
@@ -124,7 +125,7 @@ export default () => {
               <GrillaPortada>
                   
                   <CajaContenido>
-                     <FrameBase esPortada={true} tieneAudio={false} altura={window.innerWidth>900?300:250} source= {misrc}
+                     <FrameBase esPortada={true} tieneAudio={false} altura={window.innerWidth>600?450:200} source= {misrc}
                   Titulo="Recorrido 360º"
                   Bajada="La mejor forma de mostrar"
                   SubTitulo="Resalte lo importante"
@@ -141,7 +142,7 @@ export default () => {
                   IsImagen='true'/> 
                   </CajaContenido>
                  
-            <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcvideo}
+            <CajaContenido> <FrameBase altura={window.innerWidth>600?450:200} source= {misrcvideo}
                   Titulo="Video 360º"
                   Bajada="Experiencia inmersiva"
                   SubTitulo="Video 360º "
@@ -152,13 +153,13 @@ export default () => {
                  </CajaContenido> 
                  
                     </GrillaPortada> 
-                     <WhatsAppWidget phoneNumber='542216701280'
+                    
+                   </Content>  <WhatsAppWidget phoneNumber='542216701280'
                                     textReplyTime='Este es un mensaje automatizado, lo antes posible una persona de nuestro equipo lo contactará! '
                                       message= 'Hola!  En que podemos ayudarlo/a?'
                                       companyName="VTOUR"
                                       sendButton="ENVIAR WSP" className="relative t-0"
-                                      /> 
-                   </Content>
+                                      />  
              </HeroContainer>
         </Container>
       </>

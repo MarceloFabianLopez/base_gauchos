@@ -14,7 +14,7 @@ import { DataContext } from 'context/DataContext';
 
 // xl:mx-0 xl:ml-auto max-w-full md:max-w-full  lg:max-w-full xl:max-w-full p-5
 
-const Card = tw.div`relative top-auto mx-auto bg-blue-900 min-h-full    rounded-2xl   p-2 `;
+const Card = tw.div`relative top-auto  bg-blue-900 max-w-screen-sm     rounded-2xl   p-2 `;
 /* const CardImage = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`h-80 bg-cover bg-center rounded-2xl`
@@ -22,7 +22,7 @@ const Card = tw.div`relative top-auto mx-auto bg-blue-900 min-h-full    rounded-
  */
 //const CardText = tw.div`mt-0 p-4`;
 
-const CardHeader = tw.div` bg-black  p-8  flex flex-col  rounded-xl  `;
+const CardHeader = tw.div` bg-black  p-2  flex flex-col  rounded-xl  `;
 const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
 const CardType = tw.div`font-semibold text-sm text-gray-600 text-right `;
 const CardTitle = tw.h5`text-xl mt-2 text-white font-extrabold`;
