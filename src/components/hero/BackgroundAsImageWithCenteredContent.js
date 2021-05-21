@@ -35,7 +35,7 @@ hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
  const StyledHeader = styled(Header)`
   ${tw`pt-6 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-200 hover:border-red-300 hover:text-gray-300 `}
+    ${tw`text-gray-200 hover:border-primary-500 hover:text-primary-500 `}
   }
   ${NavToggle}.closed {
     ${tw`text-gray-100 hover:text-primary-500`}
@@ -88,7 +88,8 @@ const landpagebase = components['propios']['LandPBase']['url'];
 
 const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mibanner
 
-
+const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`
+const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
 const contactos =components['blocks']['Form']['elements']['Contacto']['url'];
 
@@ -98,23 +99,24 @@ export default () => {
   const MisLinks = [
    <NavLinks  key={1}>
       
-     
+      
              
        <NavLink href={clientes}>Área Clientes</NavLink>
-      {/* <NavLink href={caracteristicas}>uso</NavLink> */}
+     
       
       <NavLink href={contactos}>Contactos</NavLink>
       <NavLink href={landpagebase}>Recorridos platenses</NavLink>
+   
       
     </NavLinks> ];
  return (  
       <> 
            
         <Container> 
-           <OpacityOverlay/> 
+            <OpacityOverlay/>  
           <HeroContainer> 
-            <StyledHeader links={MisLinks} /> 
-             <Content> 
+            
+             <Content> <StyledHeader links={MisLinks} /> 
              
                <Heading>
                    Recorridos virtuales<br/>
