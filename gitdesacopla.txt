@@ -1,0 +1,11 @@
+git branch tmp
+git checkout tmp
+
+Movemos el puntero de la rama master al de nuestra nueva rama temporal:
+
+git branch -f master tmp
+git checkout master
+
+Borramos la rama temporal, que ya no es necesaria:
+
+git branch -d tmp
