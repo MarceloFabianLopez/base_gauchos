@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 //import HomeButton from 'compone
@@ -10,6 +10,7 @@ import emailjs from 'emailjs-com';
 //import PrimaryButton from 'components/misc/Buttons';
 import{ init } from 'emailjs-com';
 import WhatsAppWidget from "react-whatsapp-widget";
+import swal from "sweetalert";
 //import { Link } from 'react-router-dom'
 //import Button from '@material-ui/core/Button';
 
@@ -46,21 +47,73 @@ const SubmitButton = tw.button`w-full sm:w-32 mb-20 py-3 bg-gray-100 text-primar
 
 //const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`
 
-export default () => {
+function Contacto () {
+
+  //export default () => {
+
 
   init("user_kfmun1gr4Vx8fC0gf1XpR");
+  const [hayerror,setHayerror] =React.useState(true);
+  const [message, setMessage] = React.useState("");
+  const [messagename, setMessagename] = React.useState("");
+  const [messageemail, setMessageemail] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [error, setError] = React.useState(null);
+  const [erroremail, setErroremail] = React.useState(null);
+  const [errorname, setErrorname] = React.useState(null);
+  const [placemessage, setPlacemessage] = React.useState("Escriba su mensaje");
+  const [placenombre, setPlacenombre] = React.useState("Nombre y apellido");
+  const [placeemail, setPlaceemail] = React.useState("ej juan@gmail.com");
+
+  const mostrarAlerta =()=>{
+    swal({
+      title: "Enviado",
+      text: "Nos comunicaremos con Ud. a la brevedad!",
+      type: "success"
+  }).then(function() {
+      window.location = "/";
+  });
+  }
+  function handleChange(event) {
+    console.log("cambio message campo=",event.target.id," valor=",event.target.value);
+    const value = event.target.value;
+    
+    if (event.target.id=="message"){
+      if (value.includes("_")) setError("You cannot use an underscore");
+          else setError(null);
+      setMessage(value);}
+    if (event.target.id=="email-input"){
+      if (value.includes("x")) setErroremail("sin x plis");
+          else setErroremail(null);
+      setEmail(value);}
+      if (event.target.id=="name-input"){
+        if (value.includes("h")) setErrorname("sin h plis");
+            else setErrorname(null);
+        setName(value);}
+      if(error||erroremail||errorname) {setHayerror(true)}
+      else {setHayerror(false)}
+  }
 
   function sendEmail(e) {
     e.preventDefault();
     //e.target.reset();
+    if (hayerror) {
+      console.log("error _");
+      //e.target.reset();
+    } else {
 
-
-emailjs.sendForm('service_anxnkre', 'template_uk97428', e.target, 'user_kfmun1gr4Vx8fC0gf1XpR')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+          emailjs.sendForm('service_anxnkre', 'template_uk97428', e.target, 'user_kfmun1gr4Vx8fC0gf1XpR')
+                .then((result) => {
+                    console.log(result.text);
+                    mostrarAlerta();
+                }, (error) => {
+                    console.log(error.text);
+                });
+                //setTimeout(window.location.href="/",3000);
+              }
+              
+             // document.getElementById("miform").reset();
   }
  
   return (
@@ -72,21 +125,36 @@ emailjs.sendForm('service_anxnkre', 'template_uk97428', e.target, 'user_kfmun1gr
             <h3>Contactarse</h3>
 
            
-            <form className="contact-form" onSubmit={sendEmail}>
+            <form id="miform" className="contact-form" onSubmit={sendEmail}>
             {/* <TwoColumn> */}
                 <Column> 
                 <InputContainer tw="flex-1">
                     <Label htmlFor="message-input">Su mensaje</Label>
-                    <TextArea id="message" name="message" placeholder="Hola, quería recibir info....."/>
+                    <TextArea id="message" name="message" onChange={handleChange} value ={message} placeholder={placemessage}/>
+                    {error && (
+          <label style={{ color: "red" }} htmlFor="message">
+            {error}
+          </label>
+        )}
                   </InputContainer>
                   <InputContainer>
                    <input type="hidden" name="contact_number" />
                     <Label htmlFor="name-input">Su nombre y apellido</Label>
-                    <Input id="name-input" type="text" name="user_name" placeholder="Su nombre" />
+                    <Input id="name-input" type="text" name="user_name" onChange={handleChange} value ={name} placeholder={placenombre} />
+                    {errorname && (
+          <label style={{ color: "red" }} htmlFor="messagename">
+            {errorname}
+          </label>
+        )}
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="email-input">Su correo electrónico</Label>
-                    <Input id="email-input" type="email" name="user_email" placeholder="Por ej. juan@xmail.com" />
+                    <Input id="email-input" type="email" name="user_email" onChange={handleChange} value ={email} placeholder={placeemail} />
+                    {erroremail && (
+          <label style={{ color: "red" }} htmlFor="messageemail">
+            {erroremail}
+          </label>
+        )}
                   </InputContainer>
                 
                  
@@ -97,10 +165,10 @@ emailjs.sendForm('service_anxnkre', 'template_uk97428', e.target, 'user_kfmun1gr
               <br/>
 
 
-           {/* <p className="sm:text-center p-10">
+            <p className="sm:text-center p-10">
 
            
- <a href="/components/propios/LandPage">Cancelar</a></p> */}
+ <a href="/">Cancelar</a></p> 
 
          
               
@@ -121,3 +189,4 @@ emailjs.sendForm('service_anxnkre', 'template_uk97428', e.target, 'user_kfmun1gr
     </Container>
   );
 };
+export default Contacto;
