@@ -23,11 +23,11 @@ const Card = tw.div`relative top-auto  bg-blue-900 max-w-screen-sm     rounded-2
 //const CardText = tw.div`mt-0 p-4`;
 
 const CardHeader = tw.div` bg-black  p-2  flex flex-col  rounded-xl  `;
-const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
-const CardType = tw.div`font-semibold text-sm text-gray-600 text-right `;
+//const CardCompany = tw.div`text-primary-500 font-bold text-lg`;
+//const CardType = tw.div`font-semibold text-sm text-gray-600 text-right `;
 const CardTitle = tw.h5`text-xl mt-2 text-white font-extrabold`;
 
-const Centrador = tw.div`bg-red-400 p-2  items-end`;
+//const Centrador = tw.div`bg-red-400 p-2  items-end`;
 
 const CardMeta = styled.div`
   ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
@@ -105,7 +105,7 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
 {
   const [sourcelocal,setSourcelocal]=useState(source);
   const {cantidad,setCantidad} = useContext(DataContext);
-  const {intervalo,setIntervalo}=useContext(DataContext);                                                     
+  const {intervalo}=useContext(DataContext);                                                     
  // const [archivo,setArchivo]  = useState('');
   const [run, setRun] = useState(true);
   const [counter, setCounter] = useState(-1);

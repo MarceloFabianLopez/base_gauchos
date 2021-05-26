@@ -3,14 +3,14 @@ import tw from "twin.macro";
 import styled from "styled-components";
 //import { css } from "styled-components/macro"; //eslint-disable-line
 
-import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import Header, { NavLink, NavLinks,  LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 import FrameBase from "../propios/FrameBase";
 import { components } from "ComponentRenderer.js";
 //import LandPage from 'components/propios/LandPage';
 import WhatsAppWidget from 'react-whatsapp-widget';
 import 'react-whatsapp-widget/dist/index.css';
 
-const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
+//const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
 ${tw`relative  z-10 -mx-8 -mb-8 -my-10  bg-top  bg-cover`}
 background-image: url("images/aereos2.jpg");
@@ -26,12 +26,12 @@ background-image: url("images/aereos2.jpg");
 //  }
 //`;
 
-const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm 
+/* const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm 
 sm:text-base sm:mt-16 sm:px-8 
 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 
  text-gray-100 hocus:bg-primary-700 
 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
-
+*/
  const StyledHeader = styled(Header)`
   ${tw`pt-6 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
@@ -41,7 +41,7 @@ hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
     ${tw`text-gray-100 hover:text-primary-500`}
   }
 `;
-
+ 
 //const OpacityOverlay = tw.div`-z-10 absolute inset-0  h-full bg-black bg-opacity-50  `;
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-0 mx-auto h-full flex flex-col`;
@@ -60,9 +60,9 @@ const GrillaPortada = tw.div`   grid  gap-2 xl:grid-flow-col     sm:grid grid-fl
 const CajaContenido  = tw.div`bg-blue-200    p-4  max-w-96 bg-opacity-25 rounded-xl xl:max-w-lg`;
 const BannerFondo=tw.div` lg:hidden   text-center font-extrabold text-white`;
 
-const Tope=styled.div`-mt-64 `;
-const Llamador =tw.div`relative flex flex-1 bg-primary-500 w-full p-2 mx-auto text-white font-extrabold items-end`;
-const MenuEncabezado =tw.span`bg-primary-500  p-4 text-white font-extrabold `;
+//const Tope=styled.div`-mt-64 `;
+//const Llamador =tw.div`relative flex flex-1 bg-primary-500 w-full p-2 mx-auto text-white font-extrabold items-end`;
+//const MenuEncabezado =tw.span`bg-primary-500  p-4 text-white font-extrabold `;
 const misrc = "../standalone/pannellum.htm?config=../tour1.json";
 const misrcvideo = "../video/tres.mp4";
 const misrcImagen="../../images/repu2.png";
@@ -83,13 +83,13 @@ const videoParametros = {
     type: 'video/mp4'
   }]
 }
-const caracteristicas = components['propios']['LandPage']['url'];
+//const caracteristicas = components['propios']['LandPage']['url'];
 const landpagebase = components['propios']['LandPBase']['url'];
 
 const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mibanner
 
-const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`
-const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
+//const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`
+//const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
 const contactos =components['blocks']['Form']['elements']['Contacto']['url'];
 

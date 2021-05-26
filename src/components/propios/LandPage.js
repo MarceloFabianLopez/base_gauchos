@@ -2,7 +2,7 @@ import React , { useContext } from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 //import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
-import Header, { NavLink, NavLinks, PrimaryLink , LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import Header, { NavLink, NavLinks, PrimaryLink , NavToggle, DesktopNavLinks } from "../headers/light.js";
 //import { components } from "ComponentRenderer.js";
 
 //import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
@@ -10,7 +10,7 @@ import Header, { NavLink, NavLinks, PrimaryLink , LogoLink, NavToggle, DesktopNa
 //import {NavLinks,NavLink,PrimaryLink,LogoLink, NavToggle, DesktopNavLinks} from '../headers/light';
 //import { css } from "styled-components/macro"; //eslint-disable-line
 //import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
-import emailjs from 'emailjs-com';
+//import emailjs from 'emailjs-com';
 //import PrimaryButton from 'components/misc/Buttons';
 import{ init } from 'emailjs-com';
 //import WhatsAppWidget from "react-whatsapp-widget";
@@ -21,10 +21,10 @@ import FrameBase from "../propios/FrameBase";
 import SimpleContactUs from "components/forms/SimpleContactUs.js";
 
 import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import gfm from 'remark-gfm';
+//import rehypeRaw from 'rehype-raw';
+//import gfm from 'remark-gfm';
 //import MiMarkDown from "../propios/MiMarkDown"
-import FrameGaleria from '../propios/FrameGaleria';
+//import FrameGaleria from '../propios/FrameGaleria';
 //import MiFrame from "./MiFrame.js";
 //import FrameBase from "./FrameBase";
 //import  {DataProvider} from '../../context/DataContext';
@@ -134,7 +134,7 @@ ${tw`bg-top bg-white font-sans`}
 
 
 `;
-const NavLinkMio=tw(NavLink)`bg-primary-400 p-4`;
+//const NavLinkMio=tw(NavLink)`bg-primary-400 p-4`;
 
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const TextoDescripcion = `
@@ -161,7 +161,7 @@ export default () => {
 
   init("user_kfmun1gr4Vx8fC0gf1XpR");
  // console.log("ancho=",window.innerWidth);
-  function sendEmail(e) {
+  /* function sendEmail(e) {
     e.preventDefault();
     e.target.reset();
 
@@ -172,7 +172,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
       }, (error) => {
           console.log(error.text);
       });
-  }
+  } */
 
    const MisLinks = [
     
@@ -184,7 +184,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
    
   </NavLinks>
 ]; 
- const {escena} = useContext (DataContext);
+ //const {escena} = useContext (DataContext);
  const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour2.json" ;  
  //const contactos = components['blocks']['Form']['elements']['SimpleContactUs']['url']; 
 //logoLink={logoLink}

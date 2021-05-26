@@ -1,8 +1,8 @@
-import React , { useContext } from "react";
+import React  from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 //import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
-import Header, { NavLink, NavLinks, PrimaryLink , LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import Header, { NavLink, NavLinks, PrimaryLink , NavToggle, DesktopNavLinks } from "../headers/light.js";
 //import { components } from "ComponentRenderer.js";
 
 //import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
@@ -10,7 +10,7 @@ import Header, { NavLink, NavLinks, PrimaryLink , LogoLink, NavToggle, DesktopNa
 //import {NavLinks,NavLink,PrimaryLink,LogoLink, NavToggle, DesktopNavLinks} from '../headers/light';
 //import { css } from "styled-components/macro"; //eslint-disable-line
 //import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
-import emailjs from 'emailjs-com';
+//import emailjs from 'emailjs-com';
 //import PrimaryButton from 'components/misc/Buttons';
 import{ init } from 'emailjs-com';
 //import WhatsAppWidget from "react-whatsapp-widget";
@@ -18,30 +18,30 @@ import{ init } from 'emailjs-com';
 import FrameBase from "../propios/FrameBase";
 //import { components } from "ComponentRenderer.js";
 //import FrameBaseImagenSimple from "../propios/FrameBaseImagenSimple";
-import SimpleContactUs from "components/forms/SimpleContactUs.js";
+import Contacto from "components/forms/Contacto";
 
 import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import gfm from 'remark-gfm';
+//import rehypeRaw from 'rehype-raw';
+//import gfm from 'remark-gfm';
 //import MiMarkDown from "../propios/MiMarkDown"
-import FrameGaleria from '../propios/FrameGaleria';
+//import FrameGaleria from '../propios/FrameGaleria';
 //import MiFrame from "./MiFrame.js";
 //import FrameBase from "./FrameBase";
 //import  {DataProvider} from '../../context/DataContext';
-import { DataContext } from 'context/DataContext';
+//import { DataContext } from 'context/DataContext';
 //import Datos from "./Datos.js";
 //const gfm = require('remark-gfm');
 const MiLogoLink = styled(NavLink)`
   ${tw`top-0 flex items-center font-extrabold border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`w-64     `}
+    ${tw`w-32     `}
   }
 `;
 //const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
  const logoLink = (
    <MiLogoLink href="/">
-    <img src="../../images/logo.jpg"  alt="logo" />
+    <img src="../../images/logo.png"  alt="logo" />
     
   </MiLogoLink>
 );  
@@ -134,12 +134,12 @@ ${tw`bg-top bg-white font-sans`}
 
 
 `;
-const NavLinkMio=tw(NavLink)`bg-primary-400 p-4`;
+//const NavLinkMio=tw(NavLink)`bg-primary-400 p-4`;
 
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const TextoDescripcion = `
 ### Recorridos virtuales
-## La nueva manera de estar ahí-
+
 - Vivienda familiar en barrio residencial, sobre un lote de terreno de **_16x60_**.
 - La misma consta de **4 dormitorios, el principal en suite, con vestidor.**
 -  Escritorio. Amplio comedor, 2 livings, 1 en desnivel, con estufa hogar a leña, cocina equipada con muebles bajo y
@@ -161,7 +161,7 @@ export default () => {
 
   init("user_kfmun1gr4Vx8fC0gf1XpR");
  // console.log("ancho=",window.innerWidth);
-  function sendEmail(e) {
+ /*  function sendEmail(e) {
     e.preventDefault();
     e.target.reset();
 
@@ -173,7 +173,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
           console.log(error.text);
       });
   }
-
+*/
    const MisLinks = [
     
   <NavLinks key={1}>
@@ -184,7 +184,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
    
   </NavLinks>
 ]; 
- const {escena} = useContext (DataContext);
+ //const {escena} = useContext (DataContext);
  const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour1.json" ;  
  //const contactos = components['blocks']['Form']['elements']['SimpleContactUs']['url']; 
 //logoLink={logoLink}
@@ -235,7 +235,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                             
                             
                            
-                            </AreaContactar><FormularioCorreo> <SimpleContactUs/></FormularioCorreo>
+                            </AreaContactar><FormularioCorreo> <Contacto/></FormularioCorreo>
                            
                             </ColumnAngosta>
 

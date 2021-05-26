@@ -9,7 +9,7 @@ import tw from "twin.macro";
 import emailjs from 'emailjs-com';
 //import PrimaryButton from 'components/misc/Buttons';
 import{ init } from 'emailjs-com';
-import WhatsAppWidget from "react-whatsapp-widget";
+//import WhatsAppWidget from "react-whatsapp-widget";
 //import { Link } from 'react-router-dom'
 //import Button from '@material-ui/core/Button';
 
