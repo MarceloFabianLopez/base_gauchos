@@ -53,7 +53,7 @@ const Card = styled.a`
 const DecoratorBlob = styled(SvgDecoratorBlob3)`
   ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
 `;
-const ContainerFeature=tw(Container)`-mt-20`;
+const ContainerFeature=tw(Container)`bg-gray-200  -mt-10`;
 export default ({
 
   contactos =components['blocks']['Form']['elements']['SimpleContactUs']['url'],
