@@ -103,14 +103,14 @@ const formik = useFormik({
 validationSchema: Yup.object({
   user_name: Yup.string()
     .min(2, "Mínimo 2 characteres")
-    .max(15, "Máximo 15 characteres")
+    .max(15, "Máximo 25 characteres")
     .required("Requerido!"),
     user_email: Yup.string()
     .email("Formato de email invalido")
     .required("Requerido!"),
   
     message: Yup.string()
-    .min(8,"Mínimo 8 caracteres")
+    .min(8,"Mínimo 4 caracteres")
     .required("Requerido!")
 })
 ,
@@ -185,13 +185,13 @@ sendEmail();
           
          
          {/*   <SvgDotPattern1 /> */}
-         {/* <div className="absolute top-0  pd-20"> 
-              <WhatsAppWidget phoneNumber='542214597362'
+          {/* <div className="absolute top-0  pd-20"> 
+              <WhatsAppWidget phoneNumber='542216701280'
                                     textReplyTime='Este es un mensaje automatizado, lo antes posible una persona de nuestro equipo lo contactará! '
                                       message= 'Hola!  En que podemos ayudarlo/a?'
-                                      companyName="MCHAMA BIENES RAICES"
+                                      companyName="VTOUR"
                                       sendButton="ENVIAR WSP" 
-                                      /></div> */}
+                                      /></div>  */}
         </FormContainer>
    
       </Content>
