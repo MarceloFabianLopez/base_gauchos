@@ -44,8 +44,8 @@ const InputContainer = tw.div`relative py-5 mt-2 `;
 const Label = tw.label`absolute -mt-8 ml-2 tracking-wide font-semibold text-sm`;
 const Input = tw.input`bg-gray-200`;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`w-full sm:w-32 mb-20 py-3 bg-gray-100 text-primary-500 rounded-2xl font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
-const PrimaryButton = tw(PrimaryButtonBase)`h-12 rounded-2xl`;
+const SubmitButton = tw.button`w-full sm:w-16 mb-2 py-3 bg-gray-100 text-primary-500 rounded-2xl font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
+const PrimaryButton = tw(PrimaryButtonBase)`bg-gray-800 mx-auto h-12  rounded-2xl text-center text-sm font-normal`;
 const Botones = tw.div`grid grid-cols-2 gap-2 h-12` ;
 //const CancelButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-100 text-primary-500 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
 
@@ -176,7 +176,7 @@ sendEmail();
               {/* </TwoColumn> */}
                 <Botones>      
               <SubmitButton type="submit" value="Send">Enviar</SubmitButton>
-              <PrimaryButton  as="a" href="/">Cancelar</PrimaryButton>
+              <PrimaryButton  as="a" href="/">Anular</PrimaryButton>
               </Botones>      
 
          

@@ -41,7 +41,7 @@ export default () => {
           <LinksContainer>
             <Link href="/">Inicio</Link>
             <Link href="/">VTOUR</Link>
-            <Link href="/">Contactos</Link>
+            <Link href="/components/blocks/Form/Contacto">Contactos</Link>
             
           </LinksContainer>
           <SocialLinksContainer>
