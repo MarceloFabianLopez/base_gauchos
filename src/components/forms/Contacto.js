@@ -14,6 +14,8 @@ import swal from "sweetalert";
 //import { Link } from 'react-router-dom'
 //import Button from '@material-ui/core/Button';
 import {  PrimaryButton as PrimaryButtonBase }  from "components/misc/Buttons.js";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 //import { NavLink } from 'react-router-dom'; 
 //import HookForm from 'components/Forms/TestForm.jsx';
 const Container = tw.div`z-0 relative p-2 bg-gray-200  rounded-t-2xl `;
@@ -55,15 +57,7 @@ function Contacto () {
 
 
   init("user_kfmun1gr4Vx8fC0gf1XpR");
-  const [hayerror,setHayerror] =React.useState(true);
-  const [message, setMessage] = React.useState("");
-  //const [messagename, setMessagename] = React.useState("");
-  //const [messageemail, setMessageemail] = React.useState("");
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [error, setError] = React.useState(null);
-  const [erroremail, setErroremail] = React.useState(null);
-  const [errorname, setErrorname] = React.useState(null);
+ 
   const [placemessage] = React.useState("Escriba su mensaje");
   const [placenombre] = React.useState("Nombre y apellido");
   const [placeemail] = React.useState("ej juan@gmail.com");
@@ -77,104 +71,98 @@ function Contacto () {
       window.location = "/";
   });
   }
-  function isEmail(val) {
-    let regEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(!regEmail.test(val)){
-      return 'Invalid Email';
-    }
-}
+ 
 
-  function handleChange(event) {
-    console.log("cambio message campo=",event.target.id," valor=",event.target.value);
-    const value = event.target.value;
-   
-    if (event.target.id==="message"){
-      if (value.includes("<")) setError("Solamente texto está permitido");
-          else setError(null);
-      setMessage(value);}
-    if (event.target.id==="email-input"){
-      
-      if (value.includes("<")) setErroremail("escriba un correo válido");
-          else setErroremail(null);
-      setEmail(value);}
-      if (event.target.id==="name-input"){
-        if (value.includes("<")) setErrorname("Escriba su nombre y apellido");
-            else setErrorname(null);
-        setName(value);}
-      if(error||erroremail||errorname) {setHayerror(true)}
-      else {setHayerror(false)}
-  }
+  
 
-  function sendEmail(e) {
-    e.preventDefault();
+  function sendEmail() {
+    //e.preventDefault();
     //e.target.reset();
     
-    if (hayerror) {
-      console.log("error _");
-      //e.target.reset();
-    } else {
-      //if (isEmail(e.target.email-input.value)){console.log("email correcti");}
-      //console.log("e.target-------------------------------=",e.target.user_email.value);
-        if (!isEmail(e.target.user_email.value)){
-                                                      console.log("email correcto");
-                                                      emailjs.sendForm('service_anxnkre', 'template_uk97428', e.target, 'user_kfmun1gr4Vx8fC0gf1XpR')
+   //console.log("email correcto)=",e.tartget);
+   emailjs.sendForm('service_anxnkre', 'template_uk97428',"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
                                                             .then((result) => {
                                                                                     console.log(result.text);
                                                                                     mostrarAlerta();
                                                                                 }, (error) => {
                                                                                     console.log(error.text);
                                                                                 });
-                                                            //setTimeout(window.location.href="/",3000);
-                                                          }
-                                                  
-                                                  else  {console.log("email incorrecto");}
-             // document.getElementById("miform").reset();
-  }
+                                                           
+                                                          
+                                                
 }
-const IraInicio = () => {
-window.location.href="/";
+//-----------------------
+
+const formik = useFormik({
+  initialValues: {
+    user_name: "",
+    user_email: "",
+    message: ""
+    
+  },
+validationSchema: Yup.object({
+  user_name: Yup.string()
+    .min(2, "Mínimo 2 characteres")
+    .max(15, "Máximo 15 characteres")
+    .required("Requerido!"),
+    user_email: Yup.string()
+    .email("Formato de email invalido")
+    .required("Requerido!"),
+  
+    message: Yup.string()
+    .min(8,"Mínimo 8 caracteres")
+    .required("Requerido!")
+})
+,
+
+onSubmit: values => {
+sendEmail();
 }
+//: values => {
+  //alert(JSON.stringify(values, null, 2));
+  //console.log(e.target);
+ //sendEmail(e);
+
+
+//}
+});
+//------------------------
+
+
+//onSubmit={sendEmail}>
+
   return (
     <Container>
       <Content><TituoloFormulario><h3>Contactarse</h3></TituoloFormulario>
         
         <FormContainer>
-
-          
+  
+            <form id="miform"  onSubmit={formik.handleSubmit}>
             
-
-           
-            <form id="miform" className="contact-form" onSubmit={sendEmail}>
             {/* <TwoColumn> */}
                 <Column> 
                
                   <InputContainer>
                    <input type="hidden" name="contact_number" />
                     <Label htmlFor="name-input">Su nombre y apellido</Label>
-                    <Input id="name-input" type="text" name="user_name" onChange={handleChange} value ={name} placeholder={placenombre} />
-                    {errorname && (
-          <label style={{ color: "red" }} htmlFor="messagename">
-            {errorname}
-          </label>
-        )}
+                    <Input id="user_name" type="text" name="user_name" onChange={formik.handleChange}  value={formik.values.user_name} placeholder={placenombre} />
+                    {formik.errors.user_name && formik.touched.user_name && (
+            <p>{formik.errors.user_name}</p>
+          )}
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="email-input">Su correo electrónico</Label>
-                    <Input id="email-input" type="email" name="user_email" onChange={handleChange} value ={email} placeholder={placeemail} />
-                    {erroremail && (
-          <label style={{ color: "red" }} htmlFor="messageemail">
-            {erroremail}
-          </label>
-        )}
+                    <Input id="email" type="email" name="user_email" onChange={formik.handleChange}  value={formik.values.user_email} placeholder={placeemail} />
+                    {formik.errors.user_email && formik.touched.user_email && (
+            <p>{formik.errors.user_email}</p>
+          )}
                   </InputContainer> 
                   <InputContainer tw="flex-1">
                     <Label htmlFor="message-input">Su mensaje</Label>
-                    <TextArea id="message" name="message" onChange={handleChange} value ={message} placeholder={placemessage}/>
-                    {error && (
-          <label style={{ color: "red" }} htmlFor="message">
-            {error}
-          </label>
-        )}
+                    <TextArea id="message" name="message" onChange={formik.handleChange}   value={formik.values.message} placeholder={placemessage}/>
+                    {formik.errors.message && formik.touched.message && (
+            <p>{formik.errors.message}</p>
+          )}
                   </InputContainer>
                 
                  

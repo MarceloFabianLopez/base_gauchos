@@ -9,6 +9,7 @@
     "autoprefixer": "^10.2.5",
     "emailjs-com": "^2.6.4",
     "feather-icons": "^4.26.0",
+    "formik": "^2.2.8",
     "framer-motion": "^1.11.1",
     "postcss": "^8.1.10",
     "react": "^16.13.1",
@@ -34,7 +35,8 @@
     "use-in-view": "^1.0.15",
     "videojs": "^1.0.0",
     "videojs-panorama": "^0.1.7",
-    "videojs-vr": "^1.7.1"
+    "videojs-vr": "^1.7.1",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",
