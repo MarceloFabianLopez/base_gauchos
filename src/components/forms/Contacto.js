@@ -147,21 +147,27 @@ sendEmail();
                     <Label htmlFor="name-input">Su nombre y apellido</Label>
                     <Input id="user_name" type="text" name="user_name" onChange={formik.handleChange}  value={formik.values.user_name} placeholder={placenombre} />
                     {formik.errors.user_name && formik.touched.user_name && (
-            <p>{formik.errors.user_name}</p>
+            <p><label style={{ color: "red" }} htmlFor="messageemail">{formik.errors.user_name} </label></p>
           )}
+
+
+         
+
+
+
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="email-input">Su correo electrónico</Label>
                     <Input id="email" type="email" name="user_email" onChange={formik.handleChange}  value={formik.values.user_email} placeholder={placeemail} />
                     {formik.errors.user_email && formik.touched.user_email && (
-            <p>{formik.errors.user_email}</p>
+            <p><label style={{ color: "red" }}>{formik.errors.user_email}</label></p>
           )}
                   </InputContainer> 
                   <InputContainer tw="flex-1">
                     <Label htmlFor="message-input">Su mensaje</Label>
                     <TextArea id="message" name="message" onChange={formik.handleChange}   value={formik.values.message} placeholder={placemessage}/>
                     {formik.errors.message && formik.touched.message && (
-            <p>{formik.errors.message}</p>
+            <p><label style={{ color: "red" }}>{formik.errors.message}</label></p>
           )}
                   </InputContainer>
                 
