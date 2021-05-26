@@ -39,7 +39,7 @@ export const LogoLink = styled(NavLink)`
   ${tw`top-0 flex items-center font-extrabold border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`absolute bg-white   mt-10 -mx-2  p-2 rounded-xl w-12  border-2  border-color[blueviolet]  sm:mt-0 sm:mx-0  md:w-24  xl:mt-4   `}
+    ${tw`absolute bg-white   mt-10 -mx-2  p-2 rounded-xl w-12  border-2  border-color[blueviolet]  sm:mt-0 sm:mx-0  md:w-24 md:mt-24   xl:mt-32   `}
   }
 `;
 
@@ -55,7 +55,7 @@ export const MobileNavLinks = motion.custom(styled.div`
 `);
 
 export const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 justify-between items-center 
+  hidden lg:flex flex-1 p-4 justify-between items-center 
  
   `;
 
