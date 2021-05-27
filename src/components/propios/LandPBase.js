@@ -136,6 +136,7 @@ ${tw`bg-top bg-white font-sans`}
 `;
 //const NavLinkMio=tw(NavLink)`bg-primary-400 p-4`;
 
+
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const TextoDescripcion = `
 ### Recorridos virtuales
@@ -185,7 +186,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
   </NavLinks>
 ]; 
  //const {escena} = useContext (DataContext);
- const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour1.json" ;  
+ const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour2.json" ;  
  //const contactos = components['blocks']['Form']['elements']['SimpleContactUs']['url']; 
 //logoLink={logoLink}
  // const markdown = `Just a link: https://reactjs.com.`
@@ -209,9 +210,12 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                                               Titulo="Importante propiedad"
                                             TextoGrisMayuscula="Tres dormitorios, cochera, 2 baños"/> */}
                     <ViewerPrincipal>
-                            <FrameBase tieneAudio="true" esPortada="false" altura={window.innerWidth>600?450:250} source= {EscenaLandPage}
+                            <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= {EscenaLandPage}
+
+
+IsRecorrido='true' 
                  
-                  IsRecorrido='true'
+                  
                   IsPlano='true'/>
                   
                   </ViewerPrincipal>              

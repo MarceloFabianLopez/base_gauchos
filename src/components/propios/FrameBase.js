@@ -256,7 +256,7 @@ setCounter(counter-1);
 
   function handleClick(event) {
     //alert('clicked');
-   // //////console.log("botonera run=",run);
+   console.log("botonera run=",run);
     if(run){
     setRun(false) } else {setRun(true)}
     

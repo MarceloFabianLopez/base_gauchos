@@ -9,7 +9,8 @@ import { components } from "ComponentRenderer.js";
 //import LandPage from 'components/propios/LandPage';
 import WhatsAppWidget from 'react-whatsapp-widget';
 import 'react-whatsapp-widget/dist/index.css';
-
+import FrameBaseImagen from "components/propios/FrameBaseImagen.js";
+import FrameBaseVideo from "components/propios/FrameBaseVideo"
 //const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
 ${tw`relative  z-10 -mx-8 -mb-8 -my-10  bg-top  bg-cover`}
@@ -101,11 +102,11 @@ export default () => {
       
       
              
-       <NavLink href={clientes}>Área Clientes</NavLink>
+   {/*     <NavLink href={clientes}>Área Clientes</NavLink> */}
      
       
       <NavLink href={contactos}>Contactos</NavLink>
-      <NavLink href={landpagebase}>Recorridos platenses</NavLink>
+      <NavLink href={landpagebase}>Vea un ejemplo</NavLink>
    
       
     </NavLinks> ];
@@ -123,35 +124,38 @@ export default () => {
                    Video 360º y aéreos
                    <SubHeading>vtour.com.ar</SubHeading>
                </Heading>  
-                <BannerFondo > <a href="/components/propios/LandPage">Ejemplos </a></BannerFondo>  
+                <BannerFondo > <a href={landpagebase}>Ejemplos </a></BannerFondo>  
               <GrillaPortada>
                   
+              
+
+
                   <CajaContenido>
-                     <FrameBase esPortada={true} tieneAudio={false} altura={window.innerWidth>600?450:200} source= {misrc}
+                  {/* <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= {misrc} IsRecorrido='true'IsPlano='true'/> */}
+                      <FrameBase esPortada={true} tieneAudio={false}  altura={window.innerWidth>600?450:200} source= {misrc} IsPlano={false}
                   Titulo="Recorrido 360º"
                   Bajada="La mejor forma de mostrar"
                   SubTitulo="Resalte lo importante"
                   TextoGrisMayuscula="Un recorrido a las virtudes de su producto"
                   videoJsOptions ={ videoParametros}
-                  IsRecorrido='true'/> 
+                  IsRecorrido='true'/>  
                  </CajaContenido>
-                  <CajaContenido> <FrameBase altura={window.innerWidth>600?450:250} source= {misrcImagen}
+                  <CajaContenido>
+                  <FrameBaseImagen altura={window.innerWidth>600?450:250} source= {misrcImagen}
                   Titulo="Vistas aéreas"
                   Bajada="La otra mirada"
                   SubTitulo="Imprescindible"
-                  TextoGrisMayuscula="Agregue una dimensión a sus ventas"
-                  videoJsOptions ={ videoParametros}
-                  IsImagen='true'/> 
+                  TextoGrisMayuscula="Agregue una dimensión a sus ventas"/>   
                   </CajaContenido>
                  
-            <CajaContenido> <FrameBase altura={window.innerWidth>600?450:200} source= {misrcvideo}
+            <CajaContenido>  <FrameBaseVideo altura={window.innerWidth>600?450:200} source= {misrcvideo}
                   Titulo="Video 360º"
                   Bajada="Experiencia inmersiva"
                   SubTitulo="Video 360º "
                   TextoGrisMayuscula="Herramienta excelente para 
                   promocionar "
                   videoJsOptions ={ videoParametros}
-                  IsVideo='true'/> 
+                  /> 
                  </CajaContenido> 
                  
                     </GrillaPortada> 
