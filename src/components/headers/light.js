@@ -39,11 +39,11 @@ export const LogoLink = styled(NavLink)`
   ${tw`top-0 flex items-center font-extrabold border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`absolute bg-white   mt-10 -mx-2  p-2 rounded-xl w-12  border-2  border-color[blueviolet]  sm:mt-0 sm:mx-0  md:w-24 md:mt-24   xl:mt-32   `}
+    ${tw`absolute bg-white   mt-12 -mx-4  p-2 rounded-xl w-12  border-2  border-color[blueviolet]  sm:mt-0 sm:mx-0  md:w-24 md:mt-24   xl:mt-32   `}
   }
 `;
 
-export const MobileNavLinksContainer = tw.nav`z-40 flex flex-1 items-center justify-between md:px-5 md:mt-4`;
+export const MobileNavLinksContainer = tw.nav`z-40 flex flex-1   justify-between md:px-5 md:mt-4 sm:-mt-20`;
 export const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `;
@@ -123,7 +123,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
      
       <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
         {logoLink}
-        <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
+        <MobileNavLinks initial={{ x: "100%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
           {links}
          </MobileNavLinks>
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>

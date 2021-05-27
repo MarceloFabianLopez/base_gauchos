@@ -50,9 +50,9 @@ const HeroContainer = tw.div`z-20 relative px-6 sm:px-0 mx-auto h-full flex flex
 const Content = tw.div`flex-1 flex-col  items-center`;
 
 const Heading = styled.h1`
-  ${tw`text-xl text-center  md:text-4xl  lg:text-4xl xl:text-6xl font-black text-gray-100 leading-snug -mt-24 sm:pt-2 md:p-24`}
+  ${tw`text-xl text-center  md:text-4xl  lg:text-4xl xl:text-6xl font-black text-gray-100 leading-snug -mt-24 sm:mt-4 pt-2 md:p-24`}
   span {
-    ${tw`inline-block mt-2`}
+    ${tw`inline-block mt-4`}
   }
 `; 
 //xl:grid-cols-3     sm:grid-cols-1 pt-8 justify-items-center

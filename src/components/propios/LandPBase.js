@@ -180,7 +180,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
   <NavLinks key={1}>
     
     <a href="/">Sitio principal</a>&nbsp;&nbsp;&nbsp;
-    <PrimaryLink href="/components/blocks/Form/SimpleContactUs">Contacto</PrimaryLink>
+    <PrimaryLink href="/components/blocks/Form/Contacto">Contacto</PrimaryLink>
     
    
   </NavLinks>
