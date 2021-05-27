@@ -218,7 +218,7 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
      const   lacuenta =  setTimeout(() => setCounter(counter + 1), intervalo);
           //console.log("termina aumentando el contador .......=",counter);
      if (run&&sourcelocal) { 
-     Navegacion();
+      Navegacion(); 
      }
      // counter < (cantidad + 1) && lacuenta() ;
      // ////console.log("counter useEffect=",counter,"cantidad=",cantidad);

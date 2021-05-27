@@ -1630,7 +1630,7 @@ function renderInit() {
         
         // Display error if there is a bad texture
         if (event.type == 'webgl error' || event.type == 'no webgl') {
-            anError();
+            anError("");
         } else if (event.type == 'webgl size error') {
             anError(config.strings.textureSizeError.replace('%s', event.width).replace('%s', event.maxWidth));
         } else {
