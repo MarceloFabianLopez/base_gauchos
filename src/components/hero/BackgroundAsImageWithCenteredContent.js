@@ -64,7 +64,7 @@ const BannerFondo=tw.div` lg:hidden   text-center font-extrabold text-white`;
 //const Tope=styled.div`-mt-64 `;
 //const Llamador =tw.div`relative flex flex-1 bg-primary-500 w-full p-2 mx-auto text-white font-extrabold items-end`;
 //const MenuEncabezado =tw.span`bg-primary-500  p-4 text-white font-extrabold `;
-const misrc = "../standalone/pannellum.htm?config=../tour4.json";
+const misrc = "../standalone/pannellum.htm?config=../tour1.json";
 const misrcvideo = "../video/tres.mp4";
 const misrcImagen="../../images/repu2.png";
 const videoParametros = {
@@ -76,6 +76,7 @@ const videoParametros = {
   fluid :true ,
   responsive :true,
   width : "200" ,
+  altura :"300",
   projection : 'Cube',
   poster :'../video/jfk-poster.jpg',
   notSupportedMessage: false,
@@ -130,8 +131,8 @@ export default () => {
               
 
 
-                  <CajaContenido>
-                  {/* <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= {misrc} IsRecorrido='true'IsPlano='true'/> */}
+                   <CajaContenido>
+                 
                       <FrameBase esPortada={true} tieneAudio={false}  altura={window.innerWidth>600?450:200} source= {misrc} IsPlano={false}
                   Titulo="Recorrido 360º"
                   Bajada="La mejor forma de mostrar"
@@ -141,13 +142,13 @@ export default () => {
                   IsRecorrido='true'/>  
                  </CajaContenido>
                   <CajaContenido>
-                  <FrameBaseImagen altura={window.innerWidth>600?450:250} source= {misrcImagen}
+                  <FrameBaseImagen altura={window.innerWidth>600?350:250} source= {misrcImagen}
                   Titulo="Vistas aéreas"
                   Bajada="La otra mirada"
                   SubTitulo="Imprescindible"
                   TextoGrisMayuscula="Agregue una dimensión a sus ventas"/>   
-                  </CajaContenido>
-                 
+                  </CajaContenido> 
+                
             <CajaContenido>  <FrameBaseVideo altura={window.innerWidth>600?450:200} source= {misrcvideo}
                   Titulo="Video 360º"
                   Bajada="Experiencia inmersiva"

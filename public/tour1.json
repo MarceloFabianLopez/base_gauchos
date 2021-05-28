@@ -58,6 +58,7 @@
                 }
             ]
         },
+        
         "circle2": {
             "title": "Mason Circle",
             "hfov": 110,

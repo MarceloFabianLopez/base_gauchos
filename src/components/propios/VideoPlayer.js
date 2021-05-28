@@ -12,6 +12,7 @@ import 'videojs-vr/dist/videojs-vr.css';
 
 export default class VideoPlayer extends React.Component {
   
+  
   componentDidMount() {
 
     //var videojs = require('video.js');
@@ -23,6 +24,7 @@ export default class VideoPlayer extends React.Component {
         player.mediainfo.projection = 'equirectangular'
         player.bigPlayButton = true
         player.loadingSpinner = true
+        
 
        /*  player.panorama({
           clickAndDrag: true,
@@ -35,6 +37,7 @@ export default class VideoPlayer extends React.Component {
           projection: '360',
           debug: true,
           forceCardboard: true 
+          
 
         }) 
        // player.poster('../video/jfk-poster.jpg')
@@ -65,7 +68,7 @@ export default class VideoPlayer extends React.Component {
     return (
       <div className="video-js vjs-theme-city" >	
         <div >
-          <video ref={ node => this.videoNode = node } ></video>
+          <video   width="100%" height="100%" ref={ node => this.videoNode = node } ></video>
         </div>
       </div>
     )

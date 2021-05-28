@@ -2,9 +2,17 @@ import React from 'react';
 import tw from "twin.macro";
 import IconoAerea from './IconoAerea';
 import styled from "styled-components";
+const IconoReco = tw.div`absolute  z-10 top-0 right-0 h-16 w-16  bg-black rounded-2xl bg-opacity-75`;
 const Card = tw.div`relative top-auto  bg-blue-900 max-w-screen-sm     rounded-2xl   p-2 `;
+
+
+
 const CardHeader = tw.div` bg-black  p-2  flex flex-col  rounded-xl  `;
+const CardCompany = tw.div`text-primary-500 font-bold mt-2 text-2xl bg-black text-center bg-opacity-75 p-2 rounded-2xl`;
+const CardType = tw.div`font-semibold text-sm text-gray-600 text-right p-2`;
 const CardTitle = tw.h5`text-xl mt-2 text-white font-extrabold`;
+
+
 const CardMeta = styled.div`
   ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
 `;
@@ -14,7 +22,7 @@ const CardMetaFeature = styled.div`
     ${tw`w-5 h-5 mr-1`}
   }
 `;
-  function FrameBaseImagen ({ esPortada=true, altura="350",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
+  function FrameBaseImagen ({ esPortada=true, altura="250",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
     
                      IsPlano=false,videoJsOptions={},ImageAlt="imagen" }) 
 
@@ -23,13 +31,17 @@ const CardMetaFeature = styled.div`
  
   return (<>
 
-                      <Card><IconoAerea/><CardHeader>
-                                 <img src={source}  height={altura}  alt={ImageAlt} />
+                      <Card>
+                        <IconoReco><IconoAerea/></IconoReco>
+                      <CardHeader>
+                                 <img src={source}  width={altura}  alt={ImageAlt} />
                         </CardHeader>
-                        {!IsPlano && <><CardTitle>{SubTitulo}</CardTitle>
-                                      <CardMeta>
-                                      <CardMetaFeature>{TextoGrisMayuscula}</CardMetaFeature>
-                                      </CardMeta></>
+                        {!IsPlano && <> <CardCompany>{Titulo}</CardCompany> 
+                               <CardType>{Bajada}</CardType> 
+                              <CardTitle>{SubTitulo}</CardTitle>
+                              <CardMeta>
+                                <CardMetaFeature>{TextoGrisMayuscula}</CardMetaFeature>
+                              </CardMeta></>
                         }
                      
                       </Card>  

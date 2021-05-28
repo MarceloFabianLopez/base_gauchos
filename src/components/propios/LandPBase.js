@@ -35,7 +35,7 @@ const MiLogoLink = styled(NavLink)`
   ${tw`top-0 flex items-center font-extrabold border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`w-32     `}
+    ${tw`w-24 mt-0     `}
   }
 `;
 //const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
