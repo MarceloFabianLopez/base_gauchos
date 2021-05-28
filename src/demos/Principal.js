@@ -1,10 +1,13 @@
 import React from "react";
+import tw from "twin.macro";
+import styled from "styled-components";
+
 //import MiWsp from 'components/propios/MiWsp';
 //import WhatsAppWidget from 'react-whatsapp-widget';
 //import 'react-whatsapp-widget/dist/index.css';
 
 
-
+import Contacto from "components/forms/Contacto";
 //import tw from "twin.macro";
 //import PortfolioTwoCardsWithImage from 'components/cards/PortfolioTwoCardsWithImage';
 //import { css } from "styled-components/macro"; //eslint-disable-line
@@ -29,6 +32,24 @@ import Footer from "components/footers/MiniCenteredFooter.js";
 //import celebrationIconImageSrc from "images/celebration-icon.svg";
 //import shopIconImageSrc from "images/shop-icon.svg";
 //"Triple función, parrilla-horno-ahumador. Parrilla de hierro redondo de 70x45cm (5 pollos o un lechón de 10kg),permite hornear carnes,verduras,pizzas, empanadas, panes, etc. y si agregamos astillas para humar tendremos un ahumado delicioso en nuestras comidas. Cuenta con termómetro para visualizar la temperatura a la que se está cocinando."
+
+const AreaContactar = tw.div`p-2 bg-white`;
+const FormularioCorreo = tw.div`bg-gray-200 p-2 rounded-2xl ml-4`;
+const AreaWhatsap =styled.div(props => [
+  `background-image: url("${props.imageWsp}");
+  `,
+  tw`sm:px-2 md:px-32 h-16 w-full bg-no-repeat bg-center rounded-2xl `
+]);
+const imagenWsp='../../images/wsp.png';
+
+
+const Container = styled.div`
+
+
+${tw`bg-top bg-white font-sans`}
+
+
+`;
 export default () => {
   //const Subheading = tw.span`tracking-wider text-sm font-medium`;
   //const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
@@ -41,7 +62,13 @@ export default () => {
    
        <Hero0/>
       
-      <Features/> 
+      <Features/>
+      <AreaContactar><a href="https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
+      <AreaWhatsap imageWsp={imagenWsp}/></a>
+      </AreaContactar>
+      <FormularioCorreo> <Contacto/></FormularioCorreo>
+   
+
       <Footer />
       
     </AnimationRevealPage> 

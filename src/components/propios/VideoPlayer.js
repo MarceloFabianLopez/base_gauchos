@@ -18,12 +18,13 @@ export default class VideoPlayer extends React.Component {
     //var videojs = require('video.js');
   //require('videojs-vr');
     this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
-        console.log('onPlayerReady', this)
+        //console.log('onPlayerReady', this)
         const player = this
         player.mediainfo = player.mediainfo || {}
         player.mediainfo.projection = 'equirectangular'
         player.bigPlayButton = true
         player.loadingSpinner = true
+       
         
 
        /*  player.panorama({
@@ -35,7 +36,7 @@ export default class VideoPlayer extends React.Component {
         
          player.vr({
           projection: '360',
-          debug: true,
+          debug: false,
           forceCardboard: true 
           
 
@@ -52,6 +53,7 @@ export default class VideoPlayer extends React.Component {
       console.log('onPlayerReady', this)
     });
     this.player.vr({projection: '360'}); */
+    this.player.responsive(true);
   }
 
   // destroy player on unmount
@@ -60,15 +62,15 @@ export default class VideoPlayer extends React.Component {
       this.player.dispose()
     }
   }
-
+//className="video-js vjs-theme-city"
   // wrap the player in a div with a `data-vjs-player` attribute
   // so videojs won't create additional wrapper in the DOM
   // see https://github.com/videojs/video.js/pull/3856
   render() {
     return (
-      <div className="video-js vjs-theme-city" >	
-        <div >
-          <video   width="100%" height="100%" ref={ node => this.videoNode = node } ></video>
+      <div  >	
+        <div className="video-js vjs-4-3">
+          <video   ref={ node => this.videoNode = node } ></video>
         </div>
       </div>
     )
