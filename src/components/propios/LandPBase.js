@@ -55,9 +55,11 @@ const MiLogoLink = styled(NavLink)`
   }
 `; */
 //<img src="../../media_landpages/dacal/logoverde.jpg" width="100%" alt="logo1" />
+
+const bannerMio=("¿Por qué ud. necesita nuestros servicios?");
  const StyledHeader = styled(Header)`
   ${tw`pt-10 max-w-none w-full `}
-  ${DesktopNavLinks} ${NavLink}, ${MiLogoLink} {
+  ${DesktopNavLinks} ${NavLink},${MiLogoLink} {
     ${tw`text-gray-200 hover:border-gray-300 hover:text-gray-300  `}
   }
   ${NavToggle}.closed {
@@ -118,7 +120,7 @@ const FormularioCorreo = tw.div`bg-gray-200 p-2 rounded-2xl ml-4`;
 
 
 const AreaRegresar = tw.div`p-3 bg-gray-100 text-primary-600 font-extrabold`;
-const ViewerPrincipal =tw.div`bg-black`;
+const ViewerPrincipal =tw.div`bg-black items-center p-4 flex flex-col`;
 const AreaWhatsap =styled.div(props => [
   `background-image: url("${props.imageWsp}");
   `,
@@ -139,21 +141,14 @@ ${tw`bg-top bg-white font-sans`}
 
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const TextoDescripcion = `
-### Recorridos virtuales
+### Para mostrar, vender, promocionar o simplemente para tener un excelente recuerdo.
 
-- Vivienda familiar en barrio residencial, sobre un lote de terreno de **_16x60_**.
-- La misma consta de **4 dormitorios, el principal en suite, con vestidor.**
--  Escritorio. Amplio comedor, 2 livings, 1 en desnivel, con estufa hogar a leña, cocina equipada con muebles bajo y
-sobre mesada, y desayunador. 
-- Hermoso jardín de invierno y parque arbolado. 
-- **Toilette** en planta baja
-y **2 baños completos** en planta alta. 
-- Al fondo del terreno se encuentra un comodo **quincho** con
-parrilla y otra habitación con baño.
-- Cuenta con **calefacción central y completo sistema de alarma.**
-- Garage descubierto para 3 autos.
-- La casa tiene una **_inmejorable_** calidad constructiva e impecable
-diseño de ladrillo a la vista y aberturas de viraró.
+- La posibilidad de contar con **_contenido multimedia adecuado_** vale para diferentes interéses: Sea usted un agente inmobiliario, 
+un promotor turístico o un padre que quiere guardar el recuerdo de el cumpleaños de su hija.
+- Las nuevas tecnologías permiten **"mostrar"** de otra manera a nuestro público siendo cada día mas necesaria su utilización.
+
+### Nuestro servicio cubre las diferentes etapas
+
 
 `;
 
@@ -191,17 +186,22 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
 //logoLink={logoLink}
  // const markdown = `Just a link: https://reactjs.com.`
   return (<>
-            <Container>
-                 
+            <Container> <MiHeader logoLink={logoLink} bannerMio={bannerMio} links={MisLinks}> 
+                 </MiHeader>
                   <HeroContainer>   
-                     <MiHeader logoLink={logoLink} links={MisLinks}/>   
+                       
                  
                       <CabezaContainer>
                        
                         <CuerpoContainer>
                           <TwoColumn>
-                            <ColumnAncha><AreaRegresar><Negrito>Vea los recorridos virtuales platenses </Negrito>
-                                    Nuestros lugares
+                            <ColumnAncha><AreaRegresar>
+                           
+                            <Negrito>Haga publicidad de la manera adecuada, use contenido creativo y de calidad </Negrito>
+
+
+
+                                    Recorridos virtuales, imágenes aéreas y video 360º
                          {/*             <div>  xx {escena.idEscena}xx</div> */}
                                      </AreaRegresar>
 
@@ -210,13 +210,8 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                                               Titulo="Importante propiedad"
                                             TextoGrisMayuscula="Tres dormitorios, cochera, 2 baños"/> */}
                     <ViewerPrincipal>
-                            <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= {EscenaLandPage}
-
-
-IsRecorrido='true' 
-                 
-                  
-                  IsPlano='true'/>
+                            <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= {EscenaLandPage} IsRecorrido='true' IsPlano='true'/>
+                           {/*  <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= "../../standalone/pannellum.htm?config=../tour1.json" IsRecorrido='true' IsPlano='true'/> */}
                   
                   </ViewerPrincipal>              
                             {/* <FrameGaleria/> */}

@@ -61,7 +61,7 @@ export default ({
     {
       imageSrc: 'images/generacion.jpg',
       title: "Preparamos el material",
-      description: "Generamos el contenido audiovisal con la calidad 4k,  fotografía area y 360º.",
+      description: "Generamos el contenido audiovisal con la calidad 4k,  fotografía area y video 360º.",
       url: {contactos}
     },
     {
@@ -74,7 +74,7 @@ export default ({
     {
       imageSrc: 'images/trabajo_en_redes.png',
       title: "Usted dispone",
-      description: "Se entrega el material listo para ser visto mediante enlaces en todas las redes sociales y páginas web. Agregamos sin costo adicional una Landing Page de todo el material aportado para poder darle a nuesros clientes un accesp cómodo al contenido promocionado.",
+      description: "Se entrega el material listo para ser visto mediante enlaces en todas las redes sociales y páginas web. Agregamos sin costo adicional una Landing Page de todo el material aportado para poder darle a nuesros clientes un acceso cómodo al contenido promocionado.",
       url: "/#"
     }
   ],

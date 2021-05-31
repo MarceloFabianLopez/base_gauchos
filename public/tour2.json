@@ -8,6 +8,7 @@
         "hfov": 180,
         "pitch": 10,
         "yaw": 0,
+        "compass":false,
         "autoLoad": true,
         "hotSpotDebug" :false,
         "autoRotate" :5,

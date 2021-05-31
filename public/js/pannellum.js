@@ -120,7 +120,7 @@ defaultConfig.strings = {
     // Labels
     loadButtonLabel: 'Click <br>para cargar<br>Panorama',
     loadingLabel: 'Cargando...',
-    bylineLabel: 'Autor %s',    // One substitution: author
+    bylineLabel: 'Creado por %s',    // One substitution: author
 
     // Errors
     noPanoramaError: 'No panorama image was specified.',
@@ -158,7 +158,7 @@ uiContainer.appendChild(dragFix);
 // Display about information on right click
 var aboutMsg = document.createElement('span');
 aboutMsg.className = 'pnlm-about-msg';
-aboutMsg.innerHTML = '<a href="https://pannellum.org/" target="_blank">Pannellum</a>';
+aboutMsg.innerHTML = '<a href="https:/vtour.com.ar/" target="_blank">Vtour</a>';
 uiContainer.appendChild(aboutMsg);
 dragFix.addEventListener('contextmenu', aboutMessage);
 
@@ -194,13 +194,13 @@ infoDisplay.load.box.appendChild(infoDisplay.load.lbox);
 infoDisplay.load.lbar = document.createElement('div');
 infoDisplay.load.lbar.className = 'pnlm-lbar';
 infoDisplay.load.lbarFill = document.createElement('div');
-infoDisplay.load.lbarFill.className = 'pnlm-lbar-fill';
+//infoDisplay.load.lbarFill.className = 'pnlm-lbar-fill';
 infoDisplay.load.lbar.appendChild(infoDisplay.load.lbarFill);
 infoDisplay.load.box.appendChild(infoDisplay.load.lbar);
 infoDisplay.load.msg = document.createElement('p');
 infoDisplay.load.msg.className = 'pnlm-lmsg';
-infoDisplay.load.box.appendChild(infoDisplay.load.msg);
-uiContainer.appendChild(infoDisplay.load.box);
+//infoDisplay.load.box.appendChild(infoDisplay.load.msg);
+//uiContainer.appendChild(infoDisplay.load.box);
 
 // Error message
 infoDisplay.errorMsg = document.createElement('div');

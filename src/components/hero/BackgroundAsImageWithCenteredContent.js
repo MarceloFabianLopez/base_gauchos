@@ -50,7 +50,7 @@ const HeroContainer = tw.div`z-20 relative px-6 sm:px-0 mx-auto h-full flex flex
 const Content = tw.div`flex-1 flex-col  items-center`;
 
 const Heading = styled.h1`
-  ${tw`text-xl text-center  md:text-4xl  lg:text-4xl xl:text-6xl font-black text-gray-100 leading-snug -mt-24 sm:mt-4 pt-2 md:p-24`}
+  ${tw`text-xl text-center  md:text-4xl  lg:text-4xl xl:text-6xl font-bold text-gray-200 leading-snug  sm:mt-4 pt-2 md:p-24`}
   span {
     ${tw`inline-block mt-4`}
   }
@@ -106,9 +106,9 @@ export default () => {
    {/*     <NavLink href={clientes}>Área Clientes</NavLink> */}
      
       
-      <NavLink href={contactos}>Contactos</NavLink>
-      <NavLink href={landpagebase}>Vea un ejemplo</NavLink>
-   
+     
+      <NavLink href={landpagebase}>¿Por qué Ud. necesita nuestros servicios?</NavLink>
+    <NavLink href={contactos}>Contactos</NavLink>
       
     </NavLinks> ];
  return (  
@@ -125,7 +125,7 @@ export default () => {
                    Video 360º y aéreos
                    <SubHeading>vtour.com.ar</SubHeading>
                </Heading>  
-                <BannerFondo > <a href={landpagebase}>Ejemplos </a></BannerFondo>  
+                <BannerFondo > <a href={landpagebase}> ¿Por qué Ud. necesita nuestros servicios?</a></BannerFondo>  
               <GrillaPortada>
                   
               
