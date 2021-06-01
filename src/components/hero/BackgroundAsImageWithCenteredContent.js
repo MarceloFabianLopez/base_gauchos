@@ -62,9 +62,9 @@ const CajaContenido  = tw.div`bg-blue-200    p-4  max-w-96 bg-opacity-25 rounded
 
 
 
-const BannerFondo=styled.div` ${tw`lg:hidden    p-10
-bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 hover:bg-red-700 text-center font-extrabold text-primary-500`}
-background-image: url("images/drone2.jpg") bg-cover
+const BannerFondo=styled.div` ${tw`lg:hidden    p-8
+bg-gray-300  rounded-2xl   text-center font-extrabold text-primary-500 border-indigo-500 hover:bg-white hover:shadow-lg hover:border-transparent `}
+
 `;
 //const Tope=styled.div`-mt-64 `;
 //const Llamador =tw.div`relative flex flex-1 bg-primary-500 w-full p-2 mx-auto text-white font-extrabold items-end`;

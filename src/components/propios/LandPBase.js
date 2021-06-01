@@ -87,7 +87,7 @@ const CabezaContainer = styled.div`
   }
 `;
 const Descripcion = styled.div`
-  ${tw`relative my-4 z-40 bg-white text-justify p-16 text-gray-800 font-poppins rounded-3xl`}
+  ${tw`relative my-4 z-40 bg-white  p-4 text-gray-800 font-poppins rounded-3xl`}
   
   h2 {
     ${tw`text-2xl sm:text-2xl font-bold`}
@@ -143,11 +143,11 @@ const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const TextoDescripcion = `
 ### Para mostrar, vender, promocionar o simplemente para tener un excelente recuerdo.
 
-- La posibilidad de contar con **_contenido multimedia adecuado_** vale para diferentes interéses: Sea usted un agente inmobiliario, 
-un promotor turístico o un padre que quiere guardar el recuerdo de el cumpleaños de su hija.
+- La posibilidad de contar con **_contenido multimedia adecuado_** vale para diferentes intereses: Sea usted un agente inmobiliario, 
+un promotor turístico o un padre que quiere guardar el recuerdo del cumpleaños de su hija.
 - Las nuevas tecnologías permiten **"mostrar"** de otra manera a nuestro público siendo cada día mas necesaria su utilización.
 
-### Nuestro servicio cubre las diferentes etapas
+### Servicio cubre las diferentes etapas
 
 - Generamos los contenidos, los procesamos y los entregamos listos para ser usados cómodamente. Le brindamos la posibilidad de tener sin costo adicional una **_LANDPAGE_** con sus contenidos para que 
 su publicidad sea eficiente y logre el efecto esperado.
@@ -177,7 +177,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
     
   <NavLinks key={1}>
     
-    <a href="/">Sitio principal</a>&nbsp;&nbsp;&nbsp;
+    <a href="/">Inicio</a>&nbsp;&nbsp;&nbsp;
     <PrimaryLink href="/components/blocks/Form/Contacto">Contacto</PrimaryLink>
     
    

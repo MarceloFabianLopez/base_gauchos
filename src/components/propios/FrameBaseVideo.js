@@ -16,11 +16,11 @@ const IconoReco = tw.div`absolute  z-10 top-0 right-0 h-16 w-16  bg-black rounde
 
 const CardHeader = tw.div` bg-black  p-2  flex flex-col  rounded-xl  `;
 const CardCompany = tw.div`text-primary-500 font-bold mt-2 text-2xl bg-black text-center bg-opacity-75 p-4 rounded-2xl`;
-const CardType = tw.div`font-semibold text-sm text-gray-600 text-right p-2`;
+const CardType = tw.div`font-semibold text-sm text-gray-200 text-right p-2`;
 const CardTitle = tw.h5`text-xl mt-2 text-white font-extrabold`;
 
 const CardMeta = styled.div`
-  ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-600 uppercase text-xs`}
+  ${tw`flex flex-row flex-wrap justify-center sm:items-center font-semibold tracking-wide text-gray-200 uppercase text-xs`}
 `;
 const CardMetaFeature = styled.div`
   ${tw`flex items-center mt-4 mr-4 last:mr-0`}
