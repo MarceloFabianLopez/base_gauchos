@@ -59,7 +59,7 @@ export const DesktopNavLinks = tw.nav`
  
   `;
   export const BannerCentral = tw.h2`
-      flex flex-col p-4  lg:text-4xl  lg:text-primary-500 sm:text-xl text-white
+      flex flex-col p-4  lg:text-4xl  sm:text-primary-500 sm:text-xl text-white xl:hidden
  
   `;
 export default ({ roundedHeaderButton = false, logoLink, bannerMio, links, className, collapseBreakpointClass = "lg" }) => {

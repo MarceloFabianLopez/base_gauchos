@@ -63,7 +63,7 @@ const bannerMio=("¿Por qué ud. necesita nuestros servicios?");
     ${tw`text-gray-200 hover:border-gray-300 hover:text-gray-300  `}
   }
   ${NavToggle}.closed {
-    ${tw`text-gray-800 p-2 hover:text-primary-500`}
+    ${tw`text-red-500 p-2 hover:text-primary-500`}
   }
 `; 
 const MiHeader=tw(StyledHeader)`bg-blue-100`;
@@ -148,6 +148,9 @@ un promotor turístico o un padre que quiere guardar el recuerdo de el cumpleañ
 - Las nuevas tecnologías permiten **"mostrar"** de otra manera a nuestro público siendo cada día mas necesaria su utilización.
 
 ### Nuestro servicio cubre las diferentes etapas
+
+- Generamos los contenidos, los procesamos y los entregamos listos para ser usados cómodamente. Le brindamos la posibilidad de tener sin costo adicional una **_LANDPAGE_** con sus contenidos para que 
+su publicidad sea eficiente y logre el efecto esperado.
 
 
 `;

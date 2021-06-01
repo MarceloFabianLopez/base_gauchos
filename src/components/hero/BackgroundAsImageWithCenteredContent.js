@@ -39,7 +39,7 @@ hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
     ${tw`text-gray-200 hover:border-primary-500 hover:text-primary-500 `}
   }
   ${NavToggle}.closed {
-    ${tw`text-gray-100 hover:text-primary-500`}
+    ${tw`text-red-500 hover:text-primary-500`}
   }
 `;
  
@@ -59,8 +59,13 @@ const Heading = styled.h1`
 const SubHeading = tw.div`sm:text-sm text-purple-600 md:text-4xl`;
 const GrillaPortada = tw.div`   grid  gap-2 xl:grid-flow-col     sm:grid grid-flow-row   justify-center`;
 const CajaContenido  = tw.div`bg-blue-200    p-4  max-w-96 bg-opacity-25 rounded-xl xl:max-w-lg`;
-const BannerFondo=tw.div` lg:hidden   text-center font-extrabold text-white`;
 
+
+
+const BannerFondo=styled.div` ${tw`lg:hidden    p-10
+bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 hover:bg-red-700 text-center font-extrabold text-primary-500`}
+background-image: url("images/drone2.jpg") bg-cover
+`;
 //const Tope=styled.div`-mt-64 `;
 //const Llamador =tw.div`relative flex flex-1 bg-primary-500 w-full p-2 mx-auto text-white font-extrabold items-end`;
 //const MenuEncabezado =tw.span`bg-primary-500  p-4 text-white font-extrabold `;
@@ -94,7 +99,7 @@ const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mi
 //const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
 const contactos =components['blocks']['Form']['elements']['Contacto']['url'];
-
+const Gancho =tw.div`bg-gray-300`;
  
 export default () => {   
   
@@ -106,8 +111,7 @@ export default () => {
    {/*     <NavLink href={clientes}>Área Clientes</NavLink> */}
      
       
-     
-      <NavLink href={landpagebase}>¿Por qué Ud. necesita nuestros servicios?</NavLink>
+ <NavLink href={landpagebase}>¿Por qué Ud. necesita nuestros servicios? </NavLink>
     <NavLink href={contactos}>Contactos</NavLink>
       
     </NavLinks> ];
