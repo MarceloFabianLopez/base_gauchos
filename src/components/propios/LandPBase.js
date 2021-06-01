@@ -21,6 +21,7 @@ import FrameBase from "../propios/FrameBase";
 import Contacto from "components/forms/Contacto";
 
 import ReactMarkdown from 'react-markdown';
+import FrameGaleria from "./FrameGaleria.js";
 //import rehypeRaw from 'rehype-raw';
 //import gfm from 'remark-gfm';
 //import MiMarkDown from "../propios/MiMarkDown"
@@ -242,7 +243,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                             </ColumnAngosta>
 
                           </TwoColumn> 
-                          
+                          <FrameGaleria/>
 
                         </CuerpoContainer>
  

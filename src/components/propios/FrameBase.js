@@ -105,6 +105,7 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
 {
   const [sourcelocal,setSourcelocal]=useState(source);
   const {cantidad,setCantidad} = useContext(DataContext);
+  const {conjunto,setConjunto} = useContext(DataContext);
   const {intervalo}=useContext(DataContext);                                                     
  // const [archivo,setArchivo]  = useState('');
   const [run, setRun] = useState(true);
@@ -127,7 +128,13 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
     //console.log("state contador=",counter);
     //console.log("state sourcelocal=",sourcelocal);
     //console.log("..........................................................");
-   
+let arrayClavesEscenas =[];
+let mesirve =[];
+let unaEscena ={
+  idEscean : "",
+  urlpanorama:"",
+  title:""
+}   
     var sourceCorregido="../../" +source.slice(38);
    
          ////console.log("sourceantes=",sourcelocal);        
@@ -157,10 +164,23 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
                     fetch(sourceCorregido)
                                .then(res => res.json())
                                                                 .then(datos => {
-                                                                                //console.log("tengo los datos=",datos);
+                                                                                //console.log("tengo los datos=",datos["scenes"]["Banio"]["title"],"panorama=",datos["scenes"]["Banio"]["panorama"]);
                                                                                 //setRecorrido(datos);
                                                                                 setCounter(-1);
+                                                                               // arrayClavesEscenas = Object.keys(datos["scenes"]) ;
+                                                                               // console.log("arrayclaves=",arrayClavesEscenas);
+                                                                                // mesirve = arrayClavesEscenas.map( function( escenita){
+                                                                                  //console.log(datos["scenes"][escenita]);
+                                                                                 // return datos["scenes"][escenita];
+                                                                               // }
+                                                                               
+
+                                                                                //);
+                                                                                 //console.log("mesirce=",mesirve);
                                                                                 setConjuntoEscenas(Object.keys(datos["scenes"]));
+                                                                                //setConjuntoEscenas(mesirve);
+                                                                                setConjunto(datos["scenes"]);
+                                                                               // console.log("conjuntodeEscenas",conjuntoEscenas);
                                                                                 setCantidad((Object.keys(datos["scenes"]).length));
                                                                                 setHuboUnCambio(true);
                                                                                 setRecorrido(datos);
@@ -256,7 +276,7 @@ setCounter(counter-1);
 
   function handleClick(event) {
     //alert('clicked');
-   console.log("botonera run=",run);
+   //console.log("botonera run=",run);
     if(run){
     setRun(false) } else {setRun(true)}
     

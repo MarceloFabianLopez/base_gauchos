@@ -5,6 +5,7 @@ import tw from "twin.macro";
 import { DataContext } from 'context/DataContext';
 //escena : "../../standalone/pannellum.htm?config=../tour1.json",
 //import useState from 'react';
+
 const Fotos = [
   {
 alt:"alt1",
@@ -54,15 +55,21 @@ const UnaFoto = tw.div`mt-4 w-1/3 p-2 sm:w-1/6 md:w-1/3 lg:w-1/6 sm:pr-2 md:pr-6
 
 const TextoFoto= tw.p`p-1 text-gray-800 font-bold`;
 //const EstiloEscena =tw.div`bg-black p-5`;
-
  
 function FrameGaleria () {
  const {setEscena} = useContext (DataContext);
-
+ const {cantidad,setCantidad} = useContext(DataContext);
+ const {conjunto}=useContext(DataContext);
+ console.log("cantidad desde contexto=",cantidad);
+console.log("conjuntodeEscenas=",conjunto)
+console.log ("escenas=",Object.keys(conjunto));
+//console.log ("unaescenas=",conjuntoEscenas['Entrada'].title);
+let claves =Object.keys(conjunto);
 //const EscenaInicial ={idEscena: "Primera"};
   //const [MiEscena,setEscena]= useState({EscenaInicial});
 //const [Mirecorrido,setRecorrido] = useState( "../../standalone/pannellum.htm?config=../tour1.json");
   function CambiaEscena  (idFoto)  {
+
  // console.log(IdEscena);
  //e.preventDefault();
   console.log("click");
@@ -70,21 +77,43 @@ function FrameGaleria () {
   var OtraEscena = {idEscena : Fotos[idFoto].escena};
   console.log("otraEscena=",OtraEscena);
   setEscena(OtraEscena);
+  
  // setRecorrido()
 }
+  
+    // {Fotos.map((Foto, index) => (
+
+//<UnaFoto key={index}   onClick= {()=>CambiaEscena(index)}><img src={Foto.panorama} alt={Foto.alt}/>
+  //                              <TextoFoto>{Foto.title}</TextoFoto>
+   //         </UnaFoto>
+
+if (conjunto["Entrada"]) { 
+  console.log("adentro=",conjunto["Entrada"]);
+  let algo = conjunto["Entrada"];
+  console.log("adentros=",algo["panorama"]);
   return (
 <>
  {/*  <EstiloEscena>xx{escena.idEscena}xx</EstiloEscena> */}
-  <FotosContainer>
-           {Fotos.map((Foto, index) => (
-            <UnaFoto key={index}   onClick= {()=>CambiaEscena(index)}><img src={Foto.url} alt={Foto.alt}/>
-                                <TextoFoto>{Foto.texto}</TextoFoto>
-            </UnaFoto>
-          ))}  
-  </FotosContainer>  
+
+   <FotosContainer>
+           {  
+                                claves.map((conjuntoEscenas, index) => (
+                                                                            <UnaFoto><img src={"../" + conjunto[claves[index]].panorama}  alt={conjunto[claves[index]]["title"]}/>
+                                                                            <TextoFoto>{
+                                                                           
+                                                                            conjunto[claves[index]]["title"]}</TextoFoto>
+                                                                            </UnaFoto>
+            
+                                                                        )
+                                                                        )
+                                    
+        }
+  </FotosContainer>   
           
-</> )
+</> );
 
+
+}
+return <p>Cargando escenas</p>
 };
-
 export default FrameGaleria;

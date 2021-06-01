@@ -12,7 +12,7 @@
         "autoLoad": true,
         "hotSpotDebug" :false,
         "autoRotate" :5,
-        "preview" : "../vtour/chamas/rec_small/1_calle.jpg",
+        "preview" : "../vtour/chamas/rec_small/0_portada.jpg",
         "panorama": "../vtour/chamas/rec_small/1_calle.jpg",
         "previewTitle": "Inmobiliaria M.Chamas",
         "horizonPitch" : 10,
@@ -37,6 +37,7 @@
                 "pitch": 7,
                 "yaw": -22,
                 "type": "equirectangular",
+                "preview" : "../vtour/chamas/rec_small/0_portada.jpg",
                 
                 "panorama": "../vtour/chamas/rec_small/2_patio_delantero.jpg",
                 "hotSpots": [
