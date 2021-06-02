@@ -10,6 +10,7 @@ import VideoPlayer from 'components/propios/VideoPlayer';
 
 //import { ReactComponent as VrIcon } from "feather-icons/dist/icons/nuevovr.svg";
 import { DataContext } from 'context/DataContext';
+import FrameGaleria from './FrameGaleria';
 
 
 // xl:mx-0 xl:ml-auto max-w-full md:max-w-full  lg:max-w-full xl:max-w-full p-5
@@ -137,10 +138,12 @@ let unaEscena ={
 }   
     var sourceCorregido="../../" +source.slice(38);
    
-         ////console.log("sourceantes=",sourcelocal);        
+         console.log("Escena recibida",escena);        
          if (escena){
                      ////console.log("escena....=",escena['idEscena']);      
-                    setSourcelocal( ""+escena['idEscena']) ; 
+                   // setSourcelocal( "Escena numero="+escena) ; 
+                    setCounter(escena);
+                    setRun(true);
          
                   } else 
                   {
@@ -152,7 +155,7 @@ let unaEscena ={
         
         
                     if (sourcelocal) {
-                                ////console.log("sourcedopolocal=",sourcelocal);
+                                console.log("sourcedopolocal------------------------------------------=",sourcelocal);
                                 sourceCorregido="../../" +sourcelocal.slice(38);
 
                                 } else {//console.log("todavia no carga surcelocal");
@@ -359,8 +362,8 @@ const src = sourcelocal;
                               ....
                               </>
                         }
-                     
-                      </Card>  
+                     <FrameGaleria/> 
+                      </Card> 
                      
                        
 

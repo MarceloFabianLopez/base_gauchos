@@ -113,7 +113,7 @@ const CuerpoContainer = styled.div`
 
 const TwoColumn = tw.div`flex flex-col md:flex-row  object-center`;
 const ColumnAncha = tw.div`sm:w-full flex-auto flex-col`;
-const ColumnAngosta = tw.div`max-w-screen-sm  flex-1 flex-col`;
+const ColumnAngosta = tw.div`max-w-screen-sm  min-width[30%]  flex-1 flex-col`;
 
 const AreaContactar = tw.div`p-2 bg-white`;
 const FormularioCorreo = tw.div`bg-gray-200 p-2 rounded-2xl ml-4`;
@@ -121,7 +121,7 @@ const FormularioCorreo = tw.div`bg-gray-200 p-2 rounded-2xl ml-4`;
 
 
 const AreaRegresar = tw.div`p-3 bg-gray-100 text-primary-600 font-extrabold`;
-const ViewerPrincipal =tw.div`bg-black items-center p-4 flex flex-col`;
+const ViewerPrincipal =tw.div`bg-gray-400 items-center p-2 flex flex-col rounded-2xl`;
 const AreaWhatsap =styled.div(props => [
   `background-image: url("${props.imageWsp}");
   `,
@@ -148,7 +148,7 @@ const TextoDescripcion = `
 un promotor turístico o un padre que quiere guardar el recuerdo del cumpleaños de su hija.
 - Las nuevas tecnologías permiten **"mostrar"** de otra manera a nuestro público siendo cada día mas necesaria su utilización.
 
-### Servicio cubre las diferentes etapas
+### Servicio que cubre las diferentes etapas
 
 - Generamos los contenidos, los procesamos y los entregamos listos para ser usados cómodamente. Le brindamos la posibilidad de tener sin costo adicional una **_LANDPAGE_** con sus contenidos para que 
 su publicidad sea eficiente y logre el efecto esperado.
@@ -213,6 +213,9 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                             
                                               Titulo="Importante propiedad"
                                             TextoGrisMayuscula="Tres dormitorios, cochera, 2 baños"/> */}
+                                            <AreaContactar><a href="https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
+                            <AreaWhatsap imageWsp={imagenWsp}/></a></AreaContactar>
+                            
                     <ViewerPrincipal>
                             <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= {EscenaLandPage} IsRecorrido='true' IsPlano='true'/>
                            {/*  <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= "../../standalone/pannellum.htm?config=../tour1.json" IsRecorrido='true' IsPlano='true'/> */}
@@ -232,18 +235,15 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                            
                             </ColumnAncha>
                             <ColumnAngosta>
-                            <AreaContactar>
-                            <a href="https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
-                            <AreaWhatsap imageWsp={imagenWsp}/></a>
-                            
-                            
-                           
-                            </AreaContactar><FormularioCorreo> <Contacto/></FormularioCorreo>
+                            {/* <AreaContactar><a href="https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
+                            <AreaWhatsap imageWsp={imagenWsp}/></a></AreaContactar>
+                             */}
+                            <FormularioCorreo> <Contacto/></FormularioCorreo>
                            
                             </ColumnAngosta>
 
                           </TwoColumn> 
-                          <FrameGaleria/>
+                     
 
                         </CuerpoContainer>
  
