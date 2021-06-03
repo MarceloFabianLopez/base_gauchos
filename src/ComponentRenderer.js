@@ -4,6 +4,8 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 import MiWsp from 'components/propios/MiWsp';
 import LandPage from 'components/propios/LandPage';
 import LandPBase from 'components/propios/LandPBase';
+import LandPFabrica from 'components/propios/LandPFabrica';
+
 import ClientesPage from 'components/propios/ClientesPage';
 //import EventLandingPage from "demos/EventLandingPage.js";
 //import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
@@ -33,6 +35,7 @@ import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 import MiWspSrc from "images/demo/SignupPage.jpeg";
 import LandPageImageSrc from "images/demo/SignupPage.jpeg";
 import LandPBaseImageSrc from "images/demo/SignupPage.jpeg";
+import LandPFabricaImageSrc from "images/demo/SignupPage.jpeg";
 import ClientesPageImageSrc from "images/demo/SignupPage.jpeg";
 import LoginPageImageSrc from "images/demo/LoginPage.jpeg";
 import SignupPageImageSrc from "images/demo/SignupPage.jpeg";
@@ -92,6 +95,7 @@ import SimplePrimaryBackgroundTestimonial from "components/testimonials/SimplePr
 
 import SimpleContactUsForm from "components/forms/SimpleContactUs.js";
 import Contacto from "components/forms/Contacto.js";
+import Carpetadetrabajo from "components/forms/Carpetadetrabajo.js";
 //import SimpleSubscribeNewsletterForm from "components/forms/SimpleSubscribeNewsletter.js";
 //import TwoColContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 //import TwoColContactUsFullForm from "components/forms/TwoColContactUsWithIllustrationFullForm.js";
@@ -125,6 +129,12 @@ export const components = {
       component: LandPBase,
       imageSrc : LandPBaseImageSrc,
       url:"components/propios/LandPBase",
+
+    },
+    LandPFabrica :{
+      component: LandPFabrica,
+      imageSrc : LandPFabricaImageSrc,
+      url:"components/propios/LandPFabrica",
 
     },
     ClientesPage :{
@@ -474,6 +484,11 @@ export const components = {
           name: "Contacto",
           component: Contacto,
           url: "/components/blocks/Form/Contacto",
+        },
+        Carpetadetrabajo: {
+          name: "Carpetadetrabajo",
+          component: Carpetadetrabajo,
+          url: "/components/blocks/Form/Carpetadetrabajo",
         },
        /*  SimpleSubscribeNewsletter: {
           name: "Simple Subscribe newsletter",
