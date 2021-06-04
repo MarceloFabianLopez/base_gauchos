@@ -11,6 +11,8 @@
     "feather-icons": "^4.26.0",
     "formik": "^2.2.8",
     "framer-motion": "^1.11.1",
+    "list-files": "^1.1.4",
+    "list-react-files": "^0.2.0",
     "postcss": "^8.1.10",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",

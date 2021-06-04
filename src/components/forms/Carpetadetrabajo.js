@@ -1,24 +1,13 @@
 import React   from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-//import HomeButton from 'compone
-//import {PrimaryLink} from '../headers/light';
-
-//import { css } from "styled-components/macro"; //eslint-disable-line
-//import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
-import emailjs from 'emailjs-com';
-//import PrimaryButton from 'components/misc/Buttons';
-import{ init } from 'emailjs-com';
-//import WhatsAppWidget from "react-whatsapp-widget";
 import swal from "sweetalert";
-//import { Link } from 'react-router-dom'
-//import Button from '@material-ui/core/Button';
 import {  PrimaryButton as PrimaryButtonBase }  from "components/misc/Buttons.js";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-//import { NavLink } from 'react-router-dom'; 
-//import HookForm from 'components/Forms/TestForm.jsx';
-const Container = tw.div`z-0 relative p-2 bg-gray-200  rounded-t-2xl `;
+import { imagenes } from "components/propios/fabrica/imagenes.js";
+
+const Container = tw.div`z-0 relative p-2 bg-green-500  rounded-t-2xl `;
 const Content = tw.div` bg-white  p-2 mx-auto py-2 lg:py-2 rounded-t-2xl`;
 const TituoloFormulario = tw.div`   bg-black text-white font-extrabold p-2 rounded-t-2xl`;
 const FormContainer = styled.div`
@@ -47,16 +36,12 @@ const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
 const SubmitButton = tw.button`w-full sm:w-16 mb-2 py-3 bg-gray-100 text-primary-500 rounded-2xl font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
 const PrimaryButton = tw(PrimaryButtonBase)`bg-gray-800 mx-auto h-12  rounded-2xl text-center text-sm font-normal`;
 const Botones = tw.div`grid grid-cols-2 gap-2 h-12` ;
-//const CancelButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-100 text-primary-500 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
 
-//const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`
+const GrillaPanoramas = tw.div`p-5  grid grid-cols-2 gap-2 `;
+const UnPanorama = tw.div`bg-yellow-400 p-2 `;
+
 
 function Carpetadetrabajo () {
-
-  //export default () => {
-
-
-  init("user_kfmun1gr4Vx8fC0gf1XpR");
  
   const [placemessage] = React.useState("Escriba su mensaje");
   const [placecarpeta] = React.useState("carpeta que contiene las fotos");
@@ -71,35 +56,13 @@ function Carpetadetrabajo () {
       window.location = "/";
   });
   }
- 
-
-  
-
-  function sendEmail() {
-    //e.preventDefault();
-    //e.target.reset();
-    
-   //console.log("email correcto)=",e.tartget);
-   emailjs.sendForm('service_anxnkre', 'template_uk97428',"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
-                                                            .then((result) => {
-                                                                                    console.log(result.text);
-                                                                                    mostrarAlerta();
-                                                                                }, (error) => {
-                                                                                    console.log(error.text);
-                                                                                });
-                                                           
-                                                          
-                                                
-}
-//-----------------------
 
 const formik = useFormik({
   initialValues: {
     carpeta: "",
     user_email: "",
-    message: ""
-    
-  },
+    message: ""},
+
 validationSchema: Yup.object({
   carpeta: Yup.string()
     .min(2, "Mínimo 2 characteres")
@@ -107,94 +70,74 @@ validationSchema: Yup.object({
     .required("Requerido!"),
     user_email: Yup.string()
     .email("Formato de email invalido")
-    .required("Requerido!"),
-  
+    .required("Requerido!"),  
     message: Yup.string()
     .min(8,"Mínimo 4 caracteres")
     .required("Requerido!")
-})
-,
-
+}),
 onSubmit: values => {
-sendEmail();
-}
-//: values => {
-  //alert(JSON.stringify(values, null, 2));
-  //console.log(e.target);
- //sendEmail(e);
-
-
-//}
+  console.log(imagenes);
+  }
 });
 //------------------------
 
 
-//onSubmit={sendEmail}>
 
   return (
     <Container>
       <Content><TituoloFormulario><h3>Creacion de recorridos -Carpeta de trabajo</h3></TituoloFormulario>
-        
         <FormContainer>
-  
             <form id="miform"  onSubmit={formik.handleSubmit}>
-            
             {/* <TwoColumn> */}
                 <Column> 
-               
                   <InputContainer>
                    <input type="hidden" name="contact_number" />
                     <Label htmlFor="carpeta">Carpeta de trabajo</Label>
                     <Input id="capeta" type="text" name="carpeta" onChange={formik.handleChange}  value={formik.values.carpeta} placeholder={placecarpeta} />
                     {formik.errors.carpeta && formik.touched.carpeta && (
-            <p><label style={{ color: "red" }}>{formik.errors.carpeta} </label></p>
-          )}
-
-
-         
-
-
-
+                    <p><label style={{ color: "red" }}>{formik.errors.carpeta} </label></p>
+                    )}
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="email-input">Su correo electrónico</Label>
                     <Input id="email" type="email" name="user_email" onChange={formik.handleChange}  value={formik.values.user_email} placeholder={placeemail} />
                     {formik.errors.user_email && formik.touched.user_email && (
-            <p><label style={{ color: "red" }}>{formik.errors.user_email}</label></p>
-          )}
+                    <p><label style={{ color: "red" }}>{formik.errors.user_email}</label></p>
+                    )}
                   </InputContainer> 
-                  <InputContainer tw="flex-1">
+                  {/*< InputContainer tw="flex-1">
                     <Label htmlFor="message-input">Su mensaje</Label>
                     <TextArea id="message" name="message" onChange={formik.handleChange}   value={formik.values.message} placeholder={placemessage}/>
                     {formik.errors.message && formik.touched.message && (
-            <p><label style={{ color: "red" }}>{formik.errors.message}</label></p>
-          )}
-                  </InputContainer>
+                    <p><label style={{ color: "red" }}>{formik.errors.message}</label></p>
+                    )}
+                  </InputContainer> */}
                 
-                 
-                </Column>
               {/* </TwoColumn> */}
-                <Botones>      
-              <SubmitButton type="submit" value="Send">Enviar</SubmitButton>
-              <PrimaryButton  as="a" href="/">Borrar</PrimaryButton>
-              </Botones>      
-
-         
-              
-               </form>
+                
+<GrillaPanoramas>
+            {imagenes.map((imagen, key) => {
+                                            return (
+                                                    <UnPanorama key={key}>
+                                                    <img src={"../../vtour/fabrica/"+imagen.imagen} width="50%"/> 
+                                      
+                                                      </UnPanorama>
+                                                );
+                                            }
+                          )
+            }
+      </GrillaPanoramas>
+     
+<Botones><SubmitButton type="submit" value="Send">Enviar</SubmitButton>
+                          <PrimaryButton  as="a" href="/">Borrar</PrimaryButton>
+              </Botones> 
+              </Column>
+            </form>
           
-         
-         {/*   <SvgDotPattern1 /> */}
-          {/* <div className="absolute top-0  pd-20"> 
-              <WhatsAppWidget phoneNumber='542216701280'
-                                    textReplyTime='Este es un mensaje automatizado, lo antes posible una persona de nuestro equipo lo contactará! '
-                                      message= 'Hola!  En que podemos ayudarlo/a?'
-                                      companyName="VTOUR"
-                                      sendButton="ENVIAR WSP" 
-                                      /></div>  */}
-        </FormContainer>
-   
-      </Content>
+          
+             
+    </FormContainer>
+    </Content>
     </Container>
   );
 };
