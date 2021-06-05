@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import { imagenes } from "components/propios/fabrica/imagenes.js";
 import ReactDragListView from "react-drag-listview";
 import ListaDrageable from "components/propios/ListaDrageable";
-const Container = tw.div`z-0 relative p-2 bg-green-500  rounded-t-2xl `;
+const Container = tw.div`z-0 relative p-2 bg-black  rounded-t-2xl grid grid-cols-4 gap-4 `;
 const Content = tw.div` bg-white  p-2 mx-auto py-2 lg:py-2 rounded-t-2xl`;
 const Column = tw.div`sm:w-full flex flex-col content-center bg-indigo-400`;
 const Titulo = tw.div`   bg-black text-white font-extrabold p-2 rounded-t-2xl`;
@@ -83,7 +83,9 @@ titulo= titulo || "Carpeta de trabajo";
     <Container>
 
                     {/* <ListaArrastrable data1={imagenes}/>    */}
-                   <ListaDrageable data1={imagenes}/>
+                   <div className="p-8 bg-yellow-300 col-span-2">
+                   <ListaDrageable data1={imagenes} carpeta="../../vtour/fabrica/"/></div>
+                   <div className="w-full bg-red-500 p-4 overflow-auto"> {JSON.stringify(imagenes)} </div>
 
     </Container>
   );
