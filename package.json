@@ -17,6 +17,7 @@
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.3.1",
+    "react-drag-listview": "^0.1.8",
     "react-json-pretty": "^2.2.0",
     "react-markdown": "^5.0.3",
     "react-modal": "^3.11.2",
@@ -43,7 +44,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:tailwind": "tailwindcss build src/styles.css -o public/output.css",
+    "build:tailwind": "tailwindcss build src/styles.css -o src/output.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

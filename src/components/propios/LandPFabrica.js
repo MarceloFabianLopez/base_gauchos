@@ -79,7 +79,10 @@ return (<>
                       <CuerpoContainer>
                           <TwoColumn>
                            <ColumnAncha>
-                            <Carpetadetrabajo/>
+                            <Carpetadetrabajo titulo="Ordene las panoramicas"/>
+                           {/*  <Carpetadetrabajo titulo="Seleccione las vistas principales"/>
+                            <Carpetadetrabajo titulo="Para cada panorámica ubique los hotspots"/>
+                            <Carpetadetrabajo titulo="Para cada hotspot de cada panoramica configure la vista inicial"/> */}
                            {/*  <ViewerPrincipal>
                               <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= {EscenaLandPage} IsRecorrido='true' IsPlano='true'/>
                             </ViewerPrincipal>  */}             
