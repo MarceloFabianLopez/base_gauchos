@@ -6,7 +6,7 @@ class MuestraRecorridoJson extends Component {
         super(props);
         const datos ="nada ";
         this.state = {
-            datos: "nada de mada"
+            datos: {}
           };
     }
 
@@ -59,25 +59,51 @@ return true
 
     }
 
-    render() {
-        const that = this;
-         if (that.props.datos1) {
-        return ( <div className="p-4">
-            <div className="bg-black">
+    render() { 
+       
+                    if (this.props.datos1) {
+                    const that = this;
+                    var valores;
+                    var claves;
+                    var midato = that.state.datos['default'];
 
-                        {JSON.stringify(that.props.datos1)}
+                     console.log("midato=",midato);
+                     if (midato) {
+                                    claves = Object.keys(midato); 
+                                    valores = Object.values(midato); 
+                                    console.log("claves=",claves); 
+                                    console.log("valores=",valores[0]);
+                                //claves = Object.keys(that.state.datos['default']);
+                                return ( <div className="p-4">
+                                            <div className="bg-black">
 
-            </div>
-            <div className="overflow-auto text-sm p-4 block overflow-auto">
+                                                {JSON.stringify(this.props.datos1)}
 
-            {JSON.stringify(that.state.datos)}
-            
-</div></div>
-        );
-        } else return <p>Cargando</p>;
+                                             </div>
+                                          <div className="overflow-auto text-sm p-4 block overflow-auto">
+
+                                                            {JSON.stringify(that.state.datos['default'])}
+                                          {
+                                                    claves.map((item,index) =>{
+                                                            var unvalor = valores[index];
+                                                            console.log(unvalor);
+                                                            if ( item ==='hotSpots') { return item}
+                                                            else 
+                                                                {    return   <p key={index}>{item} = {unvalor} </p>
+                                                                }
+                                                        }
+                                                        )  
+                                          }                       
+                                        
+                                    
+                                    </div>
+                                    </div>
+                                );
+                    } else 
+                    return <p>Cargando</p>;
     }
 }
-
+}
 MuestraRecorridoJson.propTypes = {
 
 };
