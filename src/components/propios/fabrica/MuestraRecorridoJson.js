@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class MuestraRecorridoJson extends Component {
+
+
+ class MuestraRecorridoJson extends Component {
     constructor(props) {
         super(props);
         const datos ="nada ";
@@ -10,6 +12,7 @@ class MuestraRecorridoJson extends Component {
           };
     }
 
+  
     componentWillMount() {
         var undato
         this.setState({ datos :"nada desde adentro"});
@@ -61,49 +64,92 @@ return true
 
     render() { 
        
-                    if (this.props.datos1) {
-                    const that = this;
-                    var valores;
-                    var claves;
-                    var midato = that.state.datos['default'];
-
-                     console.log("midato=",midato);
-                     if (midato) {
-                                    claves = Object.keys(midato); 
-                                    valores = Object.values(midato); 
-                                    console.log("claves=",claves); 
-                                    console.log("valores=",valores[0]);
-                                //claves = Object.keys(that.state.datos['default']);
-                                return ( <div className="p-4">
-                                            <div className="bg-black">
-
-                                                {JSON.stringify(this.props.datos1)}
-
-                                             </div>
-                                          <div className="overflow-auto text-sm p-4 block overflow-auto">
-
-                                                            {JSON.stringify(that.state.datos['default'])}
-                                          {
-                                                    claves.map((item,index) =>{
-                                                            var unvalor = valores[index];
-                                                            console.log(unvalor);
-                                                            if ( item ==='hotSpots') { return item}
-                                                            else 
-                                                                {    return   <p key={index}>{item} = {unvalor} </p>
-                                                                }
+     
+    console.log("render");
+    if (this.props.datos1)  {
+        console.log("tengo valor props.datos1");
+            const that = this;
+            var valores;
+            var claves;
+            var hotSpotes;
+            var valuesHotspot;
+            var clavesHotspot;
+            var midato = that.state.datos['default'];
+            if (midato){
+                var midato = that.state.datos['scenes']["Banio"];
+            console.log('buscando el dato=',that.state.datos['scenes']["Banio"]);
+        
+        }
+             
+             if (midato) {
+                  console.log("leyomidato");
+                  claves = Object.keys(midato); 
+                  valores = Object.values(midato); 
+                  hotSpotes = midato['hotSpots'];
+                  clavesHotspot = Object.keys(hotSpotes[0]);
+                
+                   return ( <div className="p-4">
+                                           <div className="bg-black">{JSON.stringify(this.props.datos1)}</div>
+                                           <div className="overflow-auto text-sm p-4 block overflow-auto">
+                                                            {JSON.stringify(that.state.datos['scenes']["Banio"])}
+                                            </div>
+                            <div>
+                                {claves.map((clave,index) => {
+                                
+                                if(clave!='hotSpots') {
+                                                            console.log("iterando clave=",clave);
+                                                            return (
+                                                                    <div key={index}>{clave}={(clave != 'hotSpots')? midato[clave].toString():"nada"}</div>    
+                                                                    )
                                                         }
-                                                        )  
-                                          }                       
-                                        
-                                    
-                                    </div>
-                                    </div>
-                                );
-                    } else 
-                    return <p>Cargando</p>;
+                                                        else {
+                                                            return(
+                                                                <div key={index} className="text-red-500"> 
+                                                                    Hotspots
+                                                                    <div>
+                                                                    { // console.log("hotspots varios=",midato[clave])                                                                      
+                                                                    midato[clave].map((unhotspot,indice) => {
+                                                                        return(<div key={indice}><hr/>
+                                                                            {unhotspot['sceneId']}<hr/>
+                                                                                
+                                                                                    {  //aca va el map de cada hotspot
+                                                                                        Object.keys(unhotspot).map((campohot,ind) =>{
+                                                                                            console.log("dentro del hot campohot=",campohot,"=");
+                                                                                            return(
+                                                                                                <div key={ind}>
+                                                                                                    {campohot} = {unhotspot[campohot]}
+
+                                                                                                </div>
+                                                                                            )
+
+                                                                                    })
+
+                                                                                }
+                                                                        </div>)   
+                                                                        })
+                                                                    
+                                                                    }
+                                                                    
+                                                                </div>
+                                                                </div>
+                                                            );
+                                                        }
+                                            })
+                                }
+                            </div>                
+                            </div>
+                          )             
+                }
+         
+    else  {   
+            return <p>Cargando</p>
+        }
     }
+
 }
-}
+ }
+
+
 MuestraRecorridoJson.propTypes = {
 
 };

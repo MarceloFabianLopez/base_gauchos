@@ -26,6 +26,15 @@
                 "sceneId": "Entrada",
                 "targetYaw": -20,
                 "targetPitch": 20
+            },
+            {
+                "pitch": -20,
+                "yaw": 190,
+                "type": "scene",
+                "text": "Frente a puerta principal dentro de la casa",
+                "sceneId": "Borrar",
+                "targetYaw": -20,
+                "targetPitch": 20
             }
         ]
     },
