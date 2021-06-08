@@ -45,7 +45,7 @@ const CabezaContainer = styled.div`
 `;
 
 const CuerpoContainer = styled.div`
-  ${tw`p-0 sm:p-2 md:p-6 bg-blue-100 text-gray-100 rounded-lg relative `}
+  ${tw`p-4 sm:p-2 md:p-6 bg-blue-100 text-gray-100 rounded-lg relative `}
   form {
     ${tw`mt-4`}
   }
@@ -54,7 +54,8 @@ const CuerpoContainer = styled.div`
   }
   
 `;
-const TwoColumn = tw.div`flex flex-col md:flex-row  object-center max-h-screen border-2 `;
+//const TwoColumn = tw.div`flex flex-col sm:flex-row  object-center max-h-screen border-2 `;
+const TwoColumn = tw.div`p-4 md:grid grid-cols-2 sm:grid grid-cols-1  object-center max-h-screen border-2 `;
 const ColumnAncha = tw.div`sm:w-full flex-auto flex-col`;
 const ColumnAngosta = tw.div` min-width[30%]  flex-1 flex-col bg-gray-800 p-4    overflow-scroll	`;
 const FormularioCorreo = tw.div`bg-gray-200 p-2 rounded-2xl ml-4`;
