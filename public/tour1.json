@@ -5,8 +5,8 @@
         "sceneFadeDuration": 1000,
         "crossOrigin" : "anonymous",
         "autoLoad": true,
-        "preview" : "../vtour/chamas/depto_55/0_portada_edificio.jpg",
-        "panorama": "../vtour/chamas/depto_55/0_portada_edificio.jpg",
+        "preview" : "../vtour/fabrica/plaza_moreno.jpg",
+        "panorama": "../vtour/fabrica/plaza_moreno.jpg",
         "hotSpotDebug" : false,
         "autoRotate":"3",
         "hotSpots": [
