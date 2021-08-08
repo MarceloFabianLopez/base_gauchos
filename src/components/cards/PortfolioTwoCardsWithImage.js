@@ -6,8 +6,8 @@ import styled from "styled-components";
 //import { PrimaryLink as PrimaryLinkBase } from "components/misc/Links.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 //import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg";
-import { ReactComponent as VrIcon } from "feather-icons/dist/icons/nuevovr.svg";
-import { ReactComponent as TimeIcon } from "feather-icons/dist/icons/clock.svg";
+//import { ReactComponent as VrIcon } from "feather-icons/dist/icons/nuevovr.svg";
+//import { ReactComponent as TimeIcon } from "feather-icons/dist/icons/clock.svg";
 //import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 
 const Container = tw.div`relative`;
@@ -124,12 +124,12 @@ export default ({
                   </CardHeader>
                   <CardTitle>{card.title}</CardTitle>
                   <CardMeta>
-                    <CardMetaFeature>
+                   {/*  <CardMetaFeature>
                       <TimeIcon /> {card.durationText}
-                    </CardMetaFeature>
-                    <CardMetaFeature>
+                    </CardMetaFeature> */}
+                    {/* <CardMetaFeature>
                       <VrIcon /> {card.locationText}
-                    </CardMetaFeature>
+                    </CardMetaFeature> */}
                   </CardMeta>
                  { <CardAction>{cardLinkText}</CardAction>}
                 </CardText>
