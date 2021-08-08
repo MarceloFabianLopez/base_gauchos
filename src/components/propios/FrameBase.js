@@ -214,11 +214,17 @@ let unaEscena ={
           var miviewer= ifrm.contentWindow.viewer
         var pitch=0;
         var yaw=0;
+        var hfov=120;
                   if(miviewer&&conjuntoEscenas){
                     ////console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
+                     let pitch0=recorrido['default']['pitch'];
+                      let    yaw0=recorrido['default']['yaw'];
+                      let hfov0 =recorrido ['default']['hfov'];
                     if (counter===-1){
                       //console.log("inicioooooo");
-                      miviewer.loadScene("Ingreso",0,0,120,true)} else {
+                      console.log('ptch0,yaw0,hfov0 :>> ', pitch0,yaw0,hfov0);
+
+                      miviewer.loadScene("Ingreso",pitch0,yaw0,hfov0)} else {
                         if (recorrido&conjuntoEscenas) {  
                           //console.log("recorrido=",recorrido);
                           //console.log("navegacion conjuntoEscenas=",conjuntoEscenas[counter]);
@@ -226,10 +232,11 @@ let unaEscena ={
                           ////console.log(recorrido);
                           pitch=recorrido['scenes'][conjuntoEscenas[counter]]['pitch'];
                           yaw=recorrido['scenes'][conjuntoEscenas[counter]]['yaw'];
+                          hfov=recorrido['scenes'][conjuntoEscenas[counter]]['hfov'];
                         }
                       //console.log("Cambiando a escena=",conjuntoEscenas[counter]);
-                  miviewer.loadScene(conjuntoEscenas[counter],pitch,yaw,120,true)}
-                  //  miviewer.lookAt(-5,0,60,4000);
+                  miviewer.loadScene(conjuntoEscenas[counter],pitch,yaw,hfov)}
+                    miviewer.lookAt(pitch,yaw,hfov,4000);
                   //  miviewer.lookAt(0,0,120,4000);
                 }
           }

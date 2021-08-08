@@ -123,8 +123,8 @@ export default function App() {
          </Route>
          <Route path="/">
            
-     
-            <Principal /> 
+     <h1>HOla</h1>
+            
          </Route>
        </Switch>
      </Router>

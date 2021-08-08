@@ -14,8 +14,8 @@
                 "pitch": -0.6,
                 "yaw": 37.1,
                 "type": "scene",
-                "text": "Mason Circle",
-                "sceneId": "circle",
+                "text": "Parque Legislatura",
+                "sceneId": "parque",
                 "targetYaw": -23,
                 "targetPitch": 2
             },
@@ -32,20 +32,20 @@
     },
     
     "scenes": {
-        "circle": {
-            "title": "Mason Circle",
+        "parque": {
+            "title": "Parque Legislatura",
             "hfov": 110,
             "pitch": -3,
             "yaw": 117,
             "type": "equirectangular",
-            "panorama": "../vtour/chamas/depto_55/1_cochera.jpg",
+            "panorama": "../vtour/fabrica/parque.jpg",
             "hotSpots": [
                 {
                     "pitch": -2.1,
                     "yaw": 132.9,
                     "type": "scene",
-                    "text": "Spring House or Dairy",
-                    "sceneId": "house"
+                    "text": "Legislatura",
+                    "sceneId": "legislatura"
                 },
                 {
                     "pitch": -0.6,
@@ -59,46 +59,49 @@
             ]
         },
         
-        "circle2": {
-            "title": "Mason Circle",
+        "legislatura": {
+            "title": "Legislatura",
             "hfov": 110,
             "pitch": -3,
             "yaw": 117,
             "type": "equirectangular",
-            "panorama": "../images/uno.jpeg",
+            "panorama": "../vtour/fabrica/pasos_perdidos.jpg",
             "hotSpots": [
-                {
-                    "pitch": -2.1,
-                    "yaw": 132.9,
-                    "type": "scene",
-                    "text": "Spring House or Dairy",
-                    "sceneId": "house"
-                },
+                
                 {
                     "pitch": -0.6,
                     "yaw": 37.1,
                     "type": "scene",
                     "text": "Inicio",
                     "sceneId": "Inicio",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "Calle 51",
+                    "sceneId": "calle51",
                     "targetYaw": -23,
                     "targetPitch": 2
                 }
             ]
         },
-        "circle3": {
+        "calle51": {
             "title": "Mason Circle",
             "hfov": 110,
             "pitch": -3,
             "yaw": 117,
             "type": "equirectangular",
-            "panorama": "../images/uno.jpeg",
+            "panorama": "../vtour/fabrica/calle_51.jpg",
             "hotSpots": [
                 {
                     "pitch": -2.1,
                     "yaw": 132.9,
                     "type": "scene",
-                    "text": "Spring House or Dairy",
-                    "sceneId": "house"
+                    "text": "Legislatura",
+                    "sceneId": "legislatura"
                 },
                 {
                     "pitch": -0.6,
@@ -108,37 +111,20 @@
                     "sceneId": "Inicio",
                     "targetYaw": -23,
                     "targetPitch": 2
-                }
-            ]
-        },
-
-        "house": {
-            "title": "Spring House or Dairy",
-            "hfov": 110,
-            "yaw": 5,
-            "type": "equirectangular",
-            "panorama": "../images/bma-0.jpg",
-            "hotSpots": [
-                {
-                    "pitch": -0.6,
-                    "yaw": 37.1,
-                    "type": "scene",
-                    "text": "Mason Circle",
-                    "sceneId": "circle",
-                    "targetYaw": -23,
-                    "targetPitch": 2
                 },
                 {
                     "pitch": -0.6,
                     "yaw": 37.1,
                     "type": "scene",
-                    "text": "Inicio",
-                    "sceneId": "Inicio",
+                    "text": "Calle 51",
+                    "sceneId": "calle51",
                     "targetYaw": -23,
                     "targetPitch": 2
                 }
             ]
         }
+
+        
     }
 
 }

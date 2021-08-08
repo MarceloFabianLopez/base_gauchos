@@ -1,0 +1,36 @@
+"escena0_fachada": {
+    "Pitch": 28.44101741198528,
+    "Yaw": -149.67233701020484,
+    "Hfov": 120,
+    "panorama": "../vtour/chamas/depto_55/0_fachada.jpg",
+    "preview": "../vtour/chamas/depto_55/0_fachada.jpg",
+    "title": "Depto 55 y 24",
+    "firstScene": "escena0_fachada",
+    "author": "VTOUR",
+    "sceneFadeDuration": 0,
+    "crossOrigin": "anonymous",
+    "autoLoad": true,
+    "autoRotate": "5",
+    "hotSpots": [
+        {
+            "pitch": 7.875497073951102,
+            "yaw": -149.702697857495,
+            "hfov": 120,
+            "type": "scene",
+            "text": "Entrada",
+            "targetYaw": -23.468393827833232,
+            "targetPitch": -24.743468354275755,
+            "sceneId": "escena1_entrada"
+        },
+        {
+            "pitch": -1.3915203508453526,
+            "yaw": -135.59649868330732,
+            "hfov": 52.6970227012451,
+            "type": "scene",
+            "text": "Cochera",
+            "targetYaw": 47.9259562417208,
+            "targetPitch": -1.651731278593843,
+            "sceneId": "escena10_cochera"
+        }
+    ]
+},

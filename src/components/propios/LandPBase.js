@@ -185,7 +185,8 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
   </NavLinks>
 ]; 
  //const {escena} = useContext (DataContext);
- const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour2.json" ;  
+// const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour2.json" ;  
+ const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour4.json" ;  
  //const contactos = components['blocks']['Form']['elements']['SimpleContactUs']['url']; 
 //logoLink={logoLink}
  // const markdown = `Just a link: https://reactjs.com.`
@@ -217,7 +218,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                             <AreaWhatsap imageWsp={imagenWsp}/></a></AreaContactar>
                             
                     <ViewerPrincipal>
-                            <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= {EscenaLandPage} IsRecorrido='true' IsPlano='true'/>
+                            <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= {EscenaLandPage} IsRecorrido='true' IsPlano='false'/>
                            {/*  <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= "../../standalone/pannellum.htm?config=../tour1.json" IsRecorrido='true' IsPlano='true'/> */}
                   
                   </ViewerPrincipal>              

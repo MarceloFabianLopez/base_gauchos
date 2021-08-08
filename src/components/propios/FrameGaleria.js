@@ -24,9 +24,9 @@ function FrameGaleria () {
  const {setEscena} = useContext (DataContext);
  const {cantidad,setCantidad} = useContext(DataContext);
  const {conjunto}=useContext(DataContext);
-// console.log("cantidad desde contexto=",cantidad);
-//console.log("conjuntodeEscenas=",conjunto)
-//console.log ("escenas=",Object.keys(conjunto));
+ console.log("cantidad desde contexto=",cantidad);
+console.log("conjuntodeEscenas=",conjunto)
+console.log ("escenas=",Object.keys(conjunto));
 //console.log ("unaescenas=",conjuntoEscenas['Entrada'].title);
 let claves =Object.keys(conjunto);
 //const EscenaInicial ={idEscena: "Primera"};
@@ -54,7 +54,7 @@ function CambiaEscena  (index)  {
   //                              <TextoFoto>{Foto.title}</TextoFoto>
    //         </UnaFoto>
 
-if (conjunto["Entrada"]) { 
+if (conjunto[Object.keys(conjunto)[0]]) { 
  // console.log("adentro=",conjunto["Entrada"]);
   let algo = conjunto["Entrada"];
  // console.log("adentros=",algo["panorama"]);

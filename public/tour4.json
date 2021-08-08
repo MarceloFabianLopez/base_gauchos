@@ -1,145 +1,288 @@
 {
-
- "default": {
-    "firstScene": "library",
-    "author": "Matthew Petroff",
-    "preview" : "../vtour/chamas/depto_55/0_portada_edificio.jpg",
-    "panorama": "../vtour/chamas/rec_small/1_calle.jpg",
-    "sceneFadeDuration": 1000,
-    "autoRotate" :5,
-    "autoLoad": true
-},
-
-"scenes": {
-    "library": {
-        "title": "George Peabody Library",
-        "hfov": 100,
-        "pitch": 10,
-        "yaw": 50,
-        "compass": true,
-        "northOffset": 289,
-        "type": "multires",
-        "multiRes": {
-            "basePath": "https:\/\/pannellum.org/images/multires/library",
-            "path": "/%l/%s%y_%x",
-            "fallbackPath": "/fallback/%s",
-            "extension": "jpg",
-            "tileResolution": 512,
-            "maxLevel": 6,
-            "cubeResolution": 8432
-        },
+    "default": {
+        "pitch": 28.44101741198528,
+        "yaw": -149,
+        "hfov": 120,
+        "panorama": "../vtour/chamas/depto_55/0_fachada.jpg",
+        "compass":false,
+        "title": "Depto 55 y 24",
+        "firstScene": "Ingreso",
+        "author": "VTOUR",
+        "sceneFadeDuration": 2000,
+        "crossOrigin": "anonymous",
+        "autoLoad": true,
+        "autoRotate": "15",
+        "horizonPitch" : 0,
+        "horizonRoll" : 0,
         "hotSpots": [
             {
-                "pitch": 60,
-                "yaw": 60,
-                "type": "info",
-                "text": "The skylight is supported by an iron truss and has a second, peaked skylight over it."
-            },
-            {
-                "pitch": 10,
-                "yaw": 25,
-                "type": "info",
-                "text": "Much of the library was constructed from cast-iron to reduce the risk of fire."
-            },
-            {
-                "pitch": 0,
-                "yaw": 8,
-                "type": "info",
-                "text": "The lighting was originally gas."
-            },
-            {
-                "pitch": -3,
-                "yaw": 115,
-                "type": "info",
-                "text": "The JHU library catalog contains the Peabody Library’s holdings.",
-                "URL": "https://catalog.library.jhu.edu/"
-            },
-            {
-                "pitch": -3,
-                "yaw": 65,
+                "pitch": 7.875497073951102,
+                "yaw": -149.702697857495,
+                "hfov": 120,
                 "type": "scene",
-                "text": "Gallery",
-                "sceneId": "gallery"
+                "text": "Entrada",
+                "targetYaw": -23.468393827833232,
+                "targetPitch": -24.743468354275755,
+                "sceneId": "escena1_entrada"
             },
             {
-                "pitch": 47,
-                "yaw": -135,
+                "pitch": -1.3915203508453526,
+                "yaw": -135.59649868330732,
+                "hfov": 52.6970227012451,
                 "type": "scene",
-                "text": "6th Floor",
-                "sceneId": "6th-floor"
+                "text": "Cochera",
+                "targetYaw": 47.9259562417208,
+                "targetPitch": -1.651731278593843,
+                "sceneId": "escena10_cochera"
             }
         ]
     },
+    "scenes": {
+        
+        "escena1_entrada": {
+            "pitch": -9.034724625063493,
+            "yaw": -24.60069546434454,
+            "hfov": 120,
+            "panorama": "../vtour/chamas/depto_55/1_entrada.jpg",
+            "preview": "../vtour/chamas/depto_55/1_entrada.jpg",
+            "title": "Entrada",
+            "autoRotate": "15",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -32.99695566516139,
+                    "yaw": -24.85083831920158,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Living",
+                    "targetYaw": 62.966553977796785,
+                    "targetPitch": -8.439863679040283,
+                    "sceneId": "escena2_living_comedor"
+                }
+            ]
+        },
+        "escena2_living_comedor": {
+            "pitch": -9.335557296261612,
+            "yaw": 71.55408918741887,
+            "hfov": 100,
+            "panorama": "../vtour/chamas/depto_55/2_living_comedor.jpg",
+            "preview": "../vtour/chamas/depto_55/2_living_comedor.jpg",
+            "title": "Living",
+            "autoRotate": "-15",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -17.585152963187753,
+                    "yaw": 63.20097915226833,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Living 2",
+                    "targetYaw": 156.17906903117313,
+                    "targetPitch": -31.897546540201986,
+                    "sceneId": "escena2bis_living_2"
+                }
+            ]
+        },
+        "escena2bis_living_2": {
+            "pitch": -7.856498615200477,
+            "yaw": 117.30850324002927,
+            "hfov": 120,
+            "panorama": "../vtour/chamas/depto_55/2bis_living_2.jpg",
+            "preview": "../vtour/chamas/depto_55/2bis_living_2.jpg",
+            "title": "Living 2",
+            "autoRotate": "15",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -21.661190411063984,
+                    "yaw": 156.35546003835515,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Pasillo",
+                    "targetYaw": -34.135216099054595,
+                    "targetPitch": -30.245280881361904,
+                    "sceneId": "escena3_pasillo"
+                }
+            ]
+        },
+        "escena3_pasillo": {
+            "pitch": -24.18413022535228,
+            "yaw": -22.21038371224904,
+            "hfov": 120,
+            "panorama": "../vtour/chamas/depto_55/3_pasillo.jpg",
+            "preview": "../vtour/chamas/depto_55/3_pasillo.jpg",
+            "title": "Pasillo",
+            "autoRotate": "-15",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -14.971200450684828,
+                    "yaw": -79.0772309783564,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Cocina",
+                    "targetYaw": -175.64541976654277,
+                    "targetPitch": -33.3595272523454,
+                    "sceneId": "escena4_cocina"
+                }
+            ]
+        },
+        "escena4_cocina": {
+            "pitch": 3.0130659226863603,
+            "yaw": -178.42348264008507,
+            "hfov": 120,
+            "panorama": "../vtour/chamas/depto_55/4_cocina.jpg",
+            "preview": "../vtour/chamas/depto_55/4_cocina.jpg",
+            "title": "Cocina",
+            "autoRotate": "15",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -25.44066241838454,
+                    "yaw": 2.740103504393005,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Baño",
+                    "targetYaw": -173.79543154953453,
+                    "targetPitch": -29.34841318920295,
+                    "sceneId": "escena5_baño"
+                }
+            ]
+        },
+        "escena5_baño": {
+            "pitch": -29,
+            "yaw": -173,
+            "hfov": 120,
+            "panorama": "../vtour/chamas/depto_55/5_baño.jpg",
+            "preview": "../vtour/chamas/depto_55/5_baño.jpg",
+            "title": "Baño",
+            "autoRotate": "0",
+            
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -23.879024405631696,
+                    "yaw": 84.02933175883692,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Primer dormitorio",
+                    "targetYaw": 8.911843579339237,
+                    "targetPitch": -34.51021898246439,
+                    "sceneId": "escena6_primer_dormitorio"
+                }
+            ]
+        },
+        "escena6_primer_dormitorio": {
+            "pitch": -19.325442071288908,
+            "yaw": 4.64630028322631,
+            "hfov": 120,
+            "panorama": "../vtour/chamas/depto_55/6_primer_dormitorio.jpg",
+            "preview": "../vtour/chamas/depto_55/6_primer_dormitorio.jpg",
+            "title": "Primer dormitorio",
+            "autoRotate": "15",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -16.725142460029378,
+                    "yaw": 141.96108436837758,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Dormitorio principal",
+                    "targetYaw": -77.97469582750311,
+                    "targetPitch": -26.366563043647812,
+                    "sceneId": "escena7_segundo_dormitorio"
+                }    
+            ]
 
-    "gallery": {
-        "title": "Gallery",
-        "hfov": 100,
-        "yaw": -20,
-        "type": "multires",
-        "compass": true,
-        "northOffset": 240,
-        "multiRes": {
-            "basePath": "https:\/\/pannellum.org/images/multires/gallery",
-            "path": "/%l/%s%y_%x",
-            "fallbackPath": "/fallback/%s",
-            "extension": "jpg",
-            "tileResolution": 512,
-            "maxLevel": 5,
-            "cubeResolution": 4384
         },
-        "hotSpots": [
-            {
-                "pitch": -7,
-                "yaw": -58,
-                "type": "scene",
-                "text": "Library",
-                "sceneId": "library",
-                "targetYaw": 240
-            }
-        ]
-    },
-    
-    "6th-floor": {
-        "title": "6th Floor",
-        "hfov": 100,
-        "pitch": -20,
-        "yaw": -20,
-        "compass": true,
-        "northOffset": 0,
-        "type": "multires",
-        "multiRes": {
-            "basePath": "https:\/\/pannellum.org/images/multires/6th-floor",
-            "path": "/%l/%s%y_%x",
-            "fallbackPath": "/fallback/%s",
-            "extension": "jpg",
-            "tileResolution": 512,
-            "maxLevel": 4,
-            "cubeResolution": 3968
+        "escena7_segundo_dormitorio": {
+            "pitch": -29.523573624024493,
+            "yaw": -63.34751236656132,
+            "hfov": 120,
+            "panorama": "../vtour/chamas/depto_55/7_segundo_dormitorio.jpg",
+            "preview": "../vtour/chamas/depto_55/7_segundo_dormitorio.jpg",
+            "title": "Dormitorio principal",
+            "autoRotate": "-10",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -10.143386935179159,
+                    "yaw": -95.50213647149901,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Balcon",
+                    "targetYaw": -170.44638390765215,
+                    "targetPitch": -11.043156838654735,
+                    "sceneId": "escena9_balcon_2"
+                }
+            ]
         },
-        "hotSpots": [
-            {
-                "pitch": -47.5,
-                "yaw": -11,
-                "type": "scene",
-                "text": "Main Floor",
-                "sceneId": "library"
-            },
-            {
-                "pitch": -28,
-                "yaw": -3,
-                "type": "scene",
-                "text": "Gallery",
-                "sceneId": "gallery"
-            },
-            {
-                "pitch": -20,
-                "yaw": -165.7,
-                "type": "info",
-                "text": "The A B C of Prohibition",
-                "URL": "https://catalyst.library.jhu.edu/catalog/bib_1121184"
-            }
-        ]
+        "escena8_balcon_1": {
+            "pitch": 0.7743765474517917,
+            "yaw": 163.43148398750895,
+            "hfov": 100,
+            "panorama": "../vtour/chamas/depto_55/8_balcon_1.jpg",
+            "preview": "../vtour/chamas/depto_55/8_balcon_1.jpg",
+            "title": "Balcón pasante",
+            "autoRotate": "15",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -17.585152963187753,
+                    "yaw": 63.20097915226833,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Living 2",
+                    "targetYaw": 156.17906903117313,
+                    "targetPitch": -31.897546540201986,
+                    "sceneId": "escena2bis_living_2"
+                }
+            ]
+        },
+        "escena9_balcon_2": {
+            "pitch": -9.875265206536161,
+            "yaw": 162.47983481578615,
+            "hfov": 100,
+            "panorama": "../vtour/chamas/depto_55/9_balcon_2.jpg",
+            "preview": "../vtour/chamas/depto_55/9_balcon_2.jpg",
+            "title": "Balcón",
+            "autoRotate": "-10",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -10.210057044952814,
+                    "yaw": 177.32862149840562,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Balcon",
+                    "targetYaw": 172.6369074370343,
+                    "targetPitch": -10.192883153710223,
+                    "sceneId": "escena8_balcon_1"
+                }
+            ]
+        },
+        "escena10_cochera": {
+            "pitch": -8.534570759928984,
+            "yaw": 50.81559821058522,
+            "hfov": 100,
+            "panorama": "../vtour/chamas/depto_55/10_cochera.jpg",
+            "preview": "../vtour/chamas/depto_55/10_cochera.jpg",
+            "title": "Cochera",
+            "autoRotate": "15",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -2.589803857739231,
+                    "yaw": 78.95632022950028,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Entrada",
+                    "targetYaw": -19.296282328642995,
+                    "targetPitch": -41.1565352442918,
+                    "sceneId": "escena1_entrada"
+                    
+                }
+            ]
+        }
     }
-}
-
 }

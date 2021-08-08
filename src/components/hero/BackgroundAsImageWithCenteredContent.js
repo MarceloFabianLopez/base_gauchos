@@ -82,7 +82,7 @@ const videoParametros = {
   responsive :true,
   width : "200" ,
   altura :"300",
-  projection : 'Cube',
+  projection : '360',
   poster :'../video/jfk-poster.jpg',
   notSupportedMessage: false,
   sources: [{
@@ -111,7 +111,7 @@ export default () => {
    {/*     <NavLink href={clientes}>Área Clientes</NavLink> */}
      
       
- <NavLink href={landpagebase}>¿Por qué Ud. necesita nuestros servicios? </NavLink>
+ <NavLink href={landpagebase}>¿Por qué usted necesita nuestros servicios? </NavLink>
     <NavLink href={contactos}>Contactos</NavLink>
       
     </NavLinks> ];
@@ -129,7 +129,7 @@ export default () => {
                    Video 360º y aéreos
                    <SubHeading>vtour.com.ar</SubHeading>
                </Heading>  
-                <BannerFondo > <a href={landpagebase}> ¿Por qué Ud. necesita nuestros servicios?</a></BannerFondo>  
+                <BannerFondo > <a href={landpagebase}> ¿Por qué usted necesita nuestros servicios?</a></BannerFondo>  
               <GrillaPortada>
                   
               
