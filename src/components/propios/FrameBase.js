@@ -369,7 +369,7 @@ const src = sourcelocal;
                               ....
                               </>
                         }
-                     <FrameGaleria/> 
+                    {!esPortada  && <FrameGaleria/> }
                       </Card> 
                      
                        

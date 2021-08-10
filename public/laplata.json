@@ -1,0 +1,218 @@
+{
+    "default": {
+        "Pitch": -42.320500430899656,
+        "Yaw": 12.401644166646975,
+        "Hfov": 70.57080509132378,
+        "panorama": "../../vtour/laplata/0_repu.jpg",
+        "preview": "../../vtour/laplata/0_repu.jpg",
+        "title": "República de los niños",
+        "firstScene": "escena0_repu",
+        "author": "VTOUR",
+        "sceneFadeDuration": 0,
+        "crossOrigin": "anonymous",
+        "autoLoad": true,
+        "autoRotate": "20",
+        "hotSpots": [
+            {
+                "pitch": -6.180457733969777,
+                "yaw": 73.06059591670707,
+                "hfov": 120,
+                "type": "scene",
+                "text": "Distrubuidor",
+                "targetYaw": -178.04480198816816,
+                "targetPitch": -33.37560725629061,
+                "sceneId": "escena1_distribuidor"
+            },
+            {
+                "pitch": -0.9260855564263105,
+                "yaw": 54.46240466046417,
+                "hfov": 120,
+                "type": "scene",
+                "text": "Catedral",
+                "targetYaw": 19.64736475822066,
+                "targetPitch": -12.596492134284585,
+                "sceneId": "escena3_catedral"
+            },
+            {
+                "pitch": -3.324130271049272,
+                "yaw": 34.56108107725636,
+                "hfov": 120,
+                "type": "scene",
+                "text": "Legislatura",
+                "targetYaw": 144.55339349268326,
+                "targetPitch": 4.2079515559583145,
+                "sceneId": "escena4_parque_legislatura"
+            }
+        ]
+    },
+    "scenes": {
+        "escena0_repu": {
+            "Pitch": -42.320500430899656,
+            "Yaw": 12.401644166646975,
+            "Hfov": 70.57080509132378,
+            "panorama": "../../vtour/laplata/0_repu.jpg",
+            "preview": "../../vtour/laplata/0_repu.jpg",
+            "title": "República de los niños",
+            "firstScene": "escena0_repu",
+            "author": "VTOUR",
+            "sceneFadeDuration": 0,
+            "crossOrigin": "anonymous",
+            "autoLoad": false,
+            "autoRotate": "0",
+            "hotSpots": [
+                {
+                    "pitch": -6.180457733969777,
+                    "yaw": 73.06059591670707,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Distrubuidor",
+                    "targetYaw": -178.04480198816816,
+                    "targetPitch": -33.37560725629061,
+                    "sceneId": "escena1_distribuidor"
+                },
+                {
+                    "pitch": -0.9260855564263105,
+                    "yaw": 54.46240466046417,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Catedral",
+                    "targetYaw": 19.64736475822066,
+                    "targetPitch": -12.596492134284585,
+                    "sceneId": "escena3_catedral"
+                },
+                {
+                    "pitch": -3.324130271049272,
+                    "yaw": 34.56108107725636,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Legislatura",
+                    "targetYaw": 144.55339349268326,
+                    "targetPitch": 4.2079515559583145,
+                    "sceneId": "escena4_parque_legislatura"
+                }
+            ]
+        },
+        "escena1_distribuidor": {
+            "pitch": -8.48297522705126,
+            "yaw": -167.1758778548941,
+            "hfov": 120,
+            "panorama": "../../vtour/laplata/1_distribuidor.jpg",
+            "preview": "../../vtour/laplata/1_distribuidor.jpg",
+            "title": "Distribuidor de transito Benoit",
+            "hotSpots": [
+                {
+                    "pitch": -1.4899832011980554,
+                    "yaw": 3.23263923517361,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "República de los niños",
+                    "targetYaw": 152.89948350881633,
+                    "targetPitch": -69.65005097472744,
+                    "sceneId": "escena0_repu"
+                },
+                {
+                    "pitch": -0.3551712944189327,
+                    "yaw": -153.40833124088823,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Catedral",
+                    "targetYaw": 13.91181553346758,
+                    "targetPitch": -13.917578571218435,
+                    "sceneId": "escena3_catedral"
+                },
+                {
+                    "pitch": 1.2159203197292678,
+                    "yaw": -174.01491366445924,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Legislatura",
+                    "targetYaw": -159.1075096797176,
+                    "targetPitch": 15.453023931664664,
+                    "sceneId": "escena4_parque_legislatura"
+                }
+            ]
+        },
+        "escena3_catedral": {
+            "pitch": -11.408907646285742,
+            "yaw": 10.62328282335011,
+            "hfov": 100,
+            "panorama": "../../vtour/laplata/3_catedral.jpg",
+            "preview": "../../vtour/laplata/3_catedral.jpg",
+            "title": "Catedral",
+            "hotSpots": [
+                {
+                    "pitch": 0.7014204661830085,
+                    "yaw": 94.53944388806276,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "República de los niños",
+                    "targetYaw": 14.46935266843117,
+                    "targetPitch": -24.42528479605083,
+                    "sceneId": "escena0_repu"
+                },
+                {
+                    "pitch": -2.9665127687365325,
+                    "yaw": -168.6821060937748,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Legislatura",
+                    "targetYaw": -171.44541291835355,
+                    "targetPitch": 9.860718343870731,
+                    "sceneId": "escena4_parque_legislatura"
+                }
+            ]
+        },
+        "escena4_parque_legislatura": {
+            "pitch": 22.107764360327526,
+            "yaw": -177.66006277001293,
+            "hfov": 120,
+            "panorama": "../../vtour/laplata/4_parque_legislatura.jpg",
+            "preview": "../../vtour/laplata/4_parque_legislatura.jpg",
+            "title": "Legislatura provincial",
+            "hotSpots": [
+                {
+                    "pitch": 3.0583060966205675,
+                    "yaw": -76.48577987916272,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Catedral",
+                    "targetYaw": 1.4232563884619758,
+                    "targetPitch": -11.982799827808408,
+                    "sceneId": "escena3_catedral"
+                },
+                {
+                    "pitch": 17.234400828877458,
+                    "yaw": -176.77880634771378,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Salon Armendáriz",
+                    "targetYaw": 0,
+                    "targetPitch": 0,
+                    "targetHfov": 120,
+                    "sceneId": "escena5_Legislatura"
+                }
+            ]
+        },
+        "escena5_Legislatura": {
+            "pitch": 15.367975852758397,
+            "yaw": 144.01618590131272,
+            "hfov": 100,
+            "panorama": "../../vtour/laplata/5_Legislatura.jpg",
+            "preview": "../../vtour/laplata/5_Legislatura.jpg",
+            "title": "Legislatura Salón Armendáriz",
+            "hotSpots": [
+                {
+                    "pitch": 2.844539489321275,
+                    "yaw": 8.379142278830784,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Parque Legislatura",
+                    "targetYaw": -87.23778607726834,
+                    "targetPitch": -4.811461676587584,
+                    "sceneId": "escena4_parque_legislatura",
+                    "div": {}
+                }
+            ]
+        }
+    }
+}
