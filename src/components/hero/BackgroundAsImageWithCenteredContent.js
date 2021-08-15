@@ -72,6 +72,7 @@ bg-gray-300  rounded-2xl   text-center font-extrabold text-primary-500 border-in
 //const misrc = "../standalone/pannellum.htm?config=../tour1.json";
 const misrc = "../standalone/pannellum.htm?config=../laplata.json";
 const misrcvideo = "../video/tres.mp4";
+const misrcvideospot = "https://youtu.be/hXexvLhDWbY";
 const misrcImagen="../../images/repu2.png";
 const videoParametros = {
   autoplay: false,
@@ -88,6 +89,24 @@ const videoParametros = {
   notSupportedMessage: false,
   sources: [{
     src: misrcvideo,
+    type: 'video/mp4'
+  }]
+}
+const videoParametrosSpot = {
+  autoplay: false,
+  preoload : 'auto',
+  autoload :true,
+  controls: true,
+  
+  fluid :true ,
+  responsive :true,
+  width : "200" ,
+  altura :"300",
+  projection : '360',
+  poster :'../video/jfk-poster.jpg',
+  notSupportedMessage: false,
+  sources: [{
+    src: misrcvideospot,
     type: 'video/mp4'
   }]
 }
@@ -146,23 +165,28 @@ export default () => {
                   videoJsOptions ={ videoParametros}
                   IsRecorrido='true'/>  
                  </CajaContenido>
-                  <CajaContenido>
-                  <FrameBaseImagen altura={window.innerWidth>600?350:250} source= {misrcImagen}
-                  Titulo="Vistas aéreas"
-                  Bajada="La otra mirada"
-                  SubTitulo="Imprescindible"
-                  TextoGrisMayuscula="Agregue una dimensión a sus ventas"/>   
-                  </CajaContenido> 
-                
-            <CajaContenido>  <FrameBaseVideo altura={window.innerWidth>600?450:200} source= {misrcvideo}
+                {/*    <CajaContenido>
+                   <FrameBaseImagen altura={window.innerWidth>600?350:250} source= {misrcImagen}/>
+                  
+                  </CajaContenido> */}  
+                  <CajaContenido>  <FrameBaseVideo esYoutuber={true} altura={window.innerWidth>600?450:200} source= {misrcvideospot}
+                  Titulo="Video 360º"
+                  Bajada="Experiencia inmersiva"
+                  SubTitulo="Video 360º "
+                  TextoGrisMayuscula="Herramienta excelente para 
+                  promocionar "
+                  videoJsOptions ={ videoParametrosSpot}
+                   />
+                 </CajaContenido>  
+             <CajaContenido>  <FrameBaseVideo altura={window.innerWidth>600?450:200} source= {misrcvideo}
                   Titulo="Video 360º"
                   Bajada="Experiencia inmersiva"
                   SubTitulo="Video 360º "
                   TextoGrisMayuscula="Herramienta excelente para 
                   promocionar "
                   videoJsOptions ={ videoParametros}
-                  /> 
-                 </CajaContenido> 
+                   />
+                 </CajaContenido>  
                  
                     </GrillaPortada> 
                     

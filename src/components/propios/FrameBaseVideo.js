@@ -29,7 +29,7 @@ const CardMetaFeature = styled.div`
   }
 `;
 
-  function FrameBaseVideo ({ esPortada=true, tieneAudio=false,altura="350",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
+  function FrameBaseVideo ({ esYoutuber=false ,esPortada=true, tieneAudio=false,altura="350",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
     
                        IsPlano=false,videoJsOptions={}}) 
 
@@ -43,7 +43,8 @@ console.log("alturavideo=",videoJsOptions.altura);
                       <Card>
                      <IconoReco><IconoVideo360 /></IconoReco>                    
                         <CardHeader>
-                                 <VideoPlayer { ...videoJsOptions }/> 
+                         {!esYoutuber && <VideoPlayer { ...videoJsOptions }/> }
+                                  
                         </CardHeader>
                         {!IsPlano && <>
                                <CardCompany>{Titulo}</CardCompany> 
