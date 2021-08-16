@@ -108,7 +108,7 @@ export default ({ roundedHeaderButton = false, logoLink, bannerMio, links, class
       
     </LogoLink>
   );
-  const defaultBannerMio= (<h2>Vtour.com.ar</h2>);
+  const defaultBannerMio= "Vtour.com.ar";
 
   logoLink = logoLink || defaultLogoLink;
   links = links || defaultLinks;

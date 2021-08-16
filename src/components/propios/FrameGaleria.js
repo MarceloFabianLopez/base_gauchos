@@ -22,7 +22,7 @@ const TextoFoto= tw.p`p-1 text-gray-100 text-xs`;
  
 function FrameGaleria () {
  const {setEscena} = useContext (DataContext);
- const {cantidad,setCantidad} = useContext(DataContext);
+ const {cantidad} = useContext(DataContext);
  const {conjunto}=useContext(DataContext);
  console.log("cantidad desde contexto=",cantidad);
 console.log("conjuntodeEscenas=",conjunto)
@@ -56,7 +56,7 @@ function CambiaEscena  (index)  {
 
 if (conjunto[Object.keys(conjunto)[0]]) { 
  // console.log("adentro=",conjunto["Entrada"]);
-  let algo = conjunto["Entrada"];
+  //let algo = conjunto["Entrada"];
  // console.log("adentros=",algo["panorama"]);
   return (
 <>

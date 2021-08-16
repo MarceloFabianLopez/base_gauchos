@@ -1,6 +1,8 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
+import YouTube from 'react-youtube';
+
 //import { css } from "styled-components/macro"; //eslint-disable-line
 
 import Header, { NavLink, NavLinks,  LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
@@ -32,8 +34,21 @@ sm:text-base sm:mt-16 sm:px-8
 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 
  text-gray-100 hocus:bg-primary-700 
 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
+
+
 */
- const StyledHeader = styled(Header)`
+
+const opts = {
+  height: '200',
+  width: '300',
+  playerVars: {
+    // https://developers.google.com/youtube/player_parameters
+    autoplay: 1,
+    'controls': 0 ,
+  },
+};
+
+const StyledHeader = styled(Header)`
   ${tw`pt-6 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     ${tw`text-gray-200 hover:border-primary-500 hover:text-primary-500 `}
@@ -72,14 +87,15 @@ bg-gray-300  rounded-2xl   text-center font-extrabold text-primary-500 border-in
 //const misrc = "../standalone/pannellum.htm?config=../tour1.json";
 const misrc = "../standalone/pannellum.htm?config=../laplata.json";
 const misrcvideo = "../video/tres.mp4";
-const misrcvideospot = "https://youtu.be/hXexvLhDWbY";
+//const misrcvideospot = "https://youtu.be/hXexvLhDWbY";
+const misrcvideospot = "../video/vtourspot_720p_H.264.mp4";
 const misrcImagen="../../images/repu2.png";
 const videoParametros = {
   autoplay: false,
   preoload : 'auto',
   autoload :true,
   controls: true,
-  
+  vr:true,
   fluid :true ,
   responsive :true,
   width : "200" ,
@@ -93,17 +109,18 @@ const videoParametros = {
   }]
 }
 const videoParametrosSpot = {
-  autoplay: false,
+  vr : false ,
+  autoplay: true,
   preoload : 'auto',
   autoload :true,
   controls: true,
   
   fluid :true ,
   responsive :true,
-  width : "200" ,
-  altura :"300",
-  projection : '360',
-  poster :'../video/jfk-poster.jpg',
+  width : "250" ,
+  altura :"370",
+  
+  poster :'../video/miniatura_spot_vtour_alto_2.1.1.jpg',
   notSupportedMessage: false,
   sources: [{
     src: misrcvideospot,
@@ -120,7 +137,10 @@ const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mi
 
 const contactos =components['blocks']['Form']['elements']['Contacto']['url'];
 const Gancho =tw.div`bg-gray-300`;
- 
+
+
+
+
 export default () => {   
   
   const MisLinks = [
@@ -163,22 +183,24 @@ export default () => {
                   SubTitulo="Resalte lo importante"
                   TextoGrisMayuscula="Un recorrido a las virtudes de su producto"
                   videoJsOptions ={ videoParametros}
-                  IsRecorrido='true'/>  
+                  IsRecorrido='true'/>   
                  </CajaContenido>
                 {/*    <CajaContenido>
                    <FrameBaseImagen altura={window.innerWidth>600?350:250} source= {misrcImagen}/>
                   
                   </CajaContenido> */}  
-                  <CajaContenido>  <FrameBaseVideo esYoutuber={true} altura={window.innerWidth>600?450:200} source= {misrcvideospot}
-                  Titulo="Video 360º"
-                  Bajada="Experiencia inmersiva"
-                  SubTitulo="Video 360º "
-                  TextoGrisMayuscula="Herramienta excelente para 
-                  promocionar "
+                  <CajaContenido>  
+                {/*    <YouTube videoId="hXexvLhDWbY" opts={opts}  />  */}
+     
+                    <FrameBaseVideo esAerea={true} esYoutuber={false} altura={window.innerWidth>600?450:200} source= {misrcvideospot}
+                  Titulo="Tomas aéreas"
+                  Bajada="Agregue una dimensión extra"
+                  SubTitulo="Perspectivas inigualables"
+                  TextoGrisMayuscula="Herramienta imprescindible"
                   videoJsOptions ={ videoParametrosSpot}
                    />
                  </CajaContenido>  
-             <CajaContenido>  <FrameBaseVideo altura={window.innerWidth>600?450:200} source= {misrcvideo}
+             <CajaContenido>  <FrameBaseVideo esYoutuber={false} altura={window.innerWidth>600?450:200} source= {misrcvideo}
                   Titulo="Video 360º"
                   Bajada="Experiencia inmersiva"
                   SubTitulo="Video 360º "

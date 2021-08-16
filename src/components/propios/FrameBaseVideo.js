@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 import VideoPlayer from 'components/propios/VideoPlayer';
 
-
+import IconoAerea from './IconoAerea';
 
 const Card = tw.div`relative top-auto  bg-blue-900 max-w-screen-sm     rounded-2xl   p-4 `;
 const IconoReco = tw.div`absolute  z-10 top-0 right-0 h-16 w-16  bg-black rounded-2xl bg-opacity-75`;
@@ -29,7 +29,7 @@ const CardMetaFeature = styled.div`
   }
 `;
 
-  function FrameBaseVideo ({ esYoutuber=false ,esPortada=true, tieneAudio=false,altura="350",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
+  function FrameBaseVideo ({ esAerea =false, esYoutuber=false,  esPortada=true, tieneAudio=false,altura="350",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
     
                        IsPlano=false,videoJsOptions={}}) 
 
@@ -41,10 +41,11 @@ console.log("alturavideo=",videoJsOptions.altura);
   return (<>
 
                       <Card>
-                     <IconoReco><IconoVideo360 /></IconoReco>                    
+                     {!esAerea && <IconoReco><IconoVideo360 /></IconoReco>}
+                     {esAerea && <IconoReco><IconoAerea/></IconoReco>}                    
                         <CardHeader>
                          {!esYoutuber && <VideoPlayer { ...videoJsOptions }/> }
-                                  
+                         {esYoutuber && <p>Video de Youtube</p> }                                  
                         </CardHeader>
                         {!IsPlano && <>
                                <CardCompany>{Titulo}</CardCompany> 

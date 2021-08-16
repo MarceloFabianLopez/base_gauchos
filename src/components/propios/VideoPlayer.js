@@ -12,13 +12,21 @@ import 'videojs-vr/dist/videojs-vr.css';
 
 export default class VideoPlayer extends React.Component {
   
-  
+  /* constructor(props) {
+    super(props);
+    //const data = this.props.data1 ||[];
+    //const carpeta =this.props.carpeta;
+   const opciones= this.props.videoJsOptions;
+    /* this.state = {
+      opciones
+    }; */
+  //} */
   componentDidMount() {
 
     //var videojs = require('video.js');
   //require('videojs-vr');
     this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
-        //console.log('onPlayerReady', this)
+        console.log('onPlayerReady', this.options_.vr);
         const player = this
         player.mediainfo = player.mediainfo || {}
         player.mediainfo.projection = 'equirectangular'
@@ -33,14 +41,16 @@ export default class VideoPlayer extends React.Component {
             player.play();
           }
       }); */
-        
-         player.vr({
+         if (this.options_.vr) { 
+          player.vr({
           projection: '360',
           debug: false,
           forceCardboard: true 
           
 
-        }) 
+        })  
+      }
+      
        // player.poster('../video/jfk-poster.jpg')
       })
 //equirectangular para gear 360

@@ -1,14 +1,14 @@
 //import React   from "react";
-import React, { useEffect,useContext,useState } from 'react';
-import styled from "styled-components";
+import React from 'react';
+//import styled from "styled-components";
 import tw from "twin.macro";
 import { imagenes } from "components/propios/fabrica/imagenes.js";
-import ReactDragListView from "react-drag-listview";
+//import ReactDragListView from "react-drag-listview";
 import ListaDrageable from "components/propios/ListaDrageable";
 const Container = tw.div`z-0 relative p-2 bg-black  rounded-t-2xl grid grid-cols-4 gap-4 `;
-const Content = tw.div` bg-white  p-2 mx-auto py-2 lg:py-2 rounded-t-2xl`;
-const Column = tw.div`sm:w-full flex flex-col content-center bg-indigo-400`;
-const Titulo = tw.div`   bg-black text-white font-extrabold p-2 rounded-t-2xl`;
+//const Content = tw.div` bg-white  p-2 mx-auto py-2 lg:py-2 rounded-t-2xl`;
+//const Column = tw.div`sm:w-full flex flex-col content-center bg-indigo-400`;
+//const Titulo = tw.div`   bg-black text-white font-extrabold p-2 rounded-t-2xl`;
 
 
 

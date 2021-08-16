@@ -104,7 +104,7 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
 
 
 {
-  const [sourcelocal,setSourcelocal]=useState(source);
+  const [sourcelocal]=useState(source);
   const {cantidad,setCantidad} = useContext(DataContext);
   const {conjunto,setConjunto} = useContext(DataContext);
   const {intervalo}=useContext(DataContext);                                                     
@@ -129,8 +129,8 @@ const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm fon
     //console.log("state contador=",counter);
     //console.log("state sourcelocal=",sourcelocal);
     //console.log("..........................................................");
-let arrayClavesEscenas =[];
-let mesirve =[];
+//let arrayClavesEscenas =[];
+//let mesirve =[];
 let unaEscena ={
   idEscean : "",
   urlpanorama:"",
