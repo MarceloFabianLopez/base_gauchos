@@ -29,10 +29,12 @@ export default class VideoPlayer extends React.Component {
         console.log('onPlayerReady', this.options_.vr);
         const player = this
         player.mediainfo = player.mediainfo || {}
-        player.mediainfo.projection = 'equirectangular'
+        player.mediainfo.projection = 'EAC'
         player.bigPlayButton = true
         player.loadingSpinner = true
-       
+        player.debug = true
+        player.notSupportedMessage= false
+       console.log('player.mediainfo.projection :>> ', player.mediainfo.projection);
         
 
        /*  player.panorama({
@@ -43,8 +45,8 @@ export default class VideoPlayer extends React.Component {
       }); */
          if (this.options_.vr) { 
           player.vr({
-          projection: '360',
-          debug: false,
+          projection: 'EAC',
+          debug: true,
           forceCardboard: true 
           
 

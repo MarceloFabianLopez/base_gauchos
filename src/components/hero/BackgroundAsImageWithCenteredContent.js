@@ -86,7 +86,11 @@ bg-gray-300  rounded-2xl   text-center font-extrabold text-primary-500 border-in
 //const MenuEncabezado =tw.span`bg-primary-500  p-4 text-white font-extrabold `;
 //const misrc = "../standalone/pannellum.htm?config=../tour1.json";
 const misrc = "../standalone/pannellum.htm?config=../laplata.json";
-const misrcvideo = "../video/tres.mp4";
+//const misrcvideo = "../video/entrada_VP9.webm";
+const misrcvideo = "../video/video360.webm";
+//const misrcvideo = "../video/hoynomas.mp4";
+//const misrcvideo = "../video/VIDEO360_H.264.mp4";
+
 //const misrcvideospot = "https://youtu.be/hXexvLhDWbY";
 const misrcvideospot = "../video/vtourspot_720p_H.264.mp4";
 const misrcImagen="../../images/repu2.png";
@@ -100,7 +104,7 @@ const videoParametros = {
   responsive :true,
   width : "200" ,
   altura :"300",
-  projection : '360',
+  projection : 'EAC',
   poster :'../video/jfk-poster.jpg',
   notSupportedMessage: false,
   sources: [{
@@ -110,7 +114,7 @@ const videoParametros = {
 }
 const videoParametrosSpot = {
   vr : false ,
-  autoplay: true,
+  autoplay: false,
   preoload : 'auto',
   autoload :true,
   controls: true,
@@ -124,7 +128,7 @@ const videoParametrosSpot = {
   notSupportedMessage: false,
   sources: [{
     src: misrcvideospot,
-    type: 'video/mp4'
+    type: 'video/webm'
   }]
 }
 //const caracteristicas = components['propios']['LandPage']['url'];
