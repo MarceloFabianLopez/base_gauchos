@@ -105,7 +105,7 @@ const videoParametros = {
   width : "200" ,
   altura :"300",
   projection : 'EAC',
-  poster :'../video/jfk-poster.jpg',
+  poster :'../video/miniatura_video360.jpg',
   notSupportedMessage: false,
   sources: [{
     src: misrcvideo,
