@@ -84,6 +84,7 @@ function Contacto () {
                                                             .then((result) => {
                                                                                     console.log(result.text);
                                                                                     mostrarAlerta();
+                                                                                    
                                                                                 }, (error) => {
                                                                                     console.log(error.text);
                                                                                 });
@@ -103,14 +104,14 @@ const formik = useFormik({
 validationSchema: Yup.object({
   user_name: Yup.string()
     .min(2, "Mínimo 2 characteres")
-    .max(15, "Máximo 25 characteres")
+    .max(35, "Máximo 35 characteres")
     .required("Requerido!"),
     user_email: Yup.string()
     .email("Formato de email invalido")
     .required("Requerido!"),
   
     message: Yup.string()
-    .min(8,"Mínimo 4 caracteres")
+    .min(8,"Mínimo 8 caracteres")
     .required("Requerido!")
 })
 ,
