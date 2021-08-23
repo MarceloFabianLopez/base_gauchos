@@ -140,6 +140,7 @@ const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mi
 //const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
 const contactos =components['blocks']['Form']['elements']['Contacto']['url'];
+const about =components['innerPages']['AboutUsPage']['url'];
 const Gancho =tw.div`bg-gray-300`;
 
 
@@ -157,6 +158,7 @@ export default () => {
       
  <NavLink href={landpagebase}>¿Por qué usted necesita nuestros servicios? </NavLink>
     <NavLink href={contactos}>Contactos</NavLink>
+   {/*  <NavLink href={about}>Acerca de nosotros</NavLink> */}
       
     </NavLinks> ];
  return (  

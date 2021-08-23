@@ -5,6 +5,8 @@ import MiWsp from 'components/propios/MiWsp';
 import LandPage from 'components/propios/LandPage';
 import LandPBase from 'components/propios/LandPBase';
 import LandPFabrica from 'components/propios/LandPFabrica';
+import Gracias from 'components/propios/Gracias';
+
 
 import ClientesPage from 'components/propios/ClientesPage';
 //import EventLandingPage from "demos/EventLandingPage.js";
@@ -143,7 +145,12 @@ export const components = {
       url:"components/propios/ClientesPage",
 
     },
+    Gracias :{
+      component: Gracias,
+      imageSrc : ClientesPageImageSrc,
+      url:"components/propios/Gracias",
 
+    },
 
   },
   landingPages: {
@@ -511,11 +518,11 @@ export const components = {
     CTA: {
       type: "CTA Section",
       elements: {
-       /*  GetStarted: {
+        /*  GetStarted: {
           name: "Get Started",
           component: GetStartedCTA,
           url: "/components/blocks/CTA/GetStarted",
-        } ,*/
+        } , */
         /* GetStartedLight: {
           name: "Get Started Light",
           component: GetStartedLightCTA,

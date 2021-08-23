@@ -6,7 +6,7 @@ import logo from "../../images/logo.svg";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
-
+import { ReactComponent as InstagramIcon } from "../../images/Instagram_icon.svg";
 
 const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-8`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -45,15 +45,15 @@ export default () => {
             
           </LinksContainer>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            <SocialLink href="https://fb.me/recorridosvirtualesyvideo360">
               <FacebookIcon />
             </SocialLink>
-            <SocialLink href="https://twitter.com">
-              <TwitterIcon />
-            </SocialLink>
-            <SocialLink href="https://youtube.com">
+             <SocialLink href="https://www.instagram.com/vtour360argentina/">
+              <InstagramIcon />
+            </SocialLink> 
+             <SocialLink href="https://www.youtube.com/channel/UC_pXNJ_eH2CnML3AqF25GPw">
               <YoutubeIcon />
-            </SocialLink>
+            </SocialLink> 
           </SocialLinksContainer>
           <CopyrightText>
             &copy; Copyright 2021, VTOUR Recorridos virtuales y multimedia.

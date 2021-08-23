@@ -63,13 +63,16 @@ function Contacto () {
   const [placeemail] = React.useState("ej juan@gmail.com");
 
   const mostrarAlerta =()=>{
-    swal({
-      title: "Enviado",
-      text: "Nos comunicaremos con Ud. a la brevedad!",
-      type: "success"
-  }).then(function() {
-      window.location = "/";
-  });
+
+    window.location = "/components/propios/Gracias";
+
+    //swal({
+    //  title: "Enviado",
+    //  text: "Nos comunicaremos con Ud. a la brevedad!",
+    //  type: "success"
+  //}).then(function() {
+  //    window.location = "/";
+  //});
   }
  
 
@@ -78,17 +81,18 @@ function Contacto () {
   function sendEmail() {
     //e.preventDefault();
     //e.target.reset();
-    
-   //console.log("email correcto)=",e.tartget);
+  //  mostrarAlerta();
+
+    //console.log("email correcto)=",e.tartget);
    emailjs.sendForm('service_anxnkre', 'template_uk97428',"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
                                                             .then((result) => {
-                                                                                    console.log(result.text);
+                                                                                   // console.log(result.text);
                                                                                     mostrarAlerta();
-                                                                                    
+
                                                                                 }, (error) => {
                                                                                     console.log(error.text);
                                                                                 });
-                                                           
+                                                            
                                                           
                                                 
 }
