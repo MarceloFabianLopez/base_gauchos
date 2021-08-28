@@ -11,6 +11,7 @@
         "sceneFadeDuration": 2000,
         "crossOrigin": "anonymous",
         "autoLoad": true,
+        "showControls" : false,
         "autoRotate": "15",
         "horizonPitch" : 0,
         "horizonRoll" : 0,

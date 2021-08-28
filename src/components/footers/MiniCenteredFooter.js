@@ -51,7 +51,7 @@ export default () => {
              <SocialLink href="https://www.instagram.com/vtour360argentina/">
               <InstagramIcon />
             </SocialLink> 
-             <SocialLink href="https://www.youtube.com/channel/UC_pXNJ_eH2CnML3AqF25GPw">
+             <SocialLink href="https://www.youtube.com/channel/UC37NeGnyYH3Mw0GPYIInO2Q">
               <YoutubeIcon />
             </SocialLink> 
           </SocialLinksContainer>
