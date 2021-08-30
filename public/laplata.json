@@ -11,7 +11,8 @@
         "sceneFadeDuration": 0,
         "crossOrigin": "anonymous",
         "autoLoad": true,
-        "autoRotate": "20",
+        "showControls" : true,
+        "autoRotate": "15",
         "hotSpots": [
             {
                 "pitch": -6.180457733969777,

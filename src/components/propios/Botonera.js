@@ -4,7 +4,7 @@ import tw from "twin.macro";
 
 //import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-const fondo=tw.div`bg-red-600 p-4 text-blue-400`;
+const fondo=tw.div`bg-red-600 p-2 text-blue-400 text-sm`;
 
 
 

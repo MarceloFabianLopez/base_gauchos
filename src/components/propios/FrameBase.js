@@ -15,7 +15,7 @@ import FrameGaleria from './FrameGaleria';
 
 // xl:mx-0 xl:ml-auto max-w-full md:max-w-full  lg:max-w-full xl:max-w-full p-5
 
-const Card = tw.div`relative top-auto  bg-blue-900 max-w-screen-sm     rounded-2xl   p-4 `;
+const Card = tw.div`relative top-auto  bg-blue-900      rounded-2xl   p-2 `;
 /* const CardImage = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`h-80 bg-cover bg-center rounded-2xl`
@@ -23,8 +23,8 @@ const Card = tw.div`relative top-auto  bg-blue-900 max-w-screen-sm     rounded-2
  */
 //const CardText = tw.div`mt-0 p-4`;
 
-const CardHeader = tw.div` bg-black  p-2  flex flex-col  rounded-xl  `;
-const CardCompany = tw.div`text-primary-500 font-bold mt-2 text-2xl bg-black text-center bg-opacity-75 p-4 rounded-2xl`;
+const CardHeader = tw.div` bg-black  p-0  flex flex-col  rounded-xl  `;
+const CardCompany = tw.div`text-primary-500 font-bold mt-2 text-xl bg-black text-center bg-opacity-75 p-4 rounded-2xl`;
 const CardType = tw.div`font-semibold text-sm text-gray-200 text-right p-2`;
 const CardTitle = tw.h5`text-xl mt-2 text-white font-extrabold`;
 
@@ -71,7 +71,7 @@ const CardMetaFeature = styled.div`
       locationText: "Consultar zonas"
     }  
   ];
- */  const IconoReco = tw.div`absolute  z-10 top-0 right-0 h-16 w-16  bg-black rounded-2xl bg-opacity-75`;
+ */  const IconoReco = tw.div`absolute  z-10 top-0 right-0 h-16 w-16   rounded-2xl bg-opacity-50`;
   //const PosicionImagen = tw.div`z-0 relative mt-0 `;
  // const EmbedContainer =tw.div`relative bg-green-300 w-full h-full overflow-hidden `;
   
@@ -94,7 +94,7 @@ const CardMetaFeature = styled.div`
 
 
 
-const Fondo=tw.div`bg-gray-800 p-2 align-middle mx-auto text-white  max-w-sm font-mono font-extrabold rounded-xl`; 
+const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl`; 
 
 //const {cantidad,setCantidad} = useContext(DataContext);
 
@@ -307,7 +307,7 @@ setCounter(counter-1);
                  <button onClick={() => setCounter(counter+1)}>Adelante</button>
                  <button onClick={() => setCounter(counter-1)}>Atras</button> */}
 
-                 <button onClick={handleClick}>{run?"Parar recorrido automático":"Recorrido automático"}</button>
+                 <button onClick={handleClick}>{run?"Parar":"Arrancar"}</button>
                  
                   
                                      
@@ -333,7 +333,7 @@ const src = sourcelocal;
                       <Card>
                  
                          { IsVideo && <IconoReco><IconoVideo360 /></IconoReco>}
-                         { IsRecorrido && <IconoReco><IconoRecorrido /></IconoReco>}
+                         { IsRecorrido && <IconoReco tw=" -mt-8 pt-8 " ><IconoRecorrido /></IconoReco>}
                          {IsImagen &&  <IconoReco><IconoAerea /></IconoReco>}
                        
                         <CardHeader>
@@ -341,7 +341,7 @@ const src = sourcelocal;
 
                                 { IsRecorrido &&
                                     <>
-                                   {/*  <Centrador> */}
+                                   {/*  <Centrador> */}<Botonera/>
                                         <iframe id="mipannellum" title="recorrido"    allowFullScreen src={src}/>
                                          
                                      {tieneAudio && <audio controls autoPlay="autoplay"  loop="loop" src="../../images/audio.mp3" ></audio>
@@ -351,7 +351,7 @@ const src = sourcelocal;
                                     {/* </Centrador> */}
                                    
                                    
-                                      <Botonera/>
+                                      
                                    
                                     </>
                                   }

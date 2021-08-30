@@ -214,8 +214,7 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                             
                                               Titulo="Importante propiedad"
                                             TextoGrisMayuscula="Tres dormitorios, cochera, 2 baños"/> */}
-                                            <AreaContactar><a href="https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
-                            <AreaWhatsap imageWsp={imagenWsp}/></a></AreaContactar>
+                                            
                             
                     <ViewerPrincipal>
                             <FrameBase tieneAudio={false} esPortada={false} altura={window.innerWidth>600?450:250} source= {EscenaLandPage} IsRecorrido='true' IsPlano='false'/>
@@ -223,7 +222,8 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
                   
                   </ViewerPrincipal>              
                             {/* <FrameGaleria/> */}
-                          
+                          <AreaContactar><a href="https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
+                            <AreaWhatsap imageWsp={imagenWsp}/></a></AreaContactar>
               
                             <Descripcion>  {<ReactMarkdown  source={TextoDescripcion} />}
                           {/*   <Datos/> */}

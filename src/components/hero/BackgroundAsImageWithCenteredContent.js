@@ -60,25 +60,26 @@ const StyledHeader = styled(Header)`
  
 //const OpacityOverlay = tw.div`-z-10 absolute inset-0  h-full bg-black bg-opacity-50  `;
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
-const HeroContainer = tw.div`z-20 relative px-6 sm:px-0 mx-auto h-full flex flex-col`;
+const HeroContainer = tw.div`z-20 relative px-6 sm:px-2 mx-auto h-full flex flex-col`;
 //const HeroContainer = tw.div`z-20   sm:px-0 mx-auto  flex flex-col`;
 const Content = tw.div`flex-1 flex-col  items-center`;
-
+// ${tw` text-xl text-center  md:text-4xl  lg:text-4xl xl:text-6xl font-bold text-gray-200 leading-snug  sm:-mt-20  md:p-24`}
 const Heading = styled.h1`
-  ${tw`text-xl text-center  md:text-4xl  lg:text-4xl xl:text-6xl font-bold text-gray-200 leading-snug  sm:mt-4 pt-2 md:p-24`}
+  ${tw` text-xl text-center  text-white -mt-10  md:text-4xl  lg:text-4xl xl:text-6xl font-bold     sm:mt-4`}
   span {
-    ${tw`inline-block mt-4`}
+    ${tw`inline-block mt-0`}
   }
 `; 
 //xl:grid-cols-3     sm:grid-cols-1 pt-8 justify-items-center
-const SubHeading = tw.div`sm:text-sm text-purple-600 md:text-4xl`;
-const GrillaPortada = tw.div`   grid  gap-2 xl:grid-flow-col     sm:grid grid-flow-row   justify-center`;
-const CajaContenido  = tw.div`bg-blue-200    p-4  max-w-96 bg-opacity-25 rounded-xl xl:max-w-lg`;
+const SubHeading = tw.div`relative sm:text-sm text-purple-600 md:text-4xl`;
+//quitando justtify-center se expande la grilla hasta los costados
+const GrillaPortada = tw.div`  flex-grow  grid  gap-0 lg:grid-flow-col     sm:grid grid-flow-row md:justify-center`;
+const CajaContenido  = tw.div`bg-blue-200    p-1  bg-opacity-25 rounded-xl xl:max-w-lg`;
 
+const ContieneGrilla = tw.div`flex-1  bg-gray-800`;
 
-
-const BannerFondo=styled.div` ${tw`lg:hidden    p-8
-bg-gray-300  rounded-2xl   text-center font-extrabold text-primary-500 border-indigo-500 hover:bg-white hover:shadow-lg hover:border-transparent `}
+const BannerFondo=styled.div` ${tw`   p-4
+bg-gray-500  rounded-2xl   text-center font-extrabold text-primary-500 border-indigo-500 hover:bg-orange-300 hover:shadow-lg hover:border-transparent `}
 
 `;
 //const Tope=styled.div`-mt-64 `;
@@ -175,7 +176,8 @@ export default () => {
                    Video 360º y aéreos
                    <SubHeading>vtour.com.ar</SubHeading>
                </Heading>  
-                <BannerFondo > <a href={landpagebase}> ¿Por qué usted necesita nuestros servicios?</a></BannerFondo>  
+                <BannerFondo > <a href={landpagebase}> ¿Por qué usted necesita nuestros servicios?</a></BannerFondo> 
+              <ContieneGrilla>
               <GrillaPortada>
                   
               
@@ -217,6 +219,7 @@ export default () => {
                  </CajaContenido>  
                  
                     </GrillaPortada> 
+                    </ContieneGrilla> 
                     
                    </Content>  <WhatsAppWidget phoneNumber='542216701280'
                                     textReplyTime='Este es un mensaje automatizado, lo antes posible una persona de nuestro equipo lo contactará! '

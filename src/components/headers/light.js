@@ -17,13 +17,13 @@ const Header = tw.header`
 `;
 //const ColorBanner=tw(ContainerBanner)`bg-green-500`;
 
-export const NavLinks = tw.div`inline-block`; 
+export const NavLinks = tw.div`inline-block `; 
 
 /*  hocus: stands for "on hover or focus"
  hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
 `; */
 export const NavLink = tw.a`
-  text-xl my-10 lg:text-sm lg:mx-6 lg:my-0 
+  text-xl my-10 lg:text-sm lg:mx-6 lg:my-8 
   font-semibold tracking-wide transition  duration-300 
   pb-2 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
 `;
@@ -34,16 +34,16 @@ export const PrimaryLink = tw(NavLink)`
   hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
   border-b-0
 `;
-
+//${tw`absolute bg-white   mt-2 -mx-4  p-4 rounded-xl w-12  border-2  border-color[blueviolet]  sm:mt-0 sm:mx-4  md:w-24 md:mt-24   xl:mt-32   `}
 export const LogoLink = styled(NavLink)`
   ${tw`top-0 flex items-center font-extrabold border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`absolute bg-white   mt-12 -mx-4  p-2 rounded-xl w-12  border-2  border-color[blueviolet]  sm:mt-0 sm:mx-0  md:w-24 md:mt-24   xl:mt-32   `}
+    ${tw`absolute bg-white  mt-2  mx-2 rounded-xl w-12  border-2  border-color[blueviolet]  sm:mt-20 sm:mx-4  md:w-24    `}
   }
 `;
 
-export const MobileNavLinksContainer = tw.nav`z-40 flex flex-1 bg-black justify-between  md:px-5 md:mt-4 sm:-mt-20`;
+export const MobileNavLinksContainer = tw.nav`z-40 flex flex-1  justify-between  md:px-5 md:mt-4 sm:mt-48`;
 export const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none hocus:text-primary-200 transition duration-300 sm:text-white
 `;
@@ -59,7 +59,7 @@ export const DesktopNavLinks = tw.nav`
  
   `;
   export const BannerCentral = tw.h2`
-      flex flex-col p-4  lg:text-4xl  sm:text-primary-500 sm:text-xl text-white xl:hidden
+       flex-col p-4  lg:text-2xl  sm:text-primary-500 sm:text-xl text-white md:hidden
  
   `;
 export default ({ roundedHeaderButton = false, logoLink, bannerMio, links, className, collapseBreakpointClass = "lg" }) => {
@@ -108,7 +108,7 @@ export default ({ roundedHeaderButton = false, logoLink, bannerMio, links, class
       
     </LogoLink>
   );
-  const defaultBannerMio= "Vtour.com.ar";
+  const defaultBannerMio= "VTOUR.COM.AR";
 
   logoLink = logoLink || defaultLogoLink;
   links = links || defaultLinks;

@@ -1997,7 +1997,7 @@ function processOptions(isPreview) {
       if (config.hasOwnProperty(key)) {
         switch(key) {
             case 'title':
-                infoDisplay.title.innerHTML = escapeHTML(config[key]);
+                infoDisplay.title.innerHTML = "<small>"+escapeHTML(config[key])+"</small>";
                 infoDisplay.container.style.display = 'inline';
                 break;
             
@@ -2010,8 +2010,8 @@ function processOptions(isPreview) {
                     authorLink.innerHTML = escapeHTML(config[key]);
                     authorText = authorLink.outerHTML;
                 }
-                infoDisplay.author.innerHTML = config.strings.bylineLabel.replace('%s', authorText);
-                infoDisplay.container.style.display = 'inline';
+               // infoDisplay.author.innerHTML = config.strings.bylineLabel.replace('%s', authorText);
+                //infoDisplay.container.style.display = 'inline';
                 break;
             
             case 'fallback':
