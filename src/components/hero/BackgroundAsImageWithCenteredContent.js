@@ -1,7 +1,7 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import YouTube from 'react-youtube';
+//import YouTube from 'react-youtube';
 
 //import { css } from "styled-components/macro"; //eslint-disable-line
 
@@ -11,7 +11,7 @@ import { components } from "ComponentRenderer.js";
 //import LandPage from 'components/propios/LandPage';
 import WhatsAppWidget from 'react-whatsapp-widget';
 import 'react-whatsapp-widget/dist/index.css';
-import FrameBaseImagen from "components/propios/FrameBaseImagen.js";
+//import FrameBaseImagen from "components/propios/FrameBaseImagen.js";
 import FrameBaseVideo from "components/propios/FrameBaseVideo"
 //const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
@@ -37,7 +37,7 @@ hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
 
 
 */
-
+/* 
 const opts = {
   height: '200',
   width: '300',
@@ -47,7 +47,7 @@ const opts = {
     'controls': 0 ,
   },
 };
-
+ */
 const StyledHeader = styled(Header)`
   ${tw`pt-6 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
@@ -94,7 +94,7 @@ const misrcvideo = "../video/video360.webm";
 
 //const misrcvideospot = "https://youtu.be/hXexvLhDWbY";
 const misrcvideospot = "../video/vtourspot_720p_H.264.mp4";
-const misrcImagen="../../images/repu2.png";
+//const misrcImagen="../../images/repu2.png";
 const videoParametros = {
   autoplay: false,
   preoload : 'auto',
@@ -135,14 +135,14 @@ const videoParametrosSpot = {
 //const caracteristicas = components['propios']['LandPage']['url'];
 const landpagebase = components['propios']['LandPBase']['url'];
 
-const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mibanner
+//const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mibanner
 
 //const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`
 //const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
 
 const contactos =components['blocks']['Form']['elements']['Contacto']['url'];
-const about =components['innerPages']['AboutUsPage']['url'];
-const Gancho =tw.div`bg-gray-300`;
+// const about =components['innerPages']['AboutUsPage']['url'];
+// const Gancho =tw.div`bg-gray-300`;
 
 
 

@@ -26,7 +26,7 @@ export default class VideoPlayer extends React.Component {
     //var videojs = require('video.js');
   //require('videojs-vr');
     this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
-        console.log('onPlayerReady', this.options_.vr);
+       // console.log('onPlayerReady', this.options_.vr);
         const player = this
         player.mediainfo = player.mediainfo || {}
         player.mediainfo.projection = 'EAC'
@@ -34,7 +34,7 @@ export default class VideoPlayer extends React.Component {
         player.loadingSpinner = true
         player.debug = true
         player.notSupportedMessage= false
-       console.log('player.mediainfo.projection :>> ', player.mediainfo.projection);
+       //console.log('player.mediainfo.projection :>> ', player.mediainfo.projection);
         
 
        /*  player.panorama({

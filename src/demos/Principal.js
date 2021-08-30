@@ -43,13 +43,13 @@ const AreaWhatsap =styled.div(props => [
 const imagenWsp='../../images/wsp.png';
 
 
-const Container = styled.div`
+//const Container = styled.div`
 
 
-${tw`bg-top bg-white font-sans`}
+//${tw`bg-top bg-white font-sans`}
 
 
-`;
+//`;
 export default () => {
   //const Subheading = tw.span`tracking-wider text-sm font-medium`;
   //const HighlightedText = tw.span`bg-primary-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;

@@ -106,7 +106,7 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
 {
   const [sourcelocal]=useState(source);
   const {cantidad,setCantidad} = useContext(DataContext);
-  const {conjunto,setConjunto} = useContext(DataContext);
+  const {setConjunto} = useContext(DataContext);
   const {intervalo}=useContext(DataContext);                                                     
  // const [archivo,setArchivo]  = useState('');
   const [run, setRun] = useState(true);
@@ -131,14 +131,14 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
     //console.log("..........................................................");
 //let arrayClavesEscenas =[];
 //let mesirve =[];
-let unaEscena ={
-  idEscean : "",
-  urlpanorama:"",
-  title:""
-}   
+//let unaEscena ={
+//  idEscean : "",
+//  urlpanorama:"",
+//  title:""
+//}   
     var sourceCorregido="../../" +source.slice(38);
    
-         console.log("Escena recibida",escena);        
+        // console.log("Escena recibida",escena);        
          if (escena){
                      ////console.log("escena....=",escena['idEscena']);      
                    // setSourcelocal( "Escena numero="+escena) ; 
@@ -155,7 +155,7 @@ let unaEscena ={
         
         
                     if (sourcelocal) {
-                                console.log("sourcedopolocal------------------------------------------=",sourcelocal);
+                               // console.log("sourcedopolocal------------------------------------------=",sourcelocal);
                                 sourceCorregido="../../" +sourcelocal.slice(38);
 
                                 } else {//console.log("todavia no carga surcelocal");
@@ -219,10 +219,10 @@ let unaEscena ={
                     ////console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
                      let pitch0=recorrido['default']['pitch'];
                       let    yaw0=recorrido['default']['yaw'];
-                      let hfov0 =recorrido ['default']['hfov'];
+                      let hfov0 =recorrido['default']['hfov'];
                     if (counter===-1){
                       //console.log("inicioooooo");
-                      console.log('ptch0,yaw0,hfov0 :>> ', pitch0,yaw0,hfov0);
+                      //console.log('ptch0,yaw0,hfov0 :>> ', pitch0,yaw0,hfov0);
 
                       miviewer.loadScene("Ingreso",pitch0,yaw0,hfov0)} else {
                         if (recorrido&conjuntoEscenas) {  
