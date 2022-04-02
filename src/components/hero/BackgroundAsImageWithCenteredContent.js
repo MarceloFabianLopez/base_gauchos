@@ -132,8 +132,39 @@ const videoParametrosSpot = {
     type: 'video/webm'
   }]
 }
+
+
+
 //const caracteristicas = components['propios']['LandPage']['url'];
 const landpagebase = components['propios']['LandPBase']['url'];
+
+
+{/*
+
+
+//    Personalizar clientes links en la pagina principal
+//    1 - Constantes para link en banner
+
+      const landcliente1=components['propios']['LosDosVagones']['url'];
+
+      2 - Definir el navlink para menu hamburguesa 
+
+      188  <NavLink href={landcliente1}>Los Dos Vagones - Turismo rural </NavLink>
+      
+      3 - Banner del fondo agregar
+      208  <BannerFondo > <a href={landpagebase}> ¿Por qué usted necesita nuestros servicios?</a>
+                <a href={landcliente1}>Ejemplo turismo rural - Los Dos Vagones</a>
+                </BannerFondo>  
+
+
+
+*/}
+
+const landcliente1=components['propios']['LosDosVagones']['url'];
+
+
+
+
 
 //const clientes = components['propios']['ClientesPage']['url'];  //hacerla con mibanner
 
@@ -154,10 +185,12 @@ export default () => {
       
       
              
-   {/*     <NavLink href={clientes}>Área Clientes</NavLink> */}
+   
      
       
  <NavLink href={landpagebase}>¿Por qué usted necesita nuestros servicios? </NavLink>
+ <NavLink href={landcliente1}>Los Dos Vagones - Turismo rural </NavLink>
+
     <NavLink href={contactos}>Contactos</NavLink>
    {/*  <NavLink href={about}>Acerca de nosotros</NavLink> */}
       
@@ -176,7 +209,9 @@ export default () => {
                    Video 360º y aéreos
                    <SubHeading>vtour.com.ar</SubHeading>
                </Heading>  
-                <BannerFondo > <a href={landpagebase}> ¿Por qué usted necesita nuestros servicios?</a></BannerFondo> 
+                <BannerFondo > <a href={landpagebase}> ¿Por qué usted necesita nuestros servicios?</a></BannerFondo>
+                <BannerFondo><a href={landcliente1}>Ejemplo turismo rural - Los Dos Vagones</a>
+                </BannerFondo> 
               <ContieneGrilla>
               <GrillaPortada>
                   
