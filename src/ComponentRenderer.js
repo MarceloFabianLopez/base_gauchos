@@ -4,6 +4,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 import MiWsp from 'components/propios/MiWsp';
 import LandPage from 'components/propios/LandPage';
 import LandPBase from 'components/propios/LandPBase';
+import LosDosVagones from 'components/propios/LosDosVagones';
 import LandPFabrica from 'components/propios/LandPFabrica';
 import Gracias from 'components/propios/Gracias';
 
@@ -37,6 +38,7 @@ import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 import MiWspSrc from "images/demo/SignupPage.jpeg";
 import LandPageImageSrc from "images/demo/SignupPage.jpeg";
 import LandPBaseImageSrc from "images/demo/SignupPage.jpeg";
+import LosDosVagonesImageSrc from "images/demo/SignupPage.jpeg";
 import LandPFabricaImageSrc from "images/demo/SignupPage.jpeg";
 import ClientesPageImageSrc from "images/demo/SignupPage.jpeg";
 import LoginPageImageSrc from "images/demo/LoginPage.jpeg";
@@ -125,6 +127,12 @@ export const components = {
       component: LandPage,
       imageSrc : LandPageImageSrc,
       url:"components/propios/LandPage",
+
+    },
+    LosDosVagones :{
+      component: LosDosVagones,
+      imageSrc : LandPageImageSrc,
+      url:"components/propios/LosDosVagones",
 
     },
     LandPBase :{
