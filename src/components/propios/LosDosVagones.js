@@ -10,6 +10,7 @@ import ReactMarkdown from 'react-markdown';
 
 // -----------------PERSONALIZAR
 const hrefLogo="../../images/logo.png";
+const urlImagenFondo ="../../images/logo.png"
 const urlLogoLink="/";
 const linkInicioUrl="/";
 const linkInicioTexto="Inicio";
@@ -111,13 +112,21 @@ const AreaWhatsap =styled.div(props => [
 ]);
 const imagenWsp='../../images/wsp.png';
 const Container = styled.div`
+${tw`relative  z-10 -mx-8 -mb-8 -my-10  bg-top  bg-cover`}
+background-image: url("images/aereos2.jpg");
+`; 
 
 
-${tw`bg-top bg-white font-sans`}
+
+/* const Container = styled.div`
+//${tw`bg-top bg-white font-sans  bg-top  bg-cover`}
+//background-image: url("images/aereos2.jpg");
+`; `
+`}
 
 
 `;
-
+ 
 
 
 const logoLink = (
@@ -147,7 +156,7 @@ export default () => {
   }
 
 
-*/}
+*/
 
    const MisLinks = [
     
