@@ -51,7 +51,9 @@ const opts = {
 const StyledHeader = styled(Header)`
   ${tw`pt-6 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-200 hover:border-primary-500 hover:text-primary-500 `}
+    ${tw`text-gray-200 
+    hover:border-primary-500 
+    hover:text-primary-500 `}
   }
   ${NavToggle}.closed {
     ${tw`text-red-500 hover:text-primary-500`}

@@ -17,7 +17,7 @@ const Header = tw.header`
 `;
 //const ColorBanner=tw(ContainerBanner)`bg-green-500`;
 
-export const NavLinks = tw.div`inline-block `; 
+export const NavLinks = tw.div`inline-block text-gray-300`; 
 
 /*  hocus: stands for "on hover or focus"
  hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
@@ -30,7 +30,7 @@ export const NavLink = tw.a`
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-3 rounded bg-primary-500 text-gray-100
+  px-8 py-3 rounded bg-primary-500 text-gray-200
   hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
   border-b-0
 `;
@@ -55,7 +55,7 @@ export const MobileNavLinks = motion.custom(styled.div`
 `);
 
 export const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 p-4 justify-between items-center  
+  hidden lg:flex flex-1 p-8 justify-between items-center  text-gray-200
  
   `;
   export const BannerCentral = tw.h2`

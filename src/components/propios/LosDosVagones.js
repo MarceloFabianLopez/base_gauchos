@@ -1,7 +1,7 @@
 import React  from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import Header, { NavLink, NavLinks, PrimaryLink , NavToggle, DesktopNavLinks } from "../headers/light.js";
+import Header, { NavLink,  PrimaryLink , NavToggle, DesktopNavLinks } from "../headers/light.js";
 import{ init } from 'emailjs-com';
 import FrameBase from "./FrameBase";
 import Contacto from "components/forms/Contacto";
@@ -23,7 +23,7 @@ const clienteBanerMio="Recorrido virtual";
 const encabezadoLinea1="Los dos Vagones";
 const encabezadoLinea2="Turismo rural y eventos";
 const subEncabezado="Recorrido virtual";
-const colorSubheading="text-purple-400";
+const colorSubheading="text-purple-600";
 
   const guasap='https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!';
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
@@ -65,15 +65,27 @@ const MiLogoLink = styled(NavLink)`
     ${tw`w-24 m-10     `}
   }
 `;
+const NavLinks = tw.div`inline-block text-gray-100`;
+const MisNavLinks = styled(NavLinks)`
+${tw.nav`text-green-400`}
+`;
+const MiDesktopNavLinks = tw.nav`
+  hidden lg:flex flex-1 p-8 justify-between items-center  text-red-300
+ 
+  `;
+/* const MiDesktopNavLinks = styled(DesktopNavLinks) `
+${tw.nav`text-red-300 `};
 
-
-
-
+`; */
 //const bannerMio=("¿Por qué ud. necesita nuestros servicios?");
  const StyledHeader = styled(Header)`
   ${tw`pt-4 max-w-none w-full `}
-  ${DesktopNavLinks} ${NavLink},${MiLogoLink} {
-    ${tw`text-gray-200 hover:border-gray-300 hover:text-gray-300  `}
+  
+
+  ${MiDesktopNavLinks} ${NavLink},${MiLogoLink} {
+    ${tw`text-gray-200 
+    hover:border-gray-300 
+    hover:text-gray-300  `}
   }
   ${NavToggle}.closed {
     ${tw`text-red-500 p-2 hover:text-primary-100`}
