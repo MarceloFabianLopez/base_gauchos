@@ -55,11 +55,11 @@ export const MobileNavLinks = motion.custom(styled.div`
 `);
 
 export const DesktopNavLinks = tw.nav`
-  hidden lg:flex flex-1 p-4 justify-between items-center 
+  hidden lg:flex flex-1 p-4 justify-between items-center  
  
   `;
   export const BannerCentral = tw.h2`
-       flex-col p-4  lg:text-2xl  sm:text-primary-500 sm:text-xl text-white md:hidden
+       flex-col p-4  text-center lg:text-2xl  sm:text-primary-500 sm:text-xl text-white md:hidden
  
   `;
 export default ({ roundedHeaderButton = false, logoLink, bannerMio, links, className, collapseBreakpointClass = "lg" }) => {
@@ -125,17 +125,20 @@ export default ({ roundedHeaderButton = false, logoLink, bannerMio, links, class
       
 
   
-     
-      <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
+      {/* <div>
+      <BannerCentral>{bannerMio}</BannerCentral> */}
+        <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
+        
          {logoLink} 
         <MobileNavLinks initial={{ x: "100%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
           {links}
-         </MobileNavLinks><BannerCentral>{bannerMio}</BannerCentral>
+         </MobileNavLinks>
+        
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
           {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
         </NavToggle> 
       </MobileNavLinksContainer> 
-   
+    {/*   </div> */}
 
     </Header>
   );

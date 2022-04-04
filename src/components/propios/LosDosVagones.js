@@ -9,20 +9,26 @@ import ReactMarkdown from 'react-markdown';
 
 
 // -----------------PERSONALIZAR
-const hrefLogo="../../images/logo.png";
-const urlImagenFondo ="../../images/logo.png"
+const hrefLogo="../../clientes/losdosvagones/logo.png";
+//const hrefLogo="../../images/logo.png";
+const hrefBanner="../../clientes/losdosvagones/banner.jpg"
 const urlLogoLink="/";
 const linkInicioUrl="/";
 const linkInicioTexto="Inicio";
 const urlContacto="/components/blocks/Form/Contacto";
 const textoContacto="Contacto";
 const EscenaLandPage = "../../standalone/pannellum.htm?config=../tour4.json";
-const colorHeader=`bg-red-300`;
+const colorHeader=`bg-green-200`;
+const clienteBanerMio="Recorrido virtual";
+const encabezadoLinea1="Los dos Vagones";
+const encabezadoLinea2="Turismo rural y eventos";
+const subEncabezado="Recorrido virtual";
+const colorSubheading="text-purple-400";
 
   const guasap='https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!';
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const tituloNegrito = 'Los Dos Vagones';
-const bajada= 'Turismo rural - Naturaleza y tranquilidad'
+const bajada= 'Naturaleza y tranquilidad que sólo el campo puede ofrecer';
 const TextoDescripcion = `
 ### Para mostrar, vender, promocionar o simplemente para tener un excelente recuerdo.
 
@@ -38,13 +44,25 @@ su publicidad sea eficiente y logre el efecto esperado.
 
 `;
 
+const Heading = styled.h1`
+  ${tw` text-xl text-center  text-white -mt-10  md:text-4xl  lg:text-4xl xl:text-6xl font-bold     sm:mt-4`}
+  span {
+    ${tw`inline-block mt-0`}
+  }
+`; 
+const SubHeading = tw.div`relative sm:text-sm ${colorSubheading} md:text-4xl`;
+const BannerFondo=styled.div` ${tw`   p-4
+bg-gray-500  rounded-2xl   text-center font-extrabold text-primary-500 border-indigo-500 hover:bg-orange-300 hover:shadow-lg hover:border-transparent `}
+
+`;
+//const Content = tw.div`flex-1 flex-col  items-center`;
 //-----------------------------------------------------FIN PERSONALIZAR
 
 const MiLogoLink = styled(NavLink)`
   ${tw`top-0 flex items-center font-extrabold border-b-0 text-xl! ml-0!`};
 
   img {
-    ${tw`w-24 mt-0     `}
+    ${tw`w-24 m-10     `}
   }
 `;
 
@@ -53,17 +71,20 @@ const MiLogoLink = styled(NavLink)`
 
 //const bannerMio=("¿Por qué ud. necesita nuestros servicios?");
  const StyledHeader = styled(Header)`
-  ${tw`pt-10 max-w-none w-full `}
+  ${tw`pt-4 max-w-none w-full `}
   ${DesktopNavLinks} ${NavLink},${MiLogoLink} {
     ${tw`text-gray-200 hover:border-gray-300 hover:text-gray-300  `}
   }
   ${NavToggle}.closed {
-    ${tw`text-red-500 p-2 hover:text-primary-500`}
+    ${tw`text-red-500 p-2 hover:text-primary-100`}
   }
 `; 
 //const MiHeader=tw(StyledHeader)`bg-blue-100`;
 const MiHeader=tw(StyledHeader)`${colorHeader}`;
-const HeroContainer = tw.div`z-0 relative  sm:px-0 mx-auto  flex flex-col`;
+const HeroContainer = tw.div`z-20 relative px-2 sm:px-2 mx-auto h-full flex flex-col`;
+
+//const HeroContainer = tw.div`z-20 relative  sm:px-0 mx-auto  flex flex-col`;
+//const HeroContainer = tw.div`z-20 relative px-6 sm:px-2 mx-auto h-full flex flex-col`;
 const Content = tw.div`flex flex-1 flex-col justify-center items-center`;
 
 const CabezaContainer = styled.div`
@@ -112,21 +133,15 @@ const AreaWhatsap =styled.div(props => [
 ]);
 const imagenWsp='../../images/wsp.png';
 const Container = styled.div`
-${tw`relative  z-10 -mx-8 -mb-8 -my-10  bg-top  bg-cover`}
-background-image: url("images/aereos2.jpg");
+${tw`relative  z-10 -mx-2 -mb-8 -my-10  bg-top md:bg-contain sm:bg-auto`}
+background-image: url(${hrefBanner});
 `; 
-
-
-
 /* const Container = styled.div`
-//${tw`bg-top bg-white font-sans  bg-top  bg-cover`}
-//background-image: url("images/aereos2.jpg");
-`; `
-`}
-
-
+${tw`bg-top bg-white font-sans`}
+background-image: url("images/aereos2.jpg");
 `;
- 
+ */
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-25`;
 
 
 const logoLink = (
@@ -137,26 +152,7 @@ export default () => {
 
   init("user_kfmun1gr4Vx8fC0gf1XpR");
 
-{/*
 
-
-  
-  // console.log("ancho=",window.innerWidth);
-   /*  function sendEmail(e) {
-    e.preventDefault();
-    e.target.reset();
-
-
-  emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr4Vx8fC0gf1XpR')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-  }
-
-
-*/
 
    const MisLinks = [
     
@@ -167,10 +163,15 @@ export default () => {
 ]; 
 //bannerMio={bannerMio}
   return (<>
-            <Container> 
-              <MiHeader logoLink={logoLink}  links={MisLinks}></MiHeader>
-                  <HeroContainer>   
-                       
+            <Container> <OpacityOverlay/> 
+                     <HeroContainer>
+                      
+                       <Content> <StyledHeader logoLink={logoLink} links={MisLinks} bannerMio={clienteBanerMio}/> 
+                       <Heading>
+                   {encabezadoLinea1}<br/>
+                   {encabezadoLinea2}
+                   <SubHeading>{subEncabezado}</SubHeading>
+               </Heading> 
                  
                       <CabezaContainer>
                        
@@ -225,11 +226,17 @@ export default () => {
                       
                         
                         
-                        <Content>
                            
                         </Content>
 
                   </HeroContainer>
+                    
+             
+             
+            
+
+             
+                 
             </Container>
             </>);};      
       
