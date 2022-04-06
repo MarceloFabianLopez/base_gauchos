@@ -184,8 +184,8 @@ emailjs.sendForm('service_anxnkre', 'template_09kyzrp', e.target, 'user_kfmun1gr
    
   </NavLinks>
 ]; 
- //const {escena} = useContext (DataContext);
- const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour2.json" ;  
+ //const {escena} = useContext (DataContext); // 2
+ const EscenaLandPage =    "../../standalone/pannellum.htm?config=../tour5.json" ;  
  //const contactos = components['blocks']['Form']['elements']['SimpleContactUs']['url']; 
 //logoLink={logoLink}
  // const markdown = `Just a link: https://reactjs.com.`

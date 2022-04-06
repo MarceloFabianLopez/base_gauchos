@@ -1,0 +1,126 @@
+{
+    "default": {
+        "pitch": -11,
+        "yaw": 10,
+        "hfov": 10,
+        "panorama": "../vtour/prueba/plaza_moreno.jpg",
+        
+        "title": "Plaza",
+        "firstScene": "escenaplaza_moreno",
+        "author": "VTOUR",
+        "sceneFadeDuration": 0,
+        "crossOrigin": "anonymous",
+        "autoLoad": true,
+        "autoRotate": "0",
+        "hotSpots": [
+            {
+                "pitch": -8.537853983615433,
+                "yaw": 175.71857561235035,
+                "hfov": 100,
+                "type": "scene",
+                "text": "Legislatura",
+                "targetyaw": -87.2669296391237,
+                "targetPitch": -5.079808944419027,
+                "sceneId": "escenaparque_low"
+            }
+        ]
+    },
+    
+    "scenes": {
+      
+        "escenaparque_low": {
+            "pitch": -5.747597412459117,
+            "yaw": -84,
+            "hfov": 100,
+            "panorama": "../vtour/prueba/parque_low.jpg",
+            
+            "title": "Parque",
+            "autoLoad": true,
+            "hotSpots": [
+                {
+                    "pitch": -5.928702624620435,
+                    "yaw": -101.88217974051844,
+                    "hfov": 120,
+                    "type": "scene",
+                    "text": "Escalinata",
+                    "targetyaw": -175.1690168081597,
+                    "targetPitch": -32.858478345065414,
+                    "sceneId": "escenacalle_51_low"
+                },
+                {
+                    "pitch": -0.7563399281290214,
+                    "yaw": -71.49852533537933,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Plaza",
+                    "targetyaw": 8.91326440925236,
+                    "targetPitch": -45.85424951732437,
+                    "sceneId": "escenaplaza_moreno"
+                }
+            ]
+        },
+        "escenacalle_51_low": {
+            "pitch": 16.43490966669531,
+            "yaw": -170.82812809963946,
+            "hfov": 100,
+            "panorama": "../vtour/prueba/calle_51_low.jpg",
+            
+            "title": "Escalinata",
+            "hotSpots": [
+                {
+                    "pitch": 18.2973487311427,
+                    "yaw": -176.80143762472258,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Pasos perdidos",
+                    "targetyaw": -119.70968519915968,
+                    "targetPitch": -9.845438681126417,
+                    "sceneId": "escenapasos_perdidos_low",
+                    "div": {}
+                },
+                {
+                    "pitch": 3.795944450973928,
+                    "yaw": 117.44562691777647,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Parque",
+                    "targetyaw": 148.37063271922898,
+                    "targetPitch": -0.16508532428238684,
+                    "sceneId": "escenaparque_low",
+                    "div": {}
+                },
+                {
+                    "pitch": -1.9946241523965915,
+                    "yaw": -77.326391755246,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Plaza desde escalinata",
+                    "targetyaw": 17.646095092783042,
+                    "targetPitch": -41.02204780620729,
+                    "sceneId": "escenaplaza_moreno",
+                    "div": {}
+                }
+            ]
+        },
+        "escenapasos_perdidos_low": {
+            "pitch": -5.031068684588925,
+            "yaw": -177.06556540018948,
+            "hfov": 120,
+            "panorama": "../vtour/prueba/pasos_perdidos_low.jpg",
+            "preview": "../vtour/prueba/pasos_perdidos_low.jpg",
+            "title": "Pasos",
+            "hotSpots": [
+                {
+                    "pitch": -3.424054624163496,
+                    "yaw": 5.322291631357359,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Escalinata",
+                    "targetyaw": 19.02010837359044,
+                    "targetPitch": -8.789924260293548,
+                    "sceneId": "escenacalle_51_low"
+                }
+            ]
+        }
+    }
+}

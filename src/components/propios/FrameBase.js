@@ -138,7 +138,7 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
 //}   
     var sourceCorregido="../../" +source.slice(38);
    
-        // console.log("Escena recibida",escena);        
+         //console.log("Escena recibida",escena);        
          if (escena){
                      ////console.log("escena....=",escena['idEscena']);      
                    // setSourcelocal( "Escena numero="+escena) ; 
@@ -212,32 +212,43 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
   
         var ifrm = document.getElementById('mipannellum')
           var miviewer= ifrm.contentWindow.viewer
-        var pitch=0;
+        let pitch=0;
         var yaw=0;
         var hfov=120;
                   if(miviewer&&conjuntoEscenas){
-                    ////console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
-                     let pitch0=recorrido['default']['pitch'];
-                      let    yaw0=recorrido['default']['yaw'];
-                      let hfov0 =recorrido['default']['hfov'];
-                    if (counter===-1){
-                      //console.log("inicioooooo");
-                      //console.log('ptch0,yaw0,hfov0 :>> ', pitch0,yaw0,hfov0);
+                              console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
+                              let pitch0=recorrido['default']['pitch'];
+                              let    yaw0=recorrido['default']['yaw'];
+                              let hfov0 =recorrido['default']['hfov'];
+                              if (counter===-1)
+                                        {
+                                          //console.log("inicioooooo");
+                                          //console.log('ptch0,yaw0,hfov0 :>> ', pitch0,yaw0,hfov0);
 
-                      miviewer.loadScene("Ingreso",pitch0,yaw0,hfov0)} else {
-                        if (recorrido&conjuntoEscenas) {  
-                          //console.log("recorrido=",recorrido);
-                          //console.log("navegacion conjuntoEscenas=",conjuntoEscenas[counter]);
-                          //console.log("Navegacion Recorrido=",recorrido['scenes'][conjuntoEscenas[counter]]);
-                          ////console.log(recorrido);
-                          pitch=recorrido['scenes'][conjuntoEscenas[counter]]['pitch'];
-                          yaw=recorrido['scenes'][conjuntoEscenas[counter]]['yaw'];
-                          hfov=recorrido['scenes'][conjuntoEscenas[counter]]['hfov'];
-                        }
-                      //console.log("Cambiando a escena=",conjuntoEscenas[counter]);
-                  miviewer.loadScene(conjuntoEscenas[counter],pitch,yaw,hfov)}
-                    miviewer.lookAt(pitch,yaw,hfov,4000);
-                  //  miviewer.lookAt(0,0,120,4000);
+                                          miviewer.loadScene("Ingreso",pitch0,yaw0,hfov0)
+                                        } 
+                                  else 
+                                        {   //console.log("recorrido=",recorrido);
+
+                                          if (recorrido&&conjuntoEscenas) {  
+                                                                           // console.log("recorrido=",counter);
+                                                                          //console.log("navegacion conjuntoEscenas=",conjuntoEscenas[counter]);
+                                                                          //console.log("Navegacion Recorrido=",recorrido['scenes'][conjuntoEscenas[counter]]);
+                                                                          ////console.log(recorrido);
+                                                                          if (counter <cantidad) {
+                                                                          pitch=recorrido['scenes'][conjuntoEscenas[counter]]['pitch'];
+                                                                          yaw=recorrido['scenes'][conjuntoEscenas[counter]]['yaw'];
+                                                                          hfov=recorrido['scenes'][conjuntoEscenas[counter]]['hfov'];
+                                                                         // console.log("leidos ................",pitch,yaw,hfov); 
+                                                                          
+                                                                          }
+                                    
+                                                                        }
+                                  miviewer.loadScene(conjuntoEscenas[counter],pitch,yaw,hfov)}
+                                  miviewer.lookAt(pitch+5,yaw-5,hfov-10,4000);
+                                //console.log("Cambiando a escena=",conjuntoEscenas[counter]);
+                          
+                            // miviewer.lookAt(0,-100,10,10000);
                 }
           }
 
