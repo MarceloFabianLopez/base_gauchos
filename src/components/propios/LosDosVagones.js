@@ -17,7 +17,7 @@ const linkInicioUrl="/";
 const linkInicioTexto="Inicio";
 const urlContacto="/components/blocks/Form/Contacto";
 const textoContacto="Contacto";
-const EscenaLandPage = "../../standalone/pannellum.htm?config=../tour4.json";
+const EscenaLandPage = "../../standalone/pannellum.htm?config=../losdosvagones.json";
 const colorHeader=`bg-green-200`;
 const clienteBanerMio="Recorrido virtual";
 const encabezadoLinea1="Los dos Vagones";
@@ -30,20 +30,27 @@ const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const tituloNegrito = 'Los Dos Vagones';
 const bajada= 'Naturaleza y tranquilidad que sólo el campo puede ofrecer';
 const TextoDescripcion = `
-### Para mostrar, vender, promocionar o simplemente para tener un excelente recuerdo.
+## Naturaleza, Confort y Pasión en un solo lugar
 
-- La posibilidad de contar con **_contenido multimedia adecuado_** vale para diferentes intereses: Sea usted un agente inmobiliario, 
-un promotor turístico o un padre que quiere guardar el recuerdo del cumpleaños de su hija.
-- Las nuevas tecnologías permiten **"mostrar"** de otra manera a nuestro público siendo cada día mas necesaria su utilización.
+>Los Dos Vagones brinda servicios solamente para adultos, en especial para parejas sin niños, con reserva previa y anticipada.
 
-### Servicio que cubre las diferentes etapas
 
-- Generamos los contenidos, los procesamos y los entregamos listos para ser usados cómodamente. Le brindamos la posibilidad de tener sin costo adicional una **_LANDPAGE_** con sus contenidos para que 
-su publicidad sea eficiente y logre el efecto esperado.
+**_Desde el año 2002, en nuestro campo de 21 hectáreas te ofrecemos:_**
+
+**Alojamiento**
+
+**Eventos sociales y empresariales**
+
+**Días de campo**
+
+**Bodas**
+
+**Turismo de salud ... ¡y mucho más!**
+### Lo esperamos !!!
 
 
 `;
-
+//- **_contenido multimedia adecuado_**  **"mostrar"** 
 const Heading = styled.h1`
   ${tw` text-xl text-center  text-white -mt-10  md:text-4xl  lg:text-4xl xl:text-6xl font-bold     sm:mt-4`}
   span {
@@ -205,6 +212,7 @@ export default () => {
                                             
                             
                     <ViewerPrincipal>
+                     
                             <FrameBase tieneAudio={false} esPortada={false} altura={window.innerWidth>600?450:250} source= {EscenaLandPage} IsRecorrido='true' IsPlano='false'/>
                            {/*  <FrameBase tieneAudio={false} esPortada={true} altura={window.innerWidth>600?450:250} source= "../../standalone/pannellum.htm?config=../tour1.json" IsRecorrido='true' IsPlano='true'/> */}
                   
@@ -225,7 +233,7 @@ export default () => {
                             </ColumnAncha>
                             <ColumnAngosta>
                         
-                            <FormularioCorreo> <Contacto/></FormularioCorreo>
+                            <FormularioCorreo> <Contacto service="service_iq8bowe" template="template_tp629ui"/></FormularioCorreo>
                            
                             </ColumnAngosta>
 

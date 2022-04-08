@@ -1,0 +1,225 @@
+{
+    "default": {
+        "pitch": -8.080874651508612,
+        "yaw": 13.289605312614981,
+        "hfov": 100,
+        "panorama": "../../vtour/losdosvagones/35_aerea.jpg",
+        "preview": "../../vtour/losdosvagones/35_aerea.jpg",
+        "title": "Aérea",
+        "firstScene": "escena35_aerea",
+        "author": "VTOUR",
+        "sceneFadeDuration": 0,
+        "crossOrigin": "anonymous",
+        "autoLoad": true,
+        "autorotate":0,
+        "hotSpots": []
+    },
+    "scenes": {
+        
+        "escena00_ruta1": {
+            "pitch": -4.404447655098741,
+            "yaw": 68.09236435791411,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/00_ruta1.jpg",
+            "preview": "../../vtour/losdosvagones/00_ruta1.jpg",
+            "title": "Ruta"
+            
+        },
+        "escena01_ruta2": {
+            "pitch": -21.60768725034148,
+            "yaw": -35.454039174469244,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/01_ruta2.jpg",
+            "preview": "../../vtour/losdosvagones/01_ruta2.jpg",
+            "title": "Bajada ruta 36"
+            
+        },
+        "escena04_entrada2": {
+            "pitch": -5.360746216965914,
+            "yaw": -17.845167655680143,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/04_entrada2.jpg",
+            "preview": "../../vtour/losdosvagones/04_entrada2.jpg",
+            "title": "Tranquera de entrada"
+            
+        },
+        "escena05_aguada1": {
+            "pitch": -21.588588673780183,
+            "yaw": 171.32191117555988,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/05_aguada1.jpg",
+            "preview": "../../vtour/losdosvagones/05_aguada1.jpg",
+            "title": "Casa de la aguada"
+        },
+        "escena08_aguadcasa": {
+            "pitch": -29.4618971368487,
+            "yaw": 24.510561427116727,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/08_aguadcasa.jpg",
+            "preview": "../../vtour/losdosvagones/08_aguadcasa.jpg",
+            "title": "Casa de la aguada interior"
+            
+        },
+        "escena09_aguadaparque": {
+            "pitch": -22.675682737563932,
+            "yaw": -43.04252653760295,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/09_aguadaparque.jpg",
+            "preview": "../../vtour/losdosvagones/09_aguadaparque.jpg",
+            "title": "Parque frente aguada"
+        },
+        "escena10_galeria1": {
+            "pitch": 2.074987643621131,
+            "yaw": 14.60569691115461,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/10_galeria1.jpg",
+            "preview": "../../vtour/losdosvagones/10_galeria1.jpg",
+            "title": "Galería casona"
+            
+        },
+        "escena11_galria2": {
+            "pitch": 5.22366463867176,
+            "yaw": 57.07019004208746,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/11_galria2.jpg",
+            "preview": "../../vtour/losdosvagones/11_galria2.jpg",
+            "title": "Galería casona 2"
+        },
+        "escena32_casona": {
+            "pitch": -4.022541311122823,
+            "yaw": 118.82052050720495,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/32_casona.jpg",
+            "preview": "../../vtour/losdosvagones/32_casona.jpg",
+            "title": "Casona interior"
+            
+        },
+        "escena12_pileta": {
+            "pitch": -17.723331374639343,
+            "yaw": 15.649264707542898,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/12_pileta.jpg",
+            "preview": "../../vtour/losdosvagones/12_pileta.jpg",
+            "title": "Pileta 1"
+        },
+        "escena13_pileta2": {
+            "pitch": -1.026518666058352,
+            "yaw": 134.1336996144022,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/13_pileta2.jpg",
+            "preview": "../../vtour/losdosvagones/13_pileta2.jpg",
+            "title": "Pileta 2"
+            
+        },
+        "escena14_frentecasona": {
+            "pitch": 9.410485192436612,
+            "yaw": -164.62123538218248,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/14_frentecasona.jpg",
+            "preview": "../../vtour/losdosvagones/14_frentecasona.jpg",
+            "title": "Frente Casona"
+        },
+        "escena31_vagonhdr": {
+            "pitch": -10.327569905030726,
+            "yaw": 36.52739642371432,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/31_vagonhdr.jpg",
+            "preview": "../../vtour/losdosvagones/31_vagonhdr.jpg",
+            "title": "Frente vagon azul"
+            
+        },
+        "escena17_vagon4": {
+            "pitch": -28.425155367811385,
+            "yaw": 62.55107072171813,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/17_vagon4.jpg",
+            "preview": "../../vtour/losdosvagones/17_vagon4.jpg",
+            "title": "Vagon 1"
+        },
+        "escena19_vagon6": {
+            "pitch": -2.285068010343522,
+            "yaw": -45.81817177678346,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/19_vagon6.jpg",
+            "preview": "../../vtour/losdosvagones/19_vagon6.jpg",
+            "title": "Vagon 2"
+            
+        },
+        "escena20_vagon7": {
+            "pitch": -18.18918239483627,
+            "yaw": 159.83790973732266,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/20_vagon7.jpg",
+            "preview": "../../vtour/losdosvagones/20_vagon7.jpg",
+            "title": "Vagon 3"
+        },
+        "escena22_casonacancha3": {
+            "pitch": -10.176186130946808,
+            "yaw": 25.16423000467057,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/22_casonacancha3.jpg",
+            "preview": "../../vtour/losdosvagones/22_casonacancha3.jpg",
+            "title": "Parque Casona"
+            
+        },
+        "escena25_vagon9": {
+            "pitch": -19.284497658652626,
+            "yaw": -88.70842430324626,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/25_vagon9.jpg",
+            "preview": "../../vtour/losdosvagones/25_vagon9.jpg",
+            "title": "Vagon 4"
+        },
+        "escena26_casonacancha4": {
+            "pitch": -4.4225743209394786,
+            "yaw": -77.94947137148915,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/26_casonacancha4.jpg",
+            "preview": "../../vtour/losdosvagones/26_casonacancha4.jpg",
+            "title": "Bosque 1"
+            
+        },
+        "escena33_dormi_loft": {
+            "pitch": -54.666058273853146,
+            "yaw": -172.4815357540483,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/33_dormi_loft.jpg",
+            "preview": "../../vtour/losdosvagones/33_dormi_loft.jpg",
+            "title": "Loft "
+        },
+        "escena34_loft_01": {
+            "pitch": -10.693526617990452,
+            "yaw": -160.09118475123392,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/34_loft_01.jpg",
+            "preview": "../../vtour/losdosvagones/34_loft_01.jpg",
+            "title": "Loft2"
+            
+        },
+        "escena27_piletados1": {
+            "pitch": -14.19486803959595,
+            "yaw": -118.61649140730515,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/27_piletados1.jpg",
+            "preview": "../../vtour/losdosvagones/27_piletados1.jpg",
+            "title": "Pileta 3"
+        },
+        "escena28_piletados2": {
+            "pitch": -15.914489782590493,
+            "yaw": 11.671878253198429,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/28_piletados2.jpg",
+            "preview": "../../vtour/losdosvagones/28_piletados2.jpg",
+            "title": "Pilta 4"
+            
+        },
+        "escena30_clarobosque": {
+            "pitch": -2.433518088114672,
+            "yaw": 96.62692691334064,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/30_clarobosque.jpg",
+            "preview": "../../vtour/losdosvagones/30_clarobosque.jpg",
+            "title": "Bosque 2"
+        }
+    }
+}

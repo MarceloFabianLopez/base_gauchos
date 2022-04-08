@@ -51,7 +51,7 @@ const Botones = tw.div`grid grid-cols-2 gap-2 h-12` ;
 
 //const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`
 
-function Contacto () {
+function Contacto ({service="service_iq8bowe",template="template_uk97428"}) {
 
   //export default () => {
 
@@ -84,7 +84,16 @@ function Contacto () {
   //  mostrarAlerta();
 
     //console.log("email correcto)=",e.tartget);
-   emailjs.sendForm('service_anxnkre', 'template_uk97428',"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
+    // service="service_anxnkre" gmail mio
+    //Vtour template="template_uk97428"
+    //losdosvagones service="service_iq8bowe" template="template_tp629ui" con gmail vtour
+    /* emailjs.send("service_iq8bowe","template_tp629ui",{
+      user_name: "MArce",
+      message: "Hola marce",
+      user_email: "marce@marce.com",
+      }); */
+      // emailjs.sendForm('service_anxnkre', 'template_uk97428',"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
+   emailjs.sendForm({service},{template} ,"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
                                                             .then((result) => {
                                                                                    // console.log(result.text);
                                                                                     mostrarAlerta();

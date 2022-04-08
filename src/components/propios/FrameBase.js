@@ -110,13 +110,14 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
   const {intervalo}=useContext(DataContext);                                                     
  // const [archivo,setArchivo]  = useState('');
   const [run, setRun] = useState(true);
-  const [counter, setCounter] = useState(-1);
+  const {escena} = useContext (DataContext);
+  const [counter, setCounter] = useState(null);
   //const countRef = useRef(count);
   //countRef.current = count;
  const [recorrido, setRecorrido] = useState(null);
 // const {recorrido,setRecorrido} = useContext(DataContext);
   const [conjuntoEscenas,setConjuntoEscenas]=useState([]);
-  const {escena} = useContext (DataContext);
+  
   const [huboUnCambio, setHuboUnCambio]=useState(false);
 
    
@@ -169,7 +170,7 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
                                                                 .then(datos => {
                                                                                 //console.log("tengo los datos=",datos["scenes"]["Banio"]["title"],"panorama=",datos["scenes"]["Banio"]["panorama"]);
                                                                                 //setRecorrido(datos);
-                                                                                setCounter(-1);
+                                                                                //setCounter(-1);
                                                                                // arrayClavesEscenas = Object.keys(datos["scenes"]) ;
                                                                                // console.log("arrayclaves=",arrayClavesEscenas);
                                                                                 // mesirve = arrayClavesEscenas.map( function( escenita){
@@ -245,20 +246,24 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
                                     
                                                                         }
                                   miviewer.loadScene(conjuntoEscenas[counter],pitch,yaw,hfov)}
-                                  miviewer.lookAt(pitch+5,yaw-5,hfov-10,4000);
+                                  //alternate
+                                  var signo = (-1) ** counter;
+
+                                  miviewer.lookAt(pitch +5*signo ,yaw-25*signo,hfov-signo* 30,6000);
                                 //console.log("Cambiando a escena=",conjuntoEscenas[counter]);
                           
                             // miviewer.lookAt(0,-100,10,10000);
                 }
           }
 
-
+          //const lacuenta=0;
 
      ////console.log("useeffect run=",intervalo);
      //console.log("empieza aumentando el contador .......=",counter);
      const   lacuenta =  setTimeout(() => setCounter(counter + 1), intervalo);
           //console.log("termina aumentando el contador .......=",counter);
      if (run&&sourcelocal) { 
+     // const   lacuenta =  setTimeout(() => setCounter(counter + 1), intervalo);
       Navegacion(); 
      }
      // counter < (cantidad + 1) && lacuenta() ;
@@ -281,8 +286,9 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
       
     
      return() => {
-      //console.log("cleanup counter");   
-      clearTimeout(lacuenta);} 
+      //console.log("cleanup counter"); 
+      if (lacuenta) {  
+      clearTimeout(lacuenta);}} 
  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counter]);
       
@@ -299,8 +305,10 @@ setCounter(counter-1);
     //alert('clicked');
    //console.log("botonera run=",run);
     if(run){
-    setRun(false) } else {setRun(true)}
-    
+    setRun(false);
+    //setCounter(escena);
+    } else {setRun(true)}
+    //setCounter(escena+1);
      event.preventDefault();
     event.stopPropagation(); 
   }
@@ -353,7 +361,8 @@ const src = sourcelocal;
                                 { IsRecorrido &&
                                     <>
                                    {/*  <Centrador> */}<Botonera/>
-                                        <iframe id="mipannellum" title="recorrido"    allowFullScreen src={src}/>
+                                   <small>Para detener el cambio automático de imagenes click en "Parar","Arrancar" para continuar</small>
+                                        <iframe id="mipannellum" title="recorrido"  height={altura}  allowFullScreen src={src}/>
                                          
                                      {tieneAudio && <audio controls autoPlay="autoplay"  loop="loop" src="../../images/audio.mp3" ></audio>
                                      }
