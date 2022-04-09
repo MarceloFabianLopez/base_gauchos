@@ -222,7 +222,7 @@ export default () => {
 
                    <CajaContenido>
                  
-                      <FrameBase esPortada={true} tieneAudio={false}  altura={window.innerWidth>600?450:200} source= {misrc} IsPlano={false}
+                      <FrameBase esPortada={true} tieneAudio={false}   source= {misrc} IsPlano={false}
                   Titulo="Recorrido 360º"
                   Bajada="La mejor forma de mostrar"
                   SubTitulo="Resalte lo importante"

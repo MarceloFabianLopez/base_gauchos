@@ -8,15 +8,23 @@
         "title": "Aérea",
         "firstScene": "escena35_aerea",
         "author": "VTOUR",
-        "sceneFadeDuration": 0,
+        "sceneFadeDuration": 1000,
         "crossOrigin": "anonymous",
         "autoLoad": true,
         "autorotate":0,
         "hotSpots": []
     },
     "scenes": {
-        
-        "escena00_ruta1": {
+"escena35_aerea": {
+            "pitch": -8.080874651508612,
+            "yaw": 13.289605312614981,
+            "hfov": 100,
+            "panorama": "../../vtour/losdosvagones/35_aerea.jpg",
+            "preview": "../../vtour/losdosvagones//35_aerea.jpg",
+            "title": "Aérea"
+            
+        },
+      "escena00_ruta1": {
             "pitch": -4.404447655098741,
             "yaw": 68.09236435791411,
             "hfov": 100,
@@ -25,6 +33,11 @@
             "title": "Ruta"
             
         },
+        
+        
+        
+        
+        
         "escena01_ruta2": {
             "pitch": -21.60768725034148,
             "yaw": -35.454039174469244,
@@ -210,9 +223,10 @@
             "hfov": 100,
             "panorama": "../../vtour/losdosvagones/28_piletados2.jpg",
             "preview": "../../vtour/losdosvagones/28_piletados2.jpg",
-            "title": "Pilta 4"
+            "title": "Pileta 4"
             
         },
+        
         "escena30_clarobosque": {
             "pitch": -2.433518088114672,
             "yaw": 96.62692691334064,
@@ -221,5 +235,6 @@
             "preview": "../../vtour/losdosvagones/30_clarobosque.jpg",
             "title": "Bosque 2"
         }
+       
     }
 }

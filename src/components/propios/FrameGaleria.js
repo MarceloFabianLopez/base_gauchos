@@ -32,11 +32,11 @@ let claves =Object.keys(conjunto);
 //const EscenaInicial ={idEscena: "Primera"};
   //const [MiEscena,setEscena]= useState({EscenaInicial});
 //const [Mirecorrido,setRecorrido] = useState( "../../standalone/pannellum.htm?config=../tour1.json");
-  
+console.log("FrameGaleria...................................................................");
 
 function CambiaEscena  (index)  {
 
- // console.log(IdEscena);
+  console.log("cambiaescena=",index);
  //e.preventDefault();
   //console.log("click",index);
   //console.log("cambio de escena=", Fotos[idFoto])

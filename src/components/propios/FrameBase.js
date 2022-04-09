@@ -98,7 +98,7 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
 
 //const {cantidad,setCantidad} = useContext(DataContext);
 
-  function FrameBase ({ esPortada=true, tieneAudio=false,altura="350",source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
+  function FrameBase ({ esPortada=true, tieneAudio=false,altura=null,source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
     
                       IsVideo=false, IsImagen=false, IsRecorrido=false, IsPlano=false,videoJsOptions={},ImageAlt="imagen" ,sourceInicial="../../standalone/pannellum.htm?config=../tour2.json"}) 
 
@@ -122,69 +122,78 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
 
    
 //------------------------------------------------------------------------------------------------------------------
-  useEffect(() => 
+  
+function Navegacion(){
+  
+  var ifrm = document.getElementById('mipannellum')
+    var miviewer= ifrm.contentWindow.viewer
+  let pitch=0;
+  var yaw=0;
+  var hfov=120;
+  console.log("Navegacion.............................................................................")
+            if(miviewer&&conjuntoEscenas){
+                        //console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
+                        let pitch0=recorrido['default']['pitch'];
+                        let    yaw0=recorrido['default']['yaw'];
+                        let hfov0 =recorrido['default']['hfov'];
+                        if (counter===-1)
+                                  {
+                                    console.log("inicioooooo");
+                                    //console.log('ptch0,yaw0,hfov0 :>> ', pitch0,yaw0,hfov0);
+
+                                    miviewer.loadScene("Ingreso",pitch0,yaw0,hfov0);
+                                    //miviewer.loadScene(conjuntoEscenas[0],pitch,yaw,hfov)
+                                  } 
+                            else 
+                                  {   //console.log("recorrido=",recorrido);
+
+                                    if (recorrido&&conjuntoEscenas) {  
+                                                                      console.log("contador=",counter," cantidad=",cantidad);
+                                                                    //console.log("navegacion conjuntoEscenas=",conjuntoEscenas[counter]);
+                                                                    //console.log("Navegacion Recorrido=",recorrido['scenes'][conjuntoEscenas[counter]]);
+                                                                    ////console.log(recorrido);
+                                                                    if (counter <cantidad) {
+                                                                    pitch=recorrido['scenes'][conjuntoEscenas[counter]]['pitch'];
+                                                                    yaw=recorrido['scenes'][conjuntoEscenas[counter]]['yaw'];
+                                                                    hfov=recorrido['scenes'][conjuntoEscenas[counter]]['hfov'];
+                                                                    console.log("escena=",recorrido['scenes'][conjuntoEscenas[counter]]['title']); 
+                                                                    
+                                                                    }
+                              
+                                                                  }
+                            miviewer.loadScene(conjuntoEscenas[counter],pitch,yaw,hfov)}
+                            //alternate
+                            var signo = (-1) ** counter;
+
+                            miviewer.lookAt(pitch +5*signo ,yaw-25*signo,hfov-signo* 30,6000);
+                          //console.log("Cambiando a escena=",conjuntoEscenas[counter]);
+                    
+                      // miviewer.lookAt(0,-100,10,10000);
+          }
+    }
+useEffect(() => 
   {
-    //console.log("useEffect corrige recorrido");
-    //console.log("Datos actuales , parametro del componente:  source=",source);
-    //console.log("contexto escena=",escena);
-    //console.log("state contador=",counter);
-    //console.log("state sourcelocal=",sourcelocal);
-    //console.log("..........................................................");
-//let arrayClavesEscenas =[];
-//let mesirve =[];
-//let unaEscena ={
-//  idEscean : "",
-//  urlpanorama:"",
-//  title:""
-//}   
-    var sourceCorregido="../../" +source.slice(38);
    
-         //console.log("Escena recibida",escena);        
-         if (escena){
-                     ////console.log("escena....=",escena['idEscena']);      
-                   // setSourcelocal( "Escena numero="+escena) ; 
+   var sourceCorregido="../../" +source.slice(38);
+   console.log("Framebase...................................................useffect escena................");
+   console.log("Escena recibida",escena);        
+  
+     if (escena){
+                    console.log("escena....=",escena['idEscena']);      
                     setCounter(escena);
                     setRun(true);
          
-                  } else 
-                  {
-                    //console.log("todavia no carga escena");
-                  
-                  }               // eslint-disable-next-line react-hooks/exhaustive-deps 
-
-  
-        
+                  } 
+                               // eslint-disable-next-line react-hooks/exhaustive-deps 
         
                     if (sourcelocal) {
-                               // console.log("sourcedopolocal------------------------------------------=",sourcelocal);
                                 sourceCorregido="../../" +sourcelocal.slice(38);
-
-                                } else {//console.log("todavia no carga surcelocal");
-                                }
-         
-
-
-                    //console.log("leyando datos desde sourcecorregido=",sourceCorregido);
+                                } 
                     fetch(sourceCorregido)
                                .then(res => res.json())
-                                                                .then(datos => {
-                                                                                //console.log("tengo los datos=",datos["scenes"]["Banio"]["title"],"panorama=",datos["scenes"]["Banio"]["panorama"]);
-                                                                                //setRecorrido(datos);
-                                                                                //setCounter(-1);
-                                                                               // arrayClavesEscenas = Object.keys(datos["scenes"]) ;
-                                                                               // console.log("arrayclaves=",arrayClavesEscenas);
-                                                                                // mesirve = arrayClavesEscenas.map( function( escenita){
-                                                                                  //console.log(datos["scenes"][escenita]);
-                                                                                 // return datos["scenes"][escenita];
-                                                                               // }
-                                                                               
-
-                                                                                //);
-                                                                                 //console.log("mesirce=",mesirve);
+                                                       .then(datos => {
                                                                                 setConjuntoEscenas(Object.keys(datos["scenes"]));
-                                                                                //setConjuntoEscenas(mesirve);
                                                                                 setConjunto(datos["scenes"]);
-                                                                               // console.log("conjuntodeEscenas",conjuntoEscenas);
                                                                                 setCantidad((Object.keys(datos["scenes"]).length));
                                                                                 setHuboUnCambio(true);
                                                                                 setRecorrido(datos);
@@ -196,109 +205,30 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
                                                                         }
                                                                         ); 
 
-                                     
+     return () => {                    ////console.log("limpieza ussefect recorrido");
+                                                                        }
+   } ,[escena,source]);
+      
+     
 
-                    return () => {                    ////console.log("limpieza ussefect recorrido");
-                                  }
-                                  
-  } ,[escena,source]
-                 );
+  
   
 //-------------------------------------------------------------------------------------------------------------------------------------------
 
-    useEffect(() => {
-
-          //console.log("usefect counter navegacion");
-      function Navegacion(){
-  
-        var ifrm = document.getElementById('mipannellum')
-          var miviewer= ifrm.contentWindow.viewer
-        let pitch=0;
-        var yaw=0;
-        var hfov=120;
-                  if(miviewer&&conjuntoEscenas){
-                              console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
-                              let pitch0=recorrido['default']['pitch'];
-                              let    yaw0=recorrido['default']['yaw'];
-                              let hfov0 =recorrido['default']['hfov'];
-                              if (counter===-1)
-                                        {
-                                          //console.log("inicioooooo");
-                                          //console.log('ptch0,yaw0,hfov0 :>> ', pitch0,yaw0,hfov0);
-
-                                          miviewer.loadScene("Ingreso",pitch0,yaw0,hfov0)
-                                        } 
-                                  else 
-                                        {   //console.log("recorrido=",recorrido);
-
-                                          if (recorrido&&conjuntoEscenas) {  
-                                                                           // console.log("recorrido=",counter);
-                                                                          //console.log("navegacion conjuntoEscenas=",conjuntoEscenas[counter]);
-                                                                          //console.log("Navegacion Recorrido=",recorrido['scenes'][conjuntoEscenas[counter]]);
-                                                                          ////console.log(recorrido);
-                                                                          if (counter <cantidad) {
-                                                                          pitch=recorrido['scenes'][conjuntoEscenas[counter]]['pitch'];
-                                                                          yaw=recorrido['scenes'][conjuntoEscenas[counter]]['yaw'];
-                                                                          hfov=recorrido['scenes'][conjuntoEscenas[counter]]['hfov'];
-                                                                         // console.log("leidos ................",pitch,yaw,hfov); 
-                                                                          
-                                                                          }
-                                    
-                                                                        }
-                                  miviewer.loadScene(conjuntoEscenas[counter],pitch,yaw,hfov)}
-                                  //alternate
-                                  var signo = (-1) ** counter;
-
-                                  miviewer.lookAt(pitch +5*signo ,yaw-25*signo,hfov-signo* 30,6000);
-                                //console.log("Cambiando a escena=",conjuntoEscenas[counter]);
-                          
-                            // miviewer.lookAt(0,-100,10,10000);
-                }
-          }
-
-          //const lacuenta=0;
-
-     ////console.log("useeffect run=",intervalo);
-     //console.log("empieza aumentando el contador .......=",counter);
+useEffect(() => {
+      console.log("Framebase...................................................useffect contador................");
      const   lacuenta =  setTimeout(() => setCounter(counter + 1), intervalo);
-          //console.log("termina aumentando el contador .......=",counter);
-     if (run&&sourcelocal) { 
-     // const   lacuenta =  setTimeout(() => setCounter(counter + 1), intervalo);
-      Navegacion(); 
-     }
-     // counter < (cantidad + 1) && lacuenta() ;
-     // ////console.log("counter useEffect=",counter,"cantidad=",cantidad);
-
-     
-     if (counter===(cantidad) ) {
-      //console.log("reiniciando secuencia:",counter); 
-      
-      setCounter(-1);
-      
-      }
-      if (huboUnCambio){
-        //console.log("hubo un cambio");
-        setHuboUnCambio(false);
-       /*  return() => {
-          //console.log("cleanup counter");   
-          clearTimeout(lacuenta);}   */
-      }
-      
-    
-     return() => {
-      //console.log("cleanup counter"); 
-      if (lacuenta) {  
-      clearTimeout(lacuenta);}} 
- // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [counter]);
-      
-
-
-
- /*  function verViewer (){
-setCounter(counter-1);
-  } */
-
+     if (run&&sourcelocal) {
+      console.log("Navegacion") ;
+      Navegacion(); }
+     if (counter===(cantidad) ) { setCounter(0); }
+     if (huboUnCambio){ setHuboUnCambio(false); }
+      return() => {
+            if (lacuenta) {  
+            clearTimeout(lacuenta);}} 
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+     }, [counter]);
+  
   function  Botonera () {
 
   function handleClick(event) {
@@ -336,17 +266,11 @@ setCounter(counter-1);
         );
         //////console.log("counter en botonera=",counter);
    }
-
-
-
-
  
 if (!sourcelocal) { return <div></div>; }
 else {
 const src = sourcelocal;
-//setArchivo(source);
-//reco height={esPortada? 220 :altura}  width={220*1.33}
-// imagenheight={altura}  alt={ImageAlt}
+
   return (<>
 
                       <Card>
@@ -362,7 +286,7 @@ const src = sourcelocal;
                                     <>
                                    {/*  <Centrador> */}<Botonera/>
                                    <small>Para detener el cambio automático de imagenes click en "Parar","Arrancar" para continuar</small>
-                                        <iframe id="mipannellum" title="recorrido"  height={altura}  allowFullScreen src={src}/>
+                                        <iframe id="mipannellum" title="recorrido"  height={altura} allowFullScreen src={src}/>
                                          
                                      {tieneAudio && <audio controls autoPlay="autoplay"  loop="loop" src="../../images/audio.mp3" ></audio>
                                      }
