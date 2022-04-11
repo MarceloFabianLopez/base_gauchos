@@ -39,62 +39,23 @@ const CardMetaFeature = styled.div`
     ${tw`w-5 h-5 mr-1`}
   }
 `;
-//const CardAction = tw(PrimaryButtonBase)`w-full mt-6`;
-//const TituloPrimary = tw.div`text-primary-500 font-bold text-lg`;
-/* const cards = [
-    {
-      imageSrc:
-        "https://images.unsplash.com/photo-1563461660947-507ef49e9c47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      company: "Recorridos 360º",
-      type: "Recorrido virtual",
-      title: "Resalte puntos de interés",
-      durationText: "24hs para entrega",
-      locationText: "Zona Gran La Plata"
-    },
-     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1573165231977-3f0e27806045?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      company: "Video 360º",
-      type: "Experiencia inmersiva",
-      title: "La sensación de estar en el lugar",
-      durationText: "24 hs para entrega",
-      locationText: "Apto visores Realidad Virtual"
-    } 
-     ,
-     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1573165231977-3f0e27806045?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      company: "Aéreos",
-      type: "Tenga una nueva perspectiva",
-      title: "Imprescindible",
-      durationText: "24 hs para entrega",
-      locationText: "Consultar zonas"
-    }  
-  ];
- */  const IconoReco = tw.div`absolute  z-10 top-0 right-0 h-16 w-16   rounded-2xl bg-opacity-50`;
-  //const PosicionImagen = tw.div`z-0 relative mt-0 `;
- // const EmbedContainer =tw.div`relative bg-green-300 w-full h-full overflow-hidden `;
-  
-  //const EembedContainerIframe =tw.div`absolute  bg-red-300 pb-2 top-0 ml-0  h-full     `;
 
+const IconoReco = tw.div`absolute  z-10 top-0 right-0 h-16 w-16   rounded-2xl bg-opacity-50`;
 
-// TipoMedio puede ser Imagen, Video, Video360, Recorrido
-//const Escenario = tw.div`bg-gray-500 p-2 w-full`;
-
-
-/* function getIframe (){
-   document.getElementsById('mipannellum');
-}
- */
-
-
-//const proximaEscena="Entrada";
-
-//const configPannellum = "../tour1.json";
+//const Fondo = ({corriendo}) => (
+//<div css={[tw`-mt-4    p-1 border-4 border-gray-200 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl hover:border-green-800`, corriendo && tw`bg-red-400`]}/>
+//); 
 
 
 
-const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl`; 
+//<div className=`flex ${primary ? "bg-indigo-600" : "bg-indigo-300"} inline-flex items-center border border-transparent text-xs font-medium rounded shadow-sm text-white hover:bg-indigo-700 focus:outline-none`>
+const Fondo = ({corriendo}) => (
+  tw.div`-mt-4    p-1 border-4 border-gray-200 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl hover:border-green-800`
+);
+//`;
+//const Fondo1 = styled.div`
+//${tw`-mt-4    p-1 border-4 border-gray-200 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl hover:border-green-800`}
+//`; 
 
 //const {cantidad,setCantidad} = useContext(DataContext);
 
@@ -138,7 +99,7 @@ function Navegacion(){
                         let hfov0 =recorrido['default']['hfov'];
                         if (counter===-1)
                                   {
-                                    console.log("inicioooooo");
+                                   // console.log("inicioooooo");
                                     //console.log('ptch0,yaw0,hfov0 :>> ', pitch0,yaw0,hfov0);
 
                                     miviewer.loadScene("Ingreso",pitch0,yaw0,hfov0);
@@ -216,15 +177,7 @@ useEffect(() =>
   
   
 //-------------------------------------------------------------------------------------------------------------------------------------------
-/* useEffect(() => {
-  console.log("Useffect cambio escena");
-  if (escena){
-    console.log("escena....=",escena['idEscena']);      
-    setCounter(escena);
-    setRun(true);
 
-  }
-}, [escena]); */
 
 useEffect(() => {
                                       
@@ -274,9 +227,14 @@ useEffect(() => {
   }
 
 
-
+ //<Fondo css={tw`bg-red-400`}>
   return (
-            <Fondo>
+                <Fondo>
+                
+                
+             
+             
+           
                 {/* <p>You clicked {counter} times</p> */}
                 
                   
@@ -285,14 +243,13 @@ useEffect(() => {
                  
                  <button onClick={() => setCounter(counter+1)}>Adelante</button>
                  <button onClick={() => setCounter(counter-1)}>Atras</button> */}
-
-                 <button onClick={handleClick}>{run?"Parar":"Arrancar"}</button>
                  
-                  
-                                     
-                                     
-                                   
-            </Fondo>
+                
+                 <button onClick={handleClick}>{run?"Parar":"Arrancar"}</button> 
+                 
+                         
+                         </Fondo>         
+            
         );
         //////console.log("counter en botonera=",counter);
    }
