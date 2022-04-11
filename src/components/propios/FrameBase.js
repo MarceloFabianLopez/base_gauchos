@@ -94,7 +94,7 @@ const CardMetaFeature = styled.div`
 
 
 
-const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl`; 
+const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl hover:border-green-400`; 
 
 //const {cantidad,setCantidad} = useContext(DataContext);
 
