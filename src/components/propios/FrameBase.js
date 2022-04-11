@@ -110,7 +110,7 @@ const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w
   const {intervalo}=useContext(DataContext);                                                     
  // const [archivo,setArchivo]  = useState('');
   const [run, setRun] = useState(true);
-  const {escena} = useContext (DataContext);
+  const {escena,setEscena} = useContext (DataContext);
   const [counter, setCounter] = useState(null);
   //const countRef = useRef(count);
   //countRef.current = count;
@@ -130,7 +130,7 @@ function Navegacion(){
   let pitch=0;
   var yaw=0;
   var hfov=120;
-  console.log("Navegacion.............................................................................")
+//  console.log("Navegacion.............................................................................")
             if(miviewer&&conjuntoEscenas){
                         //console.log("tengo viewer y conjuntoescenas:",conjuntoEscenas);
                         let pitch0=recorrido['default']['pitch'];
@@ -148,7 +148,7 @@ function Navegacion(){
                                   {   //console.log("recorrido=",recorrido);
 
                                     if (recorrido&&conjuntoEscenas) {  
-                                                                      console.log("contador=",counter," cantidad=",cantidad);
+                                                                     // console.log("contador=",counter," cantidad=",cantidad);
                                                                     //console.log("navegacion conjuntoEscenas=",conjuntoEscenas[counter]);
                                                                     //console.log("Navegacion Recorrido=",recorrido['scenes'][conjuntoEscenas[counter]]);
                                                                     ////console.log(recorrido);
@@ -156,7 +156,7 @@ function Navegacion(){
                                                                     pitch=recorrido['scenes'][conjuntoEscenas[counter]]['pitch'];
                                                                     yaw=recorrido['scenes'][conjuntoEscenas[counter]]['yaw'];
                                                                     hfov=recorrido['scenes'][conjuntoEscenas[counter]]['hfov'];
-                                                                    console.log("escena=",recorrido['scenes'][conjuntoEscenas[counter]]['title']); 
+                                                                    //console.log("escena=",recorrido['scenes'][conjuntoEscenas[counter]]['title']); 
                                                                     
                                                                     }
                               
@@ -165,7 +165,8 @@ function Navegacion(){
                             //alternate
                             var signo = (-1) ** counter;
 
-                            miviewer.lookAt(pitch +5*signo ,yaw-25*signo,hfov-signo* 30,6000);
+                            miviewer.lookAt(pitch+5*signo ,yaw-5*signo,hfov+5*signo,1000);
+                            //miviewer.lookAt(pitch ,yaw,hfov-20,4000);
                           //console.log("Cambiando a escena=",conjuntoEscenas[counter]);
                     
                       // miviewer.lookAt(0,-100,10,10000);
@@ -175,15 +176,10 @@ useEffect(() =>
   {
    
    var sourceCorregido="../../" +source.slice(38);
-   console.log("Framebase...................................................useffect escena................");
-   console.log("Escena recibida",escena);        
+   //console.log("Framebase...................................................useffect recorrido................");
+   //console.log("Escena recibida",escena);        
   
-     if (escena){
-                    console.log("escena....=",escena['idEscena']);      
-                    setCounter(escena);
-                    setRun(true);
-         
-                  } 
+     
                                // eslint-disable-next-line react-hooks/exhaustive-deps 
         
                     if (sourcelocal) {
@@ -207,27 +203,61 @@ useEffect(() =>
 
      return () => {                    ////console.log("limpieza ussefect recorrido");
                                                                         }
-   } ,[escena,source]);
-      
+   } ,[]);
+
+   useEffect(() => 
+  {
+      //console.log("Useffect cambio de escena --------------------------------------")
+      setCounter(escena);
+      setRun(true);
+  } ,[escena]);
      
 
   
   
 //-------------------------------------------------------------------------------------------------------------------------------------------
+/* useEffect(() => {
+  console.log("Useffect cambio escena");
+  if (escena){
+    console.log("escena....=",escena['idEscena']);      
+    setCounter(escena);
+    setRun(true);
+
+  }
+}, [escena]); */
 
 useEffect(() => {
-      console.log("Framebase...................................................useffect contador................");
-     const   lacuenta =  setTimeout(() => setCounter(counter + 1), intervalo);
-     if (run&&sourcelocal) {
-      console.log("Navegacion") ;
-      Navegacion(); }
-     if (counter===(cantidad) ) { setCounter(0); }
-     if (huboUnCambio){ setHuboUnCambio(false); }
-      return() => {
-            if (lacuenta) {  
-            clearTimeout(lacuenta);}} 
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-     }, [counter]);
+                                      
+
+                
+                  
+                
+
+                //const   lacuenta =  setTimeout(() => setCounter(escena&&(escena!=counter)?escena:counter+1), intervalo); 
+                const   lacuenta =  setTimeout(() => setCounter(counter+1), intervalo); 
+                //setEscena(counter);
+                //setEscena(counter)      ;
+                  
+                if (run&&sourcelocal) {
+                  //console.log("Navegacion") ;
+                  Navegacion(); 
+                }
+                
+                if (counter===(cantidad) ) { setCounter(0); }
+                //setEscena(counter)  ;
+                
+                if (huboUnCambio){ setHuboUnCambio(false); }
+                  
+                return() => {
+                        if (lacuenta) {  
+                        clearTimeout(lacuenta);}} 
+
+
+                  // eslint-disable-next-line react-hooks/exhaustive-deps
+     }, [counter ] );
+
+
+
   
   function  Botonera () {
 

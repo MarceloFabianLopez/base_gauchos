@@ -43,14 +43,14 @@ export const LogoLink = styled(NavLink)`
   }
 `;
 
-export const MobileNavLinksContainer = tw.nav`z-40 flex flex-1  justify-between  md:px-5 md:mt-4 sm:mt-48`;
+export const MobileNavLinksContainer = tw.nav`z-40  flex flex-1  justify-between  md:px-5 md:mt-4 sm:mt-48`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-200 transition duration-300 sm:text-white
+  lg:hidden z-20 focus:outline-none  hocus:text-primary-200 transition duration-300 sm:text-white
 `;
 export const MobileNavLinks = motion.custom(styled.div`
-  ${tw`lg:hidden  fixed  inset-x-0  my-6 p-8  text-center rounded-lg text-gray-900 bg-white`}
+  ${tw`lg:hidden  fixed  inset-x-0  my-6 p-8  text-center rounded-lg text-gray-900 bg-gray-700`}
   ${NavLinks} {
-    ${tw`flex flex-col items-center`}
+    ${tw`flex flex-col items-center `}
   }
 `);
 

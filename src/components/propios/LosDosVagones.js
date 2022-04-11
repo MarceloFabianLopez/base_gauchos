@@ -13,8 +13,8 @@ const hrefLogo="../../clientes/losdosvagones/logo.png";
 //const hrefLogo="../../images/logo.png";
 const hrefBanner="../../clientes/losdosvagones/banner.jpg"
 const urlLogoLink="/";
-const linkInicioUrl="/";
-const linkInicioTexto="Inicio";
+const linkInicioUrl="https://vtour.ar";
+const linkInicioTexto="Página web";
 const urlContacto="/components/blocks/Form/Contacto";
 const textoContacto="Contacto";
 const EscenaLandPage = "../../standalone/pannellum.htm?config=../losdosvagones.json";
@@ -23,7 +23,7 @@ const clienteBanerMio="Recorrido virtual";
 const encabezadoLinea1="Los dos Vagones";
 const encabezadoLinea2="Turismo rural y eventos";
 const subEncabezado="Recorrido virtual";
-const colorSubheading="text-purple-600";
+const colorSubheading="text-white";
 
   const guasap='https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!';
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
@@ -95,7 +95,7 @@ ${tw.nav`text-red-300 `};
     hover:text-gray-300  `}
   }
   ${NavToggle}.closed {
-    ${tw`text-red-500 p-2 hover:text-primary-100`}
+    ${tw`text-red-500 p-2 hover:text-primary-300`}
   }
 `; 
 //const MiHeader=tw(StyledHeader)`bg-blue-100`;

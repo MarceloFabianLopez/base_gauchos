@@ -21,7 +21,7 @@ const TextoFoto= tw.p`p-1 text-gray-100 text-xs`;
 //const EstiloEscena =tw.div`bg-black p-5`;
  
 function FrameGaleria () {
- const {setEscena} = useContext (DataContext);
+ const {setEscena,escena} = useContext (DataContext);
  const {cantidad} = useContext(DataContext);
  const {conjunto}=useContext(DataContext);
  //console.log("cantidad desde contexto=",cantidad);
@@ -32,11 +32,12 @@ let claves =Object.keys(conjunto);
 //const EscenaInicial ={idEscena: "Primera"};
   //const [MiEscena,setEscena]= useState({EscenaInicial});
 //const [Mirecorrido,setRecorrido] = useState( "../../standalone/pannellum.htm?config=../tour1.json");
-console.log("FrameGaleria...................................................................");
+//console.log("FrameGaleria...................................................................");
 
 function CambiaEscena  (index)  {
 
-  console.log("cambiaescena=",index);
+  //console.log("cambiaescena=",index);
+  //console.log("escena vieja=",escena);
  //e.preventDefault();
   //console.log("click",index);
   //console.log("cambio de escena=", Fotos[idFoto])
@@ -44,6 +45,7 @@ function CambiaEscena  (index)  {
   
  //console.log("otraEscena=",OtraEscena);
   setEscena(index);
+  //console.log("escena cambiada=",escena);
  // setCounter(2);
   
  // setRecorrido()

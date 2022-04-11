@@ -8,10 +8,10 @@
         "title": "Aérea",
         "firstScene": "escena35_aerea",
         "author": "VTOUR",
-        "sceneFadeDuration": 1000,
+        "sceneFadeDuration": 400,
         "crossOrigin": "anonymous",
         "autoLoad": true,
-        "autorotate":0,
+        "autoRotate":5,
         "hotSpots": []
     },
     "scenes": {
@@ -21,6 +21,7 @@
             "hfov": 100,
             "panorama": "../../vtour/losdosvagones/35_aerea.jpg",
             "preview": "../../vtour/losdosvagones//35_aerea.jpg",
+            
             "title": "Aérea"
             
         },
@@ -31,6 +32,7 @@
             "panorama": "../../vtour/losdosvagones/00_ruta1.jpg",
             "preview": "../../vtour/losdosvagones/00_ruta1.jpg",
             "title": "Ruta"
+            
             
         },
         
