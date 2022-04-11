@@ -64,8 +64,9 @@ if (conjunto[Object.keys(conjunto)[0]]) {
   return (
 <>
  {/*  <EstiloEscena>xx{escena.idEscena}xx</EstiloEscena> */}
-
+ <div>Click sobre la foto para ir a cada ubicación</div>
    <FotosContainer>
+     
            {  
                                 claves.map((conjuntoEscenas, index) => (
                                                                             <UnaFoto key={index}   onClick= {()=>CambiaEscena(index)}>
