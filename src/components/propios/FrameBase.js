@@ -94,8 +94,10 @@ const CardMetaFeature = styled.div`
 
 
 
-const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl hover:border-green-400`; 
-
+//const Fondo=tw.div`-mt-4  bg-gray-800 p-1 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl hover:border-green-400`; 
+const Fondo1 = styled.div`
+${tw`-mt-4    p-1 border-4 border-gray-200 align-middle mx-auto text-white  max-w-sm font-mono font-thin rounded-xl hover:border-green-800`}
+`; 
 //const {cantidad,setCantidad} = useContext(DataContext);
 
   function FrameBase ({ esPortada=true, tieneAudio=false,altura=null,source="" , Titulo="Titulo", Bajada="Bajada", SubTitulo="Subtitulo",TextoGrisMayuscula="Texto en gris y mayusculas",
