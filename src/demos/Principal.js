@@ -66,7 +66,7 @@ export default () => {
       <AreaContactar><a href="https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!">
       <AreaWhatsap imageWsp={imagenWsp}/></a>
       </AreaContactar>
-      <FormularioCorreo> <Contacto/></FormularioCorreo>
+      <FormularioCorreo> <Contacto service="service_iq8bowe" template="template_uk97428"/></FormularioCorreo>
    
 
       <Footer />

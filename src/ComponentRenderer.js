@@ -99,6 +99,7 @@ import SimplePrimaryBackgroundTestimonial from "components/testimonials/SimplePr
 
 import SimpleContactUsForm from "components/forms/SimpleContactUs.js";
 import Contacto from "components/forms/Contacto.js";
+import WraperContacto from "components/forms/WraperContacto.js";
 import Carpetadetrabajo from "components/forms/Carpetadetrabajo.js";
 //import SimpleSubscribeNewsletterForm from "components/forms/SimpleSubscribeNewsletter.js";
 //import TwoColContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
@@ -499,6 +500,11 @@ export const components = {
           name: "Contacto",
           component: Contacto,
           url: "/components/blocks/Form/Contacto",
+        },
+        WraperContacto: {
+          name: "wraperContacto",
+          component: WraperContacto,
+          url: "/components/blocks/Form/WraperContacto",
         },
         Carpetadetrabajo: {
           name: "Carpetadetrabajo",

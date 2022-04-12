@@ -23,15 +23,38 @@ const DecoratorBlobContainer = tw.div`absolute inset-0 overflow-hidden rounded-l
 const DecoratorBlob1 = tw(SvgDecoratorBlob1)`absolute bottom-0 left-0 w-80 h-80 transform -translate-x-20 translate-y-32 text-primary-700 opacity-50`
 const DecoratorBlob2 = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-primary-700 opacity-50`
 //const mensajegracias = tw(SvgDecoratorBlob1)`absolute top-0 right-0 w-80 h-80 transform  translate-x-20 -translate-y-64 text-primary-700 opacity-50`
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+const
+  keys = urlParams.keys(),
+  values = urlParams.values(),
+  entries = urlParams.entries();
+
+for (const key of keys) console.log(key);
+// product, color, newuser, size
+
+for (const value of values) console.log(value);
+// shirt, blue, , m
+
+for(const entry of entries) {
+  console.log(`${entry[0]}: ${entry[1]}`);
+}
 export default ({
   text = "Gracias por comunicarse con nosotros.",
-  secondaryLinkText = "Inicio",
-  secondaryLinkUrl = "/",
+  secondaryLinkText = urlParams.get('textoLink'),
+  secondaryLinkUrl = urlParams.get('link'),
   
+  
+
+
+
   //secondaryLinkText = "Contact Us",
   //secondaryLinkUrl = "http://google.com",
   pushDownFooter = true
 }) => {
+  console.log(secondaryLinkText);
+  console.log(secondaryLinkUrl);
   return (
     <Container css={pushDownFooter && tw`mb-20 lg:mb-24`}>
       <ContentWithPaddingXl>

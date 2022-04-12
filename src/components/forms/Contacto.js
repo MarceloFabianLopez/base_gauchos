@@ -51,7 +51,7 @@ const Botones = tw.div`grid grid-cols-2 gap-2 h-12` ;
 
 //const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`
 
-function Contacto ({service="service_iq8bowe",template="template_uk97428"}) {
+function Contacto ({linkRegreso="/",textoLink="Inicio" , service="service_iq8bowe",template="template_uk97428"}) {
 
   //export default () => {
 
@@ -61,10 +61,10 @@ function Contacto ({service="service_iq8bowe",template="template_uk97428"}) {
   const [placemessage] = React.useState("Escriba su mensaje");
   const [placenombre] = React.useState("Nombre y apellido");
   const [placeemail] = React.useState("ej juan@gmail.com");
-
+console.log("en Contacto linkRegreso=",linkRegreso," textoLink=",textoLink);
   const mostrarAlerta =()=>{
 
-    window.location = "/components/propios/Gracias";
+    window.location = "/components/propios/Gracias?link="+linkRegreso+"&textoLink="+textoLink;
 
     //swal({
     //  title: "Enviado",
@@ -79,6 +79,7 @@ function Contacto ({service="service_iq8bowe",template="template_uk97428"}) {
   
 
   function sendEmail() {
+    console.log("service=",service+"&template=",template);
     //e.preventDefault();
     //e.target.reset();
   //  mostrarAlerta();
@@ -93,9 +94,9 @@ function Contacto ({service="service_iq8bowe",template="template_uk97428"}) {
       user_email: "marce@marce.com",
       }); */
       // emailjs.sendForm('service_anxnkre', 'template_uk97428',"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
-   emailjs.sendForm({service},{template} ,"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
+   emailjs.sendForm(service,template ,"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
                                                             .then((result) => {
-                                                                                   // console.log(result.text);
+                                                                                    console.log(result.text);
                                                                                     mostrarAlerta();
 
                                                                                 }, (error) => {
@@ -190,7 +191,7 @@ sendEmail();
               {/* </TwoColumn> */}
                 <Botones>      
               <SubmitButton type="submit" value="Send">Enviar</SubmitButton>
-              <PrimaryButton  as="a" href="/">Anular</PrimaryButton>
+              <PrimaryButton  as="a" href={linkRegreso}>Anular</PrimaryButton>
               </Botones>      
 
          

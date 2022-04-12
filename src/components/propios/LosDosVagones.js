@@ -5,6 +5,7 @@ import Header, { NavLink,  PrimaryLink , NavToggle, DesktopNavLinks } from "../h
 import{ init } from 'emailjs-com';
 import FrameBase from "./FrameBase";
 import Contacto from "components/forms/Contacto";
+import WraperContacto from "components/forms/WraperContacto";
 import ReactMarkdown from 'react-markdown';
 
 
@@ -15,7 +16,7 @@ const hrefBanner="../../clientes/losdosvagones/banner.jpg"
 const urlLogoLink="/";
 const linkInicioUrl="https://vtour.ar";
 const linkInicioTexto="Página web";
-const urlContacto="/components/blocks/Form/Contacto";
+const urlContacto="/components/blocks/Form/WraperContacto";
 const textoContacto="Contacto";
 const EscenaLandPage = "../../standalone/pannellum.htm?config=../losdosvagones.json";
 const colorHeader=`bg-green-200`;
@@ -233,7 +234,7 @@ export default () => {
                             </ColumnAncha>
                             <ColumnAngosta>
                         
-                            <FormularioCorreo> <Contacto service="service_iq8bowe" template="template_tp629ui"/></FormularioCorreo>
+                            <FormularioCorreo> <Contacto linkRegreso="/components/propios/LosDosVagones" textoLink="Regresar" service="service_iq8bowe" template="template_tp629ui"/></FormularioCorreo>
                            
                             </ColumnAngosta>
 
