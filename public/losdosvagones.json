@@ -29,7 +29,7 @@
                 "yaw": 168.42454604788594,
                 "hfov": 100,
                 "type": "scene",
-                "text": "Pileta 2",
+                "text": "Pileta vista 2",
                 "targetYaw": 0,
                 "targetPitch": 0,
                 "targetHfov": 120,
@@ -40,7 +40,7 @@
                 "yaw": -20.784856904041646,
                 "hfov": 100,
                 "type": "scene",
-                "text": "Pileta 1",
+                "text": "Pileta vista 1",
                 "targetYaw": 0,
                 "targetPitch": 0,
                 "targetHfov": 120,
@@ -101,7 +101,7 @@
                 "yaw": -56.27720631990786,
                 "hfov": 120,
                 "type": "scene",
-                "text": "Vagon 1",
+                "text": "Vagon vista 1",
                 "targetYaw": 0,
                 "targetPitch": 0,
                 "targetHfov": 120,
@@ -136,7 +136,7 @@
                     "yaw": 168.42454604788594,
                     "hfov": 100,
                     "type": "scene",
-                    "text": "Pileta 2",
+                    "text": "Pileta vista 2",
                     "targetYaw": 0,
                     "targetPitch": 0,
                     "targetHfov": 120,
@@ -147,7 +147,7 @@
                     "yaw": -20.784856904041646,
                     "hfov": 100,
                     "type": "scene",
-                    "text": "Pileta 1",
+                    "text": "Pileta vista 1",
                     "targetYaw": 0,
                     "targetPitch": 0,
                     "targetHfov": 120,
@@ -208,7 +208,7 @@
                     "yaw": -56.27720631990786,
                     "hfov": 120,
                     "type": "scene",
-                    "text": "Vagon 1",
+                    "text": "Vagon vista 1",
                     "targetYaw": 0,
                     "targetPitch": 0,
                     "targetHfov": 120,
@@ -411,43 +411,13 @@
             ]
             
         },
-        "escena11_galria2": {
-            "pitch": 5.22366463867176,
-            "yaw": 57.07019004208746,
-            "hfov": 100,
-            "panorama": "../../vtour/losdosvagones/11_galria2.jpg",
-            "preview": "../../vtour/losdosvagones/11_galria2.jpg",
-            "title": "Galería casona 2"
-        },
-        "escena32_casona": {
-            "pitch": -4.022541311122823,
-            "yaw": 118.82052050720495,
-            "hfov": 120,
-            "panorama": "../../vtour/losdosvagones/32_casona.jpg",
-            "preview": "../../vtour/losdosvagones/32_casona.jpg",
-            "title": "Casona interior",
-            "hotSpots": [
-                {
-                    "pitch": 2.1013030946798166,
-                    "yaw": 89.5508505517696,
-                    "hfov": 100,
-                    "type": "scene",
-                    "text": "Parque frente Casona",
-                    "targetYaw": 0,
-                    "targetPitch": 0,
-                    "targetHfov": 120,
-                    "sceneId": "escena14_frentecasona"
-                }
-            ]
-            
-        },
         "escena12_pileta": {
             "pitch": -17.723331374639343,
             "yaw": 15.649264707542898,
             "hfov": 100,
             "panorama": "../../vtour/losdosvagones/12_pileta.jpg",
             "preview": "../../vtour/losdosvagones/12_pileta.jpg",
-            "title": "Pileta 1",
+            "title": "Pileta vista 1",
             "hotSpots": [
                 {
                     "pitch": 6.014309599374051,
@@ -467,7 +437,7 @@
             "hfov": 120,
             "panorama": "../../vtour/losdosvagones/13_pileta2.jpg",
             "preview": "../../vtour/losdosvagones/13_pileta2.jpg",
-            "title": "Pileta 2",
+            "title": "Pileta vista 2",
             "hotSpots": [
                 {
                     "pitch": 4.79382895535714,
@@ -571,7 +541,7 @@
             "hfov": 120,
             "panorama": "../../vtour/losdosvagones/17_vagon4.jpg",
             "preview": "../../vtour/losdosvagones/17_vagon4.jpg",
-            "title": "Vagon 1",
+            "title": "Vagon vista 1",
             "hotSpots": [
                 {
                     "pitch": -2.7286000910649397,
@@ -591,7 +561,7 @@
             "hfov": 100,
             "panorama": "../../vtour/losdosvagones/19_vagon6.jpg",
             "preview": "../../vtour/losdosvagones/19_vagon6.jpg",
-            "title": "Vagon 2",
+            "title": "Vagon vista 2",
             "hotSpots": [
                 {
                     "pitch": -1.6836307239841044,
@@ -612,7 +582,7 @@
             "hfov": 100,
             "panorama": "../../vtour/losdosvagones/20_vagon7.jpg",
             "preview": "../../vtour/losdosvagones/20_vagon7.jpg",
-            "title": "Vagon 3",
+            "title": "Vagon vista 3",
             "hotSpots": [
                 {
                     "pitch": 11.124593731038846,
@@ -681,7 +651,7 @@
                     "yaw": 158.39806701093147,
                     "hfov": 100,
                     "type": "scene",
-                    "text": "Pileta 2",
+                    "text": "Pileta vista 2",
                     "targetYaw": -105.08629474347622,
                     "targetPitch": -12.541152283029794,
                     "sceneId": "escena27_piletados1"
@@ -695,7 +665,7 @@
             "hfov": 120,
             "panorama": "../../vtour/losdosvagones/25_vagon9.jpg",
             "preview": "../../vtour/losdosvagones/25_vagon9.jpg",
-            "title": "Vagon 4",
+            "title": "Vagon vista 4",
             "hotSpots": [
             
                 {
@@ -716,7 +686,7 @@
             "hfov": 100,
             "panorama": "../../vtour/losdosvagones/26_casonacancha4.jpg",
             "preview": "../../vtour/losdosvagones/26_casonacancha4.jpg",
-            "title": "Bosque 1",
+            "title": "Bosque vista 1",
             "hotSpots": [
                 {
                     "pitch": 2.05670643603509,
@@ -769,7 +739,7 @@
             "hfov": 120,
             "panorama": "../../vtour/losdosvagones/34_loft_01.jpg",
             "preview": "../../vtour/losdosvagones/34_loft_01.jpg",
-            "title": "Loft2",
+            "title": "Loft vista 2",
             "hotSpots": [
                 {
                     "pitch": 28.761284737755272,
@@ -822,7 +792,7 @@
             "hfov": 100,
             "panorama": "../../vtour/losdosvagones/28_piletados2.jpg",
             "preview": "../../vtour/losdosvagones/28_piletados2.jpg",
-            "title": "Pileta 4",
+            "title": "Pileta vista 4",
             "hotSpots": [
                 {
                     "pitch": 5.910453142868709,
@@ -844,7 +814,7 @@
             "hfov": 120,
             "panorama": "../../vtour/losdosvagones/30_clarobosque.jpg",
             "preview": "../../vtour/losdosvagones/30_clarobosque.jpg",
-            "title": "Bosque 2",
+            "title": "Bosque vista 2",
             "hotSpots": [
                 {
                     "pitch": 2.2732531325838337,
