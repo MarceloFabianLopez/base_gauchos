@@ -278,7 +278,7 @@ useEffect(() => {
 
 
   return (
-            <Fondo>
+            <Fondo1>
                 {/* <p>You clicked {counter} times</p> */}
                 
                   
@@ -294,7 +294,7 @@ useEffect(() => {
                                      
                                      
                                    
-            </Fondo>
+            </Fondo1>
         );
         //////console.log("counter en botonera=",counter);
    }

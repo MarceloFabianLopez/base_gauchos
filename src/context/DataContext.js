@@ -16,7 +16,7 @@ export const DataProvider = ({children}) => {
     const [conjunto,setConjunto]= useState(conjuntoEscenasInicial);
    // const [recorrido,setRecorrido] = useState (RecorridoInicial);
     const [cantidad,setCantidad] =useState (cantidadInicial);
-    const [intervalo, setIntervalo] = useState(3000); //en milisegundos
+    const [intervalo, setIntervalo] = useState(4000); //en milisegundos
     return (
             <DataContext.Provider value={
                { escena,setEscena ,
