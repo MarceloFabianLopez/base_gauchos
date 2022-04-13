@@ -8,10 +8,12 @@
         "title": "Aérea",
         "firstScene": "escena35_aerea",
         "author": "VTOUR",
-        "sceneFadeDuration": 100,
+        "sceneFadeDuration": 1000,
         "crossOrigin": "anonymous",
         "autoLoad": true,
-        "autoRotate":5,
+        "autoRotate" : 5,
+        
+        
         "hotSpots": [
             {
                 "pitch": -25.76635969273726,
@@ -23,6 +25,7 @@
                 "targetPitch": 0,
                 "targetHfov": 120,
                 "sceneId": "escena32_casona"
+                
             },
             {
                 "pitch": -12.859802770795676,
@@ -45,6 +48,7 @@
                 "targetPitch": 0,
                 "targetHfov": 120,
                 "sceneId": "escena12_pileta"
+                
             },
             {
                 "pitch": -5.755886032940022,
@@ -95,18 +99,8 @@
                 "targetYaw": 38.24744981624235,
                 "targetPitch": -2.9805541063796652,
                 "sceneId": "escena25_vagon9"
-            },
-            {
-                "pitch": -38.623563508853664,
-                "yaw": -56.27720631990786,
-                "hfov": 120,
-                "type": "scene",
-                "text": "Vagon vista 1",
-                "targetYaw": 0,
-                "targetPitch": 0,
-                "targetHfov": 120,
-                "sceneId": "escena35_aerea"
             }
+            
         ]
             
     },
@@ -202,18 +196,8 @@
                     "targetYaw": 38.24744981624235,
                     "targetPitch": -2.9805541063796652,
                     "sceneId": "escena25_vagon9"
-                },
-                {
-                    "pitch": -38.623563508853664,
-                    "yaw": -56.27720631990786,
-                    "hfov": 120,
-                    "type": "scene",
-                    "text": "Vagon vista 1",
-                    "targetYaw": 0,
-                    "targetPitch": 0,
-                    "targetHfov": 120,
-                    "sceneId": "escena35_aerea"
                 }
+               
             ]
             
         },

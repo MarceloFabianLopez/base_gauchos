@@ -167,8 +167,8 @@ function Navegacion(){
                             //alternate
                             var signo = (-1) ** counter;
 
-                            miviewer.lookAt(pitch+5*signo ,yaw-5*signo,hfov+5*signo,1000);
-                            //miviewer.lookAt(pitch ,yaw,hfov-20,4000);
+                            //miviewer.lookAt(pitch+(5*signo) ,yaw-(15*signo),hfov+(5*signo),200);
+                            miviewer.lookAt(pitch ,yaw,hfov,4000);
                           //console.log("Cambiando a escena=",conjuntoEscenas[counter]);
                     
                       // miviewer.lookAt(0,-100,10,10000);
