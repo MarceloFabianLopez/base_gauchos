@@ -17,7 +17,7 @@ const Header = tw.header`
 `;
 //const ColorBanner=tw(ContainerBanner)`bg-green-500`;
 
-export const NavLinks = tw.div`inline-block text-gray-300`; 
+export const NavLinks = tw.div`inline-block text-black`; 
 
 /*  hocus: stands for "on hover or focus"
  hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus

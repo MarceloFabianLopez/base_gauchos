@@ -190,8 +190,8 @@ export default () => {
    
      
       
- <NavLink href={landpagebase}>¿Por qué usted necesita nuestros servicios? </NavLink>
- <NavLink href={landcliente1}>Los Dos Vagones - Turismo rural </NavLink>
+ <NavLink href={landpagebase}> Inmobiliarias  </NavLink>
+ <NavLink href={landcliente1}>Turismo rural </NavLink>
 
     <NavLink href={contactos}>Contactos</NavLink>
    {/*  <NavLink href={about}>Acerca de nosotros</NavLink> */}
@@ -211,8 +211,8 @@ export default () => {
                    Video 360º y aéreos
                    <SubHeading>vtour.com.ar</SubHeading>
                </Heading>  
-                <BannerFondo > <a href={landpagebase}> ¿Por qué usted necesita nuestros servicios?</a></BannerFondo>
-                <BannerFondo><a href={landcliente1}>Ejemplo turismo rural - Los Dos Vagones</a>
+                <BannerFondo > <a href={landpagebase}> Inmobiliarias</a></BannerFondo>
+                <BannerFondo><a href={landcliente1}>Turismo rural</a>
                 </BannerFondo> 
               <ContieneGrilla>
               <GrillaPortada>

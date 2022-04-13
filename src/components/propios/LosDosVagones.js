@@ -73,7 +73,7 @@ const MiLogoLink = styled(NavLink)`
     ${tw`w-24 m-10     `}
   }
 `;
-const NavLinks = tw.div`inline-block text-gray-100`;
+const NavLinks = tw.div`inline-block text-gray-200`;
 const MisNavLinks = styled(NavLinks)`
 ${tw.nav`text-green-400`}
 `;
