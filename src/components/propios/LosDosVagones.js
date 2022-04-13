@@ -14,7 +14,7 @@ const hrefLogo="../../clientes/losdosvagones/logo.png";
 //const hrefLogo="../../images/logo.png";
 const hrefBanner="../../clientes/losdosvagones/banner.jpg"
 const urlLogoLink="/";
-const linkInicioUrl="https://vtour.ar";
+const linkInicioUrl="https://www.losdosvagones.com.ar/";
 const linkInicioTexto="Página web";
 const urlContacto="/components/blocks/Form/WraperContacto";
 const textoContacto="Contacto";
@@ -26,7 +26,7 @@ const encabezadoLinea2="Turismo rural y eventos";
 const subEncabezado="Recorrido virtual";
 const colorSubheading="text-white";
 
-  const guasap='https://api.whatsapp.com/send?phone=5492216701280&text=Hola!%20Quiere%20contactarse%20con%20nosotros!';
+  const guasap='https://api.whatsapp.com/send?phone=5492214779977&text=Hola!%20Quiero%20info%20con%20sobre...';
 const Negrito=tw.div`text-black  text-sm  md:text-left md:text-2xl  `;
 const tituloNegrito = 'Los Dos Vagones';
 const bajada= 'Naturaleza y tranquilidad que sólo el campo puede ofrecer';

@@ -1,0 +1,20 @@
+
+Borra en el destino los que no estan
+
+rsync -avz --delete build/ ../builVtour/
+
+
+Muestra las diferencias sin los ocultos
+
+diff -r -q --exclude=.*  build/ ../builVtour/ 
+
+
+
+
+copia todo lo nuevo o modificad a builvtour
+
+# correr dentro de build
+
+cp * -ruv   /home/marcelo/react/vtour/builVtour
+
+
