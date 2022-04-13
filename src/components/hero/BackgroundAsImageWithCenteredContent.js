@@ -163,7 +163,7 @@ const landpagebase = components['propios']['LandPBase']['url'];
 */}
 
 const landcliente1=components['propios']['LosDosVagones']['url'];
-
+//const landcliente1=['losdosvagones']['url'];
 
 
 

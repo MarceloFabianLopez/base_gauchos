@@ -61,7 +61,7 @@ function Contacto ({linkRegreso="/",textoLink="Inicio" , service="service_iq8bow
   const [placemessage] = React.useState("Escriba su mensaje");
   const [placenombre] = React.useState("Nombre y apellido");
   const [placeemail] = React.useState("ej juan@gmail.com");
-console.log("en Contacto linkRegreso=",linkRegreso," textoLink=",textoLink);
+//console.log("en Contacto linkRegreso=",linkRegreso," textoLink=",textoLink);
   const mostrarAlerta =()=>{
 
     window.location = "/components/propios/Gracias?link="+linkRegreso+"&textoLink="+textoLink;
@@ -79,7 +79,7 @@ console.log("en Contacto linkRegreso=",linkRegreso," textoLink=",textoLink);
   
 
   function sendEmail() {
-    console.log("service=",service+"&template=",template);
+   //console.log("service=",service+"&template=",template);
     //e.preventDefault();
     //e.target.reset();
   //  mostrarAlerta();
@@ -96,11 +96,11 @@ console.log("en Contacto linkRegreso=",linkRegreso," textoLink=",textoLink);
       // emailjs.sendForm('service_anxnkre', 'template_uk97428',"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
    emailjs.sendForm(service,template ,"miform", 'user_kfmun1gr4Vx8fC0gf1XpR')
                                                             .then((result) => {
-                                                                                    console.log(result.text);
+                                                                                    //console.log(result.text);
                                                                                     mostrarAlerta();
 
                                                                                 }, (error) => {
-                                                                                    console.log(error.text);
+                                                                                    //console.log(error.text);
                                                                                 });
                                                             
                                                           

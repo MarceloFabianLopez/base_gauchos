@@ -140,7 +140,7 @@ function Navegacion(){
                         let hfov0 =recorrido['default']['hfov'];
                         if (counter===-1)
                                   {
-                                    console.log("inicioooooo");
+                                   // console.log("inicioooooo");
                                     //console.log('ptch0,yaw0,hfov0 :>> ', pitch0,yaw0,hfov0);
 
                                     miviewer.loadScene("Ingreso",pitch0,yaw0,hfov0);
