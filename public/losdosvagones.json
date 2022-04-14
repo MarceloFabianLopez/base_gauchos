@@ -519,6 +519,27 @@
             ]
             
         },
+        "escena32_casona": {
+            "pitch": -4.022541311122823,
+            "yaw": 118.82052050720495,
+            "hfov": 120,
+            "panorama": "../../vtour/losdosvagones/32_casona.jpg",
+            "preview": "../../vtour/losdosvagones/32_casona.jpg",
+            "title": "Casona interior",
+            "hotSpots": [
+                {
+                    "pitch": 2.1013030946798166,
+                    "yaw": 89.5508505517696,
+                    "hfov": 100,
+                    "type": "scene",
+                    "text": "Parque frente Casona",
+                    "targetYaw": 0,
+                    "targetPitch": 0,
+                    "targetHfov": 120,
+                    "sceneId": "escena14_frentecasona"
+                }
+            ]
+        },
         "escena17_vagon4": {
             "pitch": -28.425155367811385,
             "yaw": 62.55107072171813,

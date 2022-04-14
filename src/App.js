@@ -115,6 +115,10 @@ export default function App() {
      <DataProvider>
      <Router>
        <Switch>
+       <Route path="/losdosvagones">
+
+           <ComponentRenderer name1="LosDosVagones" type1="propios"/>
+         </Route>
          <Route path="/components/:type/:subtype/:name">
            <ComponentRenderer />
          </Route>
